@@ -1,0 +1,32 @@
+{
+  "docs": [
+    {
+      "uuid": "981f3a26-2b5f-4e1f-9540-a845d01ae899",
+      "slug": "installation",
+      "path": "docs/INSTALLATION.md",
+      "title": "Installing 8th locally",
+      "blurb": "Learn how to install 8th locally to solve Exercism's exercises on your own machine"
+    },
+    {
+      "uuid": "45617b37-3e1a-4cfe-b1d8-d67913673f9b",
+      "slug": "learning",
+      "path": "docs/LEARNING.md",
+      "title": "How to learn 8th",
+      "blurb": "An overview of how to get started from scratch with 8th"
+    },
+    {
+      "uuid": "eeb66e3f-eafd-4a48-bc50-a86e968a4c96",
+      "slug": "tests",
+      "path": "docs/TESTS.md",
+      "title": "Testing on the 8th track",
+      "blurb": "Learn how to test your 8th exercises on Exercism"
+    },
+    {
+      "uuid": "c647956e-610f-49c9-8d0c-bd70441d4236",
+      "slug": "resources",
+      "path": "docs/RESOURCES.md",
+      "title": "Useful 8th resources",
+      "blurb": "A collection of useful resources to help you master 8th"
+    }
+  ]
+}
