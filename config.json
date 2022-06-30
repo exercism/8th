@@ -27,7 +27,7 @@
       {
         "slug": "hello-world",
         "name": "Hello World",
-        "uuid": "",
+        "uuid": "0c6d16eb-3a07-42ee-ba14-fa910e67a91f",
         "practices": [],
         "prerequisites": [],
         "difficulty": 1,
@@ -40,20 +40,20 @@
   "concepts": [],
   "key_features": [
     {
-      "icon": "secure",
-      "title": "Secure",
+      "icon": "safe",
+      "title": "Safe",
       "content": "8th was designed from the beginning to avoid the most common software security problems."
     },
     {
       "icon": "cross-platform",
       "title": "Cross-platform",
-      "content": "With one click, you generate the executables for any platform 8th supports, from any platform it supports!"
+      "content": "With one click generate the executable for any platform 8th supports, from any platform it supports!"
     },
     {
       "icon":"expressive",
       "title":"Expressive",
       "content": "No reserved words at all and almost no syntax."
-    }
+    },
     {
       "icon": "general-purpose",
       "title": "General purpose",

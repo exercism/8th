@@ -1,0 +1,7 @@
+"test.8th" f:include
+
+test:[ 
+    hw 
+test:=> 
+    "Hello, World!" 
+test:]
