@@ -1,7 +1,11 @@
-"test.8th" f:include
+"test_lib.8th" f:include
 
-test:[ 
+"helloworld.8th" f:include
+
+test:{
     hw 
-test:=> 
+test:== 
     "Hello, World!" 
-test:]
+test:}
+
+bye

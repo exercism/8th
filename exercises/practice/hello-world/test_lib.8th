@@ -1,0 +1,26 @@
+ns: test 
+
+private
+	
+public
+: test:{ \
+;
+
+: test:} 
+	depth a:close r>
+	( >s swap >s s:= ) a:= 
+	if
+		2drop "OK" . cr
+	else 
+		swap
+		"FAIL! Expected" . 
+		. 
+		" Received" . 
+		.
+		cr
+	then
+;
+
+: test:== 
+	depth a:close >r 
+;
