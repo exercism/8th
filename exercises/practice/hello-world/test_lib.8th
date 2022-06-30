@@ -3,10 +3,13 @@ ns: test
 private
 	
 public
-: test:{ \
+
+\ Does nothing but introduce a test
+: test:{ \ --
 ;
 
-: test:} 
+\ Convert data-stack to array, compare with current content of r-stack
+: test:} \ x -- 
 	depth a:close r>
 	( >s swap >s s:= ) a:= 
 	if
@@ -21,6 +24,7 @@ public
 	then
 ;
 
-: test:== 
+\ Convert data-stack to array and move to r-stack
+: test:== \ x -- 
 	depth a:close >r 
 ;
