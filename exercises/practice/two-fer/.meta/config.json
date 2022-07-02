@@ -2,8 +2,8 @@
   "blurb": "Create a sentence of the form \"One for X, one for me.\"",
   "authors": ["axtens"],
   "files": {
-    "solution": ["twofer.8th"],
-    "test": ["twofer_tests.8th"],
+    "solution": ["two-fer.8th"],
+    "test": ["two-fer_tests.8th"],
     "example": [".meta/example.8th"]
   },
   "source_url": "https://github.com/exercism/problem-specifications/issues/757"

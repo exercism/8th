@@ -1,23 +1,23 @@
 "test_lib.8th" f:include
 
-"twofer.8th" f:include
+"two-fer.8th" f:include
 
 test:{
-    twofer 
+    two-fer 
 test:== 
     "One for you, one for me."
 test:}
 
 
 test:{
-    "Jedoon" twofer 
+    "Jedoon" two-fer 
 test:== 
     "One for Jedoon, one for me."
 test:}
 
 
 test:{
-    "Hazelelponi" twofer 
+    "Hazelelponi" two-fer 
 test:== 
     "One for Hazelelponi, one for me."
 test:}

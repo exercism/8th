@@ -2,8 +2,8 @@
     "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
     "authors": ["axtens"],
     "files": {
-      "solution": ["helloworld.8th"],
-      "test": ["helloworld_tests.8th"],
+      "solution": ["hello-world.8th"],
+      "test": ["hello-world_tests.8th"],
       "example": [".meta/example.8th"]
     },
     "source": "This is an exercise to introduce users to using Exercism",

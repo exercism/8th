@@ -22,6 +22,7 @@ public
 		.
 		cr
 	then
+	reset \ clear data stack
 ;
 
 \ Convert data-stack to array and move to r-stack
