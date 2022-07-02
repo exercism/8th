@@ -16,10 +16,18 @@
     "highlightjs_language": "TODO: specify highlightjs language"
   },
   "files": {
-    "solution": ["%{pascal_slug}.8th"],
-    "test": ["%{pascal_slug}_tests.8th"],
-    "example": [".meta/example.8th"],
-    "exemplar": [".meta/exemplar.8th"]
+    "solution": [
+      "%{pascal_slug}.8th"
+    ],
+    "test": [
+      "%{pascal_slug}_tests.8th"
+    ],
+    "example": [
+      ".meta/example.8th"
+    ],
+    "exemplar": [
+      ".meta/exemplar.8th"
+    ]
   },
   "exercises": {
     "concept": [],
@@ -33,6 +41,19 @@
         "difficulty": 1,
         "topics": [
           "strings"
+        ]
+      },
+      {
+        "slug": "two-fer",
+        "name": "Two Fer",
+        "uuid": "8e69c859-d131-4c2c-b0b7-e5cfadd5d679",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "data-stack",
+          "depth",
+          "if/else/then"
         ]
       }
     ]
@@ -50,8 +71,8 @@
       "content": "With one click generate the executable for any platform 8th supports, from any platform it supports!"
     },
     {
-      "icon":"expressive",
-      "title":"Expressive",
+      "icon": "expressive",
+      "title": "Expressive",
       "content": "No reserved words at all and almost no syntax."
     },
     {
@@ -70,7 +91,7 @@
       "content": "Documentation is extensive, making it easy to get started with 8th."
     }
   ],
-  "tags": [  
+  "tags": [
     "paradigm/functional",
     "paradigm/imperative",
     "paradigm/procedural",

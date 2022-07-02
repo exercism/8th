@@ -1,0 +1,32 @@
+ns: test 
+
+private
+	
+public
+
+\ Does nothing but introduce a test
+: test:{ \ --
+;
+
+\ Convert data-stack to array, compare with current content of r-stack
+: test:} \ x -- 
+	depth a:close r>
+	( >s swap >s s:= ) a:= 
+	if
+		2drop "OK" . cr
+	else 
+		swap
+		"FAIL! Expected" . 
+		. 
+		" Received" . 
+		.
+		cr
+		.s \ display current stack
+	then
+	reset \ clear data stack
+;
+
+\ Convert data-stack to array and move to r-stack
+: test:== \ x -- 
+	depth a:close >r 
+;
