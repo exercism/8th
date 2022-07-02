@@ -1,9 +1,9 @@
 "test_lib.8th" f:include
 
-"helloworld.8th" f:include
+"hello-world.8th" f:include
 
 test:{
-    hw 
+    hello-world 
 test:== 
     "Hello, World!" 
 test:}

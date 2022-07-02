@@ -21,7 +21,6 @@ public
 		" Received" . 
 		.
 		cr
-		.s \ display current stack
 	then
 	reset \ clear data stack
 ;
