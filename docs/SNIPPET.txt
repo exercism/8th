@@ -1,1 +1,3 @@
-TODO: add snippet
+: hello-world \ -- s
+    "Hello, World!"
+;
