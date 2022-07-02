@@ -1,0 +1,26 @@
+"test_lib.8th" f:include
+
+"twofer.8th" f:include
+
+test:{
+    twofer 
+test:== 
+    "One for you, one for me."
+test:}
+
+
+test:{
+    "Jedoon" twofer 
+test:== 
+    "One for Jedoon, one for me."
+test:}
+
+
+test:{
+    "Hazelelponi" twofer 
+test:== 
+    "One for Hazelelponi, one for me."
+test:}
+
+
+bye
