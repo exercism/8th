@@ -1,0 +1,19 @@
+{
+    "blurb": "Given a year, report if it is a leap year.",
+    "authors": [
+        "axtens"
+    ],
+    "files": {
+        "solution": [
+            "leap.8th"
+        ],
+        "test": [
+            "leap_tests.8th"
+        ],
+        "example": [
+            ".meta/example.8th"
+        ]
+    },
+    "source": "JavaRanch Cattle Drive, exercise 3",
+    "source_url": "http://www.javaranch.com/leap.jsp"
+}

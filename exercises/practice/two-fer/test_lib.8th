@@ -1,31 +1,57 @@
 ns: test 
 
 private
-	
+	( swap s:= ) var, test_op
+
+	: set_op \ w --
+		test_op !
+	;
+
+	: get_op \ -- w
+		test_op @
+	;
 public
 
 \ Does nothing but introduce a test
-: test:{ \ --
+: test:{ \ -- 
 ;
 
 \ Convert data-stack to array, compare with current content of r-stack
-: test:} \ x -- 
-	depth a:close r>
-	( >s swap >s s:= ) a:= 
+: test:} \ * -- 
+	depth a:close r> #p:get_op a:= 
 	if
 		2drop "OK" . cr
 	else 
 		swap
-		"FAIL! Expected" . 
+		"FAIL! Expected:" . 
 		. 
-		" Received" . 
+		" Received:" . 
 		.
 		cr
 	then
 	reset \ clear data stack
 ;
 
-\ Convert data-stack to array and move to r-stack
-: test:== \ x -- 
+: test:.eqs. \ * --
+	( >s swap >s s:= ) #p:set_op
+	\ Convert data-stack to array and move to r-stack
+	depth a:close >r 
+;
+
+: test:.nes. \ * --
+	( >s swap >s s:= not ) #p:set_op
+	\ Convert data-stack to array and move to r-stack
+	depth a:close >r 
+;
+
+: test:.eq. \ * --
+	( >n swap >n n:= ) #p:set_op
+	\ Convert data-stack to array and move to r-stack
+	depth a:close >r 
+;
+
+: test:.ne. \ * --
+	( >n swap >n n:= not ) #p:set_op
+	\ Convert data-stack to array and move to r-stack
 	depth a:close >r 
 ;
