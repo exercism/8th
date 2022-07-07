@@ -1,4 +1,4 @@
-: twofer \ * -- s
+: two-fer \ * -- s
   depth 1 n:= 
   if
     "One for " swap s:+ ", one for me." s:+ 

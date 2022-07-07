@@ -1,15 +1,20 @@
 # Tests
 
-<!-- TODO: write document
+If you have the 8th binary on your path, issue
+```
+%{pascal_slug}_tests.8th
+```
+or
+```
+8th %{pascal_slug}_tests.8th
+```
 
-  This document should contain instructions on how to run the exercise's tests.
+If the 8th binary is not on the PATH, 
+```
+/path/to/8th %{pascal_slug}_tests.8th
+```
+or (on Windows)
+```
+C:\path\to\8th %{pascal_slug}_tests.8th
+```
 
-  The instructions should be short and to the point.
-
-  The docs/TESTS.md file can contain a more verbose description on how to run tests.
-
-  When a student downloads an exercise via the CLI, this file's contents are
-  included into the HELP.md file.
-
-  See https://exercism.org/docs/building/tracks/shared-files for more information.
--->
