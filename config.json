@@ -51,9 +51,49 @@
         "prerequisites": [],
         "difficulty": 1,
         "topics": [
-          "data-stack",
-          "depth",
-          "if/else/then"
+          "strings",
+          "conditionals",
+          "data-stack"
+        ]
+      },
+      {
+        "slug": "bob",
+        "name": "Bob",
+        "uuid": "b34b3dd7-9df2-4b3d-970d-f4b3a3a15358",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "regular-expressions",
+          "strings",
+          "conditionals",
+          "arrays",
+          "data-stack"
+        ]
+      },
+      {
+        "slug": "hamming",
+        "name": "Hamming",
+        "uuid": "ead8a049-708c-4413-b58c-9526e6f66bfb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 2,
+        "topics": [
+          "strings",
+          "conditionals",
+          "arrays",
+          "data-stack"
+        ]
+      },
+      {
+        "slug": "leap",
+        "name": "Leap",
+        "uuid": "b46ecfb1-59ee-4776-a8fa-f8bd23cf15db",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 1,
+        "topics": [
+          "numbers"
         ]
       }
     ]
