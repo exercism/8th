@@ -9,9 +9,9 @@ with: test
 { 0 .eq. "GGACTGAAATCTG" "GGACTGAAATCTG" distance }
 { 1 .eq. "G" "T" distance }
 { 9 .eq. "GGACGGATTCTG" "AGGACGGATTCT" distance }
-{ null .eq. "" "G" distance }
-{ null .eq. "AATG" "AAA" distance }
-{ null .eq. "ATA" "AGTG" distance }
-{ null .eq. "G" "" distance }
+{ null .eqs. "" "G" distance }
+{ null .eqs. "AATG" "AAA" distance }
+{ null .eqs. "ATA" "AGTG" distance }
+{ null .eqs. "G" "" distance }
 
 bye

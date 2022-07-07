@@ -9,7 +9,7 @@ with: test
 { "1, 2, 3 GO!" bob .eqs. "Whoa, chill out!" }
 { "1, 2, 3" bob .eqs. "Whatever." }
 { "4?" bob .eqs. "Sure." }
-{ "Does this cryogenic chamber make me look fat?" & vbLf & "no" bob .eqs. "Whatever." }
+{ "Does this cryogenic chamber make me look fat?\nno" bob .eqs. "Whatever." }
 { "Does this cryogenic chamber make me look fat?" bob .eqs. "Sure." }
 { "Ending with ? means a question." bob .eqs. "Whatever." }
 { "I HATE YOU" bob .eqs. "Whoa, chill out!" }
@@ -21,3 +21,5 @@ with: test
 { "Wait! Hang on. Are you going to be OK?" bob .eqs. "Sure." }
 { "You are, what, like 15?" bob .eqs. "Sure." }
 { "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!" bob .eqs. "Whoa, chill out!" }
+
+bye

@@ -62,7 +62,7 @@
         "uuid": "b34b3dd7-9df2-4b3d-970d-f4b3a3a15358",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": [
           "regular-expressions",
           "strings",
@@ -77,7 +77,7 @@
         "uuid": "ead8a049-708c-4413-b58c-9526e6f66bfb",
         "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
+        "difficulty": 3,
         "topics": [
           "strings",
           "conditionals",
