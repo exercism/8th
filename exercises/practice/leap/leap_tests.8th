@@ -1,0 +1,17 @@
+"test_lib.8th" f:include
+
+"leap.8th" f:include
+
+with: test
+
+{ false .eq. 1800 leap-year? }
+{ false .eq. 1900 leap-year? }
+{ false .eq. 1970 leap-year? }
+{ false .eq. 2015 leap-year? }
+{ false .eq. 2100 leap-year? }
+{ true .eq. 1960 leap-year? }
+{ true .eq. 1996 leap-year? }
+{ true .eq. 2000 leap-year? }
+{ true .eq. 2400 leap-year? }
+
+bye

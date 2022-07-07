@@ -2,10 +2,12 @@
 
 "hello-world.8th" f:include
 
-test:{
+with: test
+
+{
     hello-world 
-test:== 
+.eqs. 
     "Hello, World!" 
-test:}
+}
 
 bye
