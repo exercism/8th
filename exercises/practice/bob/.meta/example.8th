@@ -17,7 +17,7 @@
 
 : bob \ s -- s
 	is_silence if
-		"Fine. Be that way"
+		"Fine. Be that way!"
 	else
 		dup
 		is_shouting swap is_question and if

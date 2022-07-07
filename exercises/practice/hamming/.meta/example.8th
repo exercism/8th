@@ -1,4 +1,4 @@
-: distance \ s1 s2 | n
+: distance \ s1 s2 -- n
 	null s:/ a:len \ s1 a2 n2
 	rot \ a2 n2 s1
 	null s:/ a:len \ a2 n2 a1 n1
@@ -7,8 +7,6 @@
 	if 
 		null nip nip
 	else \ a2 a1
-		( s:= ) a:diff a:len nip \ a3 n3
+		' s:= a:diff a:len nip \ a3 n3
 	then
 ;
- 
-
