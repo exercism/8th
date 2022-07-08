@@ -1,156 +1,155 @@
 {
-  "language": "8th",
-  "slug": "8th",
-  "active": false,
-  "status": {
-    "concept_exercises": false,
-    "test_runner": false,
-    "representer": false,
-    "analyzer": false
-  },
-  "blurb": "8th™ is a secure, robust, cross-platform, and fun programming language. Any platform. Every platform.",
-  "version": 3,
-  "online_editor": {
-    "indent_style": "space",
-    "indent_size": 2,
-    "highlightjs_language": "TODO: specify highlightjs language"
-  },
-  "files": {
-    "solution": [
-      "%{pascal_slug}.8th"
+    "language": "8th",
+    "slug": "8th",
+    "active": false,
+    "status": {
+        "concept_exercises": false,
+        "test_runner": false,
+        "representer": false,
+        "analyzer": false
+    },
+    "blurb": "8th™ is a secure, robust, cross-platform, and fun programming language. Any platform. Every platform.",
+    "version": 3,
+    "online_editor": {
+        "indent_style": "space",
+        "indent_size": 2,
+        "highlightjs_language": "TODO: specify highlightjs language"
+    },
+    "files": {
+        "solution": [
+            "%{pascal_slug}.8th"
+        ],
+        "test": [
+            "%{pascal_slug}_tests.8th"
+        ],
+        "example": [
+            ".meta/example.8th"
+        ],
+        "exemplar": [
+            ".meta/exemplar.8th"
+        ]
+    },
+    "exercises": {
+        "concept": [],
+        "practice": [{
+                "slug": "hello-world",
+                "name": "Hello World",
+                "uuid": "0c6d16eb-3a07-42ee-ba14-fa910e67a91f",
+                "practices": [],
+                "prerequisites": [],
+                "difficulty": 1,
+                "topics": [
+                    "strings"
+                ]
+            }, {
+                "slug": "two-fer",
+                "name": "Two Fer",
+                "uuid": "8e69c859-d131-4c2c-b0b7-e5cfadd5d679",
+                "practices": [],
+                "prerequisites": [],
+                "difficulty": 1,
+                "topics": [
+                    "strings",
+                    "conditionals",
+                    "data-stack"
+                ]
+            }, {
+                "slug": "bob",
+                "name": "Bob",
+                "uuid": "b34b3dd7-9df2-4b3d-970d-f4b3a3a15358",
+                "practices": [],
+                "prerequisites": [],
+                "difficulty": 3,
+                "topics": [
+                    "regular-expressions",
+                    "strings",
+                    "conditionals",
+                    "arrays",
+                    "data-stack"
+                ]
+            }, {
+                "slug": "hamming",
+                "name": "Hamming",
+                "uuid": "ead8a049-708c-4413-b58c-9526e6f66bfb",
+                "practices": [],
+                "prerequisites": [],
+                "difficulty": 3,
+                "topics": [
+                    "strings",
+                    "conditionals",
+                    "arrays",
+                    "data-stack"
+                ]
+            }, {
+                "slug": "leap",
+                "name": "Leap",
+                "uuid": "b46ecfb1-59ee-4776-a8fa-f8bd23cf15db",
+                "practices": [],
+                "prerequisites": [],
+                "difficulty": 1,
+                "topics": [
+                    "numbers"
+                ]
+            }, {
+                "slug": "pangram",
+                "name": "Pangram",
+                "uuid": "077b874d-4094-46c2-9433-af64dd19ddfa",
+                "practices": [],
+                "prerequisites": [],
+                "difficulty": 5,
+                "topics": [
+                    "arrays", "strings", "regular-expressions"
+                ]
+            }
+        ]
+    },
+    "concepts": [],
+    "key_features": [{
+            "icon": "safe",
+            "title": "Safe",
+            "content": "8th was designed from the beginning to avoid the most common software security problems."
+        }, {
+            "icon": "cross-platform",
+            "title": "Cross-platform",
+            "content": "With one click generate the executable for any platform 8th supports, from any platform it supports!"
+        }, {
+            "icon": "expressive",
+            "title": "Expressive",
+            "content": "No reserved words at all and almost no syntax."
+        }, {
+            "icon": "general-purpose",
+            "title": "General purpose",
+            "content": "8th is primarily a strongly-typed FORTH-like stack-based procedural language with RPN syntax."
+        }, {
+            "icon": "interactive",
+            "title": "Interactive",
+            "content": "8th has an interactive REPL."
+        }, {
+            "icon": "documentation",
+            "title": "Documentation",
+            "content": "Documentation is extensive, making it easy to get started with 8th."
+        }
     ],
-    "test": [
-      "%{pascal_slug}_tests.8th"
-    ],
-    "example": [
-      ".meta/example.8th"
-    ],
-    "exemplar": [
-      ".meta/exemplar.8th"
+    "tags": [
+        "paradigm/functional",
+        "paradigm/imperative",
+        "paradigm/procedural",
+        "typing/static",
+        "typing/strong",
+        "typing/dynamic",
+        "execution_mode/compiled",
+        "execution_mode/interpreted",
+        "platform/windows",
+        "platform/mac",
+        "platform/linux",
+        "platform/ios",
+        "platform/android",
+        "used_for/backends",
+        "used_for/cross_platform_development",
+        "used_for/frontends",
+        "used_for/games",
+        "used_for/guis",
+        "used_for/mobile",
+        "used_for/web_development"
     ]
-  },
-  "exercises": {
-    "concept": [],
-    "practice": [
-      {
-        "slug": "hello-world",
-        "name": "Hello World",
-        "uuid": "0c6d16eb-3a07-42ee-ba14-fa910e67a91f",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "strings"
-        ]
-      },
-      {
-        "slug": "two-fer",
-        "name": "Two Fer",
-        "uuid": "8e69c859-d131-4c2c-b0b7-e5cfadd5d679",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "strings",
-          "conditionals",
-          "data-stack"
-        ]
-      },
-      {
-        "slug": "bob",
-        "name": "Bob",
-        "uuid": "b34b3dd7-9df2-4b3d-970d-f4b3a3a15358",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3,
-        "topics": [
-          "regular-expressions",
-          "strings",
-          "conditionals",
-          "arrays",
-          "data-stack"
-        ]
-      },
-      {
-        "slug": "hamming",
-        "name": "Hamming",
-        "uuid": "ead8a049-708c-4413-b58c-9526e6f66bfb",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 3,
-        "topics": [
-          "strings",
-          "conditionals",
-          "arrays",
-          "data-stack"
-        ]
-      },
-      {
-        "slug": "leap",
-        "name": "Leap",
-        "uuid": "b46ecfb1-59ee-4776-a8fa-f8bd23cf15db",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 1,
-        "topics": [
-          "numbers"
-        ]
-      }
-    ]
-  },
-  "concepts": [],
-  "key_features": [
-    {
-      "icon": "safe",
-      "title": "Safe",
-      "content": "8th was designed from the beginning to avoid the most common software security problems."
-    },
-    {
-      "icon": "cross-platform",
-      "title": "Cross-platform",
-      "content": "With one click generate the executable for any platform 8th supports, from any platform it supports!"
-    },
-    {
-      "icon": "expressive",
-      "title": "Expressive",
-      "content": "No reserved words at all and almost no syntax."
-    },
-    {
-      "icon": "general-purpose",
-      "title": "General purpose",
-      "content": "8th is primarily a strongly-typed FORTH-like stack-based procedural language with RPN syntax."
-    },
-    {
-      "icon": "interactive",
-      "title": "Interactive",
-      "content": "8th has an interactive REPL."
-    },
-    {
-      "icon": "documentation",
-      "title": "Documentation",
-      "content": "Documentation is extensive, making it easy to get started with 8th."
-    }
-  ],
-  "tags": [
-    "paradigm/functional",
-    "paradigm/imperative",
-    "paradigm/procedural",
-    "typing/static",
-    "typing/strong",
-    "typing/dynamic",
-    "execution_mode/compiled",
-    "execution_mode/interpreted",
-    "platform/windows",
-    "platform/mac",
-    "platform/linux",
-    "platform/ios",
-    "platform/android",
-    "used_for/backends",
-    "used_for/cross_platform_development",
-    "used_for/frontends",
-    "used_for/games",
-    "used_for/guis",
-    "used_for/mobile",
-    "used_for/web_development"
-  ]
 }

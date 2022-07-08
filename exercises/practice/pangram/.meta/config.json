@@ -1,0 +1,21 @@
+{
+  "blurb": "Determine if a sentence is a pangram.",
+  "authors": [
+    "axtens"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "pangram.8th"
+    ],
+    "test": [
+      "pangram_tests.8th"
+    ],
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Pangram"
+}
