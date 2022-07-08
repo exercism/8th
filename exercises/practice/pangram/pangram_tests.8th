@@ -1,0 +1,20 @@
+"test_lib.8th" f:include
+
+"pangram.8th" f:include
+
+with: test 
+
+{ false .eqs. "" pangram? }
+{ false .eqs. "7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog" pangram?  }
+{ true .eqs. "\"Five quacking Zephyrs jolt my wax bed.\"" pangram? }
+{ false .eqs. "a quick movement of the enemy will jeopardize five gunboats" pangram? }
+{ true .eqs. "abcdefghijklmnopqrstuvwxyz" pangram?  }
+{ false .eqs. "five boxing wizards jump quickly at it" pangram?  }
+{ true .eqs. "the 1 quick brown fox jumps over the 2 lazy dogs" pangram?  }
+{ true .eqs. "the quick brown fox jumps over the lazy dog" pangram?  }
+{ false .eqs. "the quick brown fox jumps over with lazy FX" pangram?  }
+{ true .eqs. "the_quick_brown_fox_jumps_over_the_lazy_dog" pangram?  }
+
+;with
+
+bye
