@@ -1,0 +1,28 @@
+"test_lib.8th" f:include
+
+"raindrops.8th" f:include
+
+with: test
+
+{ 1 raindrops .eqs. "1" }
+{ 10 raindrops .eqs. "Plang" }
+{ 105 raindrops .eqs. "PlingPlangPlong" }
+{ 14 raindrops .eqs. "Plong" }
+{ 15 raindrops .eqs. "PlingPlang" }
+{ 21 raindrops .eqs. "PlingPlong" }
+{ 25 raindrops .eqs. "Plang" }
+{ 27 raindrops .eqs. "Pling" }
+{ 3 raindrops .eqs. "Pling" }
+{ 3125 raindrops .eqs. "Plang" }
+{ 35 raindrops .eqs. "PlangPlong" }
+{ 49 raindrops .eqs. "Plong" }
+{ 5 raindrops .eqs. "Plang" }
+{ 52 raindrops .eqs. "52" }
+{ 6 raindrops .eqs. "Pling" }
+{ 7 raindrops .eqs. "Plong" }
+{ 8 raindrops .eqs. "8" }
+{ 9 raindrops .eqs. "Pling" }
+
+; with
+
+bye

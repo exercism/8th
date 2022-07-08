@@ -100,6 +100,16 @@
                 "topics": [
                     "arrays", "strings", "regular-expressions"
                 ]
+            }, {
+                "slug": "raindrops",
+                "name": "Raindrops",
+                "uuid": "6247ab47-f00e-4ab0-8bb9-1ca4110eaf0b",
+                "practices": [],
+                "prerequisites": [],
+                "difficulty": 3,
+                "topics": [
+                    "anonymous-words", "r-stack", "repetition"
+                ]
             }
         ]
     },
