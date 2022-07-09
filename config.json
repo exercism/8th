@@ -136,6 +136,16 @@
                 "practices": [
                     "recursion"
                 ]
+            },
+            {
+                "slug": "armstrong-numbers",
+                "name": "Armstrong Numbers",
+                "uuid": "fdc96f81-bba3-4a79-bd7d-3eab7bcdb446",
+                "prerequisites": [],
+                "difficulty": 3,
+                "practices": [
+                    "list-comprehension","variables"
+                ]
             }
         ]
     },
