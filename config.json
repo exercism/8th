@@ -120,6 +120,16 @@
                 "topics": [
                     "anonymous-words", "numbers", "repetition"
                 ]
+            }, {
+                "slug": "collatz-conjecture",
+                "name": "Collatz Conjecture",
+                "uuid": "7968006c-efdc-410c-a2fa-305a37528705",
+                "practices": [],
+                "prerequisites": [],
+                "difficulty": 4,
+                "topics": [
+                    "recursion"
+                ]
             }
         ]
     },
