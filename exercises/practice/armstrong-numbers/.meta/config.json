@@ -1,0 +1,21 @@
+{
+  "authors": [
+    "axtens"
+  ],
+  "contributors": [
+  ],
+  "files": {
+    "solution": [
+      "armstrong-numbers.8th"
+    ],
+    "test": [
+      "armstrong-numbers_tests.8th"
+    ],
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "blurb": "Determine if a number is an Armstrong number",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Narcissistic_number"
+}

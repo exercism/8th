@@ -1,0 +1,19 @@
+"test_lib.8th" f:include
+
+"armstrong-numbers.8th" f:include 
+
+with: test
+
+    { 0 armstrong?  .eqs. true }
+    { 10 armstrong?  .eqs. false }
+    { 100 armstrong?  .eqs. false }
+    { 153 armstrong?  .eqs. true }
+    { 5 armstrong?  .eqs. true }
+    { 9474 armstrong?  .eqs. true }
+    { 9475 armstrong?  .eqs. false }
+    { 9926314 armstrong?  .eqs. false }
+    { 9926315 armstrong?  .eqs. true }
+
+;with
+
+bye
