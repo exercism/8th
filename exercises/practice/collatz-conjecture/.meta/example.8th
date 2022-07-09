@@ -1,0 +1,28 @@
+: collatz' \ n n -- n
+	\ dup . space
+	dup 1 n:= 
+	if \
+		drop
+	else
+		dup 1 band
+		if 
+			3 n:* n:1+
+			swap n:1+ swap \ update counter
+		else
+			2 n:/
+			swap n:1+ swap \ update counter
+		then
+		recurse
+	then
+;
+
+: collatz \ n -- n
+	dup 1 n:< 
+	if
+		drop
+		null
+	else
+		0 swap \ init counter
+		collatz'
+	then
+;

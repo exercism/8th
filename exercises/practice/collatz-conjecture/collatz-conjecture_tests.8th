@@ -1,0 +1,16 @@
+"test_lib.8th" f:include
+
+"collatz-conjecture.8th" f:include
+
+with: test
+
+{ 1 collatz .eq. 0 }
+{ 1000000 collatz .eq.  152 } 
+{ 12 collatz .eq. 9 }
+{ 16 collatz .eq.  4 }
+{ 0 collatz .eqs.  null }
+{ -15 collatz .eqs. null }
+
+;with
+
+bye

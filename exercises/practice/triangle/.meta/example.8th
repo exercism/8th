@@ -1,0 +1,61 @@
+: all-sides-greater-than-zero \ a -- b
+	( 0 n:> ) a:each! 
+	drop
+	' and 2 times
+;
+
+: check-sides \ n n n -- a b 
+	depth a:close 
+	dup  
+	all-sides-greater-than-zero
+	not if
+		false
+	else
+		dup dup dup
+		( a:open n:+ n:> not rot ) 3 times
+		' and 2 times
+	then
+;
+
+: equilateral? \ n n n - b
+	check-sides 
+	not if 
+		false nip
+	else
+		dup
+		a:open \ a -- n1 n2 n3
+		rot drop \ -- n1 n2
+		n:= \ -- b
+		swap
+		a:open \ a -- n1 n2 n3
+		drop \ -- n2 n3
+		n:= \ -- b
+		and		
+	then
+;	
+	
+: isosceles? \ n n n - b
+	check-sides 
+	not if 
+		false nip
+	else
+		dup dup
+		a:open rot drop n:= rot \ check a == b
+		a:open drop n:= rot \ check b == c
+		a:open nip n:= \ check a == c
+		or or
+	then
+;	
+	
+: scalene? \ n n n - b
+	check-sides 
+	not if 
+		false nip
+	else
+		dup dup
+		a:open rot drop n:= not rot \ check a != b
+		a:open drop n:= not rot \ check b != c
+		a:open nip n:= not \ check a != c
+		and and 
+	then
+;	
