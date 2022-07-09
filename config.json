@@ -110,6 +110,16 @@
                 "topics": [
                     "anonymous-words", "r-stack", "repetition"
                 ]
+            }, {
+                "slug": "triangle",
+                "name": "Triangle",
+                "uuid": "12389895-0775-41f2-90bb-db65bc2ecfaf",
+                "practices": [],
+                "prerequisites": [],
+                "difficulty": 2,
+                "topics": [
+                    "anonymous-words", "numbersr", "repetition"
+                ]
             }
         ]
     },
