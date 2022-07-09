@@ -23,6 +23,6 @@ with: test
 { 8 raindrops .eqs. "8" }
 { 9 raindrops .eqs. "Pling" }
 
-; with
+;with
 
 bye
