@@ -1,0 +1,26 @@
+"test_lib.8th" f:include
+
+"binary.8th" f:include
+
+with: test
+
+{ "0" binary> .eq.  0 }
+{ "000011111" binary> .eq.  31 }
+{ "001 nope" binary> .eqs.  null }
+{ "01201" binary> .eqs.  null } 
+{ "1" binary> .eq.  1 }
+{ "10" binary> .eq.  2 }
+{ "100" binary> .eq.  4 }
+{ "10001101000" binary> .eq.  1128 }
+{ "1001" binary> .eq.  9 }
+{ "10nope" binary> .eqs.  null }
+{ "10nope10" binary> .eqs.  null }
+{ "11" binary> .eq.  3 }
+{ "11010" binary> .eq.  26 }
+{ "2" binary> .eqs.  null }
+{ "nope10" binary> .eqs.  null }
+
+;with 
+
+bye
+
