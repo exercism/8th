@@ -5,7 +5,7 @@
 ;
 
 : check-sides \ n n n -- a b 
-	depth a:close 
+	3 a:close 
 	dup  
 	all-sides-greater-than-zero
 	not if
