@@ -146,6 +146,16 @@
                 "practices": [
                     "list-comprehension","variables"
                 ]
+            },
+            {
+                "slug": "binary",
+                "name": "Binary",
+                "uuid": "d5863f7e-1e7c-4831-bf8e-3cea9caa0be9",
+                "prerequisites": [],
+                "difficulty": 3,
+                "practices": [
+                    "list-comprehension","variables"
+                ]
             }
         ]
     },
