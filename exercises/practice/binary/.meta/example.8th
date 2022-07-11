@@ -1,23 +1,8 @@
-: only_binary \ s - T
-	dup null s:/ 
-	( dup "0" s:= swap "1" s:= or not ) a:filter
-	a:len nip 0 n:=
-;
-
-: binary> \ s -- n
-	only_binary not
-	if
-		null
-	else
-		0 >r
-		null s:/ ' >n a:map a:rev
-		( \ n x
-			swap \ x n
-			2 swap \ x 2 n
-			n:^ n:*
-			r> n:+ >r
-		) a:each
-		r>
-	then
-	nip
-;
+\ Converts binary string into decimal number
+: s:binary>  \ s -- n | null
+  0 swap s:len n:1-  >r
+  ( dup 48 49 n:between if
+      48 n:- r@ rot n:- 2 swap n:^ n:* n:+
+    else
+      drop 2drop null break
+    then ) s:each rdrop ;
