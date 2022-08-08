@@ -1,25 +1,25 @@
-"test_lib.8th" f:include
+"https://raw.githubusercontent.com/axtens/8th_test/main/test_lib.8th" net:get drop nip eval
 
 "bob.8th" f:include
 
 with: test
 
-{ "    " bob .eqs. "Fine. Be that way!" }
-{ "" bob .eqs. "Fine. Be that way!" }
-{ "1, 2, 3 GO!" bob .eqs. "Whoa, chill out!" }
-{ "1, 2, 3" bob .eqs. "Whatever." }
-{ "4?" bob .eqs. "Sure." }
-{ "Does this cryogenic chamber make me look fat?\nno" bob .eqs. "Whatever." }
-{ "Does this cryogenic chamber make me look fat?" bob .eqs. "Sure." }
-{ "Ending with ? means a question." bob .eqs. "Whatever." }
-{ "I HATE YOU" bob .eqs. "Whoa, chill out!" }
-{ "It's OK if you don't want to go to the DMV." bob .eqs. "Whatever." }
-{ "Let's go make out behind the gym!" bob .eqs. "Whatever." }
-{ "Tom-ay-to, tom-aaaah-to." bob .eqs. "Whatever." }
-{ "WATCH OUT!" bob .eqs. "Whoa, chill out!" }
-{ "WHAT THE HELL WERE YOU THINKING?" bob .eqs. "Calm down, I know what I'm doing!" }
-{ "Wait! Hang on. Are you going to be OK?" bob .eqs. "Sure." }
-{ "You are, what, like 15?" bob .eqs. "Sure." }
-{ "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!" bob .eqs. "Whoa, chill out!" }
+begin_test "    " bob test_eqs "Fine. Be that way!" end_test
+begin_test "" bob test_eqs "Fine. Be that way!" end_test
+begin_test "1, 2, 3 GO!" bob test_eqs "Whoa, chill out!" end_test
+begin_test "1, 2, 3" bob test_eqs "Whatever." end_test
+begin_test "4?" bob test_eqs "Sure." end_test
+begin_test "Does this cryogenic chamber make me look fat?\nno" bob test_eqs "Whatever." end_test
+begin_test "Does this cryogenic chamber make me look fat?" bob test_eqs "Sure." end_test
+begin_test "Ending with ? means a question." bob test_eqs "Whatever." end_test
+begin_test "I HATE YOU" bob test_eqs "Whoa, chill out!" end_test
+begin_test "It's OK if you don't want to go to the DMV." bob test_eqs "Whatever." end_test
+begin_test "Let's go make out behind the gym!" bob test_eqs "Whatever." end_test
+begin_test "Tom-ay-to, tom-aaaah-to." bob test_eqs "Whatever." end_test
+begin_test "WATCH OUT!" bob test_eqs "Whoa, chill out!" end_test
+begin_test "WHAT THE HELL WERE YOU THINKING?" bob test_eqs "Calm down, I know what I'm doing!" end_test
+begin_test "Wait! Hang on. Are you going to be OK?" bob test_eqs "Sure." end_test
+begin_test "You are, what, like 15?" bob test_eqs "Sure." end_test
+begin_test "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!" bob test_eqs "Whoa, chill out!" end_test
 
 bye

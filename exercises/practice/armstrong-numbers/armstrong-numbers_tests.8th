@@ -1,18 +1,18 @@
-"test_lib.8th" f:include
+"https://raw.githubusercontent.com/axtens/8th_test/main/test_lib.8th" net:get drop nip eval
 
 "armstrong-numbers.8th" f:include 
 
 with: test
 
-    { 0 armstrong?  .eqs. true }
-    { 10 armstrong?  .eqs. false }
-    { 100 armstrong?  .eqs. false }
-    { 153 armstrong?  .eqs. true }
-    { 5 armstrong?  .eqs. true }
-    { 9474 armstrong?  .eqs. true }
-    { 9475 armstrong?  .eqs. false }
-    { 9926314 armstrong?  .eqs. false }
-    { 9926315 armstrong?  .eqs. true }
+    begin_test 0 armstrong?  test_eqs true end_test
+    begin_test 10 armstrong?  test_eqs false end_test
+    begin_test 100 armstrong?  test_eqs false end_test
+    begin_test 153 armstrong?  test_eqs true end_test
+    begin_test 5 armstrong?  test_eqs true end_test
+    begin_test 9474 armstrong?  test_eqs true end_test
+    begin_test 9475 armstrong?  test_eqs false end_test
+    begin_test 9926314 armstrong?  test_eqs false end_test
+    begin_test 9926315 armstrong?  test_eqs true end_test
 
 ;with
 

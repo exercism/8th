@@ -4,3 +4,4 @@ bin/configlet
 bin/configlet.exe
 bin/**
 *.bak
+chg_test.rr

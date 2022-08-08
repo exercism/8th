@@ -1,13 +1,13 @@
-"test_lib.8th" f:include
+"https://raw.githubusercontent.com/axtens/8th_test/main/test_lib.8th" net:get drop nip eval
 
 "hello-world.8th" f:include
 
 with: test
 
-{
+begin_test
     hello-world 
-.eqs. 
+test_eqs 
     "Hello, World!" 
-}
+end_test
 
 bye
