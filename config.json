@@ -154,15 +154,6 @@
                 "practices": [
                     "list-comprehension", "strings", "arrays"
                 ]
-            }, {
-                "slug": "pangram",
-                "name": "Pangram",
-                "uuid": "d433db43-b603-4a11-a6b5-b464120c49b9",
-                "prerequisites": [],
-                "difficulty": 3,
-                "practices": [
-                    "list-comprehension", "strings", "arrays"
-                ]
             }
         ]
     },
