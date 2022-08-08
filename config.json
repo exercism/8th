@@ -31,8 +31,7 @@
     },
     "exercises": {
         "concept": [],
-        "practice": [
-            {
+        "practice": [{
                 "slug": "hello-world",
                 "name": "Hello World",
                 "uuid": "0c6d16eb-3a07-42ee-ba14-fa910e67a91f",
@@ -41,8 +40,7 @@
                 "practices": [
                     "strings"
                 ]
-            },
-            {
+            }, {
                 "slug": "two-fer",
                 "name": "Two Fer",
                 "uuid": "8e69c859-d131-4c2c-b0b7-e5cfadd5d679",
@@ -53,8 +51,7 @@
                     "conditionals",
                     "data-stack"
                 ]
-            },
-            {
+            }, {
                 "slug": "bob",
                 "name": "Bob",
                 "uuid": "b34b3dd7-9df2-4b3d-970d-f4b3a3a15358",
@@ -67,8 +64,7 @@
                     "arrays",
                     "data-stack"
                 ]
-            },
-            {
+            }, {
                 "slug": "hamming",
                 "name": "Hamming",
                 "uuid": "ead8a049-708c-4413-b58c-9526e6f66bfb",
@@ -80,8 +76,7 @@
                     "arrays",
                     "data-stack"
                 ]
-            },
-            {
+            }, {
                 "slug": "leap",
                 "name": "Leap",
                 "uuid": "b46ecfb1-59ee-4776-a8fa-f8bd23cf15db",
@@ -90,8 +85,7 @@
                 "practices": [
                     "numbers"
                 ]
-            },
-            {
+            }, {
                 "slug": "pangram",
                 "name": "Pangram",
                 "uuid": "077b874d-4094-46c2-9433-af64dd19ddfa",
@@ -102,8 +96,7 @@
                     "strings",
                     "regular-expressions"
                 ]
-            },
-            {
+            }, {
                 "slug": "raindrops",
                 "name": "Raindrops",
                 "uuid": "6247ab47-f00e-4ab0-8bb9-1ca4110eaf0b",
@@ -114,8 +107,7 @@
                     "r-stack",
                     "repetition"
                 ]
-            },
-            {
+            }, {
                 "slug": "triangle",
                 "name": "Triangle",
                 "uuid": "12389895-0775-41f2-90bb-db65bc2ecfaf",
@@ -126,8 +118,7 @@
                     "numbers",
                     "repetition"
                 ]
-            },
-            {
+            }, {
                 "slug": "collatz-conjecture",
                 "name": "Collatz Conjecture",
                 "uuid": "7968006c-efdc-410c-a2fa-305a37528705",
@@ -136,57 +127,67 @@
                 "practices": [
                     "recursion"
                 ]
-            },
-            {
+            }, {
                 "slug": "armstrong-numbers",
                 "name": "Armstrong Numbers",
                 "uuid": "fdc96f81-bba3-4a79-bd7d-3eab7bcdb446",
                 "prerequisites": [],
                 "difficulty": 3,
                 "practices": [
-                    "list-comprehension","variables"
+                    "list-comprehension", "variables"
                 ]
-            },
-            {
+            }, {
                 "slug": "binary",
                 "name": "Binary",
                 "uuid": "d5863f7e-1e7c-4831-bf8e-3cea9caa0be9",
                 "prerequisites": [],
                 "difficulty": 3,
                 "practices": [
-                    "list-comprehension","variables"
+                    "list-comprehension", "variables"
+                ]
+            }, {
+                "slug": "isogram",
+                "name": "Isogram",
+                "uuid": "6d34e782-2002-4073-a935-9e50b9ac9d2e",
+                "prerequisites": [],
+                "difficulty": 3,
+                "practices": [
+                    "list-comprehension", "strings", "arrays"
+                ]
+            }, {
+                "slug": "pangram",
+                "name": "Pangram",
+                "uuid": "d433db43-b603-4a11-a6b5-b464120c49b9",
+                "prerequisites": [],
+                "difficulty": 3,
+                "practices": [
+                    "list-comprehension", "strings", "arrays"
                 ]
             }
         ]
     },
     "concepts": [],
-    "key_features": [
-        {
+    "key_features": [{
             "icon": "safe",
             "title": "Safe",
             "content": "8th was designed from the beginning to avoid the most common software security problems."
-        },
-        {
+        }, {
             "icon": "cross-platform",
             "title": "Cross-platform",
             "content": "With one click generate the executable for any platform 8th supports, from any platform it supports!"
-        },
-        {
+        }, {
             "icon": "expressive",
             "title": "Expressive",
             "content": "No reserved words at all and almost no syntax."
-        },
-        {
+        }, {
             "icon": "general-purpose",
             "title": "General purpose",
             "content": "8th is primarily a strongly-typed FORTH-like stack-based procedural language with RPN syntax."
-        },
-        {
+        }, {
             "icon": "interactive",
             "title": "Interactive",
             "content": "8th has an interactive REPL."
-        },
-        {
+        }, {
             "icon": "documentation",
             "title": "Documentation",
             "content": "Documentation is extensive, making it easy to get started with 8th."

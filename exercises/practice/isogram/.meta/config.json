@@ -1,0 +1,12 @@
+{
+    "authors": ["axtens"],
+    "contributors": [],
+    "files": {
+        "solution": ["isogram.8th"],
+        "test": ["isogram_tests.8th"],
+        "example": [".meta/example.8th"]
+    },
+  "blurb": "Determine if a word or phrase is an isogram.",
+  "source": "Wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Isogram"
+}
