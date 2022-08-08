@@ -1,0 +1,47 @@
+"https://raw.githubusercontent.com/axtens/8th_test/main/test_lib.8th" net:get drop nip eval
+"isogram.8th" f:include
+with: test
+\ empty string
+begin_test "" isogram? test_eqs "true" end_test
+
+\ isogram with only lower case characters
+begin_test "isogram" isogram? test_eqs "true" end_test
+
+\ word with one duplicated character
+begin_test "eleven" isogram? test_eqs "false" end_test
+
+\ word with one duplicated character from the end of the alphabet
+begin_test "zzyzx" isogram? test_eqs "false" end_test
+
+\ longest reported english isogram
+begin_test "subdermatoglyphic" isogram? test_eqs "true" end_test
+
+\ word with duplicated character in mixed case
+begin_test "Alphabet" isogram? test_eqs "false" end_test
+
+\ word with duplicated character in mixed case, lowercase first
+begin_test "alphAbet" isogram? test_eqs "false" end_test
+
+\ hypothetical isogrammic word with hyphen
+begin_test "thumbscrew-japingly" isogram? test_eqs "true" end_test
+
+\ hypothetical word with duplicated character following hyphen
+begin_test "thumbscrew-jappingly" isogram? test_eqs "false" end_test
+
+\ isogram with duplicated hyphen
+begin_test "six-year-old" isogram? test_eqs "true" end_test
+
+\ made-up name that is an isogram
+begin_test "Emily Jung Schwartzkopf" isogram? test_eqs "true" end_test
+
+\ duplicated character in the middle
+begin_test "accentor" isogram? test_eqs "false" end_test
+
+\ same first and last characters
+begin_test "angola" isogram? test_eqs "false" end_test
+
+\ word with duplicated character and with two hyphens
+begin_test "up-to-date" isogram? test_eqs "false" end_test
+
+;with
+bye

@@ -1,24 +1,24 @@
-"test_lib.8th" f:include
+"https://raw.githubusercontent.com/axtens/8th_test/main/test_lib.8th" net:get drop nip eval
 
 "binary.8th" f:include
 
 with: test
 
-{ "0" binary> .eq.  0 }
-{ "000011111" binary> .eq.  31 }
-{ "001 nope" binary> .eqs.  null }
-{ "01201" binary> .eqs.  null } 
-{ "1" binary> .eq.  1 }
-{ "10" binary> .eq.  2 }
-{ "100" binary> .eq.  4 }
-{ "10001101000" binary> .eq.  1128 }
-{ "1001" binary> .eq.  9 }
-{ "10nope" binary> .eqs.  null }
-{ "10nope10" binary> .eqs.  null }
-{ "11" binary> .eq.  3 }
-{ "11010" binary> .eq.  26 }
-{ "2" binary> .eqs.  null }
-{ "nope10" binary> .eqs.  null }
+begin_test "0" binary> test_eq  0 end_test
+begin_test "000011111" binary> test_eq  31 end_test
+begin_test "001 nope" binary> test_eqs  null end_test
+begin_test "01201" binary> test_eqs  null end_test 
+begin_test "1" binary> test_eq  1 end_test
+begin_test "10" binary> test_eq  2 end_test
+begin_test "100" binary> test_eq  4 end_test
+begin_test "10001101000" binary> test_eq  1128 end_test
+begin_test "1001" binary> test_eq  9 end_test
+begin_test "10nope" binary> test_eqs  null end_test
+begin_test "10nope10" binary> test_eqs  null end_test
+begin_test "11" binary> test_eq  3 end_test
+begin_test "11010" binary> test_eq  26 end_test
+begin_test "2" binary> test_eqs  null end_test
+begin_test "nope10" binary> test_eqs  null end_test
 
 ;with 
 

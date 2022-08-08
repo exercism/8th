@@ -1,27 +1,27 @@
-"test_lib.8th" f:include
+"https://raw.githubusercontent.com/axtens/8th_test/main/test_lib.8th" net:get drop nip eval
 
 "raindrops.8th" f:include
 
 with: test
 
-{ 1 raindrops .eqs. "1" }
-{ 10 raindrops .eqs. "Plang" }
-{ 105 raindrops .eqs. "PlingPlangPlong" }
-{ 14 raindrops .eqs. "Plong" }
-{ 15 raindrops .eqs. "PlingPlang" }
-{ 21 raindrops .eqs. "PlingPlong" }
-{ 25 raindrops .eqs. "Plang" }
-{ 27 raindrops .eqs. "Pling" }
-{ 3 raindrops .eqs. "Pling" }
-{ 3125 raindrops .eqs. "Plang" }
-{ 35 raindrops .eqs. "PlangPlong" }
-{ 49 raindrops .eqs. "Plong" }
-{ 5 raindrops .eqs. "Plang" }
-{ 52 raindrops .eqs. "52" }
-{ 6 raindrops .eqs. "Pling" }
-{ 7 raindrops .eqs. "Plong" }
-{ 8 raindrops .eqs. "8" }
-{ 9 raindrops .eqs. "Pling" }
+begin_test 1 raindrops test_eqs "1" end_test
+begin_test 10 raindrops test_eqs "Plang" end_test
+begin_test 105 raindrops test_eqs "PlingPlangPlong" end_test
+begin_test 14 raindrops test_eqs "Plong" end_test
+begin_test 15 raindrops test_eqs "PlingPlang" end_test
+begin_test 21 raindrops test_eqs "PlingPlong" end_test
+begin_test 25 raindrops test_eqs "Plang" end_test
+begin_test 27 raindrops test_eqs "Pling" end_test
+begin_test 3 raindrops test_eqs "Pling" end_test
+begin_test 3125 raindrops test_eqs "Plang" end_test
+begin_test 35 raindrops test_eqs "PlangPlong" end_test
+begin_test 49 raindrops test_eqs "Plong" end_test
+begin_test 5 raindrops test_eqs "Plang" end_test
+begin_test 52 raindrops test_eqs "52" end_test
+begin_test 6 raindrops test_eqs "Pling" end_test
+begin_test 7 raindrops test_eqs "Plong" end_test
+begin_test 8 raindrops test_eqs "8" end_test
+begin_test 9 raindrops test_eqs "Pling" end_test
 
 ;with
 

@@ -1,17 +1,17 @@
-"test_lib.8th" f:include
+"https://raw.githubusercontent.com/axtens/8th_test/main/test_lib.8th" net:get drop nip eval
 
 "hamming.8th" f:include
 
 with: test
 
-{ 0 .eq. "" "" distance }
-{ 0 .eq. "A" "A" distance }
-{ 0 .eq. "GGACTGAAATCTG" "GGACTGAAATCTG" distance }
-{ 1 .eq. "G" "T" distance }
-{ 9 .eq. "GGACGGATTCTG" "AGGACGGATTCT" distance }
-{ null .eqs. "" "G" distance }
-{ null .eqs. "AATG" "AAA" distance }
-{ null .eqs. "ATA" "AGTG" distance }
-{ null .eqs. "G" "" distance }
+begin_test 0 test_eq "" "" distance end_test
+begin_test 0 test_eq "A" "A" distance end_test
+begin_test 0 test_eq "GGACTGAAATCTG" "GGACTGAAATCTG" distance end_test
+begin_test 1 test_eq "G" "T" distance end_test
+begin_test 9 test_eq "GGACGGATTCTG" "AGGACGGATTCT" distance end_test
+begin_test null test_eqs "" "G" distance end_test
+begin_test null test_eqs "AATG" "AAA" distance end_test
+begin_test null test_eqs "ATA" "AGTG" distance end_test
+begin_test null test_eqs "G" "" distance end_test
 
 bye
