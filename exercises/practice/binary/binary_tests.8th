@@ -1,3 +1,5 @@
+needs net/http
+
 "https://raw.githubusercontent.com/axtens/8th_test/main/test_lib.8th" net:get drop nip eval
 
 "binary.8th" f:include
