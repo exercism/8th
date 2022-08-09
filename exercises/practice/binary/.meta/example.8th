@@ -1,8 +1,0 @@
-\ Converts binary string into decimal number
-: s:binary>  \ s -- n | null
-  0 swap s:len n:1-  >r
-  ( dup 48 49 n:between if
-      48 n:- r@ rot n:- 2 swap n:^ n:* n:+
-    else
-      drop 2drop null break
-    then ) s:each rdrop ;
