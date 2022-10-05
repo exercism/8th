@@ -1,7 +1,6 @@
 needs net/http
 
-"https://raw.githubusercontent.com/axtens/8th_test/main/test_lib.8th" net:get drop nip eval
-
+"test-lib.8th" f:include
 "hello-world.8th" f:include
 
 with: test
