@@ -1,5 +1,3 @@
-needs net/http
-
 "test-lib.8th" f:include
 "armstrong-numbers.8th" f:include 
 
