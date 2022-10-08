@@ -1,18 +1,27 @@
-: s:between \ s s-low s-high -- T
-	rot 0 s:@ nip -rot
-	swap 0 s:@ nip swap
-	0 s:@ nip
-	n:between
+: lt \ c c -- b
+  s:cmp -1 n:=
+; 
+
+: gt \ c c -- b
+  s:cmp 1 n:=
+; 
+ 
+: inrange \ c clow chigh -- b
+  rot dup -rot swap \ clow c c chigh
+  gt \ clow c b
+  -rot swap
+  lt \ b b
+  not swap not and
 ;
 
 : isogram? \ s -- T
-	s:uc \ uppercase
-	null s:/ \ split into characters
-	( "A" "Z" s:between ) a:filter \ filter out all the non-alphabetical
-	' s:cmp a:sort \ sort remaining
-	dup a:len swap \ get count
-	' s:= a:uniq \ get uniq items
-	a:len 
-	nip rot drop \ clean up
-	n:= \ is count after sort the same as after uniq?
+  s:uc \ uppercase
+  null s:/ \ split into characters
+  ( "A" "Z" inrange ) a:filter \ filter out all the non-alphabetical
+  ' s:cmp a:sort \ sort remaining
+  dup a:len swap \ get count
+  ' s:= a:uniq \ get uniq items
+  a:len 
+  nip rot drop \ clean up
+  n:= \ is count after sort the same as after uniq?
 ;

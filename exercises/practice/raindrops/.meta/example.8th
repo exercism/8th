@@ -1,9 +1,9 @@
 : rdepth rstack st:len nip ;
 
 : raindrops \ n -- s
-   dup 3 n:/mod swap not if "Pling" >r then drop
-   dup 5 n:/mod swap not if "Plang" >r then drop
-   dup 7 n:/mod swap not if "Plong" >r then drop
+   dup 3 n:/mod swap !if "Pling" >r then drop
+   dup 5 n:/mod swap !if "Plang" >r then drop
+   dup 7 n:/mod swap !if "Plong" >r then drop
    rdepth dup 0 n:=
    if
       drop

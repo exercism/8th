@@ -8,7 +8,7 @@
 	3 a:close 
 	dup  
 	all-sides-greater-than-zero
-	not if
+	!if
 		false
 	else
 		dup dup dup
@@ -19,7 +19,7 @@
 
 : equilateral? \ n n n - b
 	check-sides 
-	not if 
+	!if 
 		false nip
 	else
 		dup
@@ -36,7 +36,7 @@
 	
 : isosceles? \ n n n - b
 	check-sides 
-	not if 
+	!if 
 		false nip
 	else
 		dup dup
@@ -49,7 +49,7 @@
 	
 : scalene? \ n n n - b
 	check-sides 
-	not if 
+	!if 
 		false nip
 	else
 		dup dup
