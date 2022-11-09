@@ -1,0 +1,37 @@
+needs console/loaded
+
+: test_eq \ s x w --
+   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   n:= if
+    con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
+   else
+    con:red con:onBlack . space " ... FAIL" . con:white con:onBlack cr
+   then 
+;
+
+: test_eqs \ s x w --
+   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   s:= if
+    con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
+   else
+    con:red con:onBlack . space " ... FAIL" . con:white con:onBlack cr
+   then 
+;
+
+: test_true \ s w --
+   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   if
+    con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
+   else
+    con:red con:onBlack . space " ... FAIL" . con:white con:onBlack cr
+   then 
+;
+
+: test_false \ s w --
+   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   !if
+    con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
+   else
+    con:red con:onBlack . space " ... FAIL" . con:white con:onBlack cr
+   then 
+;

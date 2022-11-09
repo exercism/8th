@@ -20,7 +20,7 @@
             "%{pascal_slug}.8th"
         ],
         "test": [
-            "%{pascal_slug}_tests.8th"
+            "%{pascal_slug}-tests.8th"
         ],
         "example": [
             ".meta/example.8th"
@@ -114,6 +114,13 @@
                 "uuid": "2b310b6a-cccc-4890-ae83-e0729cac412a",
                 "prerequisites": [],
                 "difficulty": 3,
+                "practices": []
+            }, {
+                "slug": "yacht",
+                "name": "Yacht",
+                "uuid": "b1d34538-6c5c-476b-a79f-4cd55ac96e0b",
+                "prerequisites": [],
+                "difficulty": 6,
                 "practices": []
             }
         ]
