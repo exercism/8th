@@ -7,7 +7,7 @@
             "acronym.8th"
         ],
         "test": [
-            "acronym_tests.8th"
+            "acronym-tests.8th"
         ],
         "example": [
             ".meta/example.8th"
