@@ -1,0 +1,3 @@
+: armstrong? \ n -- T
+
+;

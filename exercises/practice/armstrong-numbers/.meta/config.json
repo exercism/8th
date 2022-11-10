@@ -7,7 +7,7 @@
       "armstrong-numbers.8th"
     ],
     "test": [
-      "armstrong-numbers_tests.8th"
+      "armstrong-numbers-tests.8th"
     ],
     "example": [
       ".meta/example.8th"
