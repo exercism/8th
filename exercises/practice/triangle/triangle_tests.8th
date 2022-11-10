@@ -1,29 +1,22 @@
-"test-lib.8th" f:include
+( 0 0 0 equilateral? ) false test_eq
+( 0.5 0.5 0.5 equilateral? ) true test_eq
+( 2 2 2 equilateral? ) true test_eq
+( 2 3 2 equilateral? ) false test_eq
+( 5 4 6 equilateral? ) false test_eq
+( 0.5 0.4 0.5 isosceles? ) true test_eq
+( 1 1 3 isosceles? ) true test_eq
+( 1 3 1 isosceles? ) true test_eq
+( 2 3 4 isosceles? ) false test_eq
+( 3 1 1 isosceles? ) false test_eq
+( 3 4 4 isosceles? ) true test_eq
+( 4 3 4 isosceles? ) true test_eq
+( 4 4 3 isosceles? ) true test_eq
+( 4 4 4 isosceles? ) true test_eq
+( 0.5 0.4 0.6 scalene? ) true test_eq
+( 4 4 3 scalene? ) false test_eq
+( 4 4 4 scalene? ) false test_eq
+( 5 4 6 scalene? ) true test_eq
+( 7 3 2 scalene? ) false test_eq
 
-"triangle.8th" f:include
-
-with: test
-
-begin_test 0 0 0 equilateral? test_eqs false end_test
-begin_test 0.5 0.5 0.5 equilateral? test_eqs true end_test
-begin_test 2 2 2 equilateral? test_eqs true end_test
-begin_test 2 3 2 equilateral? test_eqs false end_test
-begin_test 5 4 6 equilateral? test_eqs false end_test
-begin_test 0.5 0.4 0.5 isosceles? test_eqs true end_test
-begin_test 1 1 3 isosceles? test_eqs true end_test
-begin_test 1 3 1 isosceles? test_eqs true end_test
-begin_test 2 3 4 isosceles? test_eqs false end_test
-begin_test 3 1 1 isosceles? test_eqs false end_test
-begin_test 3 4 4 isosceles? test_eqs true end_test
-begin_test 4 3 4 isosceles? test_eqs true end_test
-begin_test 4 4 3 isosceles? test_eqs true end_test
-begin_test 4 4 4 isosceles? test_eqs true end_test
-begin_test 0.5 0.4 0.6 scalene? test_eqs true end_test
-begin_test 4 4 3 scalene? test_eqs false end_test
-begin_test 4 4 4 scalene? test_eqs false end_test
-begin_test 5 4 6 scalene? test_eqs true end_test
-begin_test 7 3 2 scalene? test_eqs false end_test
-
-;with
 
 bye
