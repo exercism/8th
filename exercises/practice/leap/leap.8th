@@ -1,4 +1,3 @@
-\ Based on FORTH version at http://rosettacode.org/wiki/Leap_year#Forth
 : leap-year? \
 
 ;

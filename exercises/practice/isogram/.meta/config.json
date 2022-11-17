@@ -7,7 +7,7 @@
       "isogram.8th"
     ],
     "test": [
-      "isogram_tests.8th"
+      "isogram-tests.8th"
     ],
     "example": [
       ".meta/example.8th"

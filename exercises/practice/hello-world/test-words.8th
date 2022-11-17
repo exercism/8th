@@ -1,6 +1,5 @@
 needs console/loaded
 
-
 : isword?  \ x -- x f
    dup  >kind  ns:w   n:= 
 ;

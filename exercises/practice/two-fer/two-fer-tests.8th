@@ -1,8 +1,3 @@
-"test-lib.8th" f:include
-"two-fer.8th" f:include
-
-with: test
-
 begin_test
     two-fer 
 test_eqs 
