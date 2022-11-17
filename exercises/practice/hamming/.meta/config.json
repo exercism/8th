@@ -7,7 +7,7 @@
       "hamming.8th"
     ],
     "test": [
-      "hamming_tests.8th"
+      "hamming-tests.8th"
     ],
     "example": [
       ".meta/example.8th"
