@@ -7,7 +7,7 @@
       "raindrops.8th"
     ],
     "test": [
-      "raindrops_tests.8th"
+      "raindrops-tests.8th"
     ],
     "example": [
       ".meta/example.8th"

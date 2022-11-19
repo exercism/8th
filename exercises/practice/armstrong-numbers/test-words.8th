@@ -42,3 +42,13 @@ needs console/loaded
     con:red con:onBlack . space " ... FAIL" . con:white con:onBlack cr
    then 
 ;
+
+: test_null \ s w --
+   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   null? if
+    drop con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
+   else
+    drop con:red con:onBlack . space " ... FAIL" . con:white con:onBlack cr
+   then 
+;
+

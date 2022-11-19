@@ -1,13 +1,13 @@
 {
   "authors": [
-    "axtens"
+      "axtens"
   ],
   "files": {
     "solution": [
       "two-fer.8th"
     ],
     "test": [
-      "two-fer_tests.8th"
+      "two-fer-tests.8th"
     ],
     "example": [
       ".meta/example.8th"

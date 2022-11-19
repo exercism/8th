@@ -1,12 +1,12 @@
-: lt \ c c -- b
+: lt \ c c -- T
   s:cmp -1 n:=
 ; 
 
-: gt \ c c -- b
+: gt \ c c -- T
   s:cmp 1 n:=
 ; 
  
-: inrange \ c clow chigh -- b
+: inrange \ c clow chigh -- T
   rot dup -rot swap \ clow c c chigh
   gt \ clow c b
   -rot swap

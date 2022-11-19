@@ -1,61 +1,60 @@
-: all-sides-greater-than-zero \ a -- b
-	( 0 n:> ) a:each! 
-	drop
-	' and 2 times
+: 3sort-d \ n n n -- n n n 
+	2dup n:> 
+	if swap then 
+	>r 
+	2dup n:> 
+	if swap then 
+	r> 
+	2dup n:> 
+	if swap then 
 ;
 
-: check-sides \ n n n -- a b 
-	3 a:close 
-	dup  
-	all-sides-greater-than-zero
-	!if
-		false
-	else
-		dup dup dup
-		( a:open n:+ n:> not rot ) 3 times
-		' and 2 times
-	then
+: 3dup \ a b c -- a b c a b c
+	dup>r >r
+	2dup
+	r> -rot r>
 ;
 
-: equilateral? \ n n n - b
-	check-sides 
+: is-triangle? \ n n n -- T
+	3dup
+	n:- n:abs n:> \ using rule |a-b| < c 
+;
+
+: equilateral? \ n n n -- T
+	\ check-sides
+	3sort-d
+	is-triangle? 
 	!if 
-		false nip
+		drop drop drop false
 	else
-		dup
-		a:open \ a -- n1 n2 n3
-		rot drop \ -- n1 n2
-		n:= \ -- b
-		swap
-		a:open \ a -- n1 n2 n3
-		drop \ -- n2 n3
-		n:= \ -- b
-		and		
+		dup n:+ swap n:- n:=
 	then
 ;	
 	
-: isosceles? \ n n n - b
-	check-sides 
+: isosceles? \ n n n -- T
+	\ check-sides	
+	3sort-d
+	is-triangle? 
 	!if 
-		false nip
+		drop drop drop false
 	else
-		dup dup
-		a:open rot drop n:= rot \ check a == b
-		a:open drop n:= rot \ check b == c
-		a:open nip n:= \ check a == c
-		or or
+		2dup n:= if drop drop drop true ;then
+		-rot 2dup n:= if drop drop drop true ;then
+		drop drop drop false
 	then
-;	
+;	 
+
 	
-: scalene? \ n n n - b
-	check-sides 
+: scalene? \ n n n - T
+	\ check-sides
+	3sort-d
+	is-triangle? 
 	!if 
-		false nip
+		drop drop drop false
 	else
-		dup dup
-		a:open rot drop n:= not rot \ check a != b
-		a:open drop n:= not rot \ check b != c
-		a:open nip n:= not \ check a != c
-		and and 
+		2dup n:= if drop drop drop false ;then
+		-rot 2dup n:= if drop drop drop false ;then
+		drop drop drop true
 	then
 ;	
+

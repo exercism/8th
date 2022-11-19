@@ -7,7 +7,7 @@
       "pangram.8th"
     ],
     "test": [
-      "pangram_tests.8th"
+      "pangram-tests.8th"
     ],
     "example": [
       ".meta/example.8th"

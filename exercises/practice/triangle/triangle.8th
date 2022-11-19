@@ -1,0 +1,6 @@
+: equilateral? \ n n n -- T
+;
+: scalene? \ n n n -- T
+;
+: isosceles? \ n n n -- T
+;
