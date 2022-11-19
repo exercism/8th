@@ -1,0 +1,34 @@
+: iterations \ s -- n
+  s:len 2 n:/mod nip
+;
+
+: push_r
+  r> a:push >r
+;
+
+: pop_r
+  r> a:pop swap >r
+;
+
+: swap_r_1_3
+  r> ( a:pop swap ) 4 times 
+  >r \ save array temporarily
+  2 roll swap 2 roll 2 roll
+  r> \ recover array
+  ' a:push 4 times >r
+;
+
+: transposer 
+  a:new >r
+  dup push_r rot swap s:@ push_r
+  swap dup push_r s:@ push_r
+  swap_r_1_3
+  pop_r pop_r swap s:!
+  pop_r pop_r swap s:!
+;
+
+: reverse \ s -- s
+  s:len 0 n:= if ;then
+  iterations
+  ( I dup n:1- swap n:neg transposer ) swap times r> drop
+;

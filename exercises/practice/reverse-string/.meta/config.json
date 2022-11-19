@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "axtens"
+  ],
+  "files": {
+    "solution": [
+      "reverse-string.8th"
+    ],
+    "test": [
+      "reverse-string-tests.8th"
+    ],
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "blurb": "Reverse a string (the hard way).",
+  "source": "Medium-strength challenge to reverse an input string",
+  "source_url": "https://medium.freecodecamp.org/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb"
+}
