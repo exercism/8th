@@ -1,22 +1,5 @@
-begin_test
-    two-fer 
-test_eqs 
-    "One for you, one for me."
-end_test
-
-
-begin_test
-    "Jedoon" two-fer 
-test_eqs 
-    "One for Jedoon, one for me."
-end_test
-
-
-begin_test
-    "Hazelelponi" two-fer 
-test_eqs 
-    "One for Hazelelponi, one for me."
-end_test
-
-
+"Unnamed person test with empty string" ( "" two-fer ) "One for you, one for me." test_eqs
+"Unnamed person test with null" ( null two-fer ) "One for you, one for me." test_eqs
+"One for the judge" ( "Jedoon" two-fer ) "One for Jedoon, one for me." test_eqs
+"One for the Hebrew shade-facing one" ( "הַצְּלֶלְפּוֹנִי" two-fer ) "One for הַצְּלֶלְפּוֹנִי, one for me." test_eqs
 bye

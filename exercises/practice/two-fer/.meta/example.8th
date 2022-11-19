@@ -1,8 +1,5 @@
-: two-fer \ * -- s
-  depth 1 n:= 
-  if
-    "One for " swap s:+ ", one for me." s:+ 
-  else
-    "One for you, one for me."
-  then
+: two-fer \ s|null -- s
+  null?      if drop "you" then
+  dup "" s:= if drop "you" then 
+  "One for %s, one for me." s:strfmt
 ;
