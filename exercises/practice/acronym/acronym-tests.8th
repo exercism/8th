@@ -9,5 +9,3 @@
 \ "it produces acronyms from phrases with underscore emphasis" "TRNT" ( "The Road _Not_ Taken" acronym ) test_eqs
 
 bye
-
-
