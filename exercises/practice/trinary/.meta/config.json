@@ -1,0 +1,20 @@
+{
+    "authors": [
+      "karl"
+    ],
+    "files": {
+      "solution": [
+        "trinary.8th"
+      ],
+      "test": [
+        "trinary-tests.8th"
+      ],
+      "example": [
+        ".meta/example.8th"
+      ]
+    },
+    "blurb": "Convert a trinary number, represented as a string (e.g. '102012'), to its decimal equivalent using first principles.",
+    "source": "All of Computer Science",
+    "source_url": "http://www.wolframalpha.com/input/?i=binary&a=*C.binary-_*MathWorld-"
+  }
+  

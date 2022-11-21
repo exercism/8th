@@ -1,0 +1,9 @@
+: trinary> \ s -- n   
+0 >r dup
+false >r
+( >n '0 '2 n:between !if rdrop true >r G:break ;then ) s:each!   
+r> !if    
+s:rev (  G:>n '0 n:- swap 3 swap n:^ n:* r> n:+ >r ) s:each    
+else drop    
+then   
+r> ;
