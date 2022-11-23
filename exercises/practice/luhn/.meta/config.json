@@ -9,7 +9,7 @@
       "luhn.8th"
     ],
     "test": [
-      "luhn.tests.8th"
+      "luhn-tests.8th"
     ],
     "example": [
       ".meta/example.8th"
