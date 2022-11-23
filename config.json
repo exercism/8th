@@ -16,18 +16,10 @@
         "highlightjs_language": "TODO: specify highlightjs language"
     },
     "files": {
-        "solution": [
-            "%{pascal_slug}.8th"
-        ],
-        "test": [
-            "%{pascal_slug}-tests.8th"
-        ],
-        "example": [
-            ".meta/example.8th"
-        ],
-        "exemplar": [
-            ".meta/exemplar.8th"
-        ]
+        "solution": ["%{pascal_slug}.8th"],
+        "test": ["%{pascal_slug}-tests.8th"],
+        "example": [".meta/example.8th"],
+        "exemplar": [".meta/exemplar.8th"]
     },
     "exercises": {
         "concept": [],
@@ -46,6 +38,27 @@
                 "difficulty": 1,
                 "practices": []
             }, {
+                "slug": "leap",
+                "name": "Leap",
+                "uuid": "b46ecfb1-59ee-4776-a8fa-f8bd23cf15db",
+                "prerequisites": [],
+                "difficulty": 1,
+                "practices": []
+            }, {
+                "slug": "triangle",
+                "name": "Triangle",
+                "uuid": "12389895-0775-41f2-90bb-db65bc2ecfaf",
+                "prerequisites": [],
+                "difficulty": 2,
+                "practices": []
+            }, {
+                "slug": "trinary",
+                "name": "Trinary (Base-3) Numbers",
+                "uuid": "6cf0dbc3-e90e-4a7f-a95b-507ef389d316",
+                "prerequisites": [],
+                "difficulty": 2,
+                "practices": []
+            }, {
                 "slug": "bob",
                 "name": "Bob",
                 "uuid": "b34b3dd7-9df2-4b3d-970d-f4b3a3a15358",
@@ -60,39 +73,11 @@
                 "difficulty": 3,
                 "practices": []
             }, {
-                "slug": "leap",
-                "name": "Leap",
-                "uuid": "b46ecfb1-59ee-4776-a8fa-f8bd23cf15db",
-                "prerequisites": [],
-                "difficulty": 1,
-                "practices": []
-            }, {
-                "slug": "pangram",
-                "name": "Pangram",
-                "uuid": "077b874d-4094-46c2-9433-af64dd19ddfa",
-                "prerequisites": [],
-                "difficulty": 5,
-                "practices": []
-            }, {
                 "slug": "raindrops",
                 "name": "Raindrops",
                 "uuid": "6247ab47-f00e-4ab0-8bb9-1ca4110eaf0b",
                 "prerequisites": [],
                 "difficulty": 3,
-                "practices": []
-            }, {
-                "slug": "triangle",
-                "name": "Triangle",
-                "uuid": "12389895-0775-41f2-90bb-db65bc2ecfaf",
-                "prerequisites": [],
-                "difficulty": 2,
-                "practices": []
-            }, {
-                "slug": "collatz-conjecture",
-                "name": "Collatz Conjecture",
-                "uuid": "7968006c-efdc-410c-a2fa-305a37528705",
-                "prerequisites": [],
-                "difficulty": 4,
                 "practices": []
             }, {
                 "slug": "armstrong-numbers",
@@ -116,18 +101,25 @@
                 "difficulty": 3,
                 "practices": []
             }, {
+                "slug": "collatz-conjecture",
+                "name": "Collatz Conjecture",
+                "uuid": "7968006c-efdc-410c-a2fa-305a37528705",
+                "prerequisites": [],
+                "difficulty": 4,
+                "practices": []
+            }, {
+                "slug": "pangram",
+                "name": "Pangram",
+                "uuid": "077b874d-4094-46c2-9433-af64dd19ddfa",
+                "prerequisites": [],
+                "difficulty": 5,
+                "practices": []
+            }, {
                 "slug": "yacht",
                 "name": "Yacht",
                 "uuid": "b1d34538-6c5c-476b-a79f-4cd55ac96e0b",
                 "prerequisites": [],
                 "difficulty": 6,
-                "practices": []
-            }, {
-                "slug": "reverse-string",
-                "name": "Reverse string",
-                "uuid": "a76d512f-2b44-46eb-87e5-b6f9b90a5309",
-                "prerequisites": [],
-                "difficulty": 8,
                 "practices": []
             }, {
                 "slug": "roman-numerals",
@@ -137,14 +129,13 @@
                 "difficulty": 7,
                 "practices": []
             }, {
-                "slug": "trinary",
-                "name": "Trinary (Base-3) Numbers",
-                "uuid": "6cf0dbc3-e90e-4a7f-a95b-507ef389d316",
+                "slug": "reverse-string",
+                "name": "Reverse string",
+                "uuid": "a76d512f-2b44-46eb-87e5-b6f9b90a5309",
                 "prerequisites": [],
-                "difficulty": 2,
+                "difficulty": 8,
                 "practices": []
             }
-
         ]
     },
     "concepts": [],
@@ -174,26 +165,5 @@
             "content": "Documentation is extensive, making it easy to get started with 8th."
         }
     ],
-    "tags": [
-        "paradigm/functional",
-        "paradigm/imperative",
-        "paradigm/procedural",
-        "typing/static",
-        "typing/strong",
-        "typing/dynamic",
-        "execution_mode/compiled",
-        "execution_mode/interpreted",
-        "platform/windows",
-        "platform/mac",
-        "platform/linux",
-        "platform/ios",
-        "platform/android",
-        "used_for/backends",
-        "used_for/cross_platform_development",
-        "used_for/frontends",
-        "used_for/games",
-        "used_for/guis",
-        "used_for/mobile",
-        "used_for/web_development"
-    ]
+    "tags": ["paradigm/functional", "paradigm/imperative", "paradigm/procedural", "typing/static", "typing/strong", "typing/dynamic", "execution_mode/compiled", "execution_mode/interpreted", "platform/windows", "platform/mac", "platform/linux", "platform/ios", "platform/android", "used_for/backends", "used_for/cross_platform_development", "used_for/frontends", "used_for/games", "used_for/guis", "used_for/mobile", "used_for/web_development"]
 }
