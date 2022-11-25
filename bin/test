@@ -30,6 +30,7 @@ done
 for practice_exercise_dir in ./exercises/practice/*/; do
     if [ -d $practice_exercise_dir ]; then
         echo "Checking $(basename "${practice_exercise_dir}") exercise..."
+	8th -f ${practice_exercise_dir}.meta/example.8th -f ${practice_exercise_dir}test-words.8th -f ${practice_exercise_dir}$(basename "${practice_exercise_dir}")-tests.8th 
         # TODO: run command to verify that the example solution passes the tests
     fi
 done

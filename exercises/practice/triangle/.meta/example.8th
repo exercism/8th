@@ -45,7 +45,7 @@
 ;	 
 
 	
-: scalene? \ n n n - T
+: scalene? \ n n n -- T
 	\ check-sides
 	3sort-d
 	is-triangle? 
