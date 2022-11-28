@@ -113,6 +113,14 @@
                 "practices": []
             },
             {
+                "slug": "word-count",
+                "name": "Word Count",
+                "uuid": "91ebb13f-394a-483a-9086-dbeb5e33c04a",
+                "prerequisites": [],
+                "difficulty": 3,
+                "practices": []
+            },
+            {
                 "slug": "acronym",
                 "name": "Acronym",
                 "uuid": "2b310b6a-cccc-4890-ae83-e0729cac412a",

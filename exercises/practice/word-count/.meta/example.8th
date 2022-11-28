@@ -1,0 +1,19 @@
+: incr dup -rot m:@ n:1+ rot swap m:! ;
+
+: set-one-or-increment
+    dup 
+    m:exists? if 
+        incr 
+    else 
+        1 m:!
+    then
+;
+
+: word-count \ s -- m
+  s:lc
+  /[^\w']+/ s:/
+  ( /^'/ "" s:replace /'$/ "" s:replace  ) a:map
+  ( s:len nip 0 n:= not ) a:filter
+    
+  m:new swap ' set-one-or-increment a:each! drop
+;
