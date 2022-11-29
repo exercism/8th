@@ -175,6 +175,14 @@
                 "prerequisites": [],
                 "difficulty": 8,
                 "practices": []
+            },
+            {
+                "slug": "affine-cipher",
+                "name": "Affine Cipher",
+                "uuid": "2db07f32-d12c-4cca-9ddc-dac986ab0749",
+                "prerequisites": [],
+                "difficulty": 8,
+                "practices": []
             }
         ]
     },
