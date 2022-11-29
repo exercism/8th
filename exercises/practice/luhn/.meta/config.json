@@ -1,0 +1,20 @@
+{
+  "blurb": "Given a number determine whether or not it is valid per the Luhn formula.",
+  "authors": [
+    "rosettacode"
+  ],
+  "contributors": [],
+  "files": {
+    "solution": [
+      "luhn.8th"
+    ],
+    "test": [
+      "luhn-tests.8th"
+    ],
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "source": "The Luhn Algorithm on Wikipedia",
+  "source_url": "http://en.wikipedia.org/wiki/Luhn_algorithm"
+}

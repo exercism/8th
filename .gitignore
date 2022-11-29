@@ -5,3 +5,4 @@ bin/configlet.exe
 bin/**
 *.bak
 chg_test.rr
+.idea/**

@@ -1,0 +1,7 @@
+: >code \ s n n -- s
+
+;
+
+: code> \ s n n -- s
+
+;
