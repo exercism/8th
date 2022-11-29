@@ -46,3 +46,5 @@
 
 "decode with a not coprime to m"
 ( "Test" 13 5 code> )  test_null
+
+bye
