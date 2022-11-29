@@ -49,6 +49,14 @@
                 "practices": []
             },
             {
+                "slug": "gigasecond",
+                "name": "Gigasecond",
+                "uuid": "a9404ad2-c08a-4ba7-8101-303964653daa",
+                "prerequisites": [],
+                "difficulty": 1,
+                "practices": []
+            },
+            {
                 "slug": "leap",
                 "name": "Leap",
                 "uuid": "b46ecfb1-59ee-4776-a8fa-f8bd23cf15db",
