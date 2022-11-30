@@ -2,7 +2,7 @@
 
 ## Installing 8th
 
- 8th is distributed in an all-inclusive ZIP file, which contains versions of 8th for all the platforms supported by the version you downloaded. Your versions of 8th are licensed specifically to you and may not be shared.
+8th is distributed in an all-inclusive ZIP file, which contains versions of 8th for all the platforms supported by the version you downloaded. Your versions of 8th are licensed specifically to you and may not be shared.
 
 In order to use 8th, you will need to unpack the zip file into any folder which is accessible to you.
 
