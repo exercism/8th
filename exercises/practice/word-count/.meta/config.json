@@ -1,19 +1,21 @@
 {
-    "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
-    "authors": [
-        "axtens"
+  "authors": [
+    "axtens"
+  ],
+  "contributors": [
+    "ronaaron"
+  ],
+  "files": {
+    "solution": [
+      "word-count.8th"
     ],
-    "contributors": ["ronaaron"],
-    "files": {
-        "solution": [
-            "word-count.8th"
-        ],
-        "test": [
-            "word-count-tests.8th"
-        ],
-        "example": [
-            ".meta/example.8th"
-        ]
-    },
-    "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
+    "test": [
+      "word-count-tests.8th"
+    ],
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "blurb": "Given a phrase, count the occurrences of each word in that phrase.",
+  "source": "This is a classic toy problem, but we were reminded of it by seeing it in the Go Tour."
 }

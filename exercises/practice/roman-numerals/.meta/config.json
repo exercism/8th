@@ -1,20 +1,22 @@
 {
-    "blurb": "Write a function to convert from normal numbers to Roman Numerals.",
-    "authors": [
-        "jalih"
+  "authors": [
+    "jalih"
+  ],
+  "contributors": [
+    "axtens"
+  ],
+  "files": {
+    "solution": [
+      "roman-numerals.8th"
     ],
-    "contributors": ["axtens"],
-    "files": {
-        "solution": [
-            "roman-numerals.8th"
-        ],
-        "test": [
-            "roman-numerals-tests.8th"
-        ],
-        "example": [
-            ".meta/example.8th"
-        ]
-    },
-    "source": "The Roman Numeral Kata",
-    "source_url": "http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals"
+    "test": [
+      "roman-numerals-tests.8th"
+    ],
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "blurb": "Write a function to convert from normal numbers to Roman Numerals.",
+  "source": "The Roman Numeral Kata",
+  "source_url": "http://codingdojo.org/cgi-bin/index.pl?KataRomanNumerals"
 }
