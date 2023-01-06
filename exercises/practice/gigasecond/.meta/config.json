@@ -1,22 +1,22 @@
 {
-    "blurb": "Given a moment, determine the moment that would be after a gigasecond has passed.",
-    "authors": [
-        "jalih"
+  "authors": [
+    "jalih"
+  ],
+  "contributors": [
+    "axtens"
+  ],
+  "files": {
+    "solution": [
+      "gigasecond.8th"
     ],
-    "contributors": [
-        "axtens"
+    "test": [
+      "gigasecond-tests.8th"
     ],
-    "files": {
-        "solution": [
-            "gigasecond.8th"
-        ],
-        "test": [
-            "gigasecond-tests.8th"
-        ],
-        "example": [
-            ".meta/example.8th"
-        ]
-    },
-    "source": "Chapter 9 in Chris Pine's online Learn to Program tutorial.",
-    "source_url": "http://pine.fm/LearnToProgram/?Chapter=09"
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "blurb": "Given a moment, determine the moment that would be after a gigasecond has passed.",
+  "source": "Chapter 9 in Chris Pine's online Learn to Program tutorial.",
+  "source_url": "http://pine.fm/LearnToProgram/?Chapter=09"
 }

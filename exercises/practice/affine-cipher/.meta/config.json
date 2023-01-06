@@ -1,22 +1,22 @@
 {
-    "blurb": "Create an implementation of the Affine cipher, an ancient encryption algorithm from the Middle East.",
-    "authors": [
-        "Caraciola"
+  "authors": [
+    "Caraciola"
+  ],
+  "contributors": [
+    "axtens"
+  ],
+  "files": {
+    "solution": [
+      "affine-cipher.8th"
     ],
-    "contributors": [
-        "axtens"
+    "test": [
+      "affine-cipher-tests.8th"
     ],
-    "files": {
-        "solution": [
-            "affine-cipher.8th"
-        ],
-        "test": [
-            "affine-cipher-tests.8th"
-        ],
-        "example": [
-            ".meta/example.8th"
-        ]
-    },
-    "source": "Wikipedia",
-    "source_url": "http://en.wikipedia.org/wiki/Affine_cipher"
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "blurb": "Create an implementation of the Affine cipher, an ancient encryption algorithm from the Middle East.",
+  "source": "Wikipedia",
+  "source_url": "http://en.wikipedia.org/wiki/Affine_cipher"
 }

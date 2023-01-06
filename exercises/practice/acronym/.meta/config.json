@@ -1,19 +1,19 @@
 {
-    "authors": [
-        "jalih"
+  "authors": [
+    "jalih"
+  ],
+  "files": {
+    "solution": [
+      "acronym.8th"
     ],
-    "files": {
-        "solution": [
-            "acronym.8th"
-        ],
-        "test": [
-            "acronym-tests.8th"
-        ],
-        "example": [
-            ".meta/example.8th"
-        ]
-    },
-    "blurb": "Convert a long phrase to its acronym.",
-    "source": "Julien Vanier",
-    "source_url": "https://github.com/monkbroc"
+    "test": [
+      "acronym-tests.8th"
+    ],
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "blurb": "Convert a long phrase to its acronym.",
+  "source": "Julien Vanier",
+  "source_url": "https://github.com/monkbroc"
 }
