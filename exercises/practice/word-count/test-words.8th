@@ -1,27 +1,5 @@
 needs console/loaded
 
-: m:= \ m1 m2 w -- m1 m2 T
-  >r
-  \ are the maps the same length?
-  m:len >r swap m:len >r swap
-  r> r> n:= !if false rdrop ;then \ no, so they're not equal
-
-  \ iterate the keys of m2 and see if each corresponding value of m1 is the same
-  m:keys                  \ m1 m2 [m2keys]
-  >r swap r>              \ m2 m1 [m2keys]
-  (
-    \ m2 m1 m2key T
-    >r rswap
-    tuck m:@              \ m2 m2key m1 m1v
-    2swap m:@            \ m1 m1v m2 m2v
-    rot r@ w:exec        \ m1 m2 T
-    \ rearrange the stack and update the reduce value
-    >r swap r> rswap r> and
-    \ don't keep going if we already know the answer is 'false'
-    dup !if break then
-  ) true a:reduce        \ m2 m1 T
-  rot swap rdrop ;
-
 : isword?  \ x -- x f
    dup  >kind  ns:w   n:= 
 ;
