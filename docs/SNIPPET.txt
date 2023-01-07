@@ -1,3 +1,6 @@
-: hello-world \ -- s
-    "Hello, World!"
+\ Displays "Hello, World!" on the console followed by a new-line.
+
+: hello-world \ -- 
+    "Hello, World!" . cr
 ;
+
