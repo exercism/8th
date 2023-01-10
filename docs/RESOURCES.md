@@ -1,13 +1,10 @@
-# Resources
+# Useful Resources
 
-<!-- TODO: write document
+- [Cookbook](https://8th-dev.com/forum/index.php/board,22.0.html) on the forum contains suggestions for "recipes" on how to accomplish tasks.
 
-  This document should link to useful resources.
+- [Sample Code](https://8th-dev.com/forum/index.php/board,7.0.html) on the forum contains samples given by forum members.
 
-  Feel free to link to any good resources you know, whether they
-  be websites, videos, mailing lists, etc.
+- [Comparisons](https://8th-dev.com/compare.html) with other programming languages: C/C++, Java and Python.
 
-  The contents of this document are displayed on the track's documentation
-  page at `https://exercism.org/docs/tracks/<track>/resources`.
+- [RosettaCode](https://rosettacode.org/wiki/Category:8th)'s 8th repository containing many 8th examples, ancient and modern. Be warned: some of the solutions offered on RosettaCode no longer work on recent versions of 8th.
 
-  See https://exercism.org/docs/building/tracks/docs for more information. -->
