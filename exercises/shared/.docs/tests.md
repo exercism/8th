@@ -2,18 +2,26 @@
 
 If you have the 8th binary on your path, issue
 ```cmd
-tester.bat
+8th test.8th
 ```
 on Windows, or on Linux
 ```bash
-bash tester.sh
+8th test.8th
 ```
 
-If the 8th binary is not on the PATH, in Windows enter
+If the 8th binary is not on the PATH, in Windows enter either
+```cmd
+\path\to\8th test.8th
+```
+or
 ```cmd
 \path\to\8th -f test-words.8th -f <task-name>.8th -f <task-name>-tests.8th
 ```
-else, on Linux,
+Linux or OS/X, either
+```bash
+/path/to/8th test.8th
+```
+or 
 ```bash
 /path/to/8th -f test-words.8th -f <task-name>.8th -f <task-name>-tests.8th
 ```
