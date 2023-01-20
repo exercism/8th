@@ -8,8 +8,6 @@
 
 set -eo pipefail
 
-docker pull exercism/8th-test-runner
-
 exit_code=0
 
 function run_test_runner() {

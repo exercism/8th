@@ -15,15 +15,17 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@8c0edbc76e98fa90f69d9a2c020dcb50019dc325
+      - name: Checkout test runner
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
         with:
-          install: true
+          repository: exercism/8th-test-runner
+          token: ${{ secrets.GH_PAT }}
+          path: 8th-test-runner
 
       - name: Build and push
         uses: docker/build-push-action@c56af957549030174b10d6867f20e78cfd7debc5
         with:
-          context: .
+          context: 8th-test-runner
           push: false
           load: true
           tags: exercism/8th-test-runner:latest
