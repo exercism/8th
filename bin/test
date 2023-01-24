@@ -26,11 +26,23 @@ for concept_exercise_dir in ./exercises/concept/*/; do
     fi
 done
 
+EXIT_CODE=0
+
 # Verify the Practice Exercises
 for practice_exercise_dir in ./exercises/practice/*/; do
     if [ -d $practice_exercise_dir ]; then
         echo "Checking $(basename "${practice_exercise_dir}") exercise..."
-	    8th -f ${practice_exercise_dir}.meta/example.8th -f ${practice_exercise_dir}test-words.8th -f ${practice_exercise_dir}$(basename "${practice_exercise_dir}")-tests.8th 
+	8th -f ${practice_exercise_dir}.meta/example.8th -f ${practice_exercise_dir}test-words.8th -f ${practice_exercise_dir}$(basename "${practice_exercise_dir}")-tests.8th > /tmp/test.out 
         # TODO: run command to verify that the example solution passes the tests
+        if [ -f /tmp/test.out ] && [ ! -s /tmp/test.out ]; then
+            EXIT_CODE=1
+            break
+        fi
+        grep -E 'Exception|\.\.\. FAIL' /tmp/test.out
+        if [ $? -eq 0 ]; then 
+            EXIT_CODE=1
+            break
+        fi
     fi
 done
+exit ${EXIT_CODE}
