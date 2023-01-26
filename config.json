@@ -1,7 +1,7 @@
 {
     "language": "8th",
     "slug": "8th",
-    "active": false,
+    "active": true,
     "status": {
         "concept_exercises": false,
         "test_runner": true,
