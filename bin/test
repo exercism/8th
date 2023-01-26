@@ -55,8 +55,6 @@ for concept_exercise_dir in ./exercises/concept/*/; do
     fi
 done
 
-EXIT_CODE=0
-
 # Verify the Practice Exercises
 for practice_exercise_dir in ./exercises/practice/*/; do
     if [ -d $practice_exercise_dir ]; then
