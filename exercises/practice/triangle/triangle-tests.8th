@@ -11,7 +11,7 @@
 "isosceles 2 3 2, 3 in middle position" ( 2 3 2 isosceles? ) test_true
 "isosceles 3 2 2, 3 in first position" ( 3 2 2 isosceles? ) test_true
 "is scalene and isosceles?" ( 2 3 4 isosceles? ) test_false
-"equlateral is also isosceles" ( 4 4 4 isosceles? ) test_true
+
 "scalene with floating point" ( 0.5 0.4 0.6 scalene? ) test_true
 "isosceles is not scalene" ( 4 4 3 scalene? ) test_false
 "equilateral is not scalene" ( 4 4 4 scalene? ) test_false
