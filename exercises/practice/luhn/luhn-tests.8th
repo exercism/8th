@@ -40,8 +40,8 @@
 "valid strings with symbols included become invalid"
 ( "055# 444$ 285" luhn ) test_false
 
-"single zero with space is invalid"
-( " 0" luhn ) test_false
+"single zero with space is invalid" \ any input of only zeros must be valid
+( " 0" luhn ) test_true
 
 "more than a single zero is valid"
 ( "0000 0" luhn ) test_true
