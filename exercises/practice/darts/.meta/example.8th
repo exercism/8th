@@ -1,0 +1,14 @@
+\ Courtesy @ron at https://8th-dev.com/forum/index.php/topic,2713.0.html
+
+with: n
+: distance \ x y -- n
+  sqr swap sqr + sqrt ;
+
+: score \ n -- n
+  dup 10 > if drop 0 ;then
+  dup 5  > if drop 1 ;then
+  dup 1  > if drop 5 ;then
+  drop 10 ;
+
+: darts-score \ x y -- n
+  distance score ;
