@@ -172,6 +172,14 @@
                 "practices": []
             },
             {
+                "slug": "atbash-cipher",
+                "name": "Atbash Cipher",
+                "uuid": "104bb694-ec6b-4213-bc9d-ddeebb0bcc2b",
+                "prerequisites": [],
+                "difficulty": 5,
+                "practices": []
+            },
+            {
                 "slug": "yacht",
                 "name": "Yacht",
                 "uuid": "b1d34538-6c5c-476b-a79f-4cd55ac96e0b",

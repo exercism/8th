@@ -1,0 +1,24 @@
+"abcdefghijklmnopqrstuvwxyz" s:rev constant cipher
+
+: (atbash)
+  /[^[:alnum:]]/ "" s:replace!
+  (
+    dup '0 '9 n:between
+    !if
+      'a n:-
+      cipher swap s:@ nip
+    then
+  ) s:map ;
+
+
+\ Encode a string to atbash:
+: >atbash \ s -- s
+  s:lc
+  (atbash)
+  [5] s:/
+  " " a:join ;
+
+
+\ Decode a string from atbash:
+: atbash> \ s -- s
+  (atbash) ;
