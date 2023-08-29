@@ -164,6 +164,14 @@
                 "practices": []
             },
             {
+                "slug": "series",
+                "name": "Series",
+                "uuid": "12db01dc-6f58-49c1-8149-59700e48c7df",
+                "prerequisites": [],
+                "difficulty": 4,
+                "practices": []
+            },
+            {
                 "slug": "pangram",
                 "name": "Pangram",
                 "uuid": "077b874d-4094-46c2-9433-af64dd19ddfa",
