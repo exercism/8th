@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
         with:
           repository: exercism/8th-test-runner
-          token: ${{ secrets.GH_PAT }}
+          token: ${{ secrets.TEST_RUNNER_PAT }}
           path: 8th-test-runner
           ref: main
 
