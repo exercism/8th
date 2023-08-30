@@ -1,0 +1,7 @@
+\ encode TO a cipher
+: >atbash \ s -- s
+;
+
+\ decode FROM a cipher
+: atbash> \ s -- s
+;
