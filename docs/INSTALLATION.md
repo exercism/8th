@@ -4,6 +4,16 @@
 
 8th is distributed in an all-inclusive ZIP file, which contains versions of 8th for all the platforms supported by the version you downloaded. Your versions of 8th are licensed specifically to you and may not be shared.
 
+### Get the zip file
+
+Starting from the [Get 8th](https://8th-dev.com/get.html) page, 
+
+* fill in the form with your name and email, and select the Free version. You must accept the 8th license.
+* 8th-dev will send you an email to verify you. Click the link in the registration email.
+* 8th-dev will compose a unique zip file for you and send you an email about it. Look for the "download here" link in that email.
+
+### Installing
+
 In order to use 8th, you will need to unpack the zip file into any folder which is accessible to you.
 
 There are a number of folders included in the zip:
@@ -30,6 +40,8 @@ Adding the 8th binary’s folder to your system’s PATH environment variable wi
 8th itself is a command-line program — it is not intended to be started by clicking on a desktop icon. You can create regular GUI programs with it which can be started that way, but the 8th compiler itself is a CLI (command-line interface) program.
 
 If you are running on Windows, and using an MSys or Cygwin shell, then you may also need to use the freely available winpty program in order for your console mode programs to work properly. Recent versions of Windows 10 don’t seem to require that.
+
+**If you are running on MacOS, [read this 8th forum thread](https://8th-dev.com/forum/index.php/topic,2715.0.html)**.
 
 The 8th command-line looks like this:
 
