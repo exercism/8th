@@ -13,3 +13,5 @@
 "decode all the letters" ( "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt" atbash> ) "thequickbrownfoxjumpsoverthelazydog" test_eqs
 "decode with too many spaces" ( "vc vix    r hn" atbash> ) "exercism" test_eqs
 "decode with no spaces" ( "zmlyhgzxovrhlugvmzhgvkkrmthglmv" atbash> ) "anobstacleisoftenasteppingstone" test_eqs
+
+bye
