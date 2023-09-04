@@ -8,7 +8,7 @@ Simply type `8th test.8th`. It is assumed that the 8th binary is declared in the
 
 Start 8th loading test-words.8th: `8th -f test-words.8th`.
 This will start a CLI session where, once you’ve written some code in your solution file, you can load it with `"luhn.8th" f:include`
-and you can run tests interactively by copying and pasting them in from luhn-tests.8th or by entering your own. 
+and you can run the tests with `"luhn-tests.8th" f:include` or you can copy and paste a single test from that file or enter your own. 
  
 ### Editing the luhn-tests.8th file
  
