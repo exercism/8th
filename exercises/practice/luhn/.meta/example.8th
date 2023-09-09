@@ -3,18 +3,17 @@
   [0,2,4,6,8,1,3,5,7,9]
   swap caseof ;
 
-: length-gt-1 \ s -- T
+: length-gt-1 \ s -- s T
   s:len 1 n:> 
 ; 
 
-: contains-only-numeric \ s -- T
-  dup /[^0-9]/ r:match 0 n:= 
+: contains-only-numeric \ s -- s T
+  dup /[^0-9]/ r:match nip 0 n:= 
 ;
 
-: valid? \ s -- T
+: valid? \ s -- s T
   length-gt-1 !if  false ;then 
-  contains-only-numeric !if drop false ;then 
-  drop
+  contains-only-numeric !if false ;then 
   true
 ;
 
@@ -22,7 +21,7 @@
   " " "" s:replace!
 ; 
 
-: luhn \ s -- f
+: luhn \ s -- T
   strip-spaces
   valid? !if drop false ;then
   0 swap
