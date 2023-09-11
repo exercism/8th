@@ -1,3 +1,4 @@
+14 !test-count
 "encode yes" ( "yes" >atbash ) "bvh" test_eqs
 "encode no" ( "no" >atbash ) "ml" test_eqs
 "encode OMG" ( "OMG" >atbash ) "lnt" test_eqs

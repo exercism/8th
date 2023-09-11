@@ -78,7 +78,20 @@ var test-count
    then 
 ;
 
-( test-count-zero? 
+: test_map_neq \ m m -- 
+   -test-count
+   isword? !if swap then
+   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   ' n:= m:= !if
+    2drop
+    con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
+   else
+    2drop
+    con:red con:onBlack . space " ... FAIL" . con:white con:onBlack cr
+   then 
+;
+
+( test-count @ 0 n:= 
   !if 
   con:red con:onBlack
   "FAIL - not all tests completed" . 
