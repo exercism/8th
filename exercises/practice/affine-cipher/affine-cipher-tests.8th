@@ -1,4 +1,4 @@
-16 !test-count
+16 tests
 
 "encode yes"
 ( "yes" 5 7 >code ) "xbt" test_eqs

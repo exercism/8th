@@ -1,4 +1,4 @@
-22 !test-count
+22 tests
 
 "single digit strings can not be valid"
 ( "1" luhn ) test_false

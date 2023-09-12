@@ -1,2 +1,2 @@
-1 !test-count
+1 tests
 "hello world test" "Hello, World!" ( hello-world ) test_eqs

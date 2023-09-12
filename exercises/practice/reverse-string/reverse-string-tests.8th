@@ -1,4 +1,4 @@
-6 !test-count
+6 tests
 "an empty string" ( "" reverse ) "" test_eqs
 "a word" ( "robot" reverse ) "tobor" test_eqs
 "a capitalized word" ( "Ramen" reverse ) "nemaR" test_eqs

@@ -1,12 +1,12 @@
 needs console/loaded
 
-var test-count
+-1 var, test-count
 
-: !test-count \ n -- 
+: tests \ n -- 
     test-count ! 
 ;
 
-: -test-count \ --
+: decr-test-count \ --
     test-count @ n:1- test-count !
 ;
 
@@ -15,9 +15,9 @@ var test-count
 ;
 
 : test_eq \ s x w -- | s w x --
-   -test-count
+   decr-test-count
    isword? !if swap then
-   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   w:exec
    n:= if
     con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
    else
@@ -26,9 +26,9 @@ var test-count
 ;
 
 : test_eqs \ s x w -- | s w x -- 
-   -test-count
+   decr-test-count
    isword? !if swap then
-   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   w:exec
    s:= if
     con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
    else
@@ -37,8 +37,8 @@ var test-count
 ;
 
 : test_true \ s w --
-   -test-count
-   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   decr-test-count
+   w:exec
    if
     con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
    else
@@ -47,8 +47,8 @@ var test-count
 ;
 
 : test_false \ s w --
-   -test-count
-   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   decr-test-count
+   w:exec
    !if
     con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
    else
@@ -57,8 +57,8 @@ var test-count
 ;
 
 : test_null \ s w --
-   -test-count
-   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   decr-test-count
+   w:exec
    null? if
     drop con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
    else
@@ -68,7 +68,7 @@ var test-count
 
 \ compare arrays by testing elements with string equality
 : test_eqa \ s x w -- | s w x -- 
-   -test-count
+   decr-test-count
    isword? !if swap then
    w:exec
    ' s:= a:= nip nip if
@@ -79,9 +79,9 @@ var test-count
 ;
 
 : test_map_neq \ m m -- 
-   -test-count
+   decr-test-count
    isword? !if swap then
-   a:new swap 0 swap a:! 0 a:@ nip w:exec
+   w:exec
    ' n:= m:= !if
     2drop
     con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
@@ -94,7 +94,7 @@ var test-count
 ( test-count @ 0 n:= 
   !if 
   con:red con:onBlack
-  "FAIL - not all tests completed" . 
+  "... FAIL - not all tests completed" . 
   con:white con:onBlack 
   cr 
   then ) onexit
