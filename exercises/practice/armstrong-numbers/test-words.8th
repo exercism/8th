@@ -76,7 +76,8 @@ var tests-failed
    if test-failed else test-passed then 
 ;
 
-: all-tests-run?
+\ Num passed + num failed should == num tests
+: all-tests-run? \ -- T
     tests-passed @ tests-failed @ n:+ test-count @ n:=
 ;
 
@@ -92,10 +93,9 @@ var tests-failed
 ) onexit
 
 \ Set the exit status to be the number of tests failed.
-\ If no tests failed but not all the tests were run,
-\ then use -1 as the exit status.
-: end-of-tests
+: end-of-tests \ --
     tests-failed @
-    dup 0 n:= if all-tests-run? if bye else -1 die then then
+    \ If no tests failed but not all the tests were run, use -1 as the exit status.
+    dup 0 n:= if all-tests-run? !if drop -1 then then
     die
 ;
