@@ -78,6 +78,20 @@ needs console/loaded
    then 
 ;
 
+
+: test_map_eq \ m m -- 
+   decr-test-count
+   isword? !if swap then
+   w:exec
+   ' n:= m:= if
+    2drop
+    con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
+   else
+    2drop
+    con:red con:onBlack . space " ... FAIL" . con:white con:onBlack cr
+   then 
+;
+
 : test_map_neq \ m m -- 
    decr-test-count
    isword? !if swap then
