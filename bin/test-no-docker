@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+usage="Usage: $0 -a|exercise_slug
+
+Test an example solution.
+Use -a to test all exercises.
+
+Example: $0 luhn"
+
+die() { echo "$*" >&2; exit 1; }
+
+make_test_dir() {
+    local exercise_dir=$1
+    local slug=${exercise_dir##*/}
+    local key=$2
+    (
+        cd "$exercise_dir"
+        cp -t "$test_dir" test.8th test-words.8th "${slug}-tests.8th" 
+        while IFS= read -r solution; do
+            cp "$solution" "$test_dir/$slug.8th"
+        done < <(
+            jq -r --arg key "$key" '.files[$key][]' .meta/config.json
+        )
+    )
+}
+
+test_one() {
+    local slug=$1
+    if [[ -d "./exercises/concept/$slug" ]]; then
+        make_test_dir "./exercises/concept/$slug" exemplar
+    elif [[ -d "./exercises/practice/$slug" ]]; then
+        make_test_dir "./exercises/practice/$slug" example
+    else
+        die "no such exercise: $slug"
+    fi
+    (
+        cd "$test_dir" || die "cannot cd to $test_dir"
+        8th test.8th
+    )
+}
+
+cleanup() { rm -rf "$test_dir"; }
+
+test_dir=$(mktemp -d)
+trap cleanup EXIT
+
+all=false
+while getopts :ha opt; do
+    case $opt in
+        h) die "$usage" ;;
+        a) all=true ;;
+        ?) die "unknown option: -$OPTARG" ;;
+    esac
+done
+shift $((OPTIND-1))
+
+if $all; then
+    shopt -s nullglob
+    for dir in ./exercises/concept/* ./exercises/practice/*; do
+        slug=${dir##*/}
+        if test_one "$slug"; then
+            echo "$slug tests exited with $?"
+            echo
+        else
+            die "$slug tests exited with $?"
+        fi
+    done
+else
+    slug=$1
+    [[ -n $slug ]] || die "$usage"
+    test_one "$slug"
+fi
