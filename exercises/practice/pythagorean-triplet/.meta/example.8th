@@ -1,0 +1,154 @@
+\ Rahul, Surya Duvvuri and Saha, Snehanshu. 2015, September. "A discussion on
+\   Primitive Pythagorean Triples and Primitive Pythagorean Primes". Asia
+\   Pacific Mathematics Newsletter. Volume 5, Number 2, p. 11. 
+\   http://www.asiapacific-mathnews.com/05/0502/0009_0015.pdf
+\
+\ φ = 4r² − 1 + 2(2r − 1)(s − 1)
+\ where,
+\ r ∈ Z+
+\ s ∈ Z+− {multiples of prime factors of 2r − 1}.
+\
+\ The PPTs (primitive pythagorean triples) [a, b, c] are:
+\ [
+\ φ,
+\ (φ² − (2r − 1)⁴) / (2(2r − 1)²),
+\ (φ² + (2r − 1)⁴) / (2(2r − 1)²)
+\ ]
+\ .
+
+: advance-r-s \ n-r n-s -- n-r' n-s'
+    n:1- swap n:1+ swap
+    \ If s is 0, s becomes r and r starts back at 1
+    dup 0 = if drop 1 swap then
+;
+
+\ Calculate φ from r s; NOTE this consumes s, and replaces it with φ!
+: calculate-phi SED: n-r n-s -- n-r n-φ
+  1 - over 2 * 1 - 2 * * \ 2(2r − 1)(s − 1)
+  over n:sqr 4 * 1 -     \ 4r² - 1
+  n:+
+;
+
+\ Using φ and r, the pythagorean triple is [ φ, (r-s)/t, (r+s)/t ]
+\ where r = φ², s = 2(2r - 1)², and t = (2r - 1)⁴.
+\ Returns -- (2r - 1)⁴   φ²   2(2r - 1)²
+: calculate-component-parts SED: n n -- n n n
+  2 * 1 - n:sqr \  (2r - 1)²
+  dup n:sqr     \  (2r - 1)⁴ is in our numerator
+  swap 2 *      \ 2(2r - 1)² is our denominator
+  3rev
+  n:sqr swap
+;
+
+\ Takes positive integers r and s, returns PPT [a, b, c]
+: triplet-from-r-s SED: n n -- a
+  "over 0 >" assert \ r > 0
+  "dup  0 >" assert \ s > 0
+
+  calculate-phi
+  dup \ 1st leg is just φ
+
+  rot
+  calculate-component-parts
+
+  \ 2nd leg
+  3dup
+  n:- swap n:/
+  -3 roll
+
+  \ hypotenuse
+  n:+ swap n:/
+
+  3 a:close
+;
+
+\ r s next-primitive-triplet returns r' s' [a, b, c]
+\ Where r ∈ Z+
+\       s ∈ Z+ where gcd((2r - 1), s) = 1
+: next-primitive-triplet SED: n-r n-s -- n-r' n-s' a-PPT
+  "over 0 >" assert \ r > 0
+  "dup  0 >" assert \ s > 0
+
+  \ First, set up r' and s' for the next call
+  2dup
+  advance-r-s
+  repeat
+    \ Is s a multiple of one of the prime factors of 2r - 1?
+    over 2 * 1 - over n:gcd 1 =
+    if break
+    else
+      advance-r-s \ Skip this (r,s) pair, it's not primitive
+    then
+  again
+
+  2swap \ Stack: r' s' r s
+  triplet-from-r-s
+;
+
+private
+var hypotenuse-limit
+var visitor
+public
+
+\ Visit all Pythagorean triplets with hypotenuse <= n, calling w for each.
+\ w has the SED a-PT --; that is, it consumes the pythagorean triplet array.
+: all-triples-up-to SED: n w --
+  #p:visitor !
+  #p:hypotenuse-limit !
+
+  1 1 \ Initial values for r and s
+  repeat
+    next-primitive-triplet
+
+    \ Push primitive triplet (PPT) and its multiples onto visitor
+    1
+    repeat
+      \ Stack: r' s' PPT multiplier
+      2dup ' n:* curry a:map
+      -1 a:@ #p:hypotenuse-limit @ n:>
+      if
+        drop break
+      else
+        \ Stack: r' s' PPT multiplier PT
+        #p:visitor @ w:exec
+        1 +
+      then
+    again
+
+    \ If over the limit when multiplier is 1, we're done
+    1 = if break then
+    drop
+  again
+
+  2drop \ r' s'
+;
+
+\ The problem specifies that a < b < c; our method of producing triples is
+\ ordered by c, but a may be greater than b. So just swap a and b if needed.
+: ensure-a<b SED: a -- a
+  a:open -rot
+  2dup n:cmp 0 <
+  !if swap then
+  rot 3 a:close
+;
+
+\ Pushes pythagorean triplet to the array at the top of the r-stack
+\ if its parts sum to n.
+: take-if-sum-equals \ n a --
+  swap
+  dup ' n:+ 0 a:reduce
+  rot n:=
+  if ensure-a<b r@ swap a:push drop
+  else drop
+  then
+;
+
+\ Given a positive integer N, returns an array of Pythagorean triplets
+\ for which a + b + c = N. For example, with N = 1_000, the result contains
+\ exactly one triplet: [ [ 200, 375, 425 ] ].
+:  triplets-with-sum SED: n -- a
+  "dup 0 >" assert
+  a:new >r
+  dup ' take-if-sum-equals curry all-triples-up-to
+  r>
+;
