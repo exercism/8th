@@ -62,14 +62,14 @@ var tests-failed
 ;
 
 
-: test_map_eq \ m m -- 
+: test_map_eq \ m w -- | w m -- 
    isword? !if swap then
    w:exec
    ' n:= m:= 2nip
    if test-passed else test-failed then 
 ;
 
-: test_map_neq \ m m -- 
+: test_map_neq \ m w -- | w m -- 
    isword? !if swap then
    w:exec
    ' n:= m:= 2nip
@@ -92,10 +92,16 @@ var tests-failed
   tests-failed @ . space "failed" . cr
 ) onexit
 
-\ Set the exit status to be the number of tests failed.
+\ Set the exit status:
+\   0 = all OK
+\   1 = not all tests were run (some error occurred)
+\   2 = some tests failed
 : end-of-tests \ --
-    tests-failed @
-    \ If no tests failed but not all the tests were run, use -1 as the exit status.
-    dup 0 n:= if all-tests-run? !if drop -1 then then
+    all-tests-run?
+    if
+      tests-failed @ 0 n:= if 0 else 2 then
+    else
+      1
+    then
     die
 ;
