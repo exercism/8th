@@ -49,7 +49,7 @@ var tests-failed
 
 : test_null \ s w --
    w:exec
-   null?
+   null? nip
    if test-passed else test-failed then 
 ;
 
