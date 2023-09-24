@@ -11,7 +11,7 @@ Security isn't an afterthought in 8th. It was designed from the beginning to avo
 8th has a [forum](https://8th-dev.com/forum/) as well as extensive documentation including a [manual](https://8th-dev.com/manual.html), and a hyperlinked dictionary of builtin and library [words](https://8th-dev.com/words.html).  [Compare](https://8th-dev.com/compare.html) 8th with other languages! 
 
 
-# Quick introduction for users of “mainstream” languages
+## Quick introduction for users of “mainstream” languages
 
 If you’re coming from C or Java or most more common languages, you may find 8th a bit puzzling. To help set you on the right path, here are some of the primary differences between 8th and “the mainstream”, as well as some helpful hints:
 
