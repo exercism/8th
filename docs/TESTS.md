@@ -1,144 +1,68 @@
-<!---
-This file is inspired by, and adapted for the 8th track from: 
-https://github.com/exercism/java/blob/main/exercises/shared/.docs/tests.md.
---->
-
 # Tests
 
-Choose your current OS:
+You can use the online editor on the Exercism website to solve the exercises.
+Or, download the exercises to your computer, solve them locally and then submit them to Exercism.
+The rest of this document talks about working locally.
 
-* [Windows](##windows)
-* [macOS](##macos)
-* [Linux](##linux)
+## Exercism CLI
 
-# Running the Tests
+You will need the `exercism` command-line tool to download and submit exercises.
+See [the exercism cli documentation][exercism-cli] for instructions to download and configure it.
 
-## Windows
+To download an exercise, do this:
 
-1. Open a Command Prompt.
+```bash
+exercism download --track 8th --exercise hello-world
+```
 
-2. Get the first exercise:
+And change to the exercise directory:
 
-    ```batchfile
-     C:\Users\USERNAME> exercism download --exercise hello-world --track 8th
-    ```
+```bash
+cd /path/to/your/exercism_workspace/8th/hello-world
+```
 
-3. Change directory into the exercise folder:
+or if you are on Windows:
 
-    ```batchfile
-     C:\Users\USERNAME> cd C:\Users\USERNAME\exercism\8th\hello-world
-    ```
-   
-4. Run the tests:
+```cmd
+cd \path\to\your\exercism_workspace\8th\hello-world
+```
 
-    ```batchfile
-     C:\Users\USERNAME\exercism\8th\hello-world> tester.bat
-    ```
-    *(Don't worry if the tests fail when you first run them, this is how you begin each exercise.)*
+Note you can get your exercism workspace using the `exercism configure` command.
 
-5. Limit the number of tests:
+## Testing locally
 
-    All defined tests are run. Reducing the number of tests executed is done as follows:
-    
-    - Open the *-tests.8th file in a text editor.
-    - Place a backslash and a space in front of each test to be disabled.
-    - Save the file.
+To run the tests for an exercise, you must be in the correct exercise directory.
+Then launch the tests with this command:
 
-    Disable all but one, then progressively re-enable tests until all tests pass.
-    
-6. Solve the exercise. 
-    Read through the `instructions.md` and see how to solve the exercise ([view on GitHub](https://github.com/exercism/8th/blob/main/exercises/practice/hello-world/.docs/instructions.md)).
+```bash
+8th test.8th
+```
 
+## Skipped tests
 
-Good luck, have fun and welcome to the 8th track!
+Solving an exercise means making all its tests pass.
+By default, only one test (the first one) is executed when you run the tests.
+This is intentional, as it allows you to focus on just making that one test pass.
+Once it passes, you can enable the next test by moving the `SKIP-REST-OF-TESTS` line below it.
 
-If you get stuck, at any point, don't forget to reach out for [help](https://exercism.org/cli-walkthrough).
+### Overriding skips
 
-----
+To run all tests, including the ones after the `SKIP-REST-OF-TESTS` word, you can set an environment variable `RUN_ALL_TESTS` to the value `true`. 
+One way to set this just for the duration of running the tests is (macOS and Linux):
 
-## macOS
+```bash
+RUN_ALL_TESTS=true 8th test.8th
+```
 
-1. Open a Terminal window.
+## Submit your solution
 
-2. Get the first exercise:
+To upload your solution to the Exercism website using the exercism tool:
 
-    ```
-     $ exercism download --exercise hello-world --track 8th
-    ```
+```bash
+exercism submit
+```
 
-3. Change directory into the exercise folder:
+Note that you can upload your code even if it is not passing all the tests.
+This is good if you are stuck and need some help from a mentor.
 
-    ```
-     $ cd /Users/USERNAME/exercism/8th/hello-world
-    ```
-
-4. Run the tests:
-
-    ```
-     $ bash tester.sh
-    ```
-    *(Don't worry if the tests fail when you first run them, this is how you begin each exercise.)*
-
-5. Limit the number of tests:
-
-    All defined tests are run. Reducing the number of tests executed is done as follows:
-    
-    - Open the *-tests.8th file in a text editor.
-    - Place a backslash and a space in front of each test to be disabled.
-    - Save the file.
-
-    Disable all but one, then progressively re-enable tests until all tests pass.
-
-6. Solve the exercise. 
-
-    Read through the `instructions.md` and see how to solve the exercise ([view on GitHub](https://github.com/exercism/8th/blob/main/exercises/practice/hello-world/.docs/instructions.md)).
-
-
-Good luck, have fun and welcome to the 8th track!
-
-If you get stuck, at any point, don't forget to reach out for [help](https://exercism.org/cli-walkthrough).
-
-
-----
-
-## Linux
-
-1. Open a Terminal window.
-
-2. Get the first exercise:
-
-    ```
-     $ exercism download --exercise hello-world --track 8th
-    ```
-
-2. Change directory into the exercise folder:
-
-     ```
-     $ cd /home/USERNAME/exercism/8th/hello-world
-     ```
-
-4. Run the tests:
-
-    ```
-     $ bash tester.sh
-    ```
-    *(Don't worry if the tests fail when you first run them, this is how you begin each exercise.)*
-
-5. Limit the number of tests:
-
-    All defined tests are run. Reducing the number of tests executed is done as follows:
-    
-    - Open the *-tests.8th file in a text editor.
-    - Place a backslash and a space in front of each test to be disabled.
-    - Save the file.
-
-    Disable all but one, then progressively re-enable tests until all tests pass.
-    
-6. Solve the exercise. 
-
-    Read through the `instructions.md` and see how to solve the exercise ([view on GitHub](https://github.com/exercism/8th/blob/main/exercises/practice/hello-world/.docs/instructions.md)).
-
-
-Good luck, have fun and welcome to the 8th track!
-
-If you get stuck, at any point, don't forget to reach out for [help](https://exercism.org/cli-walkthrough).
+[exercism-cli]: https://exercism.org/docs/using/solving-exercises/working-locally
