@@ -3,6 +3,7 @@
 "encode yes"
 ( "yes" 5 7 >code ) "xbt" test_eqs
 
+SKIP-REST-OF-TESTS
 "encode no"
 ( "no" 15 18 >code ) "fu" test_eqs
 
@@ -47,6 +48,5 @@
 
 "decode with a not coprime to m"
 ( "Test" 13 5 code> )  test_null
-
 
 end-of-tests

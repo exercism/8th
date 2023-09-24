@@ -10,6 +10,8 @@
   [[3, 4, 5]]
   12 test-triplets-with-sum
 
+SKIP-REST-OF-TESTS
+
 "triplets whose sum is 108"
   [[27, 36, 45]]
   108 test-triplets-with-sum
@@ -40,3 +42,5 @@
 \ "1 million, for extra credit"
 \   [[200000,375000,425000], [218750,360000,421250]]
 \   1_000_000  test-triplets-with-sum
+
+end-of-tests

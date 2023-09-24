@@ -5,6 +5,8 @@
     ["1"] 
     test_eqa
 
+SKIP-REST-OF-TESTS
+
 "slices of one from two" 
     ( "12" 1 slices ) 
     ["1", "2"] 
@@ -54,6 +56,5 @@
     ( "" 1 slices ) 
     [] 
     test_eqa
-
 
 end-of-tests

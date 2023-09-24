@@ -1,29 +1,42 @@
 needs console/loaded
-con:onBlack
 
 -1 var, test-count
 var tests-passed
 var tests-failed
+var tests-skipped
+
+true var, run-test
+: SKIP-REST-OF-TESTS false run-test ! ;
 
 : tests \ n -- 
     test-count ! 
 ;
 
 : test-passed \ s --
-    tests-passed @ n:1+ tests-passed !
-    con:green . space " ... OK" . con:white cr
+    1 tests-passed n:+!
+    con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
+;
+
+: test-skipped \ s --
+    1 tests-skipped n:+!
+    con:cyan con:onBlack . space " ... SKIPPED" . con:white con:onBlack cr
 ;
 
 : test-failed \ s --
-    tests-failed @ n:1+ tests-failed !
-    con:red . space " ... FAIL" . con:white cr
+    1 tests-failed n:+!
+    con:red con:onBlack . space " ... FAIL" . con:white con:onBlack cr
 ;
 
 : isword?  \ x -- x f
    dup  >kind  ns:w   n:= 
 ;
 
+: run-test? \ -- T
+   run-test @ if true else "RUN_ALL_TESTS" getenv n:>bool then
+;
+
 : test_eq \ s x w -- | s w x --
+   run-test? !if 2drop test-skipped ;; then
    isword? !if swap then
    w:exec
    n:=
@@ -31,6 +44,7 @@ var tests-failed
 ;
 
 : test_eqs \ s x w -- | s w x -- 
+   run-test? !if 2drop test-skipped ;; then
    isword? !if swap then
    w:exec
    s:=
@@ -38,87 +52,64 @@ var tests-failed
 ;
 
 : test_true \ s w --
+   run-test? !if drop test-skipped ;; then
    w:exec
    if test-passed else test-failed then 
 ;
 
 : test_false \ s w --
+   run-test? !if drop test-skipped ;; then
    w:exec
    if test-failed else test-passed then 
 ;
 
 : test_null \ s w --
+   run-test? !if drop test-skipped ;; then
    w:exec
    null? nip
-
    if test-passed else test-failed then 
 ;
 
 \ compare arrays by testing elements with string equality
 : test_eqa \ s x w -- | s w x -- 
+   run-test? !if 2drop test-skipped ;; then
    isword? !if swap then
    w:exec
    ' s:= a:= 2nip
    if test-passed else test-failed then 
 ;
 
-\ Compare a1 to a2. Individual elements are compared with w (e.g., n:cmp).
-\ The result n is:
-\ - The first non-zero result of ( a1[i] a2[i] w ), or
-\ - n:cmp of the lengths of a1 and a2
-\ Note: This may be used in some test files. For example, to compare results
-\ that are not required to be in a certain order.
-: a:cmp SED: a1 a2 w -- n
-  >r
-  over a:len nip over a:len nip n:cmp
-  true mark -rot \ Stack: length-cmp a1 a2
-  ( r@ w:exec nip dup if break else drop then ) a:2each
-  rdrop \ Done with comparison word
-  2drop \ Done with a1 and a2
-  mark?
-  !if \ Got a non-zero result from a compare
-    nip
-  then
-;
-
-\ Test that array a is equal to the result of word w. Compare arrays by
-\ testing elements with array equality. The SED of w is -- a1, where a1
-\ is an array of arrays. The elements of each sub-array must be numbers.
-: test_eqa2 SED: s a w --
-  isword? !if swap then
-  w:exec
-  ( ' n:= a:= nip nip ) a:= nip nip
-  if test-passed else test-failed then 
-;
-
-
-: test_map_eq \ m w -- | w m -- 
+: test_map_eq \ s m w -- | s w m -- 
+   run-test? !if 2drop test-skipped ;; then
    isword? !if swap then
    w:exec
    ' n:= m:= 2nip
    if test-passed else test-failed then 
 ;
 
-: test_map_neq \ m w -- | w m -- 
+: test_map_neq \ s m w -- | s w m -- 
+   run-test? !if 2drop test-skipped ;; then
    isword? !if swap then
    w:exec
    ' n:= m:= 2nip
    if test-failed else test-passed then 
 ;
 
-\ Num passed + num failed should == num tests
+\ Num passed + num skipped + num failed should == num tests
 : all-tests-run? \ -- T
-    tests-passed @ tests-failed @ n:+ test-count @ n:=
+    tests-passed @ tests-skipped @ tests-failed @ n:+ n:+
+    test-count @ n:=
 ;
 
 ( all-tests-run?  
-  !if con:red "... FAIL - not all tests completed" . con:white cr then
+  !if con:red con:onBlack "... FAIL - not all tests completed" . con:white con:onBlack cr then
 ) onexit
 
 \ Print a summary of the tests run
-( con:white
+( con:white con:onBlack
   test-count   @ . space "tests planned - " .
   tests-passed @ . space "passed - " .
+  tests-skipped @ . space "skipped - " .
   tests-failed @ . space "failed" . cr
 ) onexit
 

@@ -3,6 +3,7 @@
 "single digit strings can not be valid"
 ( "1" luhn ) test_false
 
+SKIP-REST-OF-TESTS
 "a single zero is invalid"
 ( "0" luhn ) test_false
 
