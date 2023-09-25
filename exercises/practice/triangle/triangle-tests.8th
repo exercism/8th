@@ -1,5 +1,7 @@
 21 tests
+
 "invalid: 0 0 0" ( 0 0 0 equilateral? ) test_false
+SKIP-REST-OF-TESTS
 "equilateral with floating point" ( 0.5 0.5 0.5 equilateral? ) test_true
 "equilateral 2 2 2" ( 2 2 2 equilateral? ) test_true
 "isosceles is not equilateral" ( 2 3 2 equilateral? ) test_false
@@ -21,6 +23,5 @@
 
 "broken triangle #1" ( 0 3 3 scalene? ) test_false
 "broken triangle #2" ( 0 3 0 scalene? ) test_false
-
 
 end-of-tests

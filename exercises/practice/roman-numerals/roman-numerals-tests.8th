@@ -1,5 +1,7 @@
 26 tests
+
 "1 is I" ( 1 n:>roman ) "I" test_eqs
+SKIP-REST-OF-TESTS
 "2 is II" ( 2 n:>roman ) "II" test_eqs
 "3 is III" ( 3 n:>roman ) "III" test_eqs
 "4 is IV" ( 4 n:>roman ) "IV" test_eqs
@@ -25,5 +27,4 @@
 "1666 is MDCLXVI" ( 1666 n:>roman ) "MDCLXVI" test_eqs
 "3001 is MMMI" ( 3001 n:>roman ) "MMMI" test_eqs
 "3999 is MMMCMXCIX" ( 3999 n:>roman ) "MMMCMXCIX" test_eqs
-
 end-of-tests

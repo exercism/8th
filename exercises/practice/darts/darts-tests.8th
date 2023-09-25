@@ -1,5 +1,7 @@
 13 tests
+
 "Missed target" 0 ( -9 9 darts-score ) test_eq
+SKIP-REST-OF-TESTS
 "On the outer circle" 1 ( 0 10 darts-score ) test_eq
 "On the middle circle" 5 ( -5 0 darts-score ) test_eq
 "On the inner circle" 10 ( 0 -1 darts-score ) test_eq
@@ -12,6 +14,5 @@
 "Just within the outer circle" 1 ( -7.0 7.0 darts-score ) test_eq
 "Just outside the outer circle" 0 ( 7.1 -7.1 darts-score ) test_eq
 "Asymmetric position between the inner and middle circles" 5 ( 0.5 -4 darts-score ) test_eq
-
 
 end-of-tests

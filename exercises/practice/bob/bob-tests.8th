@@ -1,5 +1,7 @@
 17 tests
+
 "prolonged silence" ( "    " bob ) "Fine. Be that way!" test_eqs
+SKIP-REST-OF-TESTS
 "silence" ( "" bob ) "Fine. Be that way!" test_eqs
 "shouting numbers" ( "1, 2, 3 GO!" bob ) "Whoa, chill out!" test_eqs
 "no letters" ( "1, 2, 3" bob ) "Whatever." test_eqs
@@ -16,6 +18,5 @@
 "prattling on" ( "Wait! Hang on. Are you going to be OK?" bob ) "Sure." test_eqs
 "asking a numeric question" ( "You are, what, like 15?" bob ) "Sure." test_eqs
 "shouting with special characters" ( "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!" bob ) "Whoa, chill out!" test_eqs
-
 
 end-of-tests
