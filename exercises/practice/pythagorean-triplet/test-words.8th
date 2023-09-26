@@ -86,26 +86,27 @@ true var, run-test
 \ Note: This may be used in some test files. For example, to compare results
 \ that are not required to be in a certain order.
 : a:cmp SED: a1 a2 w -- n
-  >r
-  over a:len nip over a:len nip n:cmp
-  true mark -rot \ Stack: length-cmp a1 a2
-  ( r@ w:exec nip dup if break else drop then ) a:2each
-  rdrop \ Done with comparison word
-  2drop \ Done with a1 and a2
-  mark?
-  !if \ Got a non-zero result from a compare
-    nip
-  then
+   >r
+   over a:len nip over a:len nip n:cmp
+   true mark -rot \ Stack: length-cmp a1 a2
+   ( r@ w:exec nip dup if break else drop then ) a:2each
+   rdrop \ Done with comparison word
+   2drop \ Done with a1 and a2
+   mark?
+   !if \ Got a non-zero result from a compare
+      nip
+   then
 ;
 
 \ Test that array a is equal to the result of word w. Compare arrays by
 \ testing elements with array equality. The SED of w is -- a1, where a1
 \ is an array of arrays. The elements of each sub-array must be numbers.
 : test_eqa2 SED: s a w --
-  isword? !if swap then
-  w:exec
-  ( ' n:= a:= nip nip ) a:= nip nip
-  if test-passed else test-failed then 
+   run-test? !if 2drop test-skipped ;; then
+   isword? !if swap then
+   w:exec
+   ( ' n:= a:= nip nip ) a:= nip nip
+   if test-passed else test-failed then 
 ;
 
 : test_map_eq \ s m w -- | s w m -- 
