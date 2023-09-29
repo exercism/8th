@@ -1,26 +1,26 @@
-5 tests
+5 test:begin
 
 "no primes under two"
     []
     ( 1 primes )
-    test_array_eq_num
+    test:a<n>=
 
-SKIP-REST-OF-TESTS
+test:skip-remaining
 
 "find first prime"
     [2]
     ( 2 primes )
-    test_array_eq_num
+    test:a<n>=
 
 "find primes up to 10"
     [2, 3, 5, 7]
     ( 10 primes )
-    test_array_eq_num
+    test:a<n>=
 
 "limit is prime"
     [2, 3, 5, 7, 11, 13]
     ( 13 primes )
-    test_array_eq_num
+    test:a<n>=
 
 "find primes up to 1000"
     [2,   3,   5,   7,   11,  13,  17,  19,  23,  29,  31,  37,  41,  43,  47,  53,
@@ -35,6 +35,6 @@ SKIP-REST-OF-TESTS
      829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941,
      947, 953, 967, 971, 977, 983, 991, 997]
     ( 1000 primes )
-    test_array_eq_num
+    test:a<n>=
 
-end-of-tests
+test:end
