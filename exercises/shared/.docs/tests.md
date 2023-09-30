@@ -18,6 +18,28 @@ Linux or macOS:
 /path/to/8th test.8th
 ```
 
+## Testing in the REPL
+
+Start 8th, loading test-words.8th: 
+
+```sh
+8th -f test-words.8th
+```
+
+This will start a CLI session where, once you’ve written some code in your solution file, you can load it into the REPL.
+For example, for the "word-count" exercise, you would enter:
+
+```8th
+"word-count.8th" f:include
+```
+
+And you can run the tests with 
+```sh
+"word-count-tests.8th" f:include
+```
+
+Or you can copy and paste a single test from that file or enter your own. 
+
 ## Skipped tests
 
 Solving an exercise means making all its tests pass.
