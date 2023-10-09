@@ -1,0 +1,139 @@
+\ Test framework for 8th
+
+private 
+
+\ track current test, test file
+var ix
+"none" var, currenttest
+
+\ store failures and successes
+[] var, failed-tests
+[] var, files
+0 var, files-run
+var did-test?
+true var, use-box-chars
+
+\ don't complain about redefined words
+false tell-conflict !
+
+public
+
+ns: test
+0 var, quiet
+0 var, tests
+0 var, verbose
+
+: no-box-chars 
+  #p:use-box-chars off ;
+
+: quiet? quiet @ ;
+
+\ just a utility to draw a 'boxed caption'
+: lines \ T -- 
+  "" swap
+  #p:use-box-chars @ 
+  if
+    if    "\n\u250c%>*\u250078s\u2510\n" 
+    else  "\n\u2514%>*\u250078s\u2518\n"
+    then
+  else
+    if    "\n+%>*=78s+\n" 
+    else  "\n+%>*=78s+\n" 
+    then
+  then  s:strfmt . ;
+
+: boxit \ s --
+  #p:use-box-chars @ 
+  if    "\u2502 %<76s \u2502"
+  else  "| %<76s |"
+  then s:strfmt
+  true lines . false lines ;
+
+: failed #p:failed-tests @ ;
+: current #p:currenttest @ ;
+: failed! \ s -- 
+  #p:failed-tests @ swap a:push drop ;
+: current! #p:currenttest ! ; 
+
+: FAIL 
+  current G:scriptfile -1 a:@ nip
+  "%s: %s" s:strfmt failed! ;
+
+: okfail not if test:FAIL then ;
+
+: equal? \ x x -- T
+    \ are the items the same kind?
+    2dup >kind swap >kind n:=
+    !if 2drop false ;then
+
+    \ same kind: try different comparators
+    number? if n:= ;then
+    string? if s:= ;then
+    array?  if ' equal? a:= 2nip ;then
+    map?    if ' equal? m:= 2nip ;then
+
+    \ otherwise fall back to 'lazy evaluation'
+    l: = ;
+
+: ix++ 1 #p:ix n:+! ;
+: resetix 0 #p:ix ! ;
+: one-test 
+  #p:did-test? off
+	clone "ns: " swap s:+ eval
+	resetix
+	quiet? not if cr then
+  swap 
+  over f:fname swap
+  quiet? if drop else
+    n:1+ "%<5d %<20s" s:strfmt .
+  then
+	f:include 
+	1 #p:files-run n:+!
+  quiet? not if 
+    #p:ix @ "%d" s:strfmt .
+    #p:did-test? @ not if
+      " INCOMPLETE" .
+    then
+  then
+	reset ;
+
+: files #p:files @ ;
+: #tests #p:files-run @ ;
+: complete #p:did-test? on ;
+
+: run \ a --
+  complete
+  false log-syslog
+	dup #p:files ! ' s:cmpi a:sort 
+
+	quiet? not if a:len "Running %d test files:" s:strfmt boxit then
+	 ' one-test  a:each ;
+
+: close-nums \ n -- a
+  #tests test:files a:len nip 
+  3 a:close ;
+
+: report 
+	failed a:len 
+  if    a:len close-nums 
+        "Failed %d test(s), ran %d of %d files"  s:strfmt boxit
+        cr ( . drop cr ) a:each
+  else  drop tests @   close-nums
+        "All %d test(s) succeeded, ran %d of %d files" 
+        s:strfmt boxit
+  then ;
+
+
+
+: test \ <name/description> --
+	parseln s:trim current! 
+	1 tests n:+!
+
+	verbose @ 
+  if    cr current . cr 
+	else  quiet? not if ix++ then
+	then  reset ;
+
+with: test
+
+\ vim: ft=8th :
