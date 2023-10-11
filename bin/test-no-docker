@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-usage="Usage: $0 -a|exercise_slug
+usage="Usage: $0 [-r] -a|exercise_slug
 
 Test an example solution.
 Use -a to test all exercises.
+Use -r to run skipped tests.
 
 Example: $0 luhn"
 
@@ -51,10 +52,11 @@ test_dir=$(mktemp -d)
 trap cleanup EXIT
 
 all=false
-while getopts :ha opt; do
+while getopts :har opt; do
     case $opt in
         h) die "$usage" ;;
         a) all=true ;;
+        r) export RUN_ALL_TESTS=true ;;
         ?) die "unknown option: -$OPTARG" ;;
     esac
 done
