@@ -7,7 +7,7 @@
       "leap.8th"
     ],
     "test": [
-      "leap-tests.8th"
+      "test.8th"
     ],
     "example": [
       ".meta/example.8th"
