@@ -15,9 +15,15 @@ make_test_dir() {
     local key=$2
     (
         cd "$exercise_dir"
-        cp -t "$test_dir" test.8th test-words.8th "${slug}-tests.8th" 
+        [[ -f test-words.8th ]] && cp test-words.8th "$test_dir"
+        [[ -d libs ]] && cp -r libs "$test_dir"
+        while IFS= read -r test; do
+            cp -r "$test" "$test_dir"
+        done < <(
+            jq -r '.files.test[]' .meta/config.json
+        )
         while IFS= read -r solution; do
-            cp "$solution" "$test_dir/$slug.8th"
+            cp -r "$solution" "$test_dir/$slug.8th"
         done < <(
             jq -r --arg key "$key" '.files[$key][]' .meta/config.json
         )
@@ -35,7 +41,7 @@ test_one() {
     fi
     (
         cd "$test_dir" || die "cannot cd to $test_dir"
-        8th test.8th
+        8th -f test.8th
     )
 }
 
