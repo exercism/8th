@@ -7,7 +7,7 @@
       "bob.8th"
     ],
     "test": [
-      "bob-tests.8th"
+      "test.8th"
     ],
     "example": [
       ".meta/example.8th"
