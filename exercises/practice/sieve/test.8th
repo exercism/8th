@@ -1,5 +1,5 @@
 "sieve.8th" f:include
-"libs/exercism/test" f:include
+needs exercism/test
 
 5 tests
 
