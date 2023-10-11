@@ -10,7 +10,7 @@
       "word-count.8th"
     ],
     "test": [
-      "word-count-tests.8th"
+      "test.8th"
     ],
     "example": [
       ".meta/example.8th"
