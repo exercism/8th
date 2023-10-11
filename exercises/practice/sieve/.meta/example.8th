@@ -22,32 +22,35 @@
 ;
 
 : mark-multiples-of   \ a i -- a
-    2dup a:@ !if 2drop ;; then
-    drop
-    dup dup n:*       \ a i idx (initial idx is i^2)
-    repeat
-        third over    \ a i idx a idx
-        false a:!     \ a i idx a
-        drop over n:+
-        dup r@ n:>
-    until!
+    2dup a:@ if
+        drop
+        dup dup n:*       \ a i idx (initial idx is i^2)
+        repeat
+            third over    \ a i idx a idx
+            false a:!     \ a i idx a
+            drop over n:+
+            dup r@ n:>    \ quit loop when idx > n (from r-stack)
+        until!
+    then
     2drop
 ;
 
+\ from 2 to √n, mark multiples of primes as non-prime
 : mark-multiples \ a -- a
     ' mark-multiples-of 2 r@ n:sqrt loop
 ;
 
 : extract-primes \ a1 -- a2
-    a:new >r
-    ( if r> a:push >r else drop then ) a:each
-    drop r>
+    a:new swap
+    \ a:each removes the array from the stack while it's running
+    ( if a:push else drop then ) a:each
+    drop
 ;
 
 : primes \ n -- a
-    >r
+    >r                  \ store `n` on r-stack
     make-flag-array
     mark-multiples
     extract-primes
-    rdrop
+    rdrop               \ clear `n` from r-stack
 ;
