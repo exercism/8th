@@ -1,0 +1,58 @@
+needs exercism/test
+
+\ A "test" file that contains several expected failures.
+\ The purpose is to see what the actual/expected output looks like.
+
+32 tests
+
+"true? true"    ( true )  true?
+"true? false"   ( false ) true?
+"false? true"   ( false ) false?
+"false? false"  ( true )  false?
+"null? true"    ( null )  null?
+"null? false"   ( false ) null?
+\ 6
+
+"equal? number true"   42 ( 42 ) equal?
+"equal? number true"   42 ( #42 ) equal?
+"equal? number true"   42 ( 0X2A ) equal?
+"equal? number true"   42 ( $2A ) equal?
+"equal? number true"   42 ( &52 ) equal?
+"equal? number true"   42 ( %101010 ) equal?
+"equal? number false"  42 ( -5 ) equal?
+\ 13
+
+"equal? string true"   "abc" ( "abc" ) equal?
+"equal? string false"  "abc" ( "abc " ) equal?
+"equal? string false"  "abc" ( "def" ) equal?
+\ 16
+
+"equal? multi-line string false"   "abc\ndef\nghi" ( "abc\ndeF\nghi" ) equal?
+\ 17
+
+"equal? array of number true"   [42] ( [42] ) equal?
+"equal? array of number false"  [42] ( [-5] ) equal?
+"equal? array of number false"  [42] ( [42, -5] ) equal?
+"equal? array of number false"  [42] ( ["42"] ) equal?
+\ 21
+
+"equal? array of string true"   ["foo"] ( ["foo"] ) equal?
+"equal? array of string false"  ["foo"] ( ["bar"] ) equal?
+"equal? array of string false"  ["foo"] ( ["foo","bar"] ) equal?
+\ 24
+
+"equal? array of array true"   [[1,2],[3,4]] ( [[1,2],[3,4]] ) equal?
+"equal? array of array false"  [[1,2],[3,4]] ( [[1,22],[3,44]] ) equal?
+\ 26
+
+"equal? map of number true"   {"a":42, "b":43} ( {"b":43,"a":42} ) equal?
+"equal? map of number false"  {"a":42, "b":43} ( {"b":43,"a":41} ) equal?
+"equal? map of number false"  {"a":42, "b":43} ( {"c":43,"a":42} ) equal?
+"equal? map of number false"  {"a":42, "b":43} ( {"b":"43","a":42} ) equal?
+\ 30
+
+"equal? dates true"   1697133755 d:unix> ( 1697133755 d:unix> ) equal?
+"equal? dates false"  1697133755 d:unix> ( 1697133756 d:unix> ) equal?
+\ 32
+
+end-of-tests
