@@ -12,7 +12,7 @@
       "atbash-cipher.8th"
     ],
     "test": [
-      "atbash-cipher-tests.8th"
+      "test.8th"
     ],
     "example": [
       ".meta/example.8th"

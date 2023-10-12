@@ -35,7 +35,7 @@ To run the tests for an exercise, you must be in the correct exercise directory.
 Then launch the tests with this command:
 
 ```bash
-8th test.8th
+8th -f test.8th
 ```
 
 ## Skipped tests
@@ -51,7 +51,7 @@ To run all tests, including the ones after the `SKIP-REST-OF-TESTS` word, you ca
 One way to set this just for the duration of running the tests is (macOS and Linux):
 
 ```bash
-RUN_ALL_TESTS=true 8th test.8th
+RUN_ALL_TESTS=true 8th -f test.8th
 ```
 
 ## Submit your solution

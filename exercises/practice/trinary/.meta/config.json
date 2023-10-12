@@ -7,7 +7,7 @@
       "trinary.8th"
     ],
     "test": [
-      "trinary-tests.8th"
+      "test.8th"
     ],
     "example": [
       ".meta/example.8th"

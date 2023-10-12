@@ -8,13 +8,14 @@ and we can deploy it to exercises with:
 
 ```sh
 for ex in ./exercises/practice/*; do
-    cp -v ./lib/test-words.8th "$ex"
+    mkdir -p "$ex/libs/exercism"
+    cp -v ./lib/exercism/test "$ex/libs/exercism/test"
 done
 ```
 
 To verify that all copies are in sync (should produce no output):
 ```sh
-for ex in ./exercises/*/*/test-words.8th; do
-    cmp "$ex" ./lib/test-words.8th
+for ex in ./exercises/practice/*; do
+    cmp "$ex/libs/exercism/test" ./lib/exercism/test
 done
 ```
