@@ -19,7 +19,6 @@ required_tool curl
 
 [[ -f ./bin/fetch-configlet ]] || die "run this script from the repo's root directory."
 
-
 slug="${1}"
 name=$(echo "${slug}" | sed 's/\b\w/\u&/g; s/-/ /g')    # assumes GNU sed
 
@@ -58,18 +57,22 @@ jq  --arg slug "${slug}"                 \
                      --docs          \
                      --exercise "${slug}"
 
-cp lib/test-words.8th "exercises/practice/${slug}"
+mkdir -p "exercises/practice/${slug}/libs/exercism"
+cp ./libs/exercism/test "exercises/practice/${slug}/libs/exercism/test"
 
 cat << END_TEST > "exercises/practice/${slug}/test.8th"
-"test-words.8th" dup . cr f:include
-"${slug}.8th" dup . cr f:include
-"${slug}-tests.8th" dup . cr f:include
-bye
+"${slug}.8th" f:include
+needs exercism/test
+
+N tests
+
+$(curl --silent "https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/${slug}/canonical-data.json")
+
+end-of-tests
 END_TEST
 
 touch "exercises/practice/${slug}/${slug}.8th"
 touch "exercises/practice/${slug}/.meta/example.8th"
-curl --silent "https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/${slug}/canonical-data.json" > "exercises/practice/${slug}/${slug}-tests.8th"
 
 echo 
 read -rp 'Your github username: ' author
@@ -80,19 +83,19 @@ jq  --arg slug "${slug}"     \
         .authors = [$author] |
         .files = {
             solution: [$slug + ".8th"],
-            test: [$slug + "-tests.8th"],
+            test: ["test.8th"],
             example: [".meta/example.8th"]
         }
     ' "${conf}" > "${conf}.tmp" \
 && mv "${conf}.tmp" "${conf}"
 
 echo
-ls -laR "exercises/practice/${slug}"
+find "exercises/practice/${slug}" -type f -ls
 
 cat << NEXT_STEPS
 
 Your next steps are:
-- Create the test suite in 'exercises/practice/${slug}/${slug}-tests.8th'
+- Create the test suite in 'exercises/practice/${slug}/test.8th'
   based on the canonical data at 'https://github.com/exercism/problem-specifications/blob/main/exercises/${slug}/canonical-data.json'
   - Any test cases you don't implement, mark them in 'exercises/practice/${slug}/.meta/tests.toml' with "include = false"
 - Create the example solution in 'exercises/practice/${slug}/.meta/example.8th'
