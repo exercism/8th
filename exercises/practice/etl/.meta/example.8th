@@ -1,0 +1,12 @@
+: transform \ m -- m
+    m:new swap          \ transformed input
+    ( swap >n swap      \ transformed score [letters] 
+      ( s:lc            \ transformed score letter
+        _swap third     \ score transformed letter score
+        m:!             \ score transformed
+        swap            \ transformed score
+      ) a:each!         \ transformed score [letters] 
+      2drop
+    ) m:each            \ transformed input
+    drop
+;
