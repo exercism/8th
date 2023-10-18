@@ -1,0 +1,10 @@
+: eggCount  \ n -- n
+    0 swap
+    repeat
+        dup 1 band
+        rot n:+ swap
+        1 shr
+        dup 0 n:=
+    until!
+    drop
+;
