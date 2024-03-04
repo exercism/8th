@@ -1,3 +1,3 @@
 : acronym \ s -- s
-  /[^a-zA-Z']/ s:/ ( 0 1 s:slice s:uc ) a:map "" a:join
+  
 ;
