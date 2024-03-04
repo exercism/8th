@@ -63,12 +63,13 @@ cp ./libs/exercism/test "exercises/practice/${slug}/libs/exercism/test"
 cat << END_TEST > "exercises/practice/${slug}/test.8th"
 "${slug}.8th" f:include
 needs exercism/test
-
+with: test
 N tests
 
 $(curl --silent "https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/${slug}/canonical-data.json")
 
 end-of-tests
+;with
 END_TEST
 
 touch "exercises/practice/${slug}/${slug}.8th"
