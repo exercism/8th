@@ -1,5 +1,5 @@
 needs exercism/test
-
+with: test
 \ A "test" file that contains several expected failures.
 \ The purpose is to see what the actual/expected output looks like.
 
@@ -56,3 +56,4 @@ needs exercism/test
 \ 32
 
 end-of-tests
+;with
