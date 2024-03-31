@@ -3,18 +3,26 @@
 ;
 
 : distance \ s1 s2 | n
-	empty-string? if drop drop null ;then
-	swap
-	empty-string? if drop drop null ;then
-	
+	\ if len s1 is zero 
+	\ 	if len s2 is zero 
+	\ 		return zero
+	\	return null
+	empty-string? 
+	if 
+	 	swap empty-string? 
+		if \ both empty
+			drop drop 0 ;; 
+		then
+		drop drop null ;; 
+	then
+
 	s:len -rot 
 	swap
 	s:len -rot
 	2swap n:=
-
 	!if drop drop null ;then
-	null s:/ swap
-	null s:/
+
+	null s:/ swap null s:/
 	0 -rot 
 	( s:= not nip if n:1+ then ) a:2each 
 	2drop
