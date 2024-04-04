@@ -1,21 +1,4 @@
-: empty-string? \ s -- T
-	s:len 0 n:= 
-;
-
-: distance \ s1 s2 | n
-	\ if len s1 is zero 
-	\ 	if len s2 is zero 
-	\ 		return zero
-	\	return null
-	empty-string? 
-	if 
-	 	swap empty-string? 
-		if \ both empty
-			drop drop 0 ;; 
-		then
-		drop drop null ;; 
-	then
-
+: distance \ s1 s2 -- n
 	s:len -rot 
 	swap
 	s:len -rot
