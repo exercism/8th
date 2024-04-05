@@ -1,20 +1,11 @@
-: empty-string? \ s -- T
-	s:len 0 n:= 
-;
-
-: distance \ s1 s2 | n
-	empty-string? if drop drop null ;then
-	swap
-	empty-string? if drop drop null ;then
-	
+: distance \ s1 s2 -- n
 	s:len -rot 
 	swap
 	s:len -rot
 	2swap n:=
-
 	!if drop drop null ;then
-	null s:/ swap
-	null s:/
+
+	null s:/ swap null s:/
 	0 -rot 
 	( s:= not nip if n:1+ then ) a:2each 
 	2drop
