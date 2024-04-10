@@ -130,6 +130,11 @@ SKIP-REST-OF-TESTS
     "MMMI"
     equal?
 
+"3888 is MMMDCCCLXXXVIII"
+    ( 3888 n:>roman )
+    "MMMDCCCLXXXVIII"
+    equal?
+
 "3999 is MMMCMXCIX"
     ( 3999 n:>roman )
     "MMMCMXCIX"
