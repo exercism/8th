@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/example.8th"
+    ],
+    "invalidator": [
+      "libs/exercism/test"
     ]
   },
   "blurb": "Create a sentence of the form \"One for X, one for me.\".",

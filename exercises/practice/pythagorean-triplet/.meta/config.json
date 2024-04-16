@@ -12,6 +12,9 @@
     ],
     "example": [
       ".meta/example.8th"
+    ],
+    "invalidator": [
+      "libs/exercism/test"
     ]
   },
   "blurb": "There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the triplet.",

@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/example.8th"
+    ],
+    "invalidator": [
+      "libs/exercism/test"
     ]
   },
   "blurb": "Convert a long phrase to its acronym.",

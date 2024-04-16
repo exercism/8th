@@ -11,6 +11,9 @@
     ],
     "example": [
       ".meta/example.8th"
+    ],
+    "invalidator": [
+      "libs/exercism/test"
     ]
   },
   "blurb": "Determine if a number is an Armstrong number.",
