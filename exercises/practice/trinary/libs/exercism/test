@@ -135,6 +135,7 @@ true var, run-test
 : null? \ s w --
    run-test? !if drop test-skipped ;; then
    w:exec
+   2 check-depth
    null swap dup     \ so test-failed can show actual and expected
    G:null? nip if test-passed else test-failed then 
 ;
