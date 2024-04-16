@@ -11,6 +11,7 @@ var tests-skipped
 true var, run-test
 
 \ Some utility words
+
 : array-insens-dot \ x --  \\ removes leading space on stringified arrays
   dup >kind ns:a n:= 
   if 
@@ -74,6 +75,19 @@ true var, run-test
    l: =
 ;
 
+: check-depth \ ... n -- ...
+  dup>r
+  n:1+ depth n:=
+  !if
+    con:red con:onBlack 
+    "PANIC: expected stack depth to be " . r> . cr
+    "Stack is:" . cr
+    .s cr
+    255 die
+  then
+  rdrop
+;
+
 \ -----------------------------------------------------------------
 
 \ status report at end of run
@@ -97,6 +111,7 @@ true var, run-test
    run-test? !if 2drop test-skipped ;; then
    isword? !if swap then
    w:exec
+   3 check-depth
    2dup             \ so test-failed can show actual and expected
    eq? if test-passed else test-failed then
 ;
@@ -104,6 +119,7 @@ true var, run-test
 : true? \ s w --
    run-test? !if drop test-skipped ;; then
    w:exec
+   2 check-depth
    true swap dup    \ so test-failed can show actual and expected
    if test-passed else test-failed then 
 ;
@@ -111,6 +127,7 @@ true var, run-test
 : false? \ s w --
    run-test? !if drop test-skipped ;; then
    w:exec
+   2 check-depth
    false swap dup    \ so test-failed can show actual and expected
    !if test-passed else test-failed then 
 ;
