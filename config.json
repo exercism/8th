@@ -30,6 +30,9 @@
     ],
     "exemplar": [
       ".meta/exemplar.8th"
+    ],
+    "invalidator": [
+      "libs/exercism/test"
     ]
   },
   "exercises": {
