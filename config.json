@@ -36,207 +36,206 @@
     ]
   },
   "exercises": {
-    "concept": [],
     "practice": [
       {
         "slug": "hello-world",
         "name": "Hello World",
         "uuid": "0c6d16eb-3a07-42ee-ba14-fa910e67a91f",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "practices": []
+        "difficulty": 1
       },
       {
         "slug": "two-fer",
         "name": "Two Fer",
         "uuid": "8e69c859-d131-4c2c-b0b7-e5cfadd5d679",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "practices": []
+        "difficulty": 1
       },
       {
         "slug": "gigasecond",
         "name": "Gigasecond",
         "uuid": "a9404ad2-c08a-4ba7-8101-303964653daa",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "practices": []
+        "difficulty": 1
       },
       {
         "slug": "leap",
         "name": "Leap",
         "uuid": "b46ecfb1-59ee-4776-a8fa-f8bd23cf15db",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 1,
-        "practices": []
+        "difficulty": 1
       },
       {
         "slug": "triangle",
         "name": "Triangle",
         "uuid": "12389895-0775-41f2-90bb-db65bc2ecfaf",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
-        "practices": []
+        "difficulty": 2
       },
       {
         "slug": "trinary",
         "name": "Trinary (Base-3) Numbers",
         "uuid": "6cf0dbc3-e90e-4a7f-a95b-507ef389d316",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
-        "practices": []
+        "difficulty": 2
       },
       {
         "slug": "darts",
         "name": "Darts",
         "uuid": "773c9910-ae75-4560-b110-e9d057438aa9",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 2,
-        "practices": []
+        "difficulty": 2
       },
       {
         "slug": "resistor-color",
         "name": "Resistor Color",
-        "difficulty": 2,
         "uuid": "cecddc24-225c-41a8-8331-d55d36e44c70",
+        "practices": [],
         "prerequisites": [],
-        "practices": []
+        "difficulty": 2
       },
       {
         "slug": "bob",
         "name": "Bob",
         "uuid": "b34b3dd7-9df2-4b3d-970d-f4b3a3a15358",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "practices": []
+        "difficulty": 3
       },
       {
         "slug": "hamming",
         "name": "Hamming",
         "uuid": "ead8a049-708c-4413-b58c-9526e6f66bfb",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "practices": []
+        "difficulty": 3
       },
       {
         "slug": "raindrops",
         "name": "Raindrops",
         "uuid": "6247ab47-f00e-4ab0-8bb9-1ca4110eaf0b",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "practices": []
+        "difficulty": 3
       },
       {
         "slug": "armstrong-numbers",
         "name": "Armstrong Numbers",
         "uuid": "fdc96f81-bba3-4a79-bd7d-3eab7bcdb446",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "practices": []
+        "difficulty": 3
       },
       {
         "slug": "isogram",
         "name": "Isogram",
         "uuid": "6d34e782-2002-4073-a935-9e50b9ac9d2e",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "practices": []
+        "difficulty": 3
       },
       {
         "slug": "word-count",
         "name": "Word Count",
         "uuid": "91ebb13f-394a-483a-9086-dbeb5e33c04a",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "practices": []
+        "difficulty": 3
       },
       {
         "slug": "acronym",
         "name": "Acronym",
         "uuid": "2b310b6a-cccc-4890-ae83-e0729cac412a",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "practices": []
+        "difficulty": 3
       },
       {
         "slug": "luhn",
         "name": "Luhn Credit Card Number Checker",
         "uuid": "b36a18cc-4385-40ba-9113-af5bf2ea349e",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 3,
-        "practices": []
+        "difficulty": 3
       },
       {
         "slug": "collatz-conjecture",
         "name": "Collatz Conjecture",
         "uuid": "7968006c-efdc-410c-a2fa-305a37528705",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 4,
-        "practices": []
+        "difficulty": 4
       },
       {
         "slug": "series",
         "name": "Series",
         "uuid": "12db01dc-6f58-49c1-8149-59700e48c7df",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 4,
-        "practices": []
+        "difficulty": 4
       },
       {
         "slug": "pangram",
         "name": "Pangram",
         "uuid": "077b874d-4094-46c2-9433-af64dd19ddfa",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 5,
-        "practices": []
+        "difficulty": 5
       },
       {
         "slug": "atbash-cipher",
         "name": "Atbash Cipher",
         "uuid": "104bb694-ec6b-4213-bc9d-ddeebb0bcc2b",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 5,
-        "practices": []
+        "difficulty": 5
       },
       {
         "slug": "yacht",
         "name": "Yacht",
         "uuid": "b1d34538-6c5c-476b-a79f-4cd55ac96e0b",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 6,
-        "practices": []
+        "difficulty": 6
       },
       {
         "slug": "roman-numerals",
         "name": "Roman Numerals",
         "uuid": "2b4c2a11-2639-4c9b-9ec1-5c20ee14da52",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 7,
-        "practices": []
+        "difficulty": 7
       },
       {
         "slug": "reverse-string",
         "name": "Reverse string",
         "uuid": "a76d512f-2b44-46eb-87e5-b6f9b90a5309",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 8,
-        "practices": []
+        "difficulty": 8
       },
       {
         "slug": "affine-cipher",
         "name": "Affine Cipher",
         "uuid": "2db07f32-d12c-4cca-9ddc-dac986ab0749",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 8,
-        "practices": []
+        "difficulty": 8
       },
       {
         "slug": "pythagorean-triplet",
         "name": "Pythagorean Triplet",
         "uuid": "1ec6e3dc-8929-403e-abcb-4346d0ad6969",
+        "practices": [],
         "prerequisites": [],
-        "difficulty": 9,
-        "practices": []
+        "difficulty": 9
       },
       {
         "slug": "sieve",
@@ -264,53 +263,52 @@
       }
     ]
   },
-  "concepts": [],
   "key_features": [
     {
-      "icon": "safe",
       "title": "Safe",
-      "content": "8th was designed from the beginning to avoid the most common software security problems."
+      "content": "8th was designed from the beginning to avoid the most common software security problems.",
+      "icon": "safe"
     },
     {
-      "icon": "cross-platform",
       "title": "Cross-platform",
-      "content": "With one click generate the executable for any platform 8th supports, from any platform it supports!"
+      "content": "With one click generate the executable for any platform 8th supports, from any platform it supports!",
+      "icon": "cross-platform"
     },
     {
-      "icon": "expressive",
       "title": "Expressive",
-      "content": "No reserved words at all and almost no syntax."
+      "content": "No reserved words at all and almost no syntax.",
+      "icon": "expressive"
     },
     {
-      "icon": "general-purpose",
       "title": "General purpose",
-      "content": "8th is primarily a strongly-typed FORTH-like stack-based procedural language with RPN syntax."
+      "content": "8th is primarily a strongly-typed FORTH-like stack-based procedural language with RPN syntax.",
+      "icon": "general-purpose"
     },
     {
-      "icon": "interactive",
       "title": "Interactive",
-      "content": "8th has an interactive REPL."
+      "content": "8th has an interactive REPL.",
+      "icon": "interactive"
     },
     {
-      "icon": "documentation",
       "title": "Documentation",
-      "content": "Documentation is extensive, making it easy to get started with 8th."
+      "content": "Documentation is extensive, making it easy to get started with 8th.",
+      "icon": "documentation"
     }
   ],
   "tags": [
+    "execution_mode/compiled",
+    "execution_mode/interpreted",
     "paradigm/functional",
     "paradigm/imperative",
     "paradigm/procedural",
+    "platform/android",
+    "platform/ios",
+    "platform/linux",
+    "platform/mac",
+    "platform/windows",
+    "typing/dynamic",
     "typing/static",
     "typing/strong",
-    "typing/dynamic",
-    "execution_mode/compiled",
-    "execution_mode/interpreted",
-    "platform/windows",
-    "platform/mac",
-    "platform/linux",
-    "platform/ios",
-    "platform/android",
     "used_for/backends",
     "used_for/cross_platform_development",
     "used_for/frontends",
