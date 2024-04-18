@@ -2,7 +2,6 @@
   "authors": [
     "softmoth"
   ],
-  "contributors": [],
   "files": {
     "solution": [
       "pythagorean-triplet.8th"
