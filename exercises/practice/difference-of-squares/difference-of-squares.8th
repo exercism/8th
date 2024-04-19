@@ -1,0 +1,11 @@
+: square-of-sum \ n -- n
+
+;
+
+: sum-of-squares \ n -- n
+
+;
+
+: difference-of-squares \ n -- n
+
+;
