@@ -20,44 +20,11 @@ required_tool curl
 [[ -f ./bin/fetch-configlet ]] || die "run this script from the repo's root directory."
 
 slug="${1}"
-name=$(echo "${slug}" | sed 's/\b\w/\u&/g; s/-/ /g')    # assumes GNU sed
 
-it_exists=$(
-    jq --arg slug "${slug}" '
-        .exercises.practice
-        | map(select(.slug == $slug))
-        | length > 0
-    ' config.json
-)
-[[ ${it_exists} == false ]] || die "${slug} already exists in config.json"
-
-# Add entry for exercise in config.json
+# Create entry for exercise in config.json and exercise files
 ./bin/fetch-configlet
-jq  --arg slug "${slug}"                 \
-    --arg uuid "$(./bin/configlet uuid)" \
-    --arg name "${name}"                 \
-    '
-        .exercises.practice += [
-            {
-                slug: $slug,
-                name: $name,
-                uuid: $uuid,
-                practices: [],
-                prerequisites: [],
-                difficulty: 1
-            }
-        ]
-    ' config.json > config.json.tmp \
-&& mv config.json.tmp config.json
+./bin/configlet create --practice-exercise "${slug}"
 
-# Sync the exercise
-./bin/configlet sync --update --yes  \
-                     --tests include \
-                     --metadata      \
-                     --docs          \
-                     --exercise "${slug}"
-
-mkdir -p "exercises/practice/${slug}/libs/exercism"
 cp ./libs/exercism/test "exercises/practice/${slug}/libs/exercism/test"
 
 cat << END_TEST > "exercises/practice/${slug}/test.8th"
@@ -72,22 +39,11 @@ end-of-tests
 ;with
 END_TEST
 
-touch "exercises/practice/${slug}/${slug}.8th"
-touch "exercises/practice/${slug}/.meta/example.8th"
-
 echo 
 read -rp 'Your github username: ' author
 conf="exercises/practice/${slug}/.meta/config.json"
-jq  --arg slug "${slug}"     \
-    --arg author "${author}" \
-    '
-        .authors = [$author] |
-        .files = {
-            solution: [$slug + ".8th"],
-            test: ["test.8th"],
-            example: [".meta/example.8th"]
-        }
-    ' "${conf}" > "${conf}.tmp" \
+jq  --arg author "${author}" \
+    '.authors = [$author]' "${conf}" > "${conf}.tmp" \
 && mv "${conf}.tmp" "${conf}"
 
 echo
