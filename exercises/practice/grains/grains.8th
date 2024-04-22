@@ -1,0 +1,6 @@
+: square \ n -- n
+;
+
+: total \ -- n
+  
+;
