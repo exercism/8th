@@ -268,6 +268,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 1
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "01c66794-36f0-4134-a9a9-4d09011beb5a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
