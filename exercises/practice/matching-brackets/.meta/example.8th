@@ -1,15 +1,14 @@
-: paired! \ a -- T
-  a:len 0 n:= if r> a:len 0 n:= 2nip ;then
-  a:shift
-  dup "[" s:= if r> "]" a:push >r drop recurse ;then
-  dup "(" s:= if r> ")" a:push >r drop recurse ;then
-  dup "{" s:= if r> "}" a:push >r drop recurse ;then
-  dup "]" s:= if r> a:len 0 n:= if 3drop false ;then a:pop swap >r s:= !if drop false ;then recurse ;then
-  dup ")" s:= if r> a:len 0 n:= if 3drop false ;then a:pop swap >r s:= !if drop false ;then recurse ;then
-  dup "}" s:= if r> a:len 0 n:= if 3drop false ;then a:pop swap >r s:= !if drop false ;then recurse ;then
-  drop recurse
-;
-
 : paired? \ s -- T
-  a:new >r null s:/ paired!
+  a:new >r 
+  (
+    dup '[ n:= if r> '] a:push >r drop ;then
+    dup '( n:= if r> ') a:push >r drop ;then
+    dup '{ n:= if r> '} a:push >r drop ;then
+    dup '] n:= if r> a:len 0 n:= if a:push >r break ;then a:pop swap >r n:= !if r> '] a:push >r break ;then ;then
+    dup ') n:= if r> a:len 0 n:= if a:push >r break ;then a:pop swap >r n:= !if r> ') a:push >r break ;then ;then
+    dup '} n:= if r> a:len 0 n:= if a:push >r break ;then a:pop swap >r n:= !if r> '} a:push >r break ;then ;then
+    drop
+  )
+  s:each!
+  r> a:len 0 n:= nip
 ;
