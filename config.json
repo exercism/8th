@@ -270,6 +270,14 @@
         "difficulty": 1
       },
       {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "01c66794-36f0-4134-a9a9-4d09011beb5a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "grains",
         "name": "Grains",
         "uuid": "213d2bdd-b6a7-4b45-a0a3-322a5027ded5",
