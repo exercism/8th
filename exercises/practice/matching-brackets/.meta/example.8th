@@ -11,5 +11,5 @@
 ;
 
 : paired? \ s -- T
-  a:new >r "" s:/ paired!
+  a:new >r null s:/ paired!
 ;
