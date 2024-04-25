@@ -24,7 +24,7 @@ function run_test_runner() {
 }
 
 function verify_exercise() {
-    local dir=$(realpath $1)
+    local dir=$(realpath "$1")
     local slug=$(basename "${dir}")
     local implementation_file_key=$2    
     local implementation_file=$(jq -r --arg d "${dir}" --arg k "${implementation_file_key}" '$d + "/" + .files[$k][0]' "${dir}/.meta/config.json")
@@ -49,18 +49,18 @@ function verify_exercise() {
 
 # Verify the Concept Exercises
 for concept_exercise_dir in ./exercises/concept/*/; do
-    if [ -d $concept_exercise_dir ]; then
+    if [[ -d $concept_exercise_dir ]]; then
         echo "Checking $(basename "${concept_exercise_dir}") exercise..."
-        verify_exercise $concept_exercise_dir "exemplar"
+        verify_exercise "$concept_exercise_dir" "exemplar"
     fi
 done
 
 # Verify the Practice Exercises
 for practice_exercise_dir in ./exercises/practice/*/; do
-    if [ -d $practice_exercise_dir ]; then
+    if [[ -d $practice_exercise_dir ]]; then
         echo "Checking $(basename "${practice_exercise_dir}") exercise..."
-        verify_exercise $practice_exercise_dir "example"
+        verify_exercise "$practice_exercise_dir" "example"
     fi
 done
 
-exit ${exit_code}
+exit "${exit_code}"

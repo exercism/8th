@@ -15,7 +15,7 @@ make_test_dir() {
     local slug=${exercise_dir##*/}
     local key=$2
     (
-        cd "$exercise_dir"
+        cd "$exercise_dir" || die "cannot cd to: $exercise_dir"
         [[ -f test-words.8th ]] && cp test-words.8th "$test_dir"
         [[ -d libs ]] && cp -r libs "$test_dir"
         while IFS= read -r test; do
