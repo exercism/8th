@@ -286,6 +286,14 @@
         "difficulty": 1
       },
       {
+        "slug": "rna-transcription",
+        "name": "RNA Transcription",
+        "uuid": "7bb351e9-55e9-495a-88fd-6aca7a68cd78",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "scrabble-score",
         "name": "Scrabble Score",
         "uuid": "e8db6509-44f0-428e-939b-25938e81b1ff",
