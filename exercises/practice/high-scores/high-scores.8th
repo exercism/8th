@@ -1,0 +1,15 @@
+: scores \ a -- a
+
+;
+
+: latest \ a -- n
+
+;
+
+: personal-best \ a -- n
+
+;
+
+: personal-top-three \ a -- a
+
+;

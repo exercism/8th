@@ -308,6 +308,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "high-scores",
+        "name": "High Scores",
+        "uuid": "62924791-ba16-4239-bc2b-ed6198b61abb",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
