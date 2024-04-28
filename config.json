@@ -332,6 +332,22 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "perfect-numbers",
+        "name": "Perfect Numbers",
+        "uuid": "27acb535-fcbd-4b41-b2c9-f065c1441e45",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
+        "slug": "rotational-cipher",
+        "name": "Rotational Cipher",
+        "uuid": "e0ef7b07-ec1f-4e00-ba47-737d3a7a696b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
