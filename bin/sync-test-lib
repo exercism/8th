@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+for test_file in $(find exercises -type f -name 'test' | sort); do
+    cp ./libs/exercism/test "${test_file}"
+done
