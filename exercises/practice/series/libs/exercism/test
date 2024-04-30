@@ -12,6 +12,13 @@ true var, run-test
 
 \ Some utility words
 
+
+: test-passed \ s x x --   \\ test name, expected value, actual value
+    2drop
+    1 tests-passed n:+!
+    con:green con:onBlack . space " ... OK" . con:white con:onBlack cr
+;
+
 : test-skipped \ s --
     1 tests-skipped n:+!
     con:cyan con:onBlack . space " ... SKIPPED" . con:white con:onBlack cr

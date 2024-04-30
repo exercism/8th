@@ -68,6 +68,14 @@ true var, run-test
    l: =
 ;
 
+: eps_eq? \ n x x -- T
+   \ are the items the same kind?
+   2dup >kind swap >kind n:=
+   !if 2drop false ;then
+   number? !if 2drop false ;then  
+   rot n:~=
+;
+
 : check-depth \ ... n -- ...
   dup>r
   n:1+ depth n:=
@@ -107,6 +115,16 @@ true var, run-test
    3 check-depth
    2dup             \ so test-failed can show actual and expected
    eq? if test-passed else test-failed then
+;
+
+: approx_eaqual? \ s x w n -- | s w x n --
+   run-test? !if 3drop test-skipped ;; then
+   -rot isword? !if swap then
+   w:exec
+   4 check-depth
+   3dup            \ so test-failed can show actual and expected
+   eps_eq?
+   if rot drop test-passed else rot drop test-failed then
 ;
 
 : true? \ s w --
