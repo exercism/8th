@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
-for test_file in $(find exercises -type f -name 'test' | sort); do
+shopt -s nullglob
+for test_file in exercises/{concept,practice}/*/libs/exercism/test; do
     cp ./libs/exercism/test "${test_file}"
 done
