@@ -117,7 +117,7 @@ true var, run-test
    eq? if test-passed else test-failed then
 ;
 
-: approx_eaqual? \ s x w n -- | s w x n --
+: approx_equal? \ s x w n -- | s w x n --
    run-test? !if 3drop test-skipped ;; then
    -rot isword? !if swap then
    w:exec
