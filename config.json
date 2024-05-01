@@ -380,6 +380,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "strain",
+        "name": "Strain",
+        "uuid": "9bc75279-afa8-4190-b71a-c4d26ce74477",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
