@@ -7,5 +7,5 @@
 ;
 
 : column \ s n -- a
-  n:1- >r >digits ( r@ a:_@ ) a:map
+  n:1- >r >digits ( r@ a:_@ ) a:map rdrop
 ;
