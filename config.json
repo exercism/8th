@@ -390,6 +390,14 @@
         "difficulty": 3
       },
       {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "793d5171-ffad-48b1-a65f-10587ca92532",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "proverb",
         "name": "Proverb",
         "uuid": "b176315f-5f9b-438a-8fe1-2c32303b58be",
