@@ -1,0 +1,7 @@
+: row \ s n -- a
+
+;
+
+: column \ s n -- a
+
+;

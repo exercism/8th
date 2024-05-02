@@ -396,6 +396,30 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 4
+      },
+      {
+        "slug": "matrix",
+        "name": "Matrix",
+        "uuid": "7c32d585-2e1f-405e-82b7-6fb2086c841b",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
+        "slug": "all-your-base",
+        "name": "All Your Base",
+        "uuid": "793d5171-ffad-48b1-a65f-10587ca92532",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
+        "slug": "proverb",
+        "name": "Proverb",
+        "uuid": "b176315f-5f9b-438a-8fe1-2c32303b58be",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
       }
     ]
   },
