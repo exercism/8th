@@ -420,6 +420,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "parallel-letter-frequency",
+        "name": "Parallel Letter Frequency",
+        "uuid": "8f55c666-41f7-42df-abf2-7133af0cb36a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 6
       }
     ]
   },
