@@ -1,0 +1,11 @@
+: modifier \ n -- n
+
+;
+
+: ability \ -- n
+
+;
+
+: character \ -- m
+
+;
