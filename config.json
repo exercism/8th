@@ -454,6 +454,14 @@
         "difficulty": 6
       },
       {
+        "slug": "food-chain",
+        "name": "Food Chain",
+        "uuid": "830897ff-ef28-4553-97b4-5c43396c3cdc",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "binary-search",
         "name": "Binary Search",
         "uuid": "f171fdeb-ad29-4268-a3bf-0fd84380630b",
