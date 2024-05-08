@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "erikschierboom"
+  ],
+  "files": {
+    "solution": [
+      "list-ops.8th"
+    ],
+    "test": [
+      "test.8th"
+    ],
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "blurb": "Implement basic list operations."
+}
