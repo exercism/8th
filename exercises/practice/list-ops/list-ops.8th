@@ -1,0 +1,30 @@
+: length \ a -- n
+
+;
+
+: append \ a a -- a
+
+;
+
+: concat \ a -- a
+
+;
+
+: filter \ a w -- a
+
+;
+
+: map \ a w -- a
+;
+
+: reverse \ a -- a
+
+;
+
+: foldl \ a x w -- x'
+
+;
+
+: foldr \ a x w -- x'
+
+;

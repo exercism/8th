@@ -470,6 +470,14 @@
         "difficulty": 3
       },
       {
+        "slug": "list-ops",
+        "name": "List Ops",
+        "uuid": "3f882da7-7702-468a-aa43-010917e30a17",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "secret-handshake",
         "name": "Secret Handshake",
         "uuid": "5f61e03e-f3b7-4d65-b73a-66383cfb6de2",
