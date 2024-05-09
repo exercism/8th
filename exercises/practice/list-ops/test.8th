@@ -40,13 +40,17 @@ SKIP-REST-OF-TESTS
     [[1], [2], [3], [], [4, 5, 6]]
     equal?
 
+: odd? \ n -- T
+    2 n:/mod drop 1 n:=
+;
+
 "empty list"
-    ( [] ( 2 n:/mod drop 1 n:= ) filter )
+    ( [] ' odd? filter )
     []
     equal?
 
 "non-empty list"
-    ( [1, 2, 3, 5] ( 2 n:/mod drop 1 n:= ) filter )
+    ( [1, 2, 3, 5] ' odd? filter )
     [1, 3, 5]
     equal?
 
