@@ -524,6 +524,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 3
+      },
+      {
+        "slug": "knapsack",
+        "name": "Knapsack",
+        "uuid": "3123e9f2-0d91-4ddc-b67c-ad9340af859e",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
       }
     ]
   },
