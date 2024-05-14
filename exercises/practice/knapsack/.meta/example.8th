@@ -2,28 +2,16 @@
   n:1+ [0] swap a:smear
 ;
 
-\ max_weight maximum_values item weight
-: update-max-weight \ n a m n -- n a m
-  >r "weight" m:@ swap "value" m:@ rot r@ swap n:- fourth swap a:@ rot n:+ r@ rot swap a:_@ n:max 2 roll r> rot a:! swap
+: update-maximum-for-item-and-weight \ n a m n -- n a m
+  >r "weight" m:@ swap "value" m:@ rot r@ swap n:- fourth swap a:@ rot n:+ 
+  r@ rot swap a:_@ n:max 2 roll r> rot a:! swap
 ;
 
-\ max_weight maximum_values item
-: max-weight-with-item \ n a m -- n a
-  "weight" m:@ fourth ' update-max-weight -rot loop- drop
+: update-maximum-for-item \ n a m -- n a
+  "weight" m:@ fourth ' update-maximum-for-item-and-weight -rot loop- drop
 ;
 
-\ max_weight items --
 : maximum-value \ n a -- n
-  over maximum-values swap \ max_weight maximum_values items
-  ' max-weight-with-item a:each! drop swap a:_@
+  over maximum-values swap
+  ' update-maximum-for-item a:each! drop swap a:_@
 ;
-
-
-\ int knapsack::maximum_value(int max_weight, const std::vector<Item>& items)
-\ {
-\     std::vector<int> dp(static_cast<std::size_t>(max_weight + 1));
-\     for (auto item: items)
-\         for (auto weight = max_weight; weight >= item.weight; --weight)
-\             dp[weight] = std::max(dp[weight], item.value + dp[weight - item.weight]);
-\     return dp[max_weight];
-\ }
