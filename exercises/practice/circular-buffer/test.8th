@@ -1,0 +1,79 @@
+"circular-buffer.8th" f:include
+needs exercism/test
+with: test
+14 tests
+
+"reading empty buffer should fail"
+    ( 1 ["read" false] run )
+    {}
+    equal?
+
+SKIP-REST-OF-TESTS
+
+"can read an item just written"
+    ( 1 ["write" 1 true, "read" true 1] run )
+    {}
+    equal?
+
+"each item may only be read once"
+    ( 1 ["write" 1 true, "read" true 1, "read" false] run )
+    {}
+    equal?
+
+"items are read in the order they are written"
+    ( 2 ["write" 1 true, "write" 2 true, "read" true 1, "read" true 2] run )
+    {}
+    equal?
+
+"full buffer can't be written to"
+    ( 1 ["write" 1 true, "write" 2 false] run )
+    {}
+    equal?
+
+"a read frees up capacity for another write"
+    ( 1 ["write" 1 true, "read" true 1, "write" 2 true, "read" true 2] run )
+    {}
+    equal?
+
+"read position is maintained even across multiple writes"
+    ( 3 ["write" 1 true, "write" 2 true, "read" true 1, "write" 3 true, "read" true 2, "read" true 3] run )
+    {}
+    equal?
+
+"items cleared out of buffer can't be read"
+    ( 1 ["write" 1 true, "clear", "read" false] run )
+    {}
+    equal?
+
+"clear frees up capacity for another write"
+    ( 1 ["write" 1 true, "clear", "write" 2 true, "read" true 2] run )
+    {}
+    equal?
+
+"clear does nothing on empty buffer"
+    ( 1 ["clear", "write" 1 true, "read" true 1] run )
+    {}
+    equal?
+
+"overwrite acts like write on non-full buffer"
+    ( 2 ["write" 1 true, "overwrite" 2, "read" true 1, "read" true 2] run )
+    {}
+    equal?
+
+"overwrite replaces the oldest item on full buffer"
+    ( 2 ["write" 1 true, "write" 2 true, "overwrite" 3, "read" true 2, "read" true 3] run )
+    {}
+    equal?
+
+"overwrite replaces the oldest item remaining in buffer following a read"
+    ( 3 ["write" 1 true, "write" 2 true, "write" 3 true, "read" true 1, "write" 4 true, "overwrite" 5, "read" true 3, "read" true 4, "read" true 5] run )
+    {}
+    equal?
+
+"initial clear does not affect wrapping around"
+    ( 2 ["clear", "write" 1 true, "write" 2 true, "overwrite" 3, "overwrite" 4, "read" true 3, "read" true 4, "read" false] run )
+    {}
+    equal?
+
+end-of-tests
+;with
