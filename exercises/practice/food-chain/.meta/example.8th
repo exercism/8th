@@ -42,12 +42,13 @@
 : verse \ n -- a
   dup a:new 
   swap verse-start a:+ 
+  over 8 n:= if nip ;then
   swap verse-middle a:+
   verse-end a:push
 ;
 
 : join-verses \ a -- a
-  ( swap a:len 0 n:= !if "" a:push then swap a:+ ) [] a:reduce
+  ( swap a:len 0 n:= !if "" a:push then swap a:+ ) a:new a:reduce
 ;
 
 : recite \ n n -- a
