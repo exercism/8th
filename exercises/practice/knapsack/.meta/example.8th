@@ -1,5 +1,5 @@
 : maximum-values \ n -- a
-  n:1+ [0] swap a:smear
+  n:1+ a:new 0 a:push swap a:smear
 ;
 
 : update-maximum-for-item-and-weight \ n a m n -- n a m
