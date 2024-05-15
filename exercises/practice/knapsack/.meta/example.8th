@@ -1,4 +1,4 @@
-: maximum-values \ n -- a
+: zeros \ n -- a
   n:1+ a:new 0 a:push swap a:smear
 ;
 
@@ -12,6 +12,6 @@
 ;
 
 : maximum-value \ n a -- n
-  over maximum-values swap
+  over zeros swap
   ' update-maximum-for-item a:each! drop swap a:_@
 ;
