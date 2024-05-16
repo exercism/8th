@@ -9,11 +9,11 @@ needs array/parallel
 ;
 
 : letter-frequencies \ s -- m
-  s:lc letters ( dup -rot increment-frequency ) {} const a:reduce
+  s:lc letters ( dup -rot increment-frequency ) m:new const a:reduce
 ;
 
 : merge-frequencies \ a -- m
-  ( ( >r dup -rot 0 m:@? r> n:+ rot swap m:! ) m:each drop ) {} const a:reduce
+  ( ( >r dup -rot 0 m:@? r> n:+ rot swap m:! ) m:each drop ) m:new const a:reduce
 ;
 
 : >frequencies \ a -- m
