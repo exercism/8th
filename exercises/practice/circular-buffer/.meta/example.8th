@@ -47,9 +47,7 @@ ns: cb
   r> swap cb:overwrite
 ;
 
-: reset \ o n
-  2dup "capacity" swap o:! drop
-  n:1- ' noop 0 rot a:generate "items" swap o:!
+: clear \ o  
   "head"  0 o:!
   "tail"  0 o:!
   "count" 0 o:!
@@ -63,5 +61,8 @@ ns: cb
       write: ' write,
       overwrite: ' overwrite
     }
-  } o:new swap cb:reset
+  } o:new swap 
+  2dup "capacity" swap o:! drop
+  n:1- ' noop 0 rot a:generate "items" swap o:!
+  cb:clear
 ;
