@@ -1,0 +1,179 @@
+"minesweeper.8th" f:include
+needs exercism/test
+with: test
+12 tests
+
+"no rows"
+    ( [] annotate )
+    []
+    equal?
+
+SKIP-REST-OF-TESTS
+
+"no columns"
+    ( [""] annotate )
+    [""]
+    equal?
+
+"no mines"
+    (
+      [
+        "   ",
+        "   ",
+        "   "
+      ]
+      annotate )
+      [
+        "   ",
+        "   ",
+        "   "
+      ]
+    equal?
+
+"minefield with only mines"
+    (
+      [
+        "***",
+        "***",
+        "***"
+      ]
+      annotate )
+      [
+        "***",
+        "***",
+        "***"
+      ]
+    equal?
+
+"mine surrounded by spaces"
+    (
+      [
+        "   ",
+        " * ",
+        "   "
+      ]
+      annotate )
+      [
+        "111",
+        "1*1",
+        "111"
+      ]
+    equal?
+
+"space surrounded by mines"
+    (
+      [
+        "***",
+        "* *",
+        "***"
+      ]
+      annotate )
+      [
+        "***",
+        "*8*",
+        "***"
+      ]
+    equal?
+
+"horizontal line"
+    (
+      [
+        " * * "
+      ]
+      annotate )
+      [
+        "1*2*1"
+      ]
+    equal?
+
+"horizontal line, mines at edges"
+    (
+      [
+        "*   *"
+      ]
+      annotate )
+      [
+        "*1 1*"
+      ]
+    equal?
+
+"vertical line"
+    (
+      [
+        " ",
+        "*",
+        " ",
+        "*",
+        " "
+      ]
+      annotate )
+      [
+        "1",
+        "*",
+        "2",
+        "*",
+        "1"
+      ]
+    equal?
+
+"vertical line, mines at edges"
+    (
+      [
+        "*",
+        " ",
+        " ",
+        " ",
+        "*"
+      ]
+      annotate )
+      [
+        "*",
+        "1",
+        " ",
+        "1",
+        "*"
+      ]
+    equal?
+
+"cross"
+    (
+      [
+        "  *  ",
+        "  *  ",
+        "*****",
+        "  *  ",
+        "  *  "
+      ]
+      annotate )
+      [
+        " 2*2 ",
+        "25*52",
+        "*****",
+        "25*52",
+        " 2*2 "
+      ]
+    equal?
+
+"large minefield"
+    (
+      [
+        " *  * ",
+        "  *   ",
+        "    * ",
+        "   * *",
+        " *  * ",
+        "      "
+      ]
+      annotate )
+      [
+        "1*22*1",
+        "12*322",
+        " 123*2",
+        "112*4*",
+        "1*22*2",
+        "111111"
+      ]
+    equal?
+
+end-of-tests
+;with

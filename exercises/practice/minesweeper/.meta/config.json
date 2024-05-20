@@ -1,0 +1,17 @@
+{
+  "authors": [
+    "erikschierboom"
+  ],
+  "files": {
+    "solution": [
+      "minesweeper.8th"
+    ],
+    "test": [
+      "test.8th"
+    ],
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "blurb": "Add the numbers to a minesweeper board."
+}

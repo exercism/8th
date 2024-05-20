@@ -532,6 +532,14 @@
         "practices": [],
         "prerequisites": [],
         "difficulty": 5
+      },
+      {
+        "slug": "minesweeper",
+        "name": "Minesweeper",
+        "uuid": "b6702b76-7973-467b-8a1f-9252a53de3c4",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
       }
     ]
   },
