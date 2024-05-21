@@ -1,0 +1,17 @@
+ns: cb
+
+: read \ x -- x x'
+
+;
+
+: write \ x x' -- x
+
+;
+
+: overwrite \ x x' -- x
+
+;
+
+: new \ n -- x
+
+;
