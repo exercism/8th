@@ -1,72 +1,72 @@
 
-"count one word"
-    ( "word" word-count )
-    { "word":1 }
-    equal?
+    test "count one word" [
+        result: word-count "word"
+        assert -> { "word":1 } = result
+    ]?
 
 
-"count one of each word"
-    ( "one of each" word-count )
-    { "one":1,"of":1,"each":1 }
-    equal?
+    test "count one of each word" [
+        result: word-count "one of each"
+        assert -> { "one":1,"of":1,"each":1 } = result
+    ]?
 
-"multiple occurrences of a word"
-    ( "one fish two fish red fish blue fish" word-count )
-    { "one":1,"fish":4,"two":1,"red":1,"blue":1 }
-    equal?
+    test "multiple occurrences of a word" [
+        result: word-count "one fish two fish red fish blue fish"
+        assert -> { "one":1,"fish":4,"two":1,"red":1,"blue":1 } = result
+    ]?
 
-"handles cramped lists"
-    ( "one,two,three" word-count )
-    { "one":1,"two":1,"three":1 }
-    equal?
+    test "handles cramped lists" [
+        result: word-count "one,two,three"
+        assert -> { "one":1,"two":1,"three":1 } = result
+    ]?
 
-"handles expanded lists"
-    ( "one,\ntwo,\nthree" word-count )
-    { "one":1,"two":1,"three":1 }
-    equal?
+    test "handles expanded lists" [
+        result: word-count "one,\ntwo,\nthree"
+        assert -> { "one":1,"two":1,"three":1 } = result
+    ]?
 
-"ignore punctuation"
-    ( "car: carpet as java: javascript!!&@$%^&" word-count )
-    { "car":1,"carpet":1,"as":1,"java":1,"javascript":1 }
-    equal?
+    test "ignore punctuation" [
+        result: word-count "car: carpet as java: javascript!!&@$%^&"
+        assert -> { "car":1,"carpet":1,"as":1,"java":1,"javascript":1 } = result
+    ]?
 
-"include numbers"
-    ( "testing, 1, 2 testing" word-count )
-    { "testing":2,"1":1,"2":1 }
-    equal?
+    test "include numbers" [
+        result: word-count "testing, 1, 2 testing"
+        assert -> { "testing":2,"1":1,"2":1 } = result
+    ]?
 
-"normalize case"
-    ( "go Go GO Stop stop" word-count )
-    { "go":3,"stop":2 }
-    equal?
+    test "normalize case" [
+        result: word-count "go Go GO Stop stop"
+        assert -> { "go":3,"stop":2 } = result
+    ]?
 
-"with apostrophes"
-    ( "First: don't laugh. Then: don't cry. You're getting it." word-count )
-    { "first":1,"don't":2,"laugh":1,"then":1,"cry":1,"you're":1,"getting":1,"it":1 }
-    equal?
+    test "with apostrophes" [
+        result: word-count "First: don't laugh. Then: don't cry. You're getting it."
+        assert -> { "first":1,"don't":2,"laugh":1,"then":1,"cry":1,"you're":1,"getting":1,"it":1 } = result
+    ]?
 
-"with quotations"
-    ( "Joe can't tell between 'large' and large." word-count )
-    { "joe":1,"can't":1,"tell":1,"between":1,"large":2,"and":1 }
-    equal?
+    test "with quotations" [
+        result: word-count "Joe can't tell between 'large' and large."
+        assert -> { "joe":1,"can't":1,"tell":1,"between":1,"large":2,"and":1 } = result
+    ]?
 
-"substrings from the beginning"
-    ( "Joe can't tell between app, apple and a." word-count )
-    { "joe":1,"can't":1,"tell":1,"between":1,"app":1,"apple":1,"and":1,"a":1 }
-    equal?
+    test "substrings from the beginning" [
+        result: word-count "Joe can't tell between app, apple and a."
+        assert -> { "joe":1,"can't":1,"tell":1,"between":1,"app":1,"apple":1,"and":1,"a":1 } = result
+    ]?
 
-"multiple spaces not detected as a word"
-    ( " multiple whitespaces" word-count )
-    { "multiple":1,"whitespaces":1 }
-    equal?
+    test "multiple spaces not detected as a word" [
+        result: word-count " multiple whitespaces"
+        assert -> { "multiple":1,"whitespaces":1 } = result
+    ]?
 
-"alternating word separators not detected as a word"
-    ( ",\n,one,\n ,two \n 'three'" word-count )
-    { "one":1,"two":1,"three":1 }
-    equal?
+    test "alternating word separators not detected as a word" [
+        result: word-count ",\n,one,\n ,two \n 'three'"
+        assert -> { "one":1,"two":1,"three":1 } = result
+    ]?
 
-"quotation for word with apostrophe"
-    ( "can, can't, 'can't'" word-count )
-    { "can":1,"can't":2 }
-    equal?
+    test "quotation for word with apostrophe" [
+        result: word-count "can, can't, 'can't'"
+        assert -> { "can":1,"can't":2 } = result
+    ]?
 

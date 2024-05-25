@@ -4,80 +4,80 @@ with: test
 
 16 tests
 
-"encode yes"
-    ( "yes" 5 7 >code )
-    "xbt"
-    equal?
+    test "encode yes" [
+        result: >code "yes" 5 7
+        assert -> "xbt" = result
+    ]?
 
 
-"encode no"
-    ( "no" 15 18 >code )
-    "fu"
-    equal?
+    test "encode no" [
+        result: >code "no" 15 18
+        assert -> "fu" = result
+    ]?
 
-"encode OMG"
-    ( "OMG" 21 3 >code )
-    "lvz"
-    equal?
+    test "encode OMG" [
+        result: >code "OMG" 21 3
+        assert -> "lvz" = result
+    ]?
 
-"encode O M G"
-    ( "O M G" 25 47 >code )
-    "hjp"
-    equal?
+    test "encode O M G" [
+        result: >code "O M G" 25 47
+        assert -> "hjp" = result
+    ]?
 
-"encode mindblowingly"
-    ( "mindblowingly" 11 15 >code )
-    "rzcwa gnxzc dgt"
-    equal?
+    test "encode mindblowingly" [
+        result: >code "mindblowingly" 11 15
+        assert -> "rzcwa gnxzc dgt" = result
+    ]?
 
-"encode numbers"
-    ( "Testing,1 2 3, testing." 3 4 >code )
-    "jqgjc rw123 jqgjc rw"
-    equal?
+    test "encode numbers" [
+        result: >code "Testing,1 2 3, testing." 3 4
+        assert -> "jqgjc rw123 jqgjc rw" = result
+    ]?
 
-"encode deep thought"
-    ( "Truth is fiction." 5 17 >code )
-    "iynia fdqfb ifje"
-    equal?
+    test "encode deep thought" [
+        result: >code "Truth is fiction." 5 17
+        assert -> "iynia fdqfb ifje" = result
+    ]?
 
-"encode all the letters"
-    ( "The quick brown fox jumps over the lazy dog." 17 33 >code )
-    "swxtj npvyk lruol iejdc blaxk swxmh qzglf"
-    equal?
+    test "encode all the letters" [
+        result: >code "The quick brown fox jumps over the lazy dog." 17 33
+        assert -> "swxtj npvyk lruol iejdc blaxk swxmh qzglf" = result
+    ]?
 
 "encode with a not coprime to m"
     ( "This is a test." 6 17 >code )
     null?
 
-"decode exercism"
-    ( "tytgn fjr" 3 7 code> )
-    "exercism"
-    equal?
+    test "decode exercism" [
+        result: code> "tytgn fjr" 3 7
+        assert -> "exercism" = result
+    ]?
 
-"decode a sentence"
-    ( "qdwju nqcro muwhn odqun oppmd aunwd o" 19 16 code> )
-    "anobstacleisoftenasteppingstone"
-    equal?
+    test "decode a sentence" [
+        result: code> "qdwju nqcro muwhn odqun oppmd aunwd o" 19 16
+        assert -> "anobstacleisoftenasteppingstone" = result
+    ]?
 
-"decode numbers"
-    ( "odpoz ub123 odpoz ub" 25 7 code> )
-    "testing123testing"
-    equal?
+    test "decode numbers" [
+        result: code> "odpoz ub123 odpoz ub" 25 7
+        assert -> "testing123testing" = result
+    ]?
 
-"decode all the letters"
-    ( "swxtj npvyk lruol iejdc blaxk swxmh qzglf" 17 33 code> )
-    "thequickbrownfoxjumpsoverthelazydog"
-    equal?
+    test "decode all the letters" [
+        result: code> "swxtj npvyk lruol iejdc blaxk swxmh qzglf" 17 33
+        assert -> "thequickbrownfoxjumpsoverthelazydog" = result
+    ]?
 
-"decode with no spaces in input"
-    ( "swxtjnpvyklruoliejdcblaxkswxmhqzglf" 17 33 code> )
-    "thequickbrownfoxjumpsoverthelazydog"
-    equal?
+    test "decode with no spaces in input" [
+        result: code> "swxtjnpvyklruoliejdcblaxkswxmhqzglf" 17 33
+        assert -> "thequickbrownfoxjumpsoverthelazydog" = result
+    ]?
 
-"decode with too many spaces"
-    ( "vszzm    cly   yd cg    qdp" 15 16 code> )
-    "jollygreengiant"
-    equal?
+    test "decode with too many spaces" [
+        result: code> "vszzm    cly   yd cg    qdp" 15 16
+        assert -> "jollygreengiant" = result
+    ]?
 
 "decode with a not coprime to m"
     ( "Test" 13 5 code> )

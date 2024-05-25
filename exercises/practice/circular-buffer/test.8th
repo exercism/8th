@@ -13,23 +13,23 @@
         assert -> true = result
     ]
 
-"items are read in the order they are written"
-    ( 2 cb:new 1 cb:write 2 cb:write cb:read swap cb:read nip 2 a:close )
-    [1, 2]
-    equal?    test "full buffer can't be written to" [
+    test "items are read in the order they are written" [
+        result: a:close 2 cb:new 1 cb:write 2 cb:write cb:read swap cb:read nip 2
+        assert -> [1, 2] = result
+    ]?    test "full buffer can't be written to" [
         result: throws? 1 cb:new 1 cb:write 2 ' cb:write
         assert -> true = result
     ]
 
-"a read frees up capacity for another write"
-    ( 1 cb:new 1 cb:write cb:read swap 2 cb:write cb:read nip 2 a:close )
-    [1, 2]
-    equal?
+    test "a read frees up capacity for another write" [
+        result: a:close 1 cb:new 1 cb:write cb:read swap 2 cb:write cb:read nip 2
+        assert -> [1, 2] = result
+    ]?
 
-"read position is maintained even across multiple writes"
-    ( 3 cb:new 1 cb:write 2 cb:write cb:read swap 3 cb:write cb:read swap cb:read nip 3 a:close )
-    [1, 2, 3]
-    equal?    test "items cleared out of buffer can't be read" [
+    test "read position is maintained even across multiple writes" [
+        result: a:close 3 cb:new 1 cb:write 2 cb:write cb:read swap 3 cb:write cb:read swap cb:read nip 3
+        assert -> [1, 2, 3] = result
+    ]?    test "items cleared out of buffer can't be read" [
         result: throws? 1 cb:new 1 cb:write cb:clear ' cb:read
         assert -> true = result
     ]
@@ -44,20 +44,20 @@
         assert -> 1 = result
     ]?
 
-"overwrite acts like write on non-full buffer"
-    ( 2 cb:new 1 cb:write 2 cb:overwrite cb:read swap cb:read nip 2 a:close )
-    [1, 2]
-    equal?
+    test "overwrite acts like write on non-full buffer" [
+        result: a:close 2 cb:new 1 cb:write 2 cb:overwrite cb:read swap cb:read nip 2
+        assert -> [1, 2] = result
+    ]?
 
-"overwrite replaces the oldest item on full buffer"
-    ( 2 cb:new 1 cb:write 2 cb:write 3 cb:overwrite cb:read swap cb:read nip 2 a:close )
-    [2, 3]
-    equal?
+    test "overwrite replaces the oldest item on full buffer" [
+        result: a:close 2 cb:new 1 cb:write 2 cb:write 3 cb:overwrite cb:read swap cb:read nip 2
+        assert -> [2, 3] = result
+    ]?
 
-"overwrite replaces the oldest item remaining in buffer following a read"
-    ( 3 cb:new 1 cb:write 2 cb:write 3 cb:write cb:read swap 4 cb:write 5 cb:overwrite cb:read swap cb:read swap cb:read nip 4 a:close )
-    [1, 3, 4, 5]
-    equal?    test "initial clear does not affect wrapping around" [
+    test "overwrite replaces the oldest item remaining in buffer following a read" [
+        result: a:close 3 cb:new 1 cb:write 2 cb:write 3 cb:write cb:read swap 4 cb:write 5 cb:overwrite cb:read swap cb:read swap cb:read nip 4
+        assert -> [1, 3, 4, 5] = result
+    ]?    test "initial clear does not affect wrapping around" [
         result: throws? 2 cb:new cb:clear 1 cb:write 2 cb:write 3 cb:overwrite 4 cb:overwrite cb:read drop cb:read drop ' cb:read
         assert -> true = result
     ]

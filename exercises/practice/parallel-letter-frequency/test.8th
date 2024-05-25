@@ -1,34 +1,34 @@
 
-"no texts"
-    ( [] >frequencies )
-    {}
-    equal?
+    test "no texts" [
+        result: >frequencies []
+        assert -> {} = result
+    ]?
 
 
-"one text with one letter"
-    ( ["a"] >frequencies )
-    {"a": 1}
-    equal?
+    test "one text with one letter" [
+        result: >frequencies ["a"]
+        assert -> {"a": 1} = result
+    ]?
 
-"one text with multiple letters"
-    ( ["bbcccd"] >frequencies )
-    {"b": 2, "c": 3, "d": 1}
-    equal?
+    test "one text with multiple letters" [
+        result: >frequencies ["bbcccd"]
+        assert -> {"b": 2, "c": 3, "d": 1} = result
+    ]?
 
-"two texts with one letter"
-    ( ["e", "f"] >frequencies )
-    {"e": 1, "f": 1}
-    equal?
+    test "two texts with one letter" [
+        result: >frequencies ["e", "f"]
+        assert -> {"e": 1, "f": 1} = result
+    ]?
 
-"two texts with multiple letters"
-    ( ["ggh", "hhi"] >frequencies )
-    {"g": 2, "h": 3, "i": 1}
-    equal?
+    test "two texts with multiple letters" [
+        result: >frequencies ["ggh", "hhi"]
+        assert -> {"g": 2, "h": 3, "i": 1} = result
+    ]?
 
-"ignore letter casing"
-    ( ["m", "M"] >frequencies )
-    {"m": 2}
-    equal?
+    test "ignore letter casing" [
+        result: >frequencies ["m", "M"]
+        assert -> {"m": 2} = result
+    ]?
 
 "ignore whitespace"
     ( ["   ", "	", "
@@ -36,29 +36,29 @@
     {}
     equal?
 
-"ignore punctuation"
-    ( ["!", "?", ";", ",", "."] >frequencies )
-    {}
-    equal?
+    test "ignore punctuation" [
+        result: >frequencies ["!", "?", ";", ",", "."]
+        assert -> {} = result
+    ]?
 
-"ignore numbers"
-    ( ["1", "2", "3", "4", "5", "6", "7", "8", "9"] >frequencies )
-    {}
-    equal?
+    test "ignore numbers" [
+        result: >frequencies ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        assert -> {} = result
+    ]?
 
-"Unicode letters"
-    ( ["本", "φ", "ほ", "ø"] >frequencies )
-    {"本": 1, "φ": 1, "ほ": 1, "ø": 1}
-    equal?
+    test "Unicode letters" [
+        result: >frequencies ["本", "φ", "ほ", "ø"]
+        assert -> {"本": 1, "φ": 1, "ほ": 1, "ø": 1} = result
+    ]?
 
-"combination of lower- and uppercase letters, punctuation and white space"
-    ( ["There, peeping among the cloud-wrack above a dark tower high up in the mountains, Sam saw a white star twinkle for a while. The beauty of it smote his heart, as he looked up out of the forsaken land, and hope returned to him. For like a shaft, clear and cold, the thought pierced him that in the end, the shadow was only a small and passing thing: there was light and high beauty forever beyond its reach."] >frequencies )
-    {"a": 32, "b": 4, "c": 6, "d": 14, "e": 37, "f": 7, "g": 8, "h": 29, "i": 19, "k": 6, "l": 12, "m": 7, "n": 19, "o": 22, "p": 7, "r": 17, "s": 16, "t": 30, "u": 9, "v": 2, "w": 9, "y": 4}
-    equal?
+    test "combination of lower- and uppercase letters, punctuation and white space" [
+        result: >frequencies ["There, peeping among the cloud-wrack above a dark tower high up in the mountains, Sam saw a white star twinkle for a while. The beauty of it smote his heart, as he looked up out of the forsaken land, and hope returned to him. For like a shaft, clear and cold, the thought pierced him that in the end, the shadow was only a small and passing thing: there was light and high beauty forever beyond its reach."]
+        assert -> {"a": 32, "b": 4, "c": 6, "d": 14, "e": 37, "f": 7, "g": 8, "h": 29, "i": 19, "k": 6, "l": 12, "m": 7, "n": 19, "o": 22, "p": 7, "r": 17, "s": 16, "t": 30, "u": 9, "v": 2, "w": 9, "y": 4} = result
+    ]?
 
-"many small texts"
-    ( ["abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc"] >frequencies )
-    {"a": 50, "b": 100, "c": 150}
-    equal?
+    test "many small texts" [
+        result: >frequencies ["abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc"]
+        assert -> {"a": 50, "b": 100, "c": 150} = result
+    ]?
 
 

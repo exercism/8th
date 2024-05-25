@@ -1,33 +1,33 @@
 
-"Empty RNA sequence"
-    ( "" >rna )
-    ""
-    equal?
+    test "Empty RNA sequence" [
+        result: >rna ""
+        assert -> "" = result
+    ]?
 
 
-"RNA complement of cytosine is guanine"
-    ( "C" >rna )
-    "G"
-    equal?
+    test "RNA complement of cytosine is guanine" [
+        result: >rna "C"
+        assert -> "G" = result
+    ]?
 
-"RNA complement of guanine is cytosine"
-    ( "G" >rna )
-    "C"
-    equal?
+    test "RNA complement of guanine is cytosine" [
+        result: >rna "G"
+        assert -> "C" = result
+    ]?
 
-"RNA complement of thymine is adenine"
-    ( "T" >rna )
-    "A"
-    equal?
+    test "RNA complement of thymine is adenine" [
+        result: >rna "T"
+        assert -> "A" = result
+    ]?
 
-"RNA complement of adenine is uracil"
-    ( "A" >rna )
-    "U"
-    equal?
+    test "RNA complement of adenine is uracil" [
+        result: >rna "A"
+        assert -> "U" = result
+    ]?
 
-"RNA complement"
-    ( "ACGTGGTCTTAA" >rna )
-    "UGCACCAGAAUU"
-    equal?
+    test "RNA complement" [
+        result: >rna "ACGTGGTCTTAA"
+        assert -> "UGCACCAGAAUU" = result
+    ]?
 
 

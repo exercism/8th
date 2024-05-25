@@ -15,25 +15,25 @@
     ( neg 5 0 darts-score )
     equal?
 
-"On the inner circle"
-    ( 0 neg 1 darts-score )
-    10
-    equal?
+    test "On the inner circle" [
+        result: darts-score 0 neg 1
+        assert -> 10 = result
+    ]?
 
-"Exactly on center"
-    ( 0 0 darts-score )
-    10
-    equal?
+    test "Exactly on center" [
+        result: darts-score 0 0
+        assert -> 10 = result
+    ]?
 
-"Near the center"
-    ( neg 0.1 neg 0.1 darts-score )
-    10
-    equal?
+    test "Near the center" [
+        result: darts-score neg 0.1 neg 0.1
+        assert -> 10 = result
+    ]?
 
-"Just within the inner circle"
-    ( 0.7 0.7 darts-score )
-    10
-    equal?
+    test "Just within the inner circle" [
+        result: darts-score 0.7 0.7
+        assert -> 10 = result
+    ]?
 
 "Just outside the inner circle"
     5

@@ -1,63 +1,63 @@
 
-"finds the largest product if span equals length"
-    ( "29" 2 largest-product )
-    18
-    equal?
+    test "finds the largest product if span equals length" [
+        result: largest-product "29" 2
+        assert -> 18 = result
+    ]?
 
 
-"can find the largest product of 2 with numbers in order"
-    ( "0123456789" 2 largest-product )
-    72
-    equal?
+    test "can find the largest product of 2 with numbers in order" [
+        result: largest-product "0123456789" 2
+        assert -> 72 = result
+    ]?
 
-"can find the largest product of 2"
-    ( "576802143" 2 largest-product )
-    48
-    equal?
+    test "can find the largest product of 2" [
+        result: largest-product "576802143" 2
+        assert -> 48 = result
+    ]?
 
-"can find the largest product of 3 with numbers in order"
-    ( "0123456789" 3 largest-product )
-    504
-    equal?
+    test "can find the largest product of 3 with numbers in order" [
+        result: largest-product "0123456789" 3
+        assert -> 504 = result
+    ]?
 
-"can find the largest product of 3"
-    ( "1027839564" 3 largest-product )
-    270
-    equal?
+    test "can find the largest product of 3" [
+        result: largest-product "1027839564" 3
+        assert -> 270 = result
+    ]?
 
-"can find the largest product of 5 with numbers in order"
-    ( "0123456789" 5 largest-product )
-    15120
-    equal?
+    test "can find the largest product of 5 with numbers in order" [
+        result: largest-product "0123456789" 5
+        assert -> 15120 = result
+    ]?
 
-"can get the largest product of a big number"
-    ( "73167176531330624919225119674426574742355349194934" 6 largest-product )
-    23520
-    equal?
+    test "can get the largest product of a big number" [
+        result: largest-product "73167176531330624919225119674426574742355349194934" 6
+        assert -> 23520 = result
+    ]?
 
-"reports zero if the only digits are zero"
-    ( "0000" 2 largest-product )
-    0
-    equal?
+    test "reports zero if the only digits are zero" [
+        result: largest-product "0000" 2
+        assert -> 0 = result
+    ]?
 
-"reports zero if all spans include zero"
-    ( "99099" 3 largest-product )
-    0
-    equal?
+    test "reports zero if all spans include zero" [
+        result: largest-product "99099" 3
+        assert -> 0 = result
+    ]?
 
 "rejects span longer than string length"
     ( "123" 4 largest-product )
     null?
 
-"reports 1 for empty string and empty product (0 span)"
-    ( "" 0 largest-product )
-    1
-    equal?
+    test "reports 1 for empty string and empty product (0 span)" [
+        result: largest-product "" 0
+        assert -> 1 = result
+    ]?
 
-"reports 1 for nonempty string and empty product (0 span)"
-    ( "123" 0 largest-product )
-    1
-    equal?
+    test "reports 1 for nonempty string and empty product (0 span)" [
+        result: largest-product "123" 0
+        assert -> 1 = result
+    ]?
 
 "rejects empty string and nonzero span"
     ( "" 1 largest-product )

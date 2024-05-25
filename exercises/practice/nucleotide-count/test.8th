@@ -1,24 +1,24 @@
 
-"empty strand"
-    ( "" nucleotide-counts )
-    {"A": 0, "C": 0, "G": 0, "T": 0}
-    equal?
+    test "empty strand" [
+        result: nucleotide-counts ""
+        assert -> {"A": 0, "C": 0, "G": 0, "T": 0} = result
+    ]?
 
 
-"can count one nucleotide in single-character input"
-    ( "G" nucleotide-counts )
-    {"A": 0, "C": 0, "G": 1, "T": 0}
-    equal?
+    test "can count one nucleotide in single-character input" [
+        result: nucleotide-counts "G"
+        assert -> {"A": 0, "C": 0, "G": 1, "T": 0} = result
+    ]?
 
-"strand with repeated nucleotide"
-    ( "GGGGGGG" nucleotide-counts )
-    {"A": 0, "C": 0, "G": 7, "T": 0}
-    equal?
+    test "strand with repeated nucleotide" [
+        result: nucleotide-counts "GGGGGGG"
+        assert -> {"A": 0, "C": 0, "G": 7, "T": 0} = result
+    ]?
 
-"strand with multiple nucleotides"
-    ( "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC" nucleotide-counts )
-    {"A": 20, "C": 12, "G": 17, "T": 21}
-    equal?
+    test "strand with multiple nucleotides" [
+        result: nucleotide-counts "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
+        assert -> {"A": 20, "C": 12, "G": 17, "T": 21} = result
+    ]?
 
     test "strand with invalid nucleotides" [
         result: nucleotide-counts "AGXXACT"

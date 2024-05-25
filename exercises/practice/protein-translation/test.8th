@@ -1,134 +1,134 @@
 
-"Empty RNA sequence results in no proteins"
-    ( "" >proteins )
-    []
-    equal?
+    test "Empty RNA sequence results in no proteins" [
+        result: >proteins ""
+        assert -> [] = result
+    ]?
 
 
-"Methionine RNA sequence"
-    ( "AUG" >proteins )
-    ["Methionine"]
-    equal?
+    test "Methionine RNA sequence" [
+        result: >proteins "AUG"
+        assert -> ["Methionine"] = result
+    ]?
 
-"Phenylalanine RNA sequence 1"
-    ( "UUU" >proteins )
-    ["Phenylalanine"]
-    equal?
+    test "Phenylalanine RNA sequence 1" [
+        result: >proteins "UUU"
+        assert -> ["Phenylalanine"] = result
+    ]?
 
-"Phenylalanine RNA sequence 2"
-    ( "UUC" >proteins )
-    ["Phenylalanine"]
-    equal?
+    test "Phenylalanine RNA sequence 2" [
+        result: >proteins "UUC"
+        assert -> ["Phenylalanine"] = result
+    ]?
 
-"Leucine RNA sequence 1"
-    ( "UUA" >proteins )
-    ["Leucine"]
-    equal?
+    test "Leucine RNA sequence 1" [
+        result: >proteins "UUA"
+        assert -> ["Leucine"] = result
+    ]?
 
-"Leucine RNA sequence 2"
-    ( "UUG" >proteins )
-    ["Leucine"]
-    equal?
+    test "Leucine RNA sequence 2" [
+        result: >proteins "UUG"
+        assert -> ["Leucine"] = result
+    ]?
 
-"Serine RNA sequence 1"
-    ( "UCU" >proteins )
-    ["Serine"]
-    equal?
+    test "Serine RNA sequence 1" [
+        result: >proteins "UCU"
+        assert -> ["Serine"] = result
+    ]?
 
-"Serine RNA sequence 2"
-    ( "UCC" >proteins )
-    ["Serine"]
-    equal?
+    test "Serine RNA sequence 2" [
+        result: >proteins "UCC"
+        assert -> ["Serine"] = result
+    ]?
 
-"Serine RNA sequence 3"
-    ( "UCA" >proteins )
-    ["Serine"]
-    equal?
+    test "Serine RNA sequence 3" [
+        result: >proteins "UCA"
+        assert -> ["Serine"] = result
+    ]?
 
-"Serine RNA sequence 4"
-    ( "UCG" >proteins )
-    ["Serine"]
-    equal?
+    test "Serine RNA sequence 4" [
+        result: >proteins "UCG"
+        assert -> ["Serine"] = result
+    ]?
 
-"Tyrosine RNA sequence 1"
-    ( "UAU" >proteins )
-    ["Tyrosine"]
-    equal?
+    test "Tyrosine RNA sequence 1" [
+        result: >proteins "UAU"
+        assert -> ["Tyrosine"] = result
+    ]?
 
-"Tyrosine RNA sequence 2"
-    ( "UAC" >proteins )
-    ["Tyrosine"]
-    equal?
+    test "Tyrosine RNA sequence 2" [
+        result: >proteins "UAC"
+        assert -> ["Tyrosine"] = result
+    ]?
 
-"Cysteine RNA sequence 1"
-    ( "UGU" >proteins )
-    ["Cysteine"]
-    equal?
+    test "Cysteine RNA sequence 1" [
+        result: >proteins "UGU"
+        assert -> ["Cysteine"] = result
+    ]?
 
-"Cysteine RNA sequence 2"
-    ( "UGC" >proteins )
-    ["Cysteine"]
-    equal?
+    test "Cysteine RNA sequence 2" [
+        result: >proteins "UGC"
+        assert -> ["Cysteine"] = result
+    ]?
 
-"Tryptophan RNA sequence"
-    ( "UGG" >proteins )
-    ["Tryptophan"]
-    equal?
+    test "Tryptophan RNA sequence" [
+        result: >proteins "UGG"
+        assert -> ["Tryptophan"] = result
+    ]?
 
-"STOP codon RNA sequence 1"
-    ( "UAA" >proteins )
-    []
-    equal?
+    test "STOP codon RNA sequence 1" [
+        result: >proteins "UAA"
+        assert -> [] = result
+    ]?
 
-"STOP codon RNA sequence 2"
-    ( "UAG" >proteins )
-    []
-    equal?
+    test "STOP codon RNA sequence 2" [
+        result: >proteins "UAG"
+        assert -> [] = result
+    ]?
 
-"STOP codon RNA sequence 3"
-    ( "UGA" >proteins )
-    []
-    equal?
+    test "STOP codon RNA sequence 3" [
+        result: >proteins "UGA"
+        assert -> [] = result
+    ]?
 
-"Sequence of two protein codons translates into proteins"
-    ( "UUUUUU" >proteins )
-    ["Phenylalanine", "Phenylalanine"]
-    equal?
+    test "Sequence of two protein codons translates into proteins" [
+        result: >proteins "UUUUUU"
+        assert -> ["Phenylalanine", "Phenylalanine"] = result
+    ]?
 
-"Sequence of two different protein codons translates into proteins"
-    ( "UUAUUG" >proteins )
-    ["Leucine", "Leucine"]
-    equal?
+    test "Sequence of two different protein codons translates into proteins" [
+        result: >proteins "UUAUUG"
+        assert -> ["Leucine", "Leucine"] = result
+    ]?
 
-"Translate RNA strand into correct protein list"
-    ( "AUGUUUUGG" >proteins )
-    ["Methionine", "Phenylalanine", "Tryptophan"]
-    equal?
+    test "Translate RNA strand into correct protein list" [
+        result: >proteins "AUGUUUUGG"
+        assert -> ["Methionine", "Phenylalanine", "Tryptophan"] = result
+    ]?
 
-"Translation stops if STOP codon at beginning of sequence"
-    ( "UAGUGG" >proteins )
-    []
-    equal?
+    test "Translation stops if STOP codon at beginning of sequence" [
+        result: >proteins "UAGUGG"
+        assert -> [] = result
+    ]?
 
-"Translation stops if STOP codon at end of two-codon sequence"
-    ( "UGGUAG" >proteins )
-    ["Tryptophan"]
-    equal?
+    test "Translation stops if STOP codon at end of two-codon sequence" [
+        result: >proteins "UGGUAG"
+        assert -> ["Tryptophan"] = result
+    ]?
 
-"Translation stops if STOP codon at end of three-codon sequence"
-    ( "AUGUUUUAA" >proteins )
-    ["Methionine", "Phenylalanine"]
-    equal?
+    test "Translation stops if STOP codon at end of three-codon sequence" [
+        result: >proteins "AUGUUUUAA"
+        assert -> ["Methionine", "Phenylalanine"] = result
+    ]?
 
-"Translation stops if STOP codon in middle of three-codon sequence"
-    ( "UGGUAGUGG" >proteins )
-    ["Tryptophan"]
-    equal?
+    test "Translation stops if STOP codon in middle of three-codon sequence" [
+        result: >proteins "UGGUAGUGG"
+        assert -> ["Tryptophan"] = result
+    ]?
 
-"Translation stops if STOP codon in middle of six-codon sequence"
-    ( "UGGUGUUAUUAAUGGUUU" >proteins )
-    ["Tryptophan", "Cysteine", "Tyrosine"]
-    equal?
+    test "Translation stops if STOP codon in middle of six-codon sequence" [
+        result: >proteins "UGGUGUUAUUAAUGGUUU"
+        assert -> ["Tryptophan", "Cysteine", "Tyrosine"] = result
+    ]?
 
 "Unknown amino acids, not part of a codon, can't translate"
     ( "XYZ" >proteins )
@@ -138,9 +138,9 @@
     ( "AUGU" >proteins )
     null?
 
-"Incomplete RNA sequence can translate if valid until a STOP codon"
-    ( "UUCUUCUAAUGGU" >proteins )
-    ["Phenylalanine", "Phenylalanine"]
-    equal?
+    test "Incomplete RNA sequence can translate if valid until a STOP codon" [
+        result: >proteins "UUCUUCUAAUGGU"
+        assert -> ["Phenylalanine", "Phenylalanine"] = result
+    ]?
 
 

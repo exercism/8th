@@ -1,14 +1,14 @@
 
-"empty spiral"
-    ( 0 spiral-matrix )
-    []
-    equal?
+    test "empty spiral" [
+        result: spiral-matrix 0
+        assert -> [] = result
+    ]?
 
 
-"trivial spiral"
-    ( 1 spiral-matrix )
-    [[1]]
-    equal?
+    test "trivial spiral" [
+        result: spiral-matrix 1
+        assert -> [[1]] = result
+    ]?
 
 "spiral of size 2"
     ( 2 spiral-matrix )

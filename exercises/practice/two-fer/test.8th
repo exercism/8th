@@ -3,24 +3,24 @@ needs exercism/test
 with: test
 4 tests 
 
-"Unnamed person test with empty string"
-    ( "" two-fer )
-    "One for you, one for me."
-    equal?
+    test "Unnamed person test with empty string" [
+        result: two-fer ""
+        assert -> "One for you, one for me." = result
+    ]?
 
 
-"Unnamed person test with null"
-    ( null two-fer )
-    "One for you, one for me."
-    equal?
+    test "Unnamed person test with null" [
+        result: two-fer null
+        assert -> "One for you, one for me." = result
+    ]?
 
-"One for the judge"
-    ( "Jedoon" two-fer )
-    "One for Jedoon, one for me."
-    equal?
+    test "One for the judge" [
+        result: two-fer "Jedoon"
+        assert -> "One for Jedoon, one for me." = result
+    ]?
 
-"One for the Hebrew shade-facing one"
-    ( "הַצְּלֶלְפּוֹנִי" two-fer )
-    "One for הַצְּלֶלְפּוֹנִי, one for me."
-    equal?
+    test "One for the Hebrew shade-facing one" [
+        result: two-fer "הַצְּלֶלְפּוֹנִי"
+        assert -> "One for הַצְּלֶלְפּוֹנִי, one for me." = result
+    ]?
 

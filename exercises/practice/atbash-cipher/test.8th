@@ -1,59 +1,59 @@
 
-"encode yes"
-  ( "yes" >atbash )
-  "bvh"
-  equal?
-"encode no"
-  ( "no" >atbash )
-  "ml"
-  equal?
-"encode OMG"
-  ( "OMG" >atbash )
-  "lnt"
-  equal?
-"encode spaces"
-  ( "O M G" >atbash )
-  "lnt"
-  equal?
-"encode mindblowingly"
-  ( "mindblowingly" >atbash )
-  "nrmwy oldrm tob"
-  equal?
-"encode numbers"
-  ( "Testing,1 2 3, testing." >atbash )
-  "gvhgr mt123 gvhgr mt"
-  equal?
-"encode deep thought"
-  ( "Truth is fiction." >atbash )
-  "gifgs rhurx grlm"
-  equal?
-"encode all the letters"
-  ( "The quick brown fox jumps over the lazy dog." >atbash )
-  "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
-  equal?
+    test "encode yes" [
+        result: >atbash "yes"
+        assert -> "bvh" = result
+    ]
+    test "encode no" [
+        result: >atbash "no"
+        assert -> "ml" = result
+    ]
+    test "encode OMG" [
+        result: >atbash "OMG"
+        assert -> "lnt" = result
+    ]
+    test "encode spaces" [
+        result: >atbash "O M G"
+        assert -> "lnt" = result
+    ]
+    test "encode mindblowingly" [
+        result: >atbash "mindblowingly"
+        assert -> "nrmwy oldrm tob" = result
+    ]
+    test "encode numbers" [
+        result: >atbash "Testing,1 2 3, testing."
+        assert -> "gvhgr mt123 gvhgr mt" = result
+    ]
+    test "encode deep thought" [
+        result: >atbash "Truth is fiction."
+        assert -> "gifgs rhurx grlm" = result
+    ]
+    test "encode all the letters" [
+        result: >atbash "The quick brown fox jumps over the lazy dog."
+        assert -> "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt" = result
+    ]?
 
-"decode exercism"
-  ( "vcvix rhn" atbash> )
-  "exercism"
-  equal?
-"decode a sentence"
-  ( "zmlyh gzxov rhlug vmzhg vkkrm thglm v" atbash> )
-  "anobstacleisoftenasteppingstone"
-  equal?
-"decode numbers"
-  ( "gvhgr mt123 gvhgr mt" atbash> )
-  "testing123testing"
-  equal?
-"decode all the letters"
-  ( "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt" atbash> )
-  "thequickbrownfoxjumpsoverthelazydog"
-  equal?
-"decode with too many spaces"
-  ( "vc vix    r hn" atbash> )
-  "exercism"
-  equal?
-"decode with no spaces"
-  ( "zmlyhgzxovrhlugvmzhgvkkrmthglmv" atbash> )
-  "anobstacleisoftenasteppingstone"
-  equal?
+    test "decode exercism" [
+        result: atbash> "vcvix rhn"
+        assert -> "exercism" = result
+    ]
+    test "decode a sentence" [
+        result: atbash> "zmlyh gzxov rhlug vmzhg vkkrm thglm v"
+        assert -> "anobstacleisoftenasteppingstone" = result
+    ]
+    test "decode numbers" [
+        result: atbash> "gvhgr mt123 gvhgr mt"
+        assert -> "testing123testing" = result
+    ]
+    test "decode all the letters" [
+        result: atbash> "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
+        assert -> "thequickbrownfoxjumpsoverthelazydog" = result
+    ]
+    test "decode with too many spaces" [
+        result: atbash> "vc vix    r hn"
+        assert -> "exercism" = result
+    ]
+    test "decode with no spaces" [
+        result: atbash> "zmlyhgzxovrhlugvmzhgvkkrmthglmv"
+        assert -> "anobstacleisoftenasteppingstone" = result
+    ]?
 

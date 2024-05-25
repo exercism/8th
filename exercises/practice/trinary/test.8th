@@ -1,52 +1,52 @@
 
-"1 is decimal 1"
-    ( "1" trinary> )
-    1
-    equal?
+    test "1 is decimal 1" [
+        result: trinary> "1"
+        assert -> 1 = result
+    ]?
 
 
-"2 is decimal 2"
-    ( "2" trinary> )
-    2
-    equal?
+    test "2 is decimal 2" [
+        result: trinary> "2"
+        assert -> 2 = result
+    ]?
 
-"10 is decimal 3"
-    ( "10" trinary> )
-    3
-    equal?
+    test "10 is decimal 3" [
+        result: trinary> "10"
+        assert -> 3 = result
+    ]?
 
-"11 is decimal 4"
-    ( "11" trinary> )
-    4
-    equal?
+    test "11 is decimal 4" [
+        result: trinary> "11"
+        assert -> 4 = result
+    ]?
 
-"100 is decimal 9"
-    ( "100" trinary> )
-    9
-    equal?
+    test "100 is decimal 9" [
+        result: trinary> "100"
+        assert -> 9 = result
+    ]?
 
-"112 is decimal 14"
-    ( "112" trinary> )
-    14
-    equal?
+    test "112 is decimal 14" [
+        result: trinary> "112"
+        assert -> 14 = result
+    ]?
 
-"222 is decimal 26"
-    ( "222" trinary> )
-    26
-    equal?
+    test "222 is decimal 26" [
+        result: trinary> "222"
+        assert -> 26 = result
+    ]?
 
-"1122000120 is decimal 32091"
-    ( "1122000120" trinary> )
-    32091
-    equal?
+    test "1122000120 is decimal 32091" [
+        result: trinary> "1122000120"
+        assert -> 32091 = result
+    ]?
 
-"invalid trinary is decimal 0"
-    ( "carrot" trinary> )
-    0
-    equal?
+    test "invalid trinary is decimal 0" [
+        result: trinary> "carrot"
+        assert -> 0 = result
+    ]?
 
-"digits from 3 to 9 are invalid"
-    ( "123" trinary> )
-    0
-    equal?
+    test "digits from 3 to 9 are invalid" [
+        result: trinary> "123"
+        assert -> 0 = result
+    ]?
 
