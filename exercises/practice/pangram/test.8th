@@ -2,9 +2,13 @@
         result: pangram? ""
         assert -> false = result
     ]
-"missing letters replaced by numbers"
-    ( "7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog" pangram? )
-    false?    test "mixed case and punctuation" [
+
+    test "missing letters replaced by numbers" [
+        result: pangram? "7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog"
+        assert -> false = result
+    ]
+    
+    test "mixed case and punctuation" [
         result: pangram? "\"Five quacking Zephyrs jolt my wax bed.\""
         assert -> true = result
     ]
@@ -14,27 +18,33 @@
         assert -> false = result
     ]
 
-"perfect lower case"
-    ( "abcdefghijklmnopqrstuvwxyz" pangram? )
-    true?
+    test "perfect lower case" [
+        result: pangram? "abcdefghijklmnopqrstuvwxyz"
+        assert -> true = result
+    ]
 
-"missing letter h"
-    ( "five boxing wizards jump quickly at it" pangram? )
-    false?
+    test "missing letter h" [
+        result: pangram? "five boxing wizards jump quickly at it"
+        assert -> false = result
+    ]
 
-"with numbers"
-    ( "the 1 quick brown fox jumps over the 2 lazy dogs" pangram? )
-    true?
+    test "with numbers" [
+        result: pangram? "the 1 quick brown fox jumps over the 2 lazy dogs"
+        assert -> true = result
+    ]
 
-"only lower case"
-    ( "the quick brown fox jumps over the lazy dog" pangram? )
-    true?
+    test "only lower case" [
+        result: pangram? "the quick brown fox jumps over the lazy dog"
+        assert -> true = result
+    ]
 
-"missing d and g"
-    ( "the quick brown fox jumps over with lazy FX" pangram? )
-    false?
+    test "missing d and g" [
+        result: pangram? "the quick brown fox jumps over with lazy FX"
+        assert -> false = result
+    ]
 
-"with underscores"
-    ( "the_quick_brown_fox_jumps_over_the_lazy_dog" pangram? )
-    true?
+    test "with underscores" [
+        result: pangram? "the_quick_brown_fox_jumps_over_the_lazy_dog"
+        assert -> true = result
+    ]
 
