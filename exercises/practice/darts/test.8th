@@ -1,7 +1,7 @@
 
 "Missed target"
     0
-    ( -9 9 darts-score )
+    ( neg 9 9 darts-score )
     equal?
 
 
@@ -12,12 +12,12 @@
 
 "On the middle circle"
     5
-    ( -5 0 darts-score )
+    ( neg 5 0 darts-score )
     equal?
 
 "On the inner circle"
     10
-    ( 0 -1 darts-score )
+    ( 0 neg 1 darts-score )
     equal?
 
 "Exactly on center"
@@ -27,7 +27,7 @@
 
 "Near the center"
     10
-    ( -0.1 -0.1 darts-score )
+    ( neg 0.1 neg 0.1 darts-score )
     equal?
 
 "Just within the inner circle"
@@ -37,31 +37,31 @@
 
 "Just outside the inner circle"
     5
-    ( 0.8 -0.8 darts-score )
+    ( 0.8 neg 0.8 darts-score )
     equal?
 
 "Just within the middle circle"
     5
-    ( -3.5 3.5 darts-score )
+    ( neg 3.5 3.5 darts-score )
     equal?
 
 "Just outside the middle circle"
     1
-    ( -3.6 -3.6 darts-score )
+    ( neg 3.6 neg 3.6 darts-score )
     equal?
 
 "Just within the outer circle"
     1
-    ( -7.0 7.0 darts-score )
+    ( neg 7.0 7.0 darts-score )
     equal?
 
 "Just outside the outer circle"
     0
-    ( 7.1 -7.1 darts-score )
+    ( 7.1 neg 7.1 darts-score )
     equal?
 
 "Asymmetric position between the inner and middle circles"
     5
-    ( 0.5 -4 darts-score )
+    ( 0.5 neg 4 darts-score )
     equal?
 

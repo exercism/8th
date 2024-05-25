@@ -68,7 +68,7 @@
     null?
 
 "rejects negative span"
-    ( "12345" -1 largest-product )
+    ( "12345" neg 1 largest-product )
     null?
 
 

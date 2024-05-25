@@ -59,7 +59,7 @@
     ]
 
     test.skip "valid strings with punctuation included become invalid" [
-        result: luhn "055-444-285"
+        result: luhn "055neg 444neg 285"
         assert -> false = result
     ]
 

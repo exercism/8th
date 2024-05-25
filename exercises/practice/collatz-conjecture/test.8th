@@ -22,6 +22,6 @@
     null?
 
 "negative value is an error"
-    ( -15 collatz )
+    ( neg 15 collatz )
     null?
 

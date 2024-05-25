@@ -69,11 +69,11 @@
     null?
 
 "input base is negative"
-    ( -2 [1] 10 rebase )
+    ( neg 2 [1] 10 rebase )
     null?
 
 "negative digit"
-    ( 2 [1, -1, 1, 0, 1, 0] 10 rebase )
+    ( 2 [1, neg 1, 1, 0, 1, 0] 10 rebase )
     null?
 
 "invalid positive digit"
@@ -89,11 +89,11 @@
     null?
 
 "output base is negative"
-    ( 2 [1] -7 rebase )
+    ( 2 [1] neg 7 rebase )
     null?
 
 "both bases are negative"
-    ( -2 [1] -7 rebase )
+    ( neg 2 [1] neg 7 rebase )
     null?
 
 

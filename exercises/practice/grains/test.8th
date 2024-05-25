@@ -38,7 +38,7 @@
     null?
 
 "negative square is invalid"
-    ( -1 square )
+    ( neg 1 square )
     null?
 
 "square greater than 64 is invalid"

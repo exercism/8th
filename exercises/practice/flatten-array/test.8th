@@ -21,8 +21,8 @@
     equal?
 
 "5 level nesting"
-    ( [0, 2, [[2, 3], 8, 100, 4, [[[50]]]], -2] flatten )
-    [0, 2, 2, 3, 8, 100, 4, 50, -2]
+    ( [0, 2, [[2, 3], 8, 100, 4, [[[50]]]], neg 2] flatten )
+    [0, 2, 2, 3, 8, 100, 4, 50, neg 2]
     equal?
 
 "6 level nesting"
@@ -46,8 +46,8 @@
     equal?
 
 "6 level nest list with null values"
-    ( [0, 2, [[2, 3], 8, [[100]], null, [[null]]], -2] flatten )
-    [0, 2, 2, 3, 8, 100, -2]
+    ( [0, 2, [[2, 3], 8, [[100]], null, [[null]]], neg 2] flatten )
+    [0, 2, 2, 3, 8, 100, neg 2]
     equal?
 
 "all values in nested list are null"

@@ -1,36 +1,36 @@
-    test "ability modifier for score 3 is -4" [
+    test "ability modifier for score 3 is neg 4" [
         result: modifier 3
-        assert -> -4 = result
+        assert -> neg 4 = result
     ]
 
-    test.skip "ability modifier for score 4 is -3" [
+    test.skip "ability modifier for score 4 is neg 3" [
         result: modifier 4
-        assert -> -3 = result
+        assert -> neg 3 = result
     ]
 
-    test.skip "ability modifier for score 5 is -3" [
+    test.skip "ability modifier for score 5 is neg 3" [
         result: modifier 5
-        assert -> -3 = result
+        assert -> neg 3 = result
     ]
 
-    test.skip "ability modifier for score 6 is -2" [
+    test.skip "ability modifier for score 6 is neg 2" [
         result: modifier 6
-        assert -> -2 = result
+        assert -> neg 2 = result
     ]
 
-    test.skip "ability modifier for score 7 is -2" [
+    test.skip "ability modifier for score 7 is neg 2" [
         result: modifier 7
-        assert -> -2 = result
+        assert -> neg 2 = result
     ]
 
-    test.skip "ability modifier for score 8 is -1" [
+    test.skip "ability modifier for score 8 is neg 1" [
         result: modifier 8
-        assert -> -1 = result
+        assert -> neg 1 = result
     ]
 
-    test.skip "ability modifier for score 9 is -1" [
+    test.skip "ability modifier for score 9 is neg 1" [
         result: modifier 9
-        assert -> -1 = result
+        assert -> neg 1 = result
     ]
 
     test.skip "ability modifier for score 10 is 0" [

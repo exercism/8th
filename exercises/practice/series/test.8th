@@ -46,7 +46,7 @@
     equal?
 
 "slice length cannot be negative" 
-    ( "123" -1 slices ) 
+    ( "123" neg 1 slices ) 
     [] 
     equal?
 
