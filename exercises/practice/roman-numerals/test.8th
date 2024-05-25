@@ -1,14 +1,9 @@
-"roman-numerals.8th" f:include
-needs exercism/test
-with: test
-27 tests
 
 "1 is I"
     ( 1 n:>roman )
     "I"
     equal?
 
-SKIP-REST-OF-TESTS
 
 "2 is II"
     ( 2 n:>roman )
@@ -140,5 +135,4 @@ SKIP-REST-OF-TESTS
     "MMMCMXCIX"
     equal?
 
-end-of-tests
-;with
+

@@ -50,8 +50,7 @@ N tests
 
 $(curl --silent "https://raw.githubusercontent.com/exercism/problem-specifications/main/exercises/${slug}/canonical-data.json")
 
-end-of-tests
-;with
+
 END_TEST
 
 if [[ -z $author ]]; then

@@ -55,5 +55,3 @@ with: test
 "equal? dates false"  1697133755 d:unix> ( 1697133756 d:unix> ) equal?
 \ 32
 
-end-of-tests
-;with

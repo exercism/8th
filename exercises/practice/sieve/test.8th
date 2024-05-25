@@ -1,14 +1,9 @@
-"sieve.8th" f:include
-needs exercism/test
-with: test
-5 tests
 
 "no primes under two"
     []
     ( 1 primes )
     equal?
 
-SKIP-REST-OF-TESTS
 
 "find first prime"
     [2]
@@ -40,5 +35,3 @@ SKIP-REST-OF-TESTS
     ( 1000 primes )
     equal?
 
-end-of-tests
-;with

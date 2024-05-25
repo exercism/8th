@@ -1,14 +1,9 @@
-"strain.8th" f:include
-needs exercism/test
-with: test
-14 tests
 
 "keep on empty list returns empty list"
     ( [] ( drop true ) keep )
     []
     equal?
 
-SKIP-REST-OF-TESTS
 
 "keeps everything"
     ( [1, 3, 5] ( drop true ) keep )
@@ -75,5 +70,4 @@ SKIP-REST-OF-TESTS
     [[1, 2, 3], [2, 1, 2], [2, 2, 1]]
     equal?
 
-end-of-tests
-;with
+

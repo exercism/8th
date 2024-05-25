@@ -1,14 +1,9 @@
-"largest-series-product.8th" f:include
-needs exercism/test
-with: test
-15 tests
 
 "finds the largest product if span equals length"
     ( "29" 2 largest-product )
     18
     equal?
 
-SKIP-REST-OF-TESTS
 
 "can find the largest product of 2 with numbers in order"
     ( "0123456789" 2 largest-product )
@@ -76,5 +71,4 @@ SKIP-REST-OF-TESTS
     ( "12345" -1 largest-product )
     null?
 
-end-of-tests
-;with
+

@@ -1,13 +1,8 @@
-"atbash-cipher.8th" f:include
-needs exercism/test
-with: test
-14 tests
 
 "encode yes"
   ( "yes" >atbash )
   "bvh"
   equal?
-SKIP-REST-OF-TESTS
 "encode no"
   ( "no" >atbash )
   "ml"
@@ -62,5 +57,3 @@ SKIP-REST-OF-TESTS
   "anobstacleisoftenasteppingstone"
   equal?
 
-end-of-tests
-;with

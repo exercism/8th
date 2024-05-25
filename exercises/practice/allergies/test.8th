@@ -1,13 +1,8 @@
-"allergies.8th" f:include
-needs exercism/test
-with: test
-50 tests
 
 "not allergic to anything, including eggs"
     ( 0 "eggs" allergic-to? )
     false?
 
-SKIP-REST-OF-TESTS
 
 "allergic only to eggs"
     ( 1 "eggs" allergic-to? )
@@ -215,5 +210,4 @@ SKIP-REST-OF-TESTS
     ["eggs"]
     equal?
 
-end-of-tests
-;with
+

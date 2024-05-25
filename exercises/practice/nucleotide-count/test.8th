@@ -1,14 +1,9 @@
-"nucleotide-count.8th" f:include
-needs exercism/test
-with: test
-5 tests
 
 "empty strand"
     ( "" nucleotide-counts )
     {"A": 0, "C": 0, "G": 0, "T": 0}
     equal?
 
-SKIP-REST-OF-TESTS
 
 "can count one nucleotide in single-character input"
     ( "G" nucleotide-counts )
@@ -29,5 +24,4 @@ SKIP-REST-OF-TESTS
     ( "AGXXACT" nucleotide-counts )
     null?
 
-end-of-tests
-;with
+

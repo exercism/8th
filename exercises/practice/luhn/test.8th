@@ -1,13 +1,8 @@
-"luhn.8th" f:include
-needs exercism/test
-with: test
-22 tests
 
 "single digit strings can not be valid"
     ( "1" luhn )
     false?
 
-SKIP-REST-OF-TESTS
 
 "a single zero is invalid"
     ( "0" luhn )
@@ -93,5 +88,3 @@ SKIP-REST-OF-TESTS
     ( "59%59" luhn )
     false?
 
-end-of-tests
-;with

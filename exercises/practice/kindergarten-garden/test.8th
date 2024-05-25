@@ -1,14 +1,9 @@
-"kindergarten-garden.8th" f:include
-needs exercism/test
-with: test
-17 tests
 
 "garden with single student"
     ( "RC\nGG" "Alice" plants )
     ["radishes", "clover", "grass", "grass"]
     equal?
 
-SKIP-REST-OF-TESTS
 
 "different garden with single student"
     ( "VC\nRC" "Alice" plants )
@@ -90,5 +85,4 @@ SKIP-REST-OF-TESTS
     ["grass", "violets", "clover", "violets"]
     equal?
 
-end-of-tests
-;with
+

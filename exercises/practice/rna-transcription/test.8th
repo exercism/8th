@@ -1,14 +1,9 @@
-"rna-transcription.8th" f:include
-needs exercism/test
-with: test
-6 tests
 
 "Empty RNA sequence"
     ( "" >rna )
     ""
     equal?
 
-SKIP-REST-OF-TESTS
 
 "RNA complement of cytosine is guanine"
     ( "C" >rna )
@@ -35,5 +30,4 @@ SKIP-REST-OF-TESTS
     "UGCACCAGAAUU"
     equal?
 
-end-of-tests
-;with
+

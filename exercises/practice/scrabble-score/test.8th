@@ -1,14 +1,9 @@
-"scrabble-score.8th" f:include
-needs exercism/test
-with: test
-11 tests
 
 "lowercase letter"
     ( "a" score )
     1
     equal?
 
-SKIP-REST-OF-TESTS
 
 "uppercase letter"
     ( "A" score )
@@ -60,5 +55,4 @@ SKIP-REST-OF-TESTS
     87
     equal?
 
-end-of-tests
-;with
+

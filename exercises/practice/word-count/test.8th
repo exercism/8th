@@ -1,14 +1,9 @@
-"word-count.8th" f:include
-needs exercism/test
-with: test
-14 tests
 
 "count one word"
     ( "word" word-count )
     { "word":1 }
     equal?
 
-SKIP-REST-OF-TESTS
 
 "count one of each word"
     ( "one of each" word-count )
@@ -75,5 +70,3 @@ SKIP-REST-OF-TESTS
     { "can":1,"can't":2 }
     equal?
 
-end-of-tests
-;with

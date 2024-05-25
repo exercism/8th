@@ -1,14 +1,9 @@
-"parallel-letter-frequency.8th" f:include
-needs exercism/test
-with: test
-12 tests
 
 "no texts"
     ( [] >frequencies )
     {}
     equal?
 
-SKIP-REST-OF-TESTS
 
 "one text with one letter"
     ( ["a"] >frequencies )
@@ -66,5 +61,4 @@ SKIP-REST-OF-TESTS
     {"a": 50, "b": 100, "c": 150}
     equal?
 
-end-of-tests
-;with
+

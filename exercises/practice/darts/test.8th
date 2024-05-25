@@ -1,14 +1,9 @@
-"darts.8th" f:include
-needs exercism/test
-with: test
-13 tests
 
 "Missed target"
     0
     ( -9 9 darts-score )
     equal?
 
-SKIP-REST-OF-TESTS
 
 "On the outer circle"
     1
@@ -70,5 +65,3 @@ SKIP-REST-OF-TESTS
     ( 0.5 -4 darts-score )
     equal?
 
-end-of-tests
-;with

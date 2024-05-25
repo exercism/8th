@@ -1,14 +1,9 @@
-"sum-of-multiples.8th" f:include
-needs exercism/test
-with: test
-16 tests
 
 "no multiples within limit"
     ( [3,5] 1 sum )
     0
     equal?
 
-SKIP-REST-OF-TESTS
 
 "one factor has multiples within limit"
     ( [3,5] 4 sum )
@@ -85,5 +80,4 @@ SKIP-REST-OF-TESTS
     39614537
     equal?
 
-end-of-tests
-;with
+

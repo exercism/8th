@@ -9,7 +9,6 @@ with: test
     ( "Complementary metal-oxide semiconductor" acronym )
     equal?
 
-SKIP-REST-OF-TESTS
 
 "ignores punctuation"
     "FIFO"
@@ -51,5 +50,4 @@ SKIP-REST-OF-TESTS
     ( "The Road _Not_ Taken" acronym )
     equal?
 
-end-of-tests
-;with
+

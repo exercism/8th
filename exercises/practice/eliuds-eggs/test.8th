@@ -1,14 +1,9 @@
-"eliuds-eggs.8th" f:include
-needs exercism/test
-with: test
-4 tests
 
 "0 eggs"
     0
     ( 0 eggCount )
     equal?
 
-SKIP-REST-OF-TESTS
 
 "1 egg"
     1
@@ -25,5 +20,3 @@ SKIP-REST-OF-TESTS
     ( 2000000000 eggCount )
     equal?
 
-end-of-tests
-;with

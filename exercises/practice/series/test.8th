@@ -1,14 +1,9 @@
-"series.8th" f:include
-needs exercism/test
-with: test
-11 tests
 
 "slices of one from one" 
     ( "1" 1 slices ) 
     ["1"] 
     equal?
 
-SKIP-REST-OF-TESTS
 
 "slices of one from two" 
     ( "12" 1 slices ) 
@@ -60,5 +55,3 @@ SKIP-REST-OF-TESTS
     [] 
     equal?
 
-end-of-tests
-;with

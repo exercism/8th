@@ -1,7 +1,3 @@
-"gigasecond.8th" f:include
-needs exercism/test
-with: test
-5 tests
 
 \ Workaround for https://8th-dev.com/bin/bugs/tktview/624833cc8d
 0 d:updatetz
@@ -11,7 +7,6 @@ with: test
     [2043, 1, 1, 1, 46, 40, 0, 0, 0, 0] d:join 
     equal?
 
-SKIP-REST-OF-TESTS
 
 "second test for date only specification of time"
     ( [1977, 6, 13, 0, 0, 0, 0, 0, 0, 0] d:join +gigasecond )
@@ -33,5 +28,3 @@ SKIP-REST-OF-TESTS
     [2046, 10, 3, 1, 46, 39, 0, 0, 0, 0] d:join
     equal?
 
-end-of-tests
-;with

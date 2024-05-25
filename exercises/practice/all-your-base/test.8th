@@ -1,14 +1,9 @@
-"all-your-base.8th" f:include
-needs exercism/test
-with: test
-21 tests
 
 "single bit one to decimal"
     ( 2 [1] 10 rebase )
     [1]
     equal?
 
-SKIP-REST-OF-TESTS
 
 "binary to single decimal"
     ( 2 [1, 0, 1] 10 rebase )
@@ -101,5 +96,4 @@ SKIP-REST-OF-TESTS
     ( -2 [1] -7 rebase )
     null?
 
-end-of-tests
-;with
+

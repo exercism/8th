@@ -1,14 +1,9 @@
-"perfect-numbers.8th" f:include
-needs exercism/test
-with: test
-13 tests
 
 "Smallest perfect number is classified correctly"
     ( 6 classify )
     "perfect"
     equal?
 
-SKIP-REST-OF-TESTS
 
 "Medium perfect number is classified correctly"
     ( 28 classify )
@@ -68,5 +63,4 @@ SKIP-REST-OF-TESTS
     ( -1 classify )
     null?
 
-end-of-tests
-;with
+

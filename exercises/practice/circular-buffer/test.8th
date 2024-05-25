@@ -1,7 +1,3 @@
-"circular-buffer.8th" f:include
-needs exercism/test
-with: test
-14 tests
 
 : throws? \ w -- T
     catch dup if nip then nip
@@ -11,7 +7,6 @@ with: test
     ( 1 cb:new ' cb:read throws? )
     true?
 
-SKIP-REST-OF-TESTS
 
 "can read an item just written"
     ( 1 cb:new 1 cb:write cb:read nip )
@@ -74,5 +69,4 @@ SKIP-REST-OF-TESTS
     ( 2 cb:new cb:clear 1 cb:write 2 cb:write 3 cb:overwrite 4 cb:overwrite cb:read drop cb:read drop ' cb:read throws? )
     true?
 
-end-of-tests
-;with
+

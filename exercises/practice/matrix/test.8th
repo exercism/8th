@@ -1,14 +1,9 @@
-"matrix.8th" f:include
-needs exercism/test
-with: test
-8 tests
 
 "extract row from one number matrix"
     ( "1" 1 row )
     [1]
     equal?
 
-SKIP-REST-OF-TESTS
 
 "can extract row"
     ( "1 2\n3 4" 2 row )
@@ -45,5 +40,4 @@ SKIP-REST-OF-TESTS
     [1903, 3, 4]
     equal?
 
-end-of-tests
-;with
+

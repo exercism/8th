@@ -1,29 +1,24 @@
-"collatz-conjecture.8th" f:include
-needs exercism/test
-with: test
-6 tests
 
-"zero steps for one"
-    ( 1 collatz )
-    0
-    equal?
+    test "zero steps for one" [
+        result: collatz 1
+        assert -> 0 = result
+    ]
 
-SKIP-REST-OF-TESTS
 
-"large number of even and odd steps"
-    ( 1000000 collatz )
-    152
-    equal?
+    test "large number of even and odd steps" [
+        result: collatz 1000000
+        assert -> 152 = result
+    ]
  
-"even and odd steps"
-    ( 12 collatz )
-    9
-    equal?
+    test "even and odd steps" [
+        result: collatz 12
+        assert -> 9 = result
+    ]
 
-"divide if even"
-    ( 16 collatz )
-    4
-    equal?
+    test "divide if even" [
+        result: collatz 16
+        assert -> 4 = result
+    ]
 
 "zero is an error"
     ( 0 collatz )
@@ -33,5 +28,3 @@ SKIP-REST-OF-TESTS
     ( -15 collatz )
     null?
 
-end-of-tests
-;with

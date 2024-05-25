@@ -1,14 +1,9 @@
-"etl.8th" f:include
-needs exercism/test
-with: test
-4 tests
 
 "single letter"
     {"a": 1}
     ( {"1": ["A"]} transform )
     equal?
 
-SKIP-REST-OF-TESTS
 
 "single score with multiple letters"
     {"a": 1, "e": 1, "i": 1, "o": 1, "u": 1}
@@ -59,5 +54,3 @@ SKIP-REST-OF-TESTS
       transform )
     equal?
 
-end-of-tests
-;with

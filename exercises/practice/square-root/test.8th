@@ -1,39 +1,33 @@
-"square-root.8th" f:include
-needs exercism/test
-with: test
-6 tests
 
-"root of 1"
-    ( 1 square-root )
-    1
-    equal?
+    test "root of 1" [
+        result: square-root 1
+        assert -> 1 = result
+    ]
 
-SKIP-REST-OF-TESTS
 
-"root of 4"
-    ( 4 square-root )
-    2
-    equal?
+    test "root of 4" [
+        result: square-root 4
+        assert -> 2 = result
+    ]
 
-"root of 25"
-    ( 25 square-root )
-    5
-    equal?
+    test "root of 25" [
+        result: square-root 25
+        assert -> 5 = result
+    ]
 
-"root of 81"
-    ( 81 square-root )
-    9
-    equal?
+    test "root of 81" [
+        result: square-root 81
+        assert -> 9 = result
+    ]
 
-"root of 196"
-    ( 196 square-root )
-    14
-    equal?
+    test "root of 196" [
+        result: square-root 196
+        assert -> 14 = result
+    ]
 
-"root of 65025"
-    ( 65025 square-root )
-    255
-    equal?
+    test "root of 65025" [
+        result: square-root 65025
+        assert -> 255 = result
+    ]
 
-end-of-tests
-;with
+

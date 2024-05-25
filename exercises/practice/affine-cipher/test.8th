@@ -9,7 +9,6 @@ with: test
     "xbt"
     equal?
 
-SKIP-REST-OF-TESTS
 
 "encode no"
     ( "no" 15 18 >code )
@@ -84,5 +83,3 @@ SKIP-REST-OF-TESTS
     ( "Test" 13 5 code> )
     null?
 
-end-of-tests
-;with

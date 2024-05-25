@@ -1,14 +1,9 @@
-"high-scores.8th" f:include
-needs exercism/test
-with: test
-8 tests
 
 "List of scores"
     ( [30, 50, 20, 70] scores )
     [30, 50, 20, 70]
     equal?
 
-SKIP-REST-OF-TESTS
 
 "Latest score"
     ( [100, 0, 90, 30] latest )
@@ -45,5 +40,4 @@ SKIP-REST-OF-TESTS
     [40]
     equal?
 
-end-of-tests
-;with
+

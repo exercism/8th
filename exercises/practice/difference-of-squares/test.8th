@@ -1,54 +1,48 @@
-"difference-of-squares.8th" f:include
-needs exercism/test
-with: test
-9 tests
 
-"square of sum 1"
-    ( 1 square-of-sum )
-    1
-    equal?
+    test "square of sum 1" [
+        result: square-of-sum 1
+        assert -> 1 = result
+    ]
 
-SKIP-REST-OF-TESTS
 
-"square of sum 5"
-    ( 5 square-of-sum )
-    225
-    equal?
+    test "square of sum 5" [
+        result: square-of-sum 5
+        assert -> 225 = result
+    ]
 
-"square of sum 100"
-    ( 100 square-of-sum )
-    25502500
-    equal?
+    test "square of sum 100" [
+        result: square-of-sum 100
+        assert -> 25502500 = result
+    ]
 
-"sum of squares 1"
-    ( 1 sum-of-squares )
-    1
-    equal?
+    test "sum of squares 1" [
+        result: sum-of-squares 1
+        assert -> 1 = result
+    ]
 
-"sum of squares 5"
-    ( 5 sum-of-squares )
-    55
-    equal?
+    test "sum of squares 5" [
+        result: sum-of-squares 5
+        assert -> 55 = result
+    ]
 
-"sum of squares 100"
-    ( 100 sum-of-squares )
-    338350
-    equal?
+    test "sum of squares 100" [
+        result: sum-of-squares 100
+        assert -> 338350 = result
+    ]
 
-"difference of squares 1"
-    ( 1 difference-of-squares )
-    0
-    equal?
+    test "difference of squares 1" [
+        result: difference-of-squares 1
+        assert -> 0 = result
+    ]
 
-"difference of squares 5"
-    ( 5 difference-of-squares )
-    170
-    equal?
+    test "difference of squares 5" [
+        result: difference-of-squares 5
+        assert -> 170 = result
+    ]
 
-"difference of squares 100"
-    ( 100 difference-of-squares )
-    25164150
-    equal?
+    test "difference of squares 100" [
+        result: difference-of-squares 100
+        assert -> 25164150 = result
+    ]
 
-end-of-tests
-;with
+

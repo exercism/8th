@@ -1,14 +1,9 @@
-"rotational-cipher.8th" f:include
-needs exercism/test
-with: test
-10 tests
 
 "rotate a by 0, same output as input"
     ( "a" 0 rotate )
     "a"
     equal?
 
-SKIP-REST-OF-TESTS
 
 "rotate a by 1"
     ( "a" 1 rotate )
@@ -55,5 +50,4 @@ SKIP-REST-OF-TESTS
     "Gur dhvpx oebja sbk whzcf bire gur ynml qbt."
     equal?
 
-end-of-tests
-;with
+

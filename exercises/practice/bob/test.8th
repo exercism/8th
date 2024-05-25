@@ -1,14 +1,9 @@
-"bob.8th" f:include
-needs exercism/test
-with: test
-17 tests
 
 "prolonged silence"
     ( "    " bob )
     "Fine. Be that way!"
     equal?
 
-SKIP-REST-OF-TESTS
 
 "silence"
     ( "" bob )
@@ -90,5 +85,3 @@ SKIP-REST-OF-TESTS
     "Whoa, chill out!"
     equal?
 
-end-of-tests
-;with

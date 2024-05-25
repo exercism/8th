@@ -1,14 +1,9 @@
-"knapsack.8th" f:include
-needs exercism/test
-with: test
-7 tests
 
 "no items"
     ( 100 [] maximum-value )
     0
     equal?
 
-SKIP-REST-OF-TESTS
 
 "one item, too heavy"
     ( 10 [{"weight": 100, "value": 1}] maximum-value )
@@ -40,5 +35,4 @@ SKIP-REST-OF-TESTS
     1458
     equal?
 
-end-of-tests
-;with
+

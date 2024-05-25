@@ -1,14 +1,9 @@
-"raindrops.8th" f:include
-needs exercism/test
-with: test
-18 tests
 
 "the sound of 1 is 1"
     ( 1 raindrops )
     "1"
     equal?
 
-SKIP-REST-OF-TESTS
 
 "the sound for 10 is Plang as it has a factor 5"
     ( 10 raindrops )
@@ -95,5 +90,3 @@ SKIP-REST-OF-TESTS
     "Pling"
     equal?
 
-end-of-tests
-;with

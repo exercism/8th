@@ -8,7 +8,6 @@ with: test
     ( [5, 5, 5, 5, 5] "yacht"  play_yacht )
     equal?
 
-SKIP-REST-OF-TESTS
 
 "Not Yacht"
     0 
@@ -150,5 +149,3 @@ SKIP-REST-OF-TESTS
     ( [2, 2, 2, 2, 2] "choice"  play_yacht )
     equal?
 
-end-of-tests
-;with

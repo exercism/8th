@@ -1,14 +1,9 @@
-"protein-translation.8th" f:include
-needs exercism/test
-with: test
-29 tests
 
 "Empty RNA sequence results in no proteins"
     ( "" >proteins )
     []
     equal?
 
-SKIP-REST-OF-TESTS
 
 "Methionine RNA sequence"
     ( "AUG" >proteins )
@@ -148,5 +143,4 @@ SKIP-REST-OF-TESTS
     ["Phenylalanine", "Phenylalanine"]
     equal?
 
-end-of-tests
-;with
+

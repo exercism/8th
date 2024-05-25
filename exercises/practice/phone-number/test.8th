@@ -1,14 +1,9 @@
-"phone-number.8th" f:include
-needs exercism/test
-with: test
-18 tests
 
 "cleans the number"
     ( "(223) 456-7890" clean )
     "2234567890"
     equal?
 
-SKIP-REST-OF-TESTS
 
 "cleans numbers with dots"
     ( "223.456.7890" clean )
@@ -82,5 +77,4 @@ SKIP-REST-OF-TESTS
     ( "1 (223) 156-7890" clean )
     null?
 
-end-of-tests
-;with
+

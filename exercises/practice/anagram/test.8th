@@ -1,14 +1,9 @@
-"anagram.8th" f:include
-needs exercism/test
-with: test
-16 tests
 
 "no matches"
     ( "diaper" ["hello", "world", "zombies", "pants"] anagrams )
     []
     equal?
 
-SKIP-REST-OF-TESTS
 
 "detects two anagrams"
     ( "solemn" ["lemons", "cherry", "melons"] anagrams )
@@ -85,5 +80,4 @@ SKIP-REST-OF-TESTS
     ["Silent"]
     equal?
 
-end-of-tests
-;with
+

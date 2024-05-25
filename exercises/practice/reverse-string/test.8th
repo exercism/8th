@@ -1,14 +1,9 @@
-"reverse-string.8th" f:include
-needs exercism/test
-with: test
-6 tests
 
 "an empty string"
     ( "" reverse )
     ""
     equal?
 
-SKIP-REST-OF-TESTS
 
 "a word"
     ( "robot" reverse )
@@ -35,5 +30,3 @@ SKIP-REST-OF-TESTS
     "reward"
     equal?
 
-end-of-tests
-;with

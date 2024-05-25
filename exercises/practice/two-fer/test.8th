@@ -8,7 +8,6 @@ with: test
     "One for you, one for me."
     equal?
 
-SKIP-REST-OF-TESTS
 
 "Unnamed person test with null"
     ( null two-fer )
@@ -25,5 +24,3 @@ SKIP-REST-OF-TESTS
     "One for הַצְּלֶלְפּוֹנִי, one for me."
     equal?
 
-end-of-tests
-;with

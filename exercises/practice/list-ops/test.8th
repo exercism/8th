@@ -1,14 +1,9 @@
-"list-ops.8th" f:include
-needs exercism/test
-with: test
-22 tests
 
 "empty lists"
     ( [] [] append )
     []
     equal?
 
-SKIP-REST-OF-TESTS
 
 "list to empty list"
     ( [] [1, 2, 3, 4] append )
@@ -119,5 +114,4 @@ SKIP-REST-OF-TESTS
     [[4, 5, 6], [], [3], [1, 2]]
     equal?
 
-end-of-tests
-;with
+

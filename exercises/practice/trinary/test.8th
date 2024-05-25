@@ -1,14 +1,9 @@
-"trinary.8th" f:include
-needs exercism/test
-with: test
-10 tests
 
 "1 is decimal 1"
     ( "1" trinary> )
     1
     equal?
 
-SKIP-REST-OF-TESTS
 
 "2 is decimal 2"
     ( "2" trinary> )
@@ -55,5 +50,3 @@ SKIP-REST-OF-TESTS
     0
     equal?
 
-end-of-tests
-;with

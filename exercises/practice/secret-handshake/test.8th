@@ -1,14 +1,9 @@
-"secret-handshake.8th" f:include
-needs exercism/test
-with: test
-11 tests
 
 "wink for 1"
     ( 1 commands )
     ["wink"]
     equal?
 
-SKIP-REST-OF-TESTS
 
 "double blink for 10"
     ( 2 commands )
@@ -60,5 +55,4 @@ SKIP-REST-OF-TESTS
     []
     equal?
 
-end-of-tests
-;with
+

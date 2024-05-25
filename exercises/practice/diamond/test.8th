@@ -1,7 +1,3 @@
-"diamond.8th" f:include
-needs exercism/test
-with: test
-5 tests
 
 "Degenerate case with a single 'A' row"
     ( "A" rows )
@@ -10,7 +6,6 @@ with: test
     ]
     equal?
 
-SKIP-REST-OF-TESTS
 
 "Degenerate case with no row containing 3 distinct groups of spaces"
     ( "B" rows )
@@ -102,5 +97,4 @@ SKIP-REST-OF-TESTS
     ]
     equal?
 
-end-of-tests
-;with
+
