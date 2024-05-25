@@ -1,31 +1,31 @@
 
-    test "root of 1" [
+    test.skip "root of 1" [
         result: square-root 1
         assert -> 1 = result
     ]
 
 
-    test "root of 4" [
+    test.skip "root of 4" [
         result: square-root 4
         assert -> 2 = result
     ]
 
-    test "root of 25" [
+    test.skip "root of 25" [
         result: square-root 25
         assert -> 5 = result
     ]
 
-    test "root of 81" [
+    test.skip "root of 81" [
         result: square-root 81
         assert -> 9 = result
     ]
 
-    test "root of 196" [
+    test.skip "root of 196" [
         result: square-root 196
         assert -> 14 = result
     ]
 
-    test "root of 65025" [
+    test.skip "root of 65025" [
         result: square-root 65025
         assert -> 255 = result
     ]

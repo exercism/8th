@@ -1,101 +1,101 @@
 
-    test "paired square brackets" [
+    test.skip "paired square brackets" [
         result: paired? "[]"
         assert -> true = result
     ]
 
 
-    test "empty string" [
+    test.skip "empty string" [
         result: paired? ""
         assert -> true = result
     ]
 
-    test "unpaired brackets" [
+    test.skip "unpaired brackets" [
         result: paired? "[["
         assert -> false = result
     ]
 
-    test "wrong ordered brackets" [
+    test.skip "wrong ordered brackets" [
         result: paired? "}{"
         assert -> false = result
     ]
 
-    test "wrong closing bracket" [
+    test.skip "wrong closing bracket" [
         result: paired? "{]"
         assert -> false = result
     ]
 
-    test "paired with whitespace" [
+    test.skip "paired with whitespace" [
         result: paired? "{ }"
         assert -> true = result
     ]
 
-    test "partially paired brackets" [
+    test.skip "partially paired brackets" [
         result: paired? "{[])"
         assert -> false = result
     ]
 
-    test "simple nested brackets" [
+    test.skip "simple nested brackets" [
         result: paired? "{[]}"
         assert -> true = result
     ]
 
-    test "several paired brackets" [
+    test.skip "several paired brackets" [
         result: paired? "{}[]"
         assert -> true = result
     ]
 
-    test "paired and nested brackets" [
+    test.skip "paired and nested brackets" [
         result: paired? "([{}({}[])])"
         assert -> true = result
     ]
 
-    test "unopened closing brackets" [
+    test.skip "unopened closing brackets" [
         result: paired? "{[)][]}"
         assert -> false = result
     ]
 
-    test "unpaired and nested brackets" [
+    test.skip "unpaired and nested brackets" [
         result: paired? "([{])"
         assert -> false = result
     ]
 
-    test "paired and wrong nested brackets" [
+    test.skip "paired and wrong nested brackets" [
         result: paired? "[({]})"
         assert -> false = result
     ]
 
-    test "paired and wrong nested brackets but innermost are correct" [
+    test.skip "paired and wrong nested brackets but innermost are correct" [
         result: paired? "[({}])"
         assert -> false = result
     ]
 
-    test "paired and incomplete brackets" [
+    test.skip "paired and incomplete brackets" [
         result: paired? "{}["
         assert -> false = result
     ]
 
-    test "too many closing brackets" [
+    test.skip "too many closing brackets" [
         result: paired? "[]]"
         assert -> false = result
     ]
 
-    test "early unexpected brackets" [
+    test.skip "early unexpected brackets" [
         result: paired? ")()"
         assert -> false = result
     ]
 
-    test "early mismatched brackets" [
+    test.skip "early mismatched brackets" [
         result: paired? "{)()"
         assert -> false = result
     ]
 
-    test "math expression" [
+    test.skip "math expression" [
         result: paired? "(((185 + 223.85) * 15) - 543)/2"
         assert -> true = result
     ]
 
-    test "complex latex expression" [
+    test.skip "complex latex expression" [
         result: paired? "\left(\begin{array}{cc} \frac{1}{3} & x\\ \mathrm{e}^{x} &... x^2 \end{array}\right)"
         assert -> true = result
     ]

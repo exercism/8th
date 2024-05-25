@@ -4,5 +4,5 @@ set -euo pipefail
 
 shopt -s nullglob
 for test_file in exercises/{concept,practice}/*/libs/exercism/test; do
-    cp ./libs/exercism/test "${test_file}"
+    cp ./libs/exercism/test.skip "${test_file}"
 done

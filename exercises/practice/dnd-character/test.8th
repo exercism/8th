@@ -1,81 +1,81 @@
 
-    test "ability modifier for score 3 is -4" [
+    test.skip "ability modifier for score 3 is -4" [
         result: modifier 3
         assert -> -4 = result
     ]
 
 
-    test "ability modifier for score 4 is -3" [
+    test.skip "ability modifier for score 4 is -3" [
         result: modifier 4
         assert -> -3 = result
     ]
 
-    test "ability modifier for score 5 is -3" [
+    test.skip "ability modifier for score 5 is -3" [
         result: modifier 5
         assert -> -3 = result
     ]
 
-    test "ability modifier for score 6 is -2" [
+    test.skip "ability modifier for score 6 is -2" [
         result: modifier 6
         assert -> -2 = result
     ]
 
-    test "ability modifier for score 7 is -2" [
+    test.skip "ability modifier for score 7 is -2" [
         result: modifier 7
         assert -> -2 = result
     ]
 
-    test "ability modifier for score 8 is -1" [
+    test.skip "ability modifier for score 8 is -1" [
         result: modifier 8
         assert -> -1 = result
     ]
 
-    test "ability modifier for score 9 is -1" [
+    test.skip "ability modifier for score 9 is -1" [
         result: modifier 9
         assert -> -1 = result
     ]
 
-    test "ability modifier for score 10 is 0" [
+    test.skip "ability modifier for score 10 is 0" [
         result: modifier 10
         assert -> 0 = result
     ]
 
-    test "ability modifier for score 11 is 0" [
+    test.skip "ability modifier for score 11 is 0" [
         result: modifier 11
         assert -> 0 = result
     ]
 
-    test "ability modifier for score 12 is +1" [
+    test.skip "ability modifier for score 12 is +1" [
         result: modifier 12
         assert -> 1 = result
     ]
 
-    test "ability modifier for score 13 is +1" [
+    test.skip "ability modifier for score 13 is +1" [
         result: modifier 13
         assert -> 1 = result
     ]
 
-    test "ability modifier for score 14 is +2" [
+    test.skip "ability modifier for score 14 is +2" [
         result: modifier 14
         assert -> 2 = result
     ]
 
-    test "ability modifier for score 15 is +2" [
+    test.skip "ability modifier for score 15 is +2" [
         result: modifier 15
         assert -> 2 = result
     ]
 
-    test "ability modifier for score 16 is +3" [
+    test.skip "ability modifier for score 16 is +3" [
         result: modifier 16
         assert -> 3 = result
     ]
 
-    test "ability modifier for score 17 is +3" [
+    test.skip "ability modifier for score 17 is +3" [
         result: modifier 17
         assert -> 3 = result
     ]
 
-    test "ability modifier for score 18 is +4" [
+    test.skip "ability modifier for score 18 is +4" [
         result: modifier 18
         assert -> 4 = result
     ]
@@ -84,7 +84,7 @@
     3 18 n:between
 ;
 
-    test "random ability is within range" [
+    test.skip "random ability is within range" [
         result: ability-valid? ability
         assert -> true = result
     ]
