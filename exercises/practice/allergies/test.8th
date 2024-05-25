@@ -1,200 +1,200 @@
     test "not allergic to anything, including eggs" [
-        result: allergic-to? 0 "eggs"
+        result: allergicTo? 0 "eggs"
         assert -> false = result
     ]
 
     test.skip "allergic only to eggs" [
-        result: allergic-to? 1 "eggs"
+        result: allergicTo? 1 "eggs"
         assert -> true = result
     ]
 
     test.skip "allergic to eggs and something else" [
-        result: allergic-to? 3 "eggs"
+        result: allergicTo? 3 "eggs"
         assert -> true = result
     ]
 
     test.skip "allergic to something, but not eggs" [
-        result: allergic-to? 2 "eggs"
+        result: allergicTo? 2 "eggs"
         assert -> false = result
     ]
 
     test.skip "allergic to everything, including eggs" [
-        result: allergic-to? 255 "eggs"
+        result: allergicTo? 255 "eggs"
         assert -> true = result
     ]
 
     test.skip "not allergic to anything, including peanuts" [
-        result: allergic-to? 0 "peanuts"
+        result: allergicTo? 0 "peanuts"
         assert -> false = result
     ]
 
     test.skip "allergic only to peanuts" [
-        result: allergic-to? 2 "peanuts"
+        result: allergicTo? 2 "peanuts"
         assert -> true = result
     ]
 
     test.skip "allergic to peanuts and something else" [
-        result: allergic-to? 7 "peanuts"
+        result: allergicTo? 7 "peanuts"
         assert -> true = result
     ]
 
     test.skip "allergic to something, but not peanuts" [
-        result: allergic-to? 5 "peanuts"
+        result: allergicTo? 5 "peanuts"
         assert -> false = result
     ]
 
     test.skip "allergic to everything, including peanuts" [
-        result: allergic-to? 255 "peanuts"
+        result: allergicTo? 255 "peanuts"
         assert -> true = result
     ]
 
     test.skip "not allergic to anything, including shellfish" [
-        result: allergic-to? 0 "shellfish"
+        result: allergicTo? 0 "shellfish"
         assert -> false = result
     ]
 
     test.skip "allergic only to shellfish" [
-        result: allergic-to? 4 "shellfish"
+        result: allergicTo? 4 "shellfish"
         assert -> true = result
     ]
 
     test.skip "allergic to shellfish and something else" [
-        result: allergic-to? 14 "shellfish"
+        result: allergicTo? 14 "shellfish"
         assert -> true = result
     ]
 
     test.skip "allergic to something, but not shellfish" [
-        result: allergic-to? 10 "shellfish"
+        result: allergicTo? 10 "shellfish"
         assert -> false = result
     ]
 
     test.skip "allergic to everything, including shellfish" [
-        result: allergic-to? 255 "shellfish"
+        result: allergicTo? 255 "shellfish"
         assert -> true = result
     ]
 
     test.skip "not allergic to anything, including strawberries" [
-        result: allergic-to? 0 "strawberries"
+        result: allergicTo? 0 "strawberries"
         assert -> false = result
     ]
 
     test.skip "allergic only to strawberries" [
-        result: allergic-to? 8 "strawberries"
+        result: allergicTo? 8 "strawberries"
         assert -> true = result
     ]
 
     test.skip "allergic to strawberries and something else" [
-        result: allergic-to? 28 "strawberries"
+        result: allergicTo? 28 "strawberries"
         assert -> true = result
     ]
 
     test.skip "allergic to something, but not strawberries" [
-        result: allergic-to? 20 "strawberries"
+        result: allergicTo? 20 "strawberries"
         assert -> false = result
     ]
 
     test.skip "allergic to everything, including strawberries" [
-        result: allergic-to? 255 "strawberries"
+        result: allergicTo? 255 "strawberries"
         assert -> true = result
     ]
 
     test.skip "not allergic to anything, including tomatoes" [
-        result: allergic-to? 0 "tomatoes"
+        result: allergicTo? 0 "tomatoes"
         assert -> false = result
     ]
 
     test.skip "allergic only to tomatoes" [
-        result: allergic-to? 16 "tomatoes"
+        result: allergicTo? 16 "tomatoes"
         assert -> true = result
     ]
 
     test.skip "allergic to tomatoes and something else" [
-        result: allergic-to? 56 "tomatoes"
+        result: allergicTo? 56 "tomatoes"
         assert -> true = result
     ]
 
     test.skip "allergic to something, but not tomatoes" [
-        result: allergic-to? 40 "tomatoes"
+        result: allergicTo? 40 "tomatoes"
         assert -> false = result
     ]
 
     test.skip "allergic to everything, including tomatoes" [
-        result: allergic-to? 255 "tomatoes"
+        result: allergicTo? 255 "tomatoes"
         assert -> true = result
     ]
 
     test.skip "not allergic to anything, including chocolate" [
-        result: allergic-to? 0 "chocolate"
+        result: allergicTo? 0 "chocolate"
         assert -> false = result
     ]
 
     test.skip "allergic only to chocolate" [
-        result: allergic-to? 32 "chocolate"
+        result: allergicTo? 32 "chocolate"
         assert -> true = result
     ]
 
     test.skip "allergic to chocolate and something else" [
-        result: allergic-to? 112 "chocolate"
+        result: allergicTo? 112 "chocolate"
         assert -> true = result
     ]
 
     test.skip "allergic to something, but not chocolate" [
-        result: allergic-to? 80 "chocolate"
+        result: allergicTo? 80 "chocolate"
         assert -> false = result
     ]
 
     test.skip "allergic to everything, including chocolate" [
-        result: allergic-to? 255 "chocolate"
+        result: allergicTo? 255 "chocolate"
         assert -> true = result
     ]
 
     test.skip "not allergic to anything, including pollen" [
-        result: allergic-to? 0 "pollen"
+        result: allergicTo? 0 "pollen"
         assert -> false = result
     ]
 
     test.skip "allergic only to pollen" [
-        result: allergic-to? 64 "pollen"
+        result: allergicTo? 64 "pollen"
         assert -> true = result
     ]
 
     test.skip "allergic to pollen and something else" [
-        result: allergic-to? 224 "pollen"
+        result: allergicTo? 224 "pollen"
         assert -> true = result
     ]
 
     test.skip "allergic to something, but not pollen" [
-        result: allergic-to? 160 "pollen"
+        result: allergicTo? 160 "pollen"
         assert -> false = result
     ]
 
     test.skip "allergic to everything, including pollen" [
-        result: allergic-to? 255 "pollen"
+        result: allergicTo? 255 "pollen"
         assert -> true = result
     ]
 
     test.skip "not allergic to anything, including cats" [
-        result: allergic-to? 0 "cats"
+        result: allergicTo? 0 "cats"
         assert -> false = result
     ]
 
     test.skip "allergic only to cats" [
-        result: allergic-to? 128 "cats"
+        result: allergicTo? 128 "cats"
         assert -> true = result
     ]
 
     test.skip "allergic to cats and something else" [
-        result: allergic-to? 192 "cats"
+        result: allergicTo? 192 "cats"
         assert -> true = result
     ]
 
     test.skip "allergic to something, but not cats" [
-        result: allergic-to? 64 "cats"
+        result: allergicTo? 64 "cats"
         assert -> false = result
     ]
 
     test.skip "allergic to everything, including cats" [
-        result: allergic-to? 255 "cats"
+        result: allergicTo? 255 "cats"
         assert -> true = result
     ]
 
