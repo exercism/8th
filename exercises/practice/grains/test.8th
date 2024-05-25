@@ -1,5 +1,4 @@
-
-    test.skip "grains on square 1" [
+    test "grains on square 1" [
         result: square 1
         assert -> 1 = result
     ]

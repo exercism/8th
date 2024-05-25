@@ -1,12 +1,10 @@
-
-    test.skip "empty sentence" [
+    test "empty sentence" [
         result: pangram? ""
         assert -> false = result
     ]
 "missing letters replaced by numbers"
     ( "7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog" pangram?  )
-    false?
-    test.skip "mixed case and punctuation" [
+    false?    test "mixed case and punctuation" [
         result: pangram? "\"Five quacking Zephyrs jolt my wax bed.\""
         assert -> true = result
     ]

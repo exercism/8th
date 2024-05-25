@@ -1,5 +1,4 @@
-
-    test.skip "zero steps for one" [
+    test "zero steps for one" [
         result: collatz 1
         assert -> 0 = result
     ]
@@ -8,8 +7,7 @@
         result: collatz 1000000
         assert -> 152 = result
     ]
- 
-    test.skip "even and odd steps" [
+     test "even and odd steps" [
         result: collatz 12
         assert -> 9 = result
     ]

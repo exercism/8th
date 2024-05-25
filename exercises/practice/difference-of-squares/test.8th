@@ -1,5 +1,4 @@
-
-    test.skip "square of sum 1" [
+    test "square of sum 1" [
         result: square-of-sum 1
         assert -> 1 = result
     ]

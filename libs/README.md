@@ -9,7 +9,7 @@ and we can deploy it to exercises with:
 ```sh
 for ex in ./exercises/practice/*; do
     mkdir -p "$ex/libs/exercism"
-    cp -v ./libs/exercism/test.skip "$ex/libs/exercism/test"
+    cp -v ./libs/exercism/test "$ex/libs/exercism/test"
 done
 ```
 

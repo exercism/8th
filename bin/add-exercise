@@ -40,7 +40,7 @@ slug="${1}"
 ./bin/fetch-configlet
 ./bin/configlet create --practice-exercise "${slug}"
 
-cp ./libs/exercism/test.skip "exercises/practice/${slug}/libs/exercism/test"
+cp ./libs/exercism/test "exercises/practice/${slug}/libs/exercism/test"
 
 cat << END_TEST > "exercises/practice/${slug}/test.8th"
 "${slug}.8th" f:include

@@ -1,5 +1,4 @@
-
-    test.skip "not allergic to anything, including eggs" [
+    test "not allergic to anything, including eggs" [
         result: allergic-to? 0 "eggs"
         assert -> false = result
     ]

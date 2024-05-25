@@ -1,5 +1,4 @@
-
-    test.skip "single digit strings can not be valid" [
+    test "single digit strings can not be valid" [
         result: luhn "1"
         assert -> false = result
     ]

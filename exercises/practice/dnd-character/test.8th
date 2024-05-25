@@ -1,5 +1,4 @@
-
-    test.skip "ability modifier for score 3 is -4" [
+    test "ability modifier for score 3 is -4" [
         result: modifier 3
         assert -> -4 = result
     ]
@@ -81,8 +80,7 @@
 
 : ability-valid? \ n -- t
     3 18 n:between
-;
-    test.skip "random ability is within range" [
+;    test "random ability is within range" [
         result: ability-valid? ability
         assert -> true = result
     ]

@@ -1,5 +1,4 @@
-
-    test.skip "paired square brackets" [
+    test "paired square brackets" [
         result: paired? "[]"
         assert -> true = result
     ]
