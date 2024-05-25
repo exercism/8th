@@ -43,5 +43,3 @@
         result: difference-of-squares 100
         assert -> 25164150 = result
     ]
-
-

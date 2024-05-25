@@ -28,5 +28,3 @@
         result: square-root 65025
         assert -> 255 = result
     ]
-
-

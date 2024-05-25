@@ -6,8 +6,6 @@
         result: throws? 1 cb:new ' cb:read
         assert -> true = result
     ]
-
-
 "can read an item just written"
     ( 1 cb:new 1 cb:write cb:read nip )
     1
@@ -68,5 +66,3 @@
         result: throws? 2 cb:new cb:clear 1 cb:write 2 cb:write 3 cb:overwrite 4 cb:overwrite cb:read drop cb:read drop ' cb:read
         assert -> true = result
     ]
-
-
