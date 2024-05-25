@@ -3,72 +3,72 @@ import {src/word-count}!
 
 suite "Word Count" [
     test "count one word" [
-        result: word-count "word"
+        result: wordCount "word"
         assert -> { "word":1 } = result
     ]
 
     test.skip "count one of each word" [
-        result: word-count "one of each"
+        result: wordCount "one of each"
         assert -> { "one":1,"of":1,"each":1 } = result
     ]
 
     test.skip "multiple occurrences of a word" [
-        result: word-count "one fish two fish red fish blue fish"
+        result: wordCount "one fish two fish red fish blue fish"
         assert -> { "one":1,"fish":4,"two":1,"red":1,"blue":1 } = result
     ]
 
     test.skip "handles cramped lists" [
-        result: word-count "one,two,three"
+        result: wordCount "one,two,three"
         assert -> { "one":1,"two":1,"three":1 } = result
     ]
 
     test.skip "handles expanded lists" [
-        result: word-count "one,\ntwo,\nthree"
+        result: wordCount "one,\ntwo,\nthree"
         assert -> { "one":1,"two":1,"three":1 } = result
     ]
 
     test.skip "ignore punctuation" [
-        result: word-count "car: carpet as java: javascript!!&@$%^&"
+        result: wordCount "car: carpet as java: javascript!!&@$%^&"
         assert -> { "car":1,"carpet":1,"as":1,"java":1,"javascript":1 } = result
     ]
 
     test.skip "include numbers" [
-        result: word-count "testing, 1, 2 testing"
+        result: wordCount "testing, 1, 2 testing"
         assert -> { "testing":2,"1":1,"2":1 } = result
     ]
 
     test.skip "normalize case" [
-        result: word-count "go Go GO Stop stop"
+        result: wordCount "go Go GO Stop stop"
         assert -> { "go":3,"stop":2 } = result
     ]
 
     test.skip "with apostrophes" [
-        result: word-count "First: don't laugh. Then: don't cry. You're getting it."
+        result: wordCount "First: don't laugh. Then: don't cry. You're getting it."
         assert -> { "first":1,"don't":2,"laugh":1,"then":1,"cry":1,"you're":1,"getting":1,"it":1 } = result
     ]
 
     test.skip "with quotations" [
-        result: word-count "Joe can't tell between 'large' and large."
+        result: wordCount "Joe can't tell between 'large' and large."
         assert -> { "joe":1,"can't":1,"tell":1,"between":1,"large":2,"and":1 } = result
     ]
 
     test.skip "substrings from the beginning" [
-        result: word-count "Joe can't tell between app, apple and a."
+        result: wordCount "Joe can't tell between app, apple and a."
         assert -> { "joe":1,"can't":1,"tell":1,"between":1,"app":1,"apple":1,"and":1,"a":1 } = result
     ]
 
     test.skip "multiple spaces not detected as a word" [
-        result: word-count " multiple whitespaces"
+        result: wordCount " multiple whitespaces"
         assert -> { "multiple":1,"whitespaces":1 } = result
     ]
 
     test.skip "alternating word separators not detected as a word" [
-        result: word-count ",\n,one,\n ,two \n 'three'"
+        result: wordCount ",\n,one,\n ,two \n 'three'"
         assert -> { "one":1,"two":1,"three":1 } = result
     ]
 
     test.skip "quotation for word with apostrophe" [
-        result: word-count "can, can't, 'can't'"
+        result: wordCount "can, can't, 'can't'"
         assert -> { "can":1,"can't":2 } = result
     ]
 

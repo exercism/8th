@@ -6,22 +6,22 @@ needs exercism/test
 with: test
 4 tests     
     test.skip "Unnamed person test with empty string" [
-        result: two-fer ""
+        result: twoFer ""
         assert -> "One for you, one for me." = result
     ]
 
     test.skip "Unnamed person test with null" [
-        result: two-fer null
+        result: twoFer null
         assert -> "One for you, one for me." = result
     ]
 
     test.skip "One for the judge" [
-        result: two-fer "Jedoon"
+        result: twoFer "Jedoon"
         assert -> "One for Jedoon, one for me." = result
     ]
 
     test.skip "One for the Hebrew shade-facing one" [
-        result: two-fer "הַצְּלֶלְפּוֹנִי"
+        result: twoFer "הַצְּלֶלְפּוֹנִי"
         assert -> "One for הַצְּלֶלְפּוֹנִי, one for me." = result
     ]
 

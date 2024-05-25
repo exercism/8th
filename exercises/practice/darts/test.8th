@@ -18,22 +18,22 @@ suite "Darts" [
     ( neg 5 0 darts-score )
     equal?    
     test.skip "On the inner circle" [
-        result: darts-score 0 neg 1
+        result: dartsScore 0 neg 1
         assert -> 10 = result
     ]
 
     test.skip "Exactly on center" [
-        result: darts-score 0 0
+        result: dartsScore 0 0
         assert -> 10 = result
     ]
 
     test.skip "Near the center" [
-        result: darts-score neg 0.1 neg 0.1
+        result: dartsScore neg 0.1 neg 0.1
         assert -> 10 = result
     ]
 
     test.skip "Just within the inner circle" [
-        result: darts-score 0.7 0.7
+        result: dartsScore 0.7 0.7
         assert -> 10 = result
     ]
 

@@ -3,12 +3,12 @@ import {src/spiral-matrix}!
 
 suite "Spiral Matrix" [
     test "empty spiral" [
-        result: spiral-matrix 0
+        result: spiralMatrix 0
         assert -> [] = result
     ]
 
     test.skip "trivial spiral" [
-        result: spiral-matrix 1
+        result: spiralMatrix 1
         assert -> [[1]] = result
     ]
 
