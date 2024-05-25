@@ -1,22 +1,24 @@
+import {unitt}!
+import {src/spiral-matrix}!
 
+suite "Spiral Matrix" [
     test "empty spiral" [
         result: spiral-matrix 0
         assert -> [] = result
-    ]?
+    ]
 
-
-    test "trivial spiral" [
+    test.skip "trivial spiral" [
         result: spiral-matrix 1
         assert -> [[1]] = result
-    ]?
+    ]
 
 "spiral of size 2"
     ( 2 spiral-matrix )
     [
         [1, 2],
         [4, 3]
-    ]
-    equal?
+]
+equal?
 
 "spiral of size 3"
     ( 3 spiral-matrix )
@@ -24,8 +26,8 @@
         [1, 2, 3],
         [8, 9, 4],
         [7, 6, 5]
-    ]
-    equal?
+]
+equal?
 
 "spiral of size 4"
     ( 4 spiral-matrix )
@@ -34,8 +36,8 @@
         [12, 13, 14, 5],
         [11, 16, 15, 6],
         [10, 9, 8, 7]
-    ]
-    equal?
+]
+equal?
 
 "spiral of size 5"
     ( 5 spiral-matrix )
@@ -45,7 +47,9 @@
         [15, 24, 25, 20, 7], 
         [14, 23, 22, 21, 8], 
         [13, 12, 11, 10, 9]
-    ]
-    equal?
+]
+equal?
 
 
+
+]

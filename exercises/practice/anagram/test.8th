@@ -1,83 +1,84 @@
+import {unitt}!
+import {src/anagram}!
 
+suite "Anagram" [
     test "no matches" [
         result: anagrams "diaper" ["hello", "world", "zombies", "pants"]
-        assert -> [] = result
-    ]?
+    assert -> [] = result
+    ]
 
-
-    test "detects two anagrams" [
+    test.skip "detects two anagrams" [
         result: anagrams "solemn" ["lemons", "cherry", "melons"]
-        assert -> ["lemons", "melons"] = result
-    ]?
+    assert -> ["lemons", "melons"] = result
+    ]
 
-    test "does not detect anagram subsets" [
+    test.skip "does not detect anagram subsets" [
         result: anagrams "good" ["dog", "goody"]
-        assert -> [] = result
-    ]?
+    assert -> [] = result
+    ]
 
-    test "detects anagram" [
+    test.skip "detects anagram" [
         result: anagrams "listen" ["enlists", "google", "inlets", "banana"]
-        assert -> ["inlets"] = result
-    ]?
+    assert -> ["inlets"] = result
+    ]
 
-    test "detects three anagrams" [
+    test.skip "detects three anagrams" [
         result: anagrams "allergy" ["gallery", "ballerina", "regally", "clergy", "largely", "leading"]
-        assert -> ["gallery", "regally", "largely"] = result
-    ]?
+    assert -> ["gallery", "regally", "largely"] = result
+    ]
 
-    test "detects multiple anagrams with different case" [
+    test.skip "detects multiple anagrams with different case" [
         result: anagrams "nose" ["Eons", "ONES"]
-        assert -> ["Eons", "ONES"] = result
-    ]?
+    assert -> ["Eons", "ONES"] = result
+    ]
 
-    test "does not detect non-anagrams with identical checksum" [
+    test.skip "does not detect non-anagrams with identical checksum" [
         result: anagrams "mass" ["last"]
-        assert -> [] = result
-    ]?
+    assert -> [] = result
+    ]
 
-    test "detects anagrams case-insensitively" [
+    test.skip "detects anagrams case-insensitively" [
         result: anagrams "Orchestra" ["cashregister", "Carthorse", "radishes"]
-        assert -> ["Carthorse"] = result
-    ]?
+    assert -> ["Carthorse"] = result
+    ]
 
-    test "detects anagrams using case-insensitive subject" [
+    test.skip "detects anagrams using case-insensitive subject" [
         result: anagrams "Orchestra" ["cashregister", "carthorse", "radishes"]
-        assert -> ["carthorse"] = result
-    ]?
+    assert -> ["carthorse"] = result
+    ]
 
-    test "detects anagrams using case-insensitive possible matches" [
+    test.skip "detects anagrams using case-insensitive possible matches" [
         result: anagrams "orchestra" ["cashregister", "Carthorse", "radishes"]
-        assert -> ["Carthorse"] = result
-    ]?
+    assert -> ["Carthorse"] = result
+    ]
 
-    test "does not detect an anagram if the original word is repeated" [
+    test.skip "does not detect an anagram if the original word is repeated" [
         result: anagrams "go" ["goGoGO"]
-        assert -> [] = result
-    ]?
+    assert -> [] = result
+    ]
 
-    test "anagrams must use all letters exactly once" [
+    test.skip "anagrams must use all letters exactly once" [
         result: anagrams "tapper" ["patter"]
-        assert -> [] = result
-    ]?
+    assert -> [] = result
+    ]
 
-    test "words are not anagrams of themselves" [
+    test.skip "words are not anagrams of themselves" [
         result: anagrams "BANANA" ["BANANA"]
-        assert -> [] = result
-    ]?
+    assert -> [] = result
+    ]
 
-    test "words are not anagrams of themselves even if letter case is partially different" [
+    test.skip "words are not anagrams of themselves even if letter case is partially different" [
         result: anagrams "BANANA" ["Banana"]
-        assert -> [] = result
-    ]?
+    assert -> [] = result
+    ]
 
-    test "words are not anagrams of themselves even if letter case is completely different" [
+    test.skip "words are not anagrams of themselves even if letter case is completely different" [
         result: anagrams "BANANA" ["banana"]
-        assert -> [] = result
-    ]?
+    assert -> [] = result
+    ]
 
-    test "words other than themselves can be anagrams" [
+    test.skip "words other than themselves can be anagrams" [
         result: anagrams "LISTEN" ["LISTEN", "Silent"]
-        assert -> ["Silent"] = result
-    ]?
-
-
+    assert -> ["Silent"] = result
+    ]
+]

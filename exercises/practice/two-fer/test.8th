@@ -1,26 +1,29 @@
-"two-fer.8th" f:include
+import {unitt}!
+import {src/two-fer}!
+
+suite "Two Fer" ["two-fer.8th" f:include
 needs exercism/test
 with: test
-4 tests 
-
-    test "Unnamed person test with empty string" [
+4 tests     
+    test.skip "Unnamed person test with empty string" [
         result: two-fer ""
         assert -> "One for you, one for me." = result
-    ]?
+    ]
 
-
-    test "Unnamed person test with null" [
+    test.skip "Unnamed person test with null" [
         result: two-fer null
         assert -> "One for you, one for me." = result
-    ]?
+    ]
 
-    test "One for the judge" [
+    test.skip "One for the judge" [
         result: two-fer "Jedoon"
         assert -> "One for Jedoon, one for me." = result
-    ]?
+    ]
 
-    test "One for the Hebrew shade-facing one" [
+    test.skip "One for the Hebrew shade-facing one" [
         result: two-fer "הַצְּלֶלְפּוֹנִי"
         assert -> "One for הַצְּלֶלְפּוֹנִי, one for me." = result
-    ]?
+    ]
 
+
+]

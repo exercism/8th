@@ -1,4 +1,7 @@
-    test "not allergic to anything, including eggs" [
+import {unitt}!
+import {src/allergies}!
+
+suite "Allergies" [    test.skip "not allergic to anything, including eggs" [
         result: allergicTo? 0 "eggs"
         assert -> false = result
     ]
@@ -198,54 +201,53 @@
         assert -> true = result
     ]
 
-    test "no allergies" [
+    test.skip "no allergies" [
         result: list 0
         assert -> [] = result
-    ]?
+    ]
 
-    test "just eggs" [
+    test.skip "just eggs" [
         result: list 1
         assert -> ["eggs"] = result
-    ]?
+    ]
 
-    test "just peanuts" [
+    test.skip "just peanuts" [
         result: list 2
         assert -> ["peanuts"] = result
-    ]?
+    ]
 
-    test "just strawberries" [
+    test.skip "just strawberries" [
         result: list 8
         assert -> ["strawberries"] = result
-    ]?
+    ]
 
-    test "eggs and peanuts" [
+    test.skip "eggs and peanuts" [
         result: list 3
         assert -> ["eggs", "peanuts"] = result
-    ]?
+    ]
 
-    test "more than eggs but not peanuts" [
+    test.skip "more than eggs but not peanuts" [
         result: list 5
         assert -> ["eggs", "shellfish"] = result
-    ]?
+    ]
 
-    test "lots of stuff" [
+    test.skip "lots of stuff" [
         result: list 248
         assert -> ["strawberries", "tomatoes", "chocolate", "pollen", "cats"] = result
-    ]?
+    ]
 
-    test "everything" [
+    test.skip "everything" [
         result: list 255
         assert -> ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] = result
-    ]?
+    ]
 
-    test "no allergen score parts" [
+    test.skip "no allergen score parts" [
         result: list 509
         assert -> ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] = result
-    ]?
+    ]
 
-    test "no allergen score parts without highest valid score" [
+    test.skip "no allergen score parts without highest valid score" [
         result: list 257
         assert -> ["eggs"] = result
-    ]?
-
-
+    ]
+]

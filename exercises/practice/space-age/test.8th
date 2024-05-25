@@ -1,4 +1,7 @@
+import {unitt}!
+import {src/space-age}!
 
+suite "Space Age" [
 "age on Earth"
     ( 1000000000 "Earth" >age )
     31.69
@@ -48,8 +51,8 @@
     0.01
     approx_equal?
 
-"invalid planet causes error"
-    ( 680804807 "Sun" >age )
-    null?
-
-
+    test.skip "invalid planet causes error" [
+        result: >age 680804807 "Sun"
+        assert -> null = result
+    ]
+]

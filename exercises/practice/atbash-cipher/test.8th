@@ -1,59 +1,76 @@
+import {unitt}!
+import {src/atbash-cipher}!
 
+suite "Atbash Cipher" [
     test "encode yes" [
         result: >atbash "yes"
         assert -> "bvh" = result
     ]
-    test "encode no" [
+
+    test.skip "encode no" [
         result: >atbash "no"
         assert -> "ml" = result
     ]
-    test "encode OMG" [
+
+    test.skip "encode OMG" [
         result: >atbash "OMG"
         assert -> "lnt" = result
     ]
-    test "encode spaces" [
+
+    test.skip "encode spaces" [
         result: >atbash "O M G"
         assert -> "lnt" = result
     ]
-    test "encode mindblowingly" [
+
+    test.skip "encode mindblowingly" [
         result: >atbash "mindblowingly"
         assert -> "nrmwy oldrm tob" = result
     ]
-    test "encode numbers" [
+
+    test.skip "encode numbers" [
         result: >atbash "Testing,1 2 3, testing."
         assert -> "gvhgr mt123 gvhgr mt" = result
     ]
-    test "encode deep thought" [
+
+    test.skip "encode deep thought" [
         result: >atbash "Truth is fiction."
         assert -> "gifgs rhurx grlm" = result
     ]
-    test "encode all the letters" [
+
+    test.skip "encode all the letters" [
         result: >atbash "The quick brown fox jumps over the lazy dog."
         assert -> "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt" = result
-    ]?
+    ]
 
-    test "decode exercism" [
+    test.skip "decode exercism" [
         result: atbash> "vcvix rhn"
         assert -> "exercism" = result
     ]
-    test "decode a sentence" [
+
+    test.skip "decode a sentence" [
         result: atbash> "zmlyh gzxov rhlug vmzhg vkkrm thglm v"
         assert -> "anobstacleisoftenasteppingstone" = result
     ]
-    test "decode numbers" [
+
+    test.skip "decode numbers" [
         result: atbash> "gvhgr mt123 gvhgr mt"
         assert -> "testing123testing" = result
     ]
-    test "decode all the letters" [
+
+    test.skip "decode all the letters" [
         result: atbash> "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
         assert -> "thequickbrownfoxjumpsoverthelazydog" = result
     ]
-    test "decode with too many spaces" [
+
+    test.skip "decode with too many spaces" [
         result: atbash> "vc vix    r hn"
         assert -> "exercism" = result
     ]
-    test "decode with no spaces" [
+
+    test.skip "decode with no spaces" [
         result: atbash> "zmlyhgzxovrhlugvmzhgvkkrmthglmv"
         assert -> "anobstacleisoftenasteppingstone" = result
-    ]?
+    ]
 
+
+]

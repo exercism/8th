@@ -1,85 +1,89 @@
-"affine-cipher.8th" f:include
+import {unitt}!
+import {src/affine-cipher}!
+
+suite "Affine Cipher" ["affine-cipher.8th" f:include
 needs exercism/test
 with: test
 
-16 tests
-
-    test "encode yes" [
+16 tests    
+    test.skip "encode yes" [
         result: >code "yes" 5 7
         assert -> "xbt" = result
-    ]?
+    ]
 
-
-    test "encode no" [
+    test.skip "encode no" [
         result: >code "no" 15 18
         assert -> "fu" = result
-    ]?
+    ]
 
-    test "encode OMG" [
+    test.skip "encode OMG" [
         result: >code "OMG" 21 3
         assert -> "lvz" = result
-    ]?
+    ]
 
-    test "encode O M G" [
+    test.skip "encode O M G" [
         result: >code "O M G" 25 47
         assert -> "hjp" = result
-    ]?
+    ]
 
-    test "encode mindblowingly" [
+    test.skip "encode mindblowingly" [
         result: >code "mindblowingly" 11 15
         assert -> "rzcwa gnxzc dgt" = result
-    ]?
+    ]
 
-    test "encode numbers" [
+    test.skip "encode numbers" [
         result: >code "Testing,1 2 3, testing." 3 4
         assert -> "jqgjc rw123 jqgjc rw" = result
-    ]?
+    ]
 
-    test "encode deep thought" [
+    test.skip "encode deep thought" [
         result: >code "Truth is fiction." 5 17
         assert -> "iynia fdqfb ifje" = result
-    ]?
+    ]
 
-    test "encode all the letters" [
+    test.skip "encode all the letters" [
         result: >code "The quick brown fox jumps over the lazy dog." 17 33
         assert -> "swxtj npvyk lruol iejdc blaxk swxmh qzglf" = result
-    ]?
+    ]
 
-"encode with a not coprime to m"
-    ( "This is a test." 6 17 >code )
-    null?
-
-    test "decode exercism" [
+    test.skip "encode with a not coprime to m" [
+        result: >code "This is a test." 6 17
+        assert -> null = result
+    ]    
+    test.skip "decode exercism" [
         result: code> "tytgn fjr" 3 7
         assert -> "exercism" = result
-    ]?
+    ]
 
-    test "decode a sentence" [
+    test.skip "decode a sentence" [
         result: code> "qdwju nqcro muwhn odqun oppmd aunwd o" 19 16
         assert -> "anobstacleisoftenasteppingstone" = result
-    ]?
+    ]
 
-    test "decode numbers" [
+    test.skip "decode numbers" [
         result: code> "odpoz ub123 odpoz ub" 25 7
         assert -> "testing123testing" = result
-    ]?
+    ]
 
-    test "decode all the letters" [
+    test.skip "decode all the letters" [
         result: code> "swxtj npvyk lruol iejdc blaxk swxmh qzglf" 17 33
         assert -> "thequickbrownfoxjumpsoverthelazydog" = result
-    ]?
+    ]
 
-    test "decode with no spaces in input" [
+    test.skip "decode with no spaces in input" [
         result: code> "swxtjnpvyklruoliejdcblaxkswxmhqzglf" 17 33
         assert -> "thequickbrownfoxjumpsoverthelazydog" = result
-    ]?
+    ]
 
-    test "decode with too many spaces" [
+    test.skip "decode with too many spaces" [
         result: code> "vszzm    cly   yd cg    qdp" 15 16
         assert -> "jollygreengiant" = result
-    ]?
+    ]
 
 "decode with a not coprime to m"
-    ( "Test" 13 5 code> )
+    ( "
+    test.skip " 13 5 code> )
     null?
 
+
+]

@@ -1,4 +1,7 @@
+import {unitt}!
+import {src/gigasecond}!
 
+suite "Gigasecond" [
 \ Workaround for https://8th-dev.com/bin/bugs/tktview/624833cc8d
 0 d:updatetz
 
@@ -28,3 +31,5 @@
     [2046, 10, 3, 1, 46, 39, 0, 0, 0, 0] d:join
     equal?
 
+
+]

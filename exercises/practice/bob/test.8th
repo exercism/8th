@@ -1,87 +1,91 @@
+import {unitt}!
+import {src/bob}!
 
+suite "Bob" [
     test "prolonged silence" [
         result: bob "    "
         assert -> "Fine. Be that way!" = result
-    ]?
+    ]
 
-
-    test "silence" [
+    test.skip "silence" [
         result: bob ""
         assert -> "Fine. Be that way!" = result
-    ]?
+    ]
 
-    test "shouting numbers" [
+    test.skip "shouting numbers" [
         result: bob "1, 2, 3 GO!"
         assert -> "Whoa, chill out!" = result
-    ]?
+    ]
 
-    test "no letters" [
+    test.skip "no letters" [
         result: bob "1, 2, 3"
         assert -> "Whatever." = result
-    ]?
+    ]
 
-    test "question with no letters" [
+    test.skip "question with no letters" [
         result: bob "4?"
         assert -> "Sure." = result
-    ]?
+    ]
 
-    test "multiple line question" [
+    test.skip "multiple line question" [
         result: bob "Does this cryogenic chamber make me look fat?\nno"
         assert -> "Whatever." = result
-    ]?
+    ]
 
-    test "asking a question" [
+    test.skip "asking a question" [
         result: bob "Does this cryogenic chamber make me look fat?"
         assert -> "Sure." = result
-    ]?
+    ]
 
-    test "statement containing question mark" [
+    test.skip "statement containing question mark" [
         result: bob "Ending with ? means a question."
         assert -> "Whatever." = result
-    ]?
+    ]
 
-    test "shouting with no exclamation mark" [
+    test.skip "shouting with no exclamation mark" [
         result: bob "I HATE YOU"
         assert -> "Whoa, chill out!" = result
-    ]?
+    ]
 
-    test "using acronyms in regular speech" [
+    test.skip "using acronyms in regular speech" [
         result: bob "It's OK if you don't want to go to the DMV."
         assert -> "Whatever." = result
-    ]?
+    ]
 
-    test "speaking forcefully" [
+    test.skip "speaking forcefully" [
         result: bob "Let's go make out behind the gym!"
         assert -> "Whatever." = result
-    ]?
+    ]
 
-    test "stating something" [
+    test.skip "stating something" [
         result: bob "Tom-ay-to, tom-aaaah-to."
         assert -> "Whatever." = result
-    ]?
+    ]
 
-    test "shouting" [
+    test.skip "shouting" [
         result: bob "WATCH OUT!"
         assert -> "Whoa, chill out!" = result
-    ]?
+    ]
 
-    test "forceful question" [
+    test.skip "forceful question" [
         result: bob "WHAT THE HELL WERE YOU THINKING?"
         assert -> "Calm down, I know what I'm doing!" = result
-    ]?
+    ]
 
-    test "prattling on" [
+    test.skip "prattling on" [
         result: bob "Wait! Hang on. Are you going to be OK?"
         assert -> "Sure." = result
-    ]?
+    ]
 
-    test "asking a numeric question" [
+    test.skip "asking a numeric question" [
         result: bob "You are, what, like 15?"
         assert -> "Sure." = result
-    ]?
+    ]
 
-    test "shouting with special characters" [
+    test.skip "shouting with special characters" [
         result: bob "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"
         assert -> "Whoa, chill out!" = result
-    ]?
+    ]
 
+
+]

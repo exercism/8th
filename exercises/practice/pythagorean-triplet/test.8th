@@ -1,4 +1,7 @@
+import {unitt}!
+import {src/pythagorean-triplet}!
 
+suite "Pythagorean Triplet" [
 \ Compare a1 to a2. Individual elements are compared with w (e.g., n:cmp).
 \ The result n is:
 \ - The first non-zero result of ( a1[i] a2[i] w ), or
@@ -26,37 +29,39 @@
 
 "triplets whose sum is 12"
     [[3, 4, 5]]
-    12 test-triplets-with-sum
+12 test-triplets-with-sum
 
 
 "triplets whose sum is 108"
     [[27, 36, 45]]
-    108 test-triplets-with-sum
+108 test-triplets-with-sum
 
 "triplets whose sum is 1000"
     [[200, 375, 425]]
-    1000 test-triplets-with-sum
+1000 test-triplets-with-sum
 
 "no matching triplets for 1001"
     []
-    1001 test-triplets-with-sum
+1001 test-triplets-with-sum
 
 "returns all matching triplets"
     [[9, 40, 41], [15, 36, 39]]
-    90 test-triplets-with-sum
+90 test-triplets-with-sum
 
 "several matching triplets"
     [[40, 399, 401],  [56, 390, 394], [105, 360, 375], [120, 350, 370],
      [140, 336, 364], [168, 315, 357], [210, 280, 350], [240, 252, 348]]
-    840 test-triplets-with-sum
+840 test-triplets-with-sum
 
 "test triplets for large number"
     [[1200, 14375, 14425], [1875, 14000, 14125], [5000, 12000, 13000],
      [6000, 11250, 12750], [7500, 10000, 12500]]
-    30_000 test-triplets-with-sum
+30_000 test-triplets-with-sum
 
 \ 1 tests
 \ "1 million, for extra credit"
 \     [[200000,375000,425000], [218750,360000,421250]]
 \     1_000_000  test-triplets-with-sum
 
+
+]

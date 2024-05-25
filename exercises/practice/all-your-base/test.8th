@@ -1,99 +1,109 @@
+import {unitt}!
+import {src/all-your-base}!
 
+suite "All Your Base" [
     test "single bit one to decimal" [
         result: rebase 2 [1] 10
         assert -> [1] = result
-    ]?
+    ]
 
-
-    test "binary to single decimal" [
+    test.skip "binary to single decimal" [
         result: rebase 2 [1, 0, 1] 10
         assert -> [5] = result
-    ]?
+    ]
 
-    test "single decimal to binary" [
+    test.skip "single decimal to binary" [
         result: rebase 10 [5] 2
         assert -> [1, 0, 1] = result
-    ]?
+    ]
 
-    test "binary to multiple decimal" [
+    test.skip "binary to multiple decimal" [
         result: rebase 2 [1, 0, 1, 0, 1, 0] 10
         assert -> [4, 2] = result
-    ]?
+    ]
 
-    test "decimal to binary" [
+    test.skip "decimal to binary" [
         result: rebase 10 [4, 2] 2
         assert -> [1, 0, 1, 0, 1, 0] = result
-    ]?
+    ]
 
-    test "trinary to hexadecimal" [
+    test.skip "trinary to hexadecimal" [
         result: rebase 3 [1, 1, 2, 0] 16
         assert -> [2, 10] = result
-    ]?
+    ]
 
-    test "hexadecimal to trinary" [
+    test.skip "hexadecimal to trinary" [
         result: rebase 16 [2, 10] 3
         assert -> [1, 1, 2, 0] = result
-    ]?
+    ]
 
-    test "15-bit integer" [
+    test.skip "15-bit integer" [
         result: rebase 97 [3, 46, 60] 73
         assert -> [6, 10, 45] = result
-    ]?
+    ]
 
-    test "empty list" [
+    test.skip "empty list" [
         result: rebase 2 [] 10
         assert -> [0] = result
-    ]?
+    ]
 
-    test "single zero" [
+    test.skip "single zero" [
         result: rebase 10 [0] 2
         assert -> [0] = result
-    ]?
+    ]
 
-    test "multiple zeros" [
+    test.skip "multiple zeros" [
         result: rebase 10 [0, 0, 0] 2
         assert -> [0] = result
-    ]?
+    ]
 
-    test "leading zeros" [
+    test.skip "leading zeros" [
         result: rebase 7 [0, 6, 0] 10
         assert -> [4, 2] = result
-    ]?
+    ]
 
-"input base is one"
-    ( 1 [0] 10 rebase )
-    null?
+    test.skip "input base is one" [
+        result: rebase 1 [0] 10
+        assert -> null = result
+    ]
 
-"input base is zero"
-    ( 0 [] 10 rebase )
-    null?
+    test.skip "input base is zero" [
+        result: rebase 0 [] 10
+        assert -> null = result
+    ]
 
-"input base is negative"
-    ( neg 2 [1] 10 rebase )
-    null?
+    test.skip "input base is negative" [
+        result: rebase neg 2 [1] 10
+        assert -> null = result
+    ]
 
-"negative digit"
-    ( 2 [1, neg 1, 1, 0, 1, 0] 10 rebase )
-    null?
+    test.skip "negative digit" [
+        result: rebase 2 [1, neg 1, 1, 0, 1, 0] 10
+        assert -> null = result
+    ]
 
-"invalid positive digit"
-    ( 2 [1, 2, 1, 0, 1, 0] 10 rebase )
-    null?
+    test.skip "invalid positive digit" [
+        result: rebase 2 [1, 2, 1, 0, 1, 0] 10
+        assert -> null = result
+    ]
 
-"output base is one"
-    ( 2 [1, 0, 1, 0, 1, 0] 1 rebase )
-    null?
+    test.skip "output base is one" [
+        result: rebase 2 [1, 0, 1, 0, 1, 0] 1
+        assert -> null = result
+    ]
 
-"output base is zero"
-    ( 10 [7] 0 rebase )
-    null?
+    test.skip "output base is zero" [
+        result: rebase 10 [7] 0
+        assert -> null = result
+    ]
 
-"output base is negative"
-    ( 2 [1] neg 7 rebase )
-    null?
+    test.skip "output base is negative" [
+        result: rebase 2 [1] neg 7
+        assert -> null = result
+    ]
 
-"both bases are negative"
-    ( neg 2 [1] neg 7 rebase )
-    null?
-
-
+    test.skip "both bases are negative" [
+        result: rebase neg 2 [1] neg 7
+        assert -> null = result
+    ]
+]

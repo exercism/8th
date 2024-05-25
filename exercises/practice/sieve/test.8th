@@ -1,24 +1,26 @@
+import {unitt}!
+import {src/sieve}!
 
+suite "Sieve" [
     test "no primes under two" [
         result: primes 1
         assert -> [] = result
-    ]?
+    ]
 
-
-    test "find first prime" [
+    test.skip "find first prime" [
         result: primes 2
         assert -> [2] = result
-    ]?
+    ]
 
-    test "find primes up to 10" [
+    test.skip "find primes up to 10" [
         result: primes 10
         assert -> [2, 3, 5, 7] = result
-    ]?
+    ]
 
-    test "limit is prime" [
+    test.skip "limit is prime" [
         result: primes 13
         assert -> [2, 3, 5, 7, 11, 13] = result
-    ]?
+    ]
 
 "find primes up to 1000"
     [  2,   3,   5,   7,  11,  13,  17,  19,  23,  29,  31,  37,  41,  43,  47,  53,
@@ -32,6 +34,8 @@
      727, 733, 739, 743, 751, 757, 761, 769, 773, 787, 797, 809, 811, 821, 823, 827,
      829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941,
      947, 953, 967, 971, 977, 983, 991, 997 ]
-    ( 1000 primes )
+( 1000 primes )
     equal?
 
+
+]

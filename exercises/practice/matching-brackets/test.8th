@@ -1,4 +1,7 @@
-    test "paired square brackets" [
+import {unitt}!
+import {src/matching-brackets}!
+
+suite "Matching Brackets" [    test.skip "paired square brackets" [
         result: paired? "[]"
         assert -> true = result
     ]
@@ -97,3 +100,5 @@
         result: paired? "\left(\begin{array}{cc} \frac{1}{3} & x\\ \mathrm{e}^{x} &... x^2 \end{array}\right)"
         assert -> true = result
     ]
+
+]

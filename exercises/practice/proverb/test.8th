@@ -1,33 +1,34 @@
+import {unitt}!
+import {src/proverb}!
 
+suite "Proverb" [
     test "zero pieces" [
         result: recite []
-        assert -> [] = result
-    ]?
+    assert -> [] = result
+    ]
 
-
-    test "one piece" [
+    test.skip "one piece" [
         result: recite ["nail"]
-        assert -> ["And all for the want of a nail."] = result
-    ]?
+    assert -> ["And all for the want of a nail."] = result
+    ]
 
-    test "two pieces" [
+    test.skip "two pieces" [
         result: recite ["nail", "shoe"]
-        assert -> ["For want of a nail the shoe was lost.", "And all for the want of a nail."] = result
-    ]?
+    assert -> ["For want of a nail the shoe was lost.", "And all for the want of a nail."] = result
+    ]
 
-    test "three pieces" [
+    test.skip "three pieces" [
         result: recite ["nail", "shoe", "horse"]
-        assert -> ["For want of a nail the shoe was lost.", "For want of a shoe the horse was lost.", "And all for the want of a nail."] = result
-    ]?
+    assert -> ["For want of a nail the shoe was lost.", "For want of a shoe the horse was lost.", "And all for the want of a nail."] = result
+    ]
 
-    test "full proverb" [
+    test.skip "full proverb" [
         result: recite ["nail", "shoe", "horse", "rider", "message", "battle", "kingdom"]
-        assert -> ["For want of a nail the shoe was lost.", "For want of a shoe the horse was lost.", "For want of a horse the rider was lost.", "For want of a rider the message was lost.", "For want of a message the battle was lost.", "For want of a battle the kingdom was lost.", "And all for the want of a nail."] = result
-    ]?
+    assert -> ["For want of a nail the shoe was lost.", "For want of a shoe the horse was lost.", "For want of a horse the rider was lost.", "For want of a rider the message was lost.", "For want of a message the battle was lost.", "For want of a battle the kingdom was lost.", "And all for the want of a nail."] = result
+    ]
 
-    test "four pieces modernized" [
+    test.skip "four pieces modernized" [
         result: recite ["pin", "gun", "soldier", "battle"]
-        assert -> ["For want of a pin the gun was lost.", "For want of a gun the soldier was lost.", "For want of a soldier the battle was lost.", "And all for the want of a pin."] = result
-    ]?
-
-
+    assert -> ["For want of a pin the gun was lost.", "For want of a gun the soldier was lost.", "For want of a soldier the battle was lost.", "And all for the want of a pin."] = result
+    ]
+]

@@ -1,74 +1,78 @@
+import {unitt}!
+import {src/largest-series-product}!
 
+suite "Largest Series Product" [
     test "finds the largest product if span equals length" [
         result: largest-product "29" 2
         assert -> 18 = result
-    ]?
+    ]
 
-
-    test "can find the largest product of 2 with numbers in order" [
+    test.skip "can find the largest product of 2 with numbers in order" [
         result: largest-product "0123456789" 2
         assert -> 72 = result
-    ]?
+    ]
 
-    test "can find the largest product of 2" [
+    test.skip "can find the largest product of 2" [
         result: largest-product "576802143" 2
         assert -> 48 = result
-    ]?
+    ]
 
-    test "can find the largest product of 3 with numbers in order" [
+    test.skip "can find the largest product of 3 with numbers in order" [
         result: largest-product "0123456789" 3
         assert -> 504 = result
-    ]?
+    ]
 
-    test "can find the largest product of 3" [
+    test.skip "can find the largest product of 3" [
         result: largest-product "1027839564" 3
         assert -> 270 = result
-    ]?
+    ]
 
-    test "can find the largest product of 5 with numbers in order" [
+    test.skip "can find the largest product of 5 with numbers in order" [
         result: largest-product "0123456789" 5
         assert -> 15120 = result
-    ]?
+    ]
 
-    test "can get the largest product of a big number" [
+    test.skip "can get the largest product of a big number" [
         result: largest-product "73167176531330624919225119674426574742355349194934" 6
         assert -> 23520 = result
-    ]?
+    ]
 
-    test "reports zero if the only digits are zero" [
+    test.skip "reports zero if the only digits are zero" [
         result: largest-product "0000" 2
         assert -> 0 = result
-    ]?
+    ]
 
-    test "reports zero if all spans include zero" [
+    test.skip "reports zero if all spans include zero" [
         result: largest-product "99099" 3
         assert -> 0 = result
-    ]?
+    ]
 
-"rejects span longer than string length"
-    ( "123" 4 largest-product )
-    null?
-
-    test "reports 1 for empty string and empty product (0 span)" [
+    test.skip "rejects span longer than string length" [
+        result: largest-product "123" 4
+        assert -> null = result
+    ]    
+    test.skip "reports 1 for empty string and empty product (0 span)" [
         result: largest-product "" 0
         assert -> 1 = result
-    ]?
+    ]
 
-    test "reports 1 for nonempty string and empty product (0 span)" [
+    test.skip "reports 1 for nonempty string and empty product (0 span)" [
         result: largest-product "123" 0
         assert -> 1 = result
-    ]?
+    ]
 
-"rejects empty string and nonzero span"
-    ( "" 1 largest-product )
-    null?
+    test.skip "rejects empty string and nonzero span" [
+        result: largest-product "" 1
+        assert -> null = result
+    ]
 
-"rejects invalid character in digits"
-    ( "1234a5" 2 largest-product )
-    null?
+    test.skip "rejects invalid character in digits" [
+        result: largest-product "1234a5" 2
+        assert -> null = result
+    ]
 
-"rejects negative span"
-    ( "12345" neg 1 largest-product )
-    null?
-
-
+    test.skip "rejects negative span" [
+        result: largest-product "12345" neg 1
+        assert -> null = result
+    ]
+]

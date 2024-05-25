@@ -1,4 +1,7 @@
+import {unitt}!
+import {src/darts}!
 
+suite "Darts" [
 "Missed target"
     0
     ( neg 9 9 darts-score )
@@ -13,27 +16,26 @@
 "On the middle circle"
     5
     ( neg 5 0 darts-score )
-    equal?
-
-    test "On the inner circle" [
+    equal?    
+    test.skip "On the inner circle" [
         result: darts-score 0 neg 1
         assert -> 10 = result
-    ]?
+    ]
 
-    test "Exactly on center" [
+    test.skip "Exactly on center" [
         result: darts-score 0 0
         assert -> 10 = result
-    ]?
+    ]
 
-    test "Near the center" [
+    test.skip "Near the center" [
         result: darts-score neg 0.1 neg 0.1
         assert -> 10 = result
-    ]?
+    ]
 
-    test "Just within the inner circle" [
+    test.skip "Just within the inner circle" [
         result: darts-score 0.7 0.7
         assert -> 10 = result
-    ]?
+    ]
 
 "Just outside the inner circle"
     5
@@ -65,3 +67,5 @@
     ( 0.5 neg 4 darts-score )
     equal?
 
+
+]

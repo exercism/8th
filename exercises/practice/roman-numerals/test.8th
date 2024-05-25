@@ -1,138 +1,139 @@
+import {unitt}!
+import {src/roman-numerals}!
 
+suite "Roman Numerals" [
     test "1 is I" [
         result: n:>roman 1
         assert -> "I" = result
-    ]?
+    ]
 
-
-    test "2 is II" [
+    test.skip "2 is II" [
         result: n:>roman 2
         assert -> "II" = result
-    ]?
+    ]
 
-    test "3 is III" [
+    test.skip "3 is III" [
         result: n:>roman 3
         assert -> "III" = result
-    ]?
+    ]
 
-    test "4 is IV" [
+    test.skip "4 is IV" [
         result: n:>roman 4
         assert -> "IV" = result
-    ]?
+    ]
 
-    test "5 is V" [
+    test.skip "5 is V" [
         result: n:>roman 5
         assert -> "V" = result
-    ]?
+    ]
 
-    test "6 is VI" [
+    test.skip "6 is VI" [
         result: n:>roman 6
         assert -> "VI" = result
-    ]?
+    ]
 
-    test "9 is IX" [
+    test.skip "9 is IX" [
         result: n:>roman 9
         assert -> "IX" = result
-    ]?
+    ]
 
-    test "27 is XXVII" [
+    test.skip "27 is XXVII" [
         result: n:>roman 27
         assert -> "XXVII" = result
-    ]?
+    ]
 
-    test "48 is XLVIII" [
+    test.skip "48 is XLVIII" [
         result: n:>roman 48
         assert -> "XLVIII" = result
-    ]?
+    ]
 
-    test "49 is XLIX" [
+    test.skip "49 is XLIX" [
         result: n:>roman 49
         assert -> "XLIX" = result
-    ]?
+    ]
 
-    test "59 is LIX" [
+    test.skip "59 is LIX" [
         result: n:>roman 59
         assert -> "LIX" = result
-    ]?
+    ]
 
-    test "93 is XCIII" [
+    test.skip "93 is XCIII" [
         result: n:>roman 93
         assert -> "XCIII" = result
-    ]?
+    ]
 
-    test "141 is CXLI" [
+    test.skip "141 is CXLI" [
         result: n:>roman 141
         assert -> "CXLI" = result
-    ]?
+    ]
 
-    test "163 is CLXIII" [
+    test.skip "163 is CLXIII" [
         result: n:>roman 163
         assert -> "CLXIII" = result
-    ]?
+    ]
 
-    test "402 is CDII" [
+    test.skip "402 is CDII" [
         result: n:>roman 402
         assert -> "CDII" = result
-    ]?
+    ]
 
-    test "575 is DLXXV" [
+    test.skip "575 is DLXXV" [
         result: n:>roman 575
         assert -> "DLXXV" = result
-    ]?
+    ]
 
-    test "911 is CMXI" [
+    test.skip "911 is CMXI" [
         result: n:>roman 911
         assert -> "CMXI" = result
-    ]?
+    ]
 
-    test "1024 is MXXIV" [
+    test.skip "1024 is MXXIV" [
         result: n:>roman 1024
         assert -> "MXXIV" = result
-    ]?
+    ]
 
-    test "3000 is MMM" [
+    test.skip "3000 is MMM" [
         result: n:>roman 3000
         assert -> "MMM" = result
-    ]?
+    ]
 
-    test "16 is XVI" [
+    test.skip "16 is XVI" [
         result: n:>roman 16
         assert -> "XVI" = result
-    ]?
+    ]
 
-    test "66 is LXVI" [
+    test.skip "66 is LXVI" [
         result: n:>roman 66
         assert -> "LXVI" = result
-    ]?
+    ]
 
-    test "166 is CLXVI" [
+    test.skip "166 is CLXVI" [
         result: n:>roman 166
         assert -> "CLXVI" = result
-    ]?
+    ]
 
-    test "666 is DCLXVI" [
+    test.skip "666 is DCLXVI" [
         result: n:>roman 666
         assert -> "DCLXVI" = result
-    ]?
+    ]
 
-    test "1666 is MDCLXVI" [
+    test.skip "1666 is MDCLXVI" [
         result: n:>roman 1666
         assert -> "MDCLXVI" = result
-    ]?
+    ]
 
-    test "3001 is MMMI" [
+    test.skip "3001 is MMMI" [
         result: n:>roman 3001
         assert -> "MMMI" = result
-    ]?
+    ]
 
-    test "3888 is MMMDCCCLXXXVIII" [
+    test.skip "3888 is MMMDCCCLXXXVIII" [
         result: n:>roman 3888
         assert -> "MMMDCCCLXXXVIII" = result
-    ]?
+    ]
 
-    test "3999 is MMMCMXCIX" [
+    test.skip "3999 is MMMCMXCIX" [
         result: n:>roman 3999
         assert -> "MMMCMXCIX" = result
-    ]?
-
-
+    ]
+]

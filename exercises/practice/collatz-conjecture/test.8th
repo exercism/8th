@@ -1,4 +1,7 @@
-    test "zero steps for one" [
+import {unitt}!
+import {src/collatz-conjecture}!
+
+suite "Collatz Conjecture" [    test.skip "zero steps for one" [
         result: collatz 1
         assert -> 0 = result
     ]
@@ -7,7 +10,7 @@
         result: collatz 1000000
         assert -> 152 = result
     ]
-     test "even and odd steps" [
+ test.skip "even and odd steps" [
         result: collatz 12
         assert -> 9 = result
     ]
@@ -17,12 +20,15 @@
         assert -> 4 = result
     ]
 
-    test "zero is an error" [
+    test.skip "zero is an error" [
         result: collatz 0
         assert -> null = result
     ]
 
-"negative value is an error"
-    ( neg 15 collatz )
-    null?
+    test.skip "negative value is an error" [
+        result: collatz neg 15
+        assert -> null = result
+    ]
 
+
+]

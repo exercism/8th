@@ -1,14 +1,17 @@
-    test "empty sentence" [
+import {unitt}!
+import {src/pangram}!
+
+suite "Pangram" [    test.skip "empty sentence" [
         result: pangram? ""
         assert -> false = result
     ]
 
-    test "missing letters replaced by numbers" [
+    test.skip "missing letters replaced by numbers" [
         result: pangram? "7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog"
         assert -> false = result
     ]
-    
-    test "mixed case and punctuation" [
+
+    test.skip "mixed case and punctuation" [
         result: pangram? "\"Five quacking Zephyrs jolt my wax bed.\""
         assert -> true = result
     ]
@@ -18,33 +21,35 @@
         assert -> false = result
     ]
 
-    test "perfect lower case" [
+    test.skip "perfect lower case" [
         result: pangram? "abcdefghijklmnopqrstuvwxyz"
         assert -> true = result
     ]
 
-    test "missing letter h" [
+    test.skip "missing letter h" [
         result: pangram? "five boxing wizards jump quickly at it"
         assert -> false = result
     ]
 
-    test "with numbers" [
+    test.skip "with numbers" [
         result: pangram? "the 1 quick brown fox jumps over the 2 lazy dogs"
         assert -> true = result
     ]
 
-    test "only lower case" [
+    test.skip "only lower case" [
         result: pangram? "the quick brown fox jumps over the lazy dog"
         assert -> true = result
     ]
 
-    test "missing d and g" [
+    test.skip "missing d and g" [
         result: pangram? "the quick brown fox jumps over with lazy FX"
         assert -> false = result
     ]
 
-    test "with underscores" [
+    test.skip "with underscores" [
         result: pangram? "the_quick_brown_fox_jumps_over_the_lazy_dog"
         assert -> true = result
     ]
 
+
+]

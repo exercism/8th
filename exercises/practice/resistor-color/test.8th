@@ -1,4 +1,7 @@
-"resistor-color.8th" f:include
+import {unitt}!
+import {src/resistor-color}!
+
+suite "Resistor Color" ["resistor-color.8th" f:include
 needs exercism/test
 with: test
 4 tests 
@@ -9,3 +12,5 @@ with: test
 
 "Colors" ( colors ) ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"] equal?
 
+
+]

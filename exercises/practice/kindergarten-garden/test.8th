@@ -1,88 +1,89 @@
+import {unitt}!
+import {src/kindergarten-garden}!
 
+suite "Kindergarten Garden" [
     test "garden with single student" [
         result: plants "RC\nGG" "Alice"
         assert -> ["radishes", "clover", "grass", "grass"] = result
-    ]?
+    ]
 
-
-    test "different garden with single student" [
+    test.skip "different garden with single student" [
         result: plants "VC\nRC" "Alice"
         assert -> ["violets", "clover", "radishes", "clover"] = result
-    ]?
+    ]
 
-    test "garden with two students" [
+    test.skip "garden with two students" [
         result: plants "VVCG\nVVRC" "Bob"
         assert -> ["clover", "grass", "radishes", "clover"] = result
-    ]?
+    ]
 
-    test "second student's garden" [
+    test.skip "second student's garden" [
         result: plants "VVCCGG\nVVCCGG" "Bob"
         assert -> ["clover", "clover", "clover", "clover"] = result
-    ]?
+    ]
 
-    test "third student's garden" [
+    test.skip "third student's garden" [
         result: plants "VVCCGG\nVVCCGG" "Charlie"
         assert -> ["grass", "grass", "grass", "grass"] = result
-    ]?
+    ]
 
-    test "for Alice, first student's garden" [
+    test.skip "for Alice, first student's garden" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Alice"
         assert -> ["violets", "radishes", "violets", "radishes"] = result
-    ]?
+    ]
 
-    test "for Bob, second student's garden" [
+    test.skip "for Bob, second student's garden" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Bob"
         assert -> ["clover", "grass", "clover", "clover"] = result
-    ]?
+    ]
 
-    test "for Charlie" [
+    test.skip "for Charlie" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Charlie"
         assert -> ["violets", "violets", "clover", "grass"] = result
-    ]?
+    ]
 
-    test "for David" [
+    test.skip "for David" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "David"
         assert -> ["radishes", "violets", "clover", "radishes"] = result
-    ]?
+    ]
 
-    test "for Eve" [
+    test.skip "for Eve" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Eve"
         assert -> ["clover", "grass", "radishes", "grass"] = result
-    ]?
+    ]
 
-    test "for Fred" [
+    test.skip "for Fred" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Fred"
         assert -> ["grass", "clover", "violets", "clover"] = result
-    ]?
+    ]
 
-    test "for Ginny" [
+    test.skip "for Ginny" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Ginny"
         assert -> ["clover", "grass", "grass", "clover"] = result
-    ]?
+    ]
 
-    test "for Harriet" [
+    test.skip "for Harriet" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Harriet"
         assert -> ["violets", "radishes", "radishes", "violets"] = result
-    ]?
+    ]
 
-    test "for Ileana" [
+    test.skip "for Ileana" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Ileana"
         assert -> ["grass", "clover", "violets", "clover"] = result
-    ]?
+    ]
 
-    test "for Joseph" [
+    test.skip "for Joseph" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Joseph"
         assert -> ["violets", "clover", "violets", "grass"] = result
-    ]?
+    ]
 
-    test "for Kincaid, second to last student's garden" [
+    test.skip "for Kincaid, second to last student's garden" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Kincaid"
         assert -> ["grass", "clover", "clover", "grass"] = result
-    ]?
+    ]
 
-    test "for Larry, last student's garden" [
+    test.skip "for Larry, last student's garden" [
         result: plants "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Larry"
         assert -> ["grass", "violets", "clover", "violets"] = result
-    ]?
-
-
+    ]
+]

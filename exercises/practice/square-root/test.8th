@@ -1,4 +1,7 @@
-    test "root of 1" [
+import {unitt}!
+import {src/square-root}!
+
+suite "Square Root" [    test.skip "root of 1" [
         result: squareRoot 1
         assert -> 1 = result
     ]
@@ -27,3 +30,5 @@
         result: squareRoot 65025
         assert -> 255 = result
     ]
+
+]

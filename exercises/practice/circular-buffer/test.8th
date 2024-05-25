@@ -1,63 +1,69 @@
+import {unitt}!
+import {src/circular-buffer}!
 
+suite "Circular Buffer" [
 : throws? \ w -- T
     catch dup if nip then nip
-;    test "reading empty buffer should fail" [
+;    test.skip "reading empty buffer should fail" [
         result: throws? 1 cb:new ' cb:read
         assert -> true = result
     ]
-    test "can read an item just written" [
+
+    test.skip "can read an item just written" [
         result: nip 1 cb:new 1 cb:write cb:read
         assert -> 1 = result
-    ]?    test "each item may only be read once" [
+    ]test.skip "each item may only be read once" [
         result: throws? 1 cb:new 1 cb:write cb:read drop ' cb:read
         assert -> true = result
     ]
 
-    test "items are read in the order they are written" [
+    test.skip "items are read in the order they are written" [
         result: a:close 2 cb:new 1 cb:write 2 cb:write cb:read swap cb:read nip 2
         assert -> [1, 2] = result
-    ]?    test "full buffer can't be written to" [
+    ]test.skip "full buffer can't be written to" [
         result: throws? 1 cb:new 1 cb:write 2 ' cb:write
         assert -> true = result
     ]
 
-    test "a read frees up capacity for another write" [
+    test.skip "a read frees up capacity for another write" [
         result: a:close 1 cb:new 1 cb:write cb:read swap 2 cb:write cb:read nip 2
         assert -> [1, 2] = result
-    ]?
+    ]
 
-    test "read position is maintained even across multiple writes" [
+    test.skip "read position is maintained even across multiple writes" [
         result: a:close 3 cb:new 1 cb:write 2 cb:write cb:read swap 3 cb:write cb:read swap cb:read nip 3
         assert -> [1, 2, 3] = result
-    ]?    test "items cleared out of buffer can't be read" [
+    ]test.skip "items cleared out of buffer can't be read" [
         result: throws? 1 cb:new 1 cb:write cb:clear ' cb:read
         assert -> true = result
     ]
 
-    test "clear frees up capacity for another write" [
+    test.skip "clear frees up capacity for another write" [
         result: nip 1 cb:new 1 cb:write cb:clear 2 cb:write cb:read
         assert -> 2 = result
-    ]?
+    ]
 
-    test "clear does nothing on empty buffer" [
+    test.skip "clear does nothing on empty buffer" [
         result: nip 1 cb:new cb:clear 1 cb:write cb:read
         assert -> 1 = result
-    ]?
+    ]
 
-    test "overwrite acts like write on non-full buffer" [
+    test.skip "overwrite acts like write on non-full buffer" [
         result: a:close 2 cb:new 1 cb:write 2 cb:overwrite cb:read swap cb:read nip 2
         assert -> [1, 2] = result
-    ]?
+    ]
 
-    test "overwrite replaces the oldest item on full buffer" [
+    test.skip "overwrite replaces the oldest item on full buffer" [
         result: a:close 2 cb:new 1 cb:write 2 cb:write 3 cb:overwrite cb:read swap cb:read nip 2
         assert -> [2, 3] = result
-    ]?
+    ]
 
-    test "overwrite replaces the oldest item remaining in buffer following a read" [
+    test.skip "overwrite replaces the oldest item remaining in buffer following a read" [
         result: a:close 3 cb:new 1 cb:write 2 cb:write 3 cb:write cb:read swap 4 cb:write 5 cb:overwrite cb:read swap cb:read swap cb:read nip 4
         assert -> [1, 3, 4, 5] = result
-    ]?    test "initial clear does not affect wrapping around" [
+    ]test.skip "initial clear does not affect wrapping around" [
         result: throws? 2 cb:new cb:clear 1 cb:write 2 cb:write 3 cb:overwrite 4 cb:overwrite cb:read drop cb:read drop ' cb:read
         assert -> true = result
     ]
+
+]
