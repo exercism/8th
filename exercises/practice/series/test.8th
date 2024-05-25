@@ -1,57 +1,57 @@
 
-"slices of one from one" 
-    ( "1" 1 slices ) 
-    ["1"] 
-    equal?
+    test "slices of one from one" [
+        result: slices "1" 1
+        assert -> ["1"]  = result
+    ]
 
 
-"slices of one from two" 
-    ( "12" 1 slices ) 
-    ["1", "2"] 
-    equal?
+    test "slices of one from two" [
+        result: slices "12" 1
+        assert -> ["1", "2"]  = result
+    ]
 
-"slices of two" 
-    ( "35" 2 slices ) 
-    ["35"] 
-    equal?
+    test "slices of two" [
+        result: slices "35" 2
+        assert -> ["35"]  = result
+    ]
 
-"slices of two overlap" 
-    ( "9142" 2 slices ) 
-    ["91", "14", "42"] 
-    equal?
+    test "slices of two overlap" [
+        result: slices "9142" 2
+        assert -> ["91", "14", "42"]  = result
+    ]
 
-"slices can include duplicates" 
-    ( "777777" 3 slices ) 
-    ["777", "777", "777", "777"] 
-    equal?
+    test "slices can include duplicates" [
+        result: slices "777777" 3
+        assert -> ["777", "777", "777", "777"]  = result
+    ]
 
-"slices of a long series" 
-    ( "918493904243" 5 slices ) 
-    ["91849", "18493", "84939", "49390", "93904", "39042", "90424", "04243"] 
-    equal?
+    test "slices of a long series" [
+        result: slices "918493904243" 5
+        assert -> ["91849", "18493", "84939", "49390", "93904", "39042", "90424", "04243"]  = result
+    ]
 
-"slice length is too large" 
-    ( "12345" 6 slices ) 
-    [] 
-    equal?
+    test "slice length is too large" [
+        result: slices "12345" 6
+        assert -> []  = result
+    ]
 
-"slice length is way too large" 
-    ( "12345" 42 slices ) 
-    [] 
-    equal?
+    test "slice length is way too large" [
+        result: slices "12345" 42
+        assert -> []  = result
+    ]
 
-"slice length cannot be zero" 
-    ( "12345" 0 slices ) 
-    [] 
-    equal?
+    test "slice length cannot be zero" [
+        result: slices "12345" 0
+        assert -> []  = result
+    ]
 
-"slice length cannot be negative" 
-    ( "123" neg 1 slices ) 
-    [] 
-    equal?
+    test "slice length cannot be negative" [
+        result: slices "123" neg 1
+        assert -> []  = result
+    ]
 
-"empty series is invalid" 
-    ( "" 1 slices ) 
-    [] 
-    equal?
+    test "empty series is invalid" [
+        result: slices "" 1
+        assert -> []  = result
+    ]
 
