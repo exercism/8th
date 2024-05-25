@@ -1,117 +1,117 @@
 
-"empty lists"
-    ( [] [] append )
-    []
-    equal?
+    test "empty lists" [
+        result: append [] []
+        assert -> [] = result
+    ]?
 
 
-"list to empty list"
-    ( [] [1, 2, 3, 4] append )
-    [1, 2, 3, 4]
-    equal?
+    test "list to empty list" [
+        result: append [] [1, 2, 3, 4]
+        assert -> [1, 2, 3, 4] = result
+    ]?
 
-"empty list to list"
-    ( [1, 2, 3, 4] [] append )
-    [1, 2, 3, 4]
-    equal?
+    test "empty list to list" [
+        result: append [1, 2, 3, 4] []
+        assert -> [1, 2, 3, 4] = result
+    ]?
 
-"non-empty lists"
-    ( [1, 2] [2, 3, 4, 5] append )
-    [1, 2, 2, 3, 4, 5]
-    equal?
+    test "non-empty lists" [
+        result: append [1, 2] [2, 3, 4, 5]
+        assert -> [1, 2, 2, 3, 4, 5] = result
+    ]?
 
-"empty list"
-    ( [] concat )
-    []
-    equal?
+    test "empty list" [
+        result: concat []
+        assert -> [] = result
+    ]?
 
-"list of lists"
-    ( [[1, 2], [3], [], [4, 5, 6]] concat )
-    [1, 2, 3, 4, 5, 6]
-    equal?
+    test "list of lists" [
+        result: concat [[1, 2], [3], [], [4, 5, 6]]
+        assert -> [1, 2, 3, 4, 5, 6] = result
+    ]?
 
-"list of nested lists"
-    ( [[[1], [2]], [[3]], [[]], [[4, 5, 6]]] concat )
-    [[1], [2], [3], [], [4, 5, 6]]
-    equal?
+    test "list of nested lists" [
+        result: concat [[[1], [2]], [[3]], [[]], [[4, 5, 6]]]
+        assert -> [[1], [2], [3], [], [4, 5, 6]] = result
+    ]?
 
 : odd? \ n -- T
     2 n:/mod drop 1 n:=
 ;
 
-"empty list"
-    ( [] ' odd? filter )
-    []
-    equal?
+    test "empty list" [
+        result: filter [] ' odd?
+        assert -> [] = result
+    ]?
 
-"non-empty list"
-    ( [1, 2, 3, 5] ' odd? filter )
-    [1, 3, 5]
-    equal?
+    test "non-empty list" [
+        result: filter [1, 2, 3, 5] ' odd?
+        assert -> [1, 3, 5] = result
+    ]?
 
-"empty list"
-    ( [] length )
-    0
-    equal?
+    test "empty list" [
+        result: length []
+        assert -> 0 = result
+    ]?
 
-"non-empty list"
-    ( [1, 2, 3, 4] length )
-    4
-    equal?
+    test "non-empty list" [
+        result: length [1, 2, 3, 4]
+        assert -> 4 = result
+    ]?
 
-"empty list"
-    ( [] ' n:1+ map )
-    []
-    equal?
+    test "empty list" [
+        result: map [] ' n:1+
+        assert -> [] = result
+    ]?
 
-"non-empty list"
-    ( [1, 3, 5, 7] ' n:1+ map )
-    [2, 4, 6, 8]
-    equal?
+    test "non-empty list" [
+        result: map [1, 3, 5, 7] ' n:1+
+        assert -> [2, 4, 6, 8] = result
+    ]?
 
-"empty list"
-    ( [] 2 ' n:* foldl )
-    2
-    equal?
+    test "empty list" [
+        result: foldl [] 2 ' n:*
+        assert -> 2 = result
+    ]?
 
-"direction independent function applied to non-empty list"
-    ( [1, 2, 3, 4] 5 ' n:+ foldl )
-    15
-    equal?
+    test "direction independent function applied to non-empty list" [
+        result: foldl [1, 2, 3, 4] 5 ' n:+
+        assert -> 15 = result
+    ]?
 
-"direction dependent function applied to non-empty list"
-    ( [1, 2, 3, 4] 24 ( swap n:/ ) foldl )
-    64
-    equal?
+    test "direction dependent function applied to non-empty list" [
+        result: foldl [1, 2, 3, 4] 24 ( swap n:/ )
+        assert -> 64 = result
+    ]?
 
-"empty list"
-    ( [] 2 ' n:* foldr )
-    2
-    equal?
+    test "empty list" [
+        result: foldr [] 2 ' n:*
+        assert -> 2 = result
+    ]?
 
-"direction independent function applied to non-empty list"
-    ( [1, 2, 3, 4] 5 ' n:+ foldr )
-    15
-    equal?
+    test "direction independent function applied to non-empty list" [
+        result: foldr [1, 2, 3, 4] 5 ' n:+
+        assert -> 15 = result
+    ]?
 
-"direction dependent function applied to non-empty list"
-    ( [1, 2, 3, 4] 24 ( swap n:/ ) foldr )
-    9
-    equal?
+    test "direction dependent function applied to non-empty list" [
+        result: foldr [1, 2, 3, 4] 24 ( swap n:/ )
+        assert -> 9 = result
+    ]?
 
-"empty list"
-    ( [] reverse )
-    []
-    equal?
+    test "empty list" [
+        result: reverse []
+        assert -> [] = result
+    ]?
 
-"non-empty list"
-    ( [1, 3, 5, 7] reverse )
-    [7, 5, 3, 1]
-    equal?
+    test "non-empty list" [
+        result: reverse [1, 3, 5, 7]
+        assert -> [7, 5, 3, 1] = result
+    ]?
 
-"list of lists is not flattened"
-    ( [[1, 2], [3], [], [4, 5, 6]] reverse )
-    [[4, 5, 6], [], [3], [1, 2]]
-    equal?
+    test "list of lists is not flattened" [
+        result: reverse [[1, 2], [3], [], [4, 5, 6]]
+        assert -> [[4, 5, 6], [], [3], [1, 2]] = result
+    ]?
 
 

@@ -1,33 +1,33 @@
 
-"zero pieces"
-    ( [] recite )
-    []
-    equal?
+    test "zero pieces" [
+        result: recite []
+        assert -> [] = result
+    ]?
 
 
-"one piece"
-    ( ["nail"] recite )
-    ["And all for the want of a nail."]
-    equal?
+    test "one piece" [
+        result: recite ["nail"]
+        assert -> ["And all for the want of a nail."] = result
+    ]?
 
-"two pieces"
-    ( ["nail", "shoe"] recite )
-    ["For want of a nail the shoe was lost.", "And all for the want of a nail."]
-    equal?
+    test "two pieces" [
+        result: recite ["nail", "shoe"]
+        assert -> ["For want of a nail the shoe was lost.", "And all for the want of a nail."] = result
+    ]?
 
-"three pieces"
-    ( ["nail", "shoe", "horse"] recite )
-    ["For want of a nail the shoe was lost.", "For want of a shoe the horse was lost.", "And all for the want of a nail."]
-    equal?
+    test "three pieces" [
+        result: recite ["nail", "shoe", "horse"]
+        assert -> ["For want of a nail the shoe was lost.", "For want of a shoe the horse was lost.", "And all for the want of a nail."] = result
+    ]?
 
-"full proverb"
-    ( ["nail", "shoe", "horse", "rider", "message", "battle", "kingdom"] recite )
-    ["For want of a nail the shoe was lost.", "For want of a shoe the horse was lost.", "For want of a horse the rider was lost.", "For want of a rider the message was lost.", "For want of a message the battle was lost.", "For want of a battle the kingdom was lost.", "And all for the want of a nail."]
-    equal?
+    test "full proverb" [
+        result: recite ["nail", "shoe", "horse", "rider", "message", "battle", "kingdom"]
+        assert -> ["For want of a nail the shoe was lost.", "For want of a shoe the horse was lost.", "For want of a horse the rider was lost.", "For want of a rider the message was lost.", "For want of a message the battle was lost.", "For want of a battle the kingdom was lost.", "And all for the want of a nail."] = result
+    ]?
 
-"four pieces modernized"
-    ( ["pin", "gun", "soldier", "battle"] recite )
-    ["For want of a pin the gun was lost.", "For want of a gun the soldier was lost.", "For want of a soldier the battle was lost.", "And all for the want of a pin."]
-    equal?
+    test "four pieces modernized" [
+        result: recite ["pin", "gun", "soldier", "battle"]
+        assert -> ["For want of a pin the gun was lost.", "For want of a gun the soldier was lost.", "For want of a soldier the battle was lost.", "And all for the want of a pin."] = result
+    ]?
 
 

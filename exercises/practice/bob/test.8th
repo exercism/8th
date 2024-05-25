@@ -1,87 +1,87 @@
 
-"prolonged silence"
-    ( "    " bob )
-    "Fine. Be that way!"
-    equal?
+    test "prolonged silence" [
+        result: bob "    "
+        assert -> "Fine. Be that way!" = result
+    ]?
 
 
-"silence"
-    ( "" bob )
-    "Fine. Be that way!"
-    equal?
+    test "silence" [
+        result: bob ""
+        assert -> "Fine. Be that way!" = result
+    ]?
 
-"shouting numbers"
-    ( "1, 2, 3 GO!" bob )
-    "Whoa, chill out!"
-    equal?
+    test "shouting numbers" [
+        result: bob "1, 2, 3 GO!"
+        assert -> "Whoa, chill out!" = result
+    ]?
 
-"no letters"
-    ( "1, 2, 3" bob )
-    "Whatever."
-    equal?
+    test "no letters" [
+        result: bob "1, 2, 3"
+        assert -> "Whatever." = result
+    ]?
 
-"question with no letters"
-    ( "4?" bob )
-    "Sure."
-    equal?
+    test "question with no letters" [
+        result: bob "4?"
+        assert -> "Sure." = result
+    ]?
 
-"multiple line question"
-    ( "Does this cryogenic chamber make me look fat?\nno" bob )
-    "Whatever."
-    equal?
+    test "multiple line question" [
+        result: bob "Does this cryogenic chamber make me look fat?\nno"
+        assert -> "Whatever." = result
+    ]?
 
-"asking a question"
-    ( "Does this cryogenic chamber make me look fat?" bob )
-    "Sure."
-    equal?
+    test "asking a question" [
+        result: bob "Does this cryogenic chamber make me look fat?"
+        assert -> "Sure." = result
+    ]?
 
-"statement containing question mark"
-    ( "Ending with ? means a question." bob )
-    "Whatever."
-    equal?
+    test "statement containing question mark" [
+        result: bob "Ending with ? means a question."
+        assert -> "Whatever." = result
+    ]?
 
-"shouting with no exclamation mark"
-    ( "I HATE YOU" bob )
-    "Whoa, chill out!"
-    equal?
+    test "shouting with no exclamation mark" [
+        result: bob "I HATE YOU"
+        assert -> "Whoa, chill out!" = result
+    ]?
 
-"using acronyms in regular speech"
-    ( "It's OK if you don't want to go to the DMV." bob )
-    "Whatever."
-    equal?
+    test "using acronyms in regular speech" [
+        result: bob "It's OK if you don't want to go to the DMV."
+        assert -> "Whatever." = result
+    ]?
 
-"speaking forcefully"
-    ( "Let's go make out behind the gym!" bob )
-    "Whatever."
-    equal?
+    test "speaking forcefully" [
+        result: bob "Let's go make out behind the gym!"
+        assert -> "Whatever." = result
+    ]?
 
-"stating something"
-    ( "Tom-ay-to, tom-aaaah-to." bob )
-    "Whatever."
-    equal?
+    test "stating something" [
+        result: bob "Tom-ay-to, tom-aaaah-to."
+        assert -> "Whatever." = result
+    ]?
 
-"shouting"
-    ( "WATCH OUT!" bob )
-    "Whoa, chill out!"
-    equal?
+    test "shouting" [
+        result: bob "WATCH OUT!"
+        assert -> "Whoa, chill out!" = result
+    ]?
 
-"forceful question"
-    ( "WHAT THE HELL WERE YOU THINKING?" bob )
-    "Calm down, I know what I'm doing!"
-    equal?
+    test "forceful question" [
+        result: bob "WHAT THE HELL WERE YOU THINKING?"
+        assert -> "Calm down, I know what I'm doing!" = result
+    ]?
 
-"prattling on"
-    ( "Wait! Hang on. Are you going to be OK?" bob )
-    "Sure."
-    equal?
+    test "prattling on" [
+        result: bob "Wait! Hang on. Are you going to be OK?"
+        assert -> "Sure." = result
+    ]?
 
-"asking a numeric question"
-    ( "You are, what, like 15?" bob )
-    "Sure."
-    equal?
+    test "asking a numeric question" [
+        result: bob "You are, what, like 15?"
+        assert -> "Sure." = result
+    ]?
 
-"shouting with special characters"
-    ( "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!" bob )
-    "Whoa, chill out!"
-    equal?
+    test "shouting with special characters" [
+        result: bob "ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!"
+        assert -> "Whoa, chill out!" = result
+    ]?
 

@@ -198,54 +198,54 @@
         assert -> true = result
     ]
 
-"no allergies"
-    ( 0 list )
-    []
-    equal?
+    test "no allergies" [
+        result: list 0
+        assert -> [] = result
+    ]?
 
-"just eggs"
-    ( 1 list )
-    ["eggs"]
-    equal?
+    test "just eggs" [
+        result: list 1
+        assert -> ["eggs"] = result
+    ]?
 
-"just peanuts"
-    ( 2 list )
-    ["peanuts"]
-    equal?
+    test "just peanuts" [
+        result: list 2
+        assert -> ["peanuts"] = result
+    ]?
 
-"just strawberries"
-    ( 8 list )
-    ["strawberries"]
-    equal?
+    test "just strawberries" [
+        result: list 8
+        assert -> ["strawberries"] = result
+    ]?
 
-"eggs and peanuts"
-    ( 3 list )
-    ["eggs", "peanuts"]
-    equal?
+    test "eggs and peanuts" [
+        result: list 3
+        assert -> ["eggs", "peanuts"] = result
+    ]?
 
-"more than eggs but not peanuts"
-    ( 5 list )
-    ["eggs", "shellfish"]
-    equal?
+    test "more than eggs but not peanuts" [
+        result: list 5
+        assert -> ["eggs", "shellfish"] = result
+    ]?
 
-"lots of stuff"
-    ( 248 list )
-    ["strawberries", "tomatoes", "chocolate", "pollen", "cats"]
-    equal?
+    test "lots of stuff" [
+        result: list 248
+        assert -> ["strawberries", "tomatoes", "chocolate", "pollen", "cats"] = result
+    ]?
 
-"everything"
-    ( 255 list )
-    ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
-    equal?
+    test "everything" [
+        result: list 255
+        assert -> ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] = result
+    ]?
 
-"no allergen score parts"
-    ( 509 list )
-    ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
-    equal?
+    test "no allergen score parts" [
+        result: list 509
+        assert -> ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] = result
+    ]?
 
-"no allergen score parts without highest valid score"
-    ( 257 list )
-    ["eggs"]
-    equal?
+    test "no allergen score parts without highest valid score" [
+        result: list 257
+        assert -> ["eggs"] = result
+    ]?
 
 

@@ -1,83 +1,83 @@
 
-"no matches"
-    ( "diaper" ["hello", "world", "zombies", "pants"] anagrams )
-    []
-    equal?
+    test "no matches" [
+        result: anagrams "diaper" ["hello", "world", "zombies", "pants"]
+        assert -> [] = result
+    ]?
 
 
-"detects two anagrams"
-    ( "solemn" ["lemons", "cherry", "melons"] anagrams )
-    ["lemons", "melons"]
-    equal?
+    test "detects two anagrams" [
+        result: anagrams "solemn" ["lemons", "cherry", "melons"]
+        assert -> ["lemons", "melons"] = result
+    ]?
 
-"does not detect anagram subsets"
-    ( "good" ["dog", "goody"] anagrams )
-    []
-    equal?
+    test "does not detect anagram subsets" [
+        result: anagrams "good" ["dog", "goody"]
+        assert -> [] = result
+    ]?
 
-"detects anagram"
-    ( "listen" ["enlists", "google", "inlets", "banana"] anagrams )
-    ["inlets"]
-    equal?
+    test "detects anagram" [
+        result: anagrams "listen" ["enlists", "google", "inlets", "banana"]
+        assert -> ["inlets"] = result
+    ]?
 
-"detects three anagrams"
-    ( "allergy" ["gallery", "ballerina", "regally", "clergy", "largely", "leading"] anagrams )
-    ["gallery", "regally", "largely"]
-    equal?
+    test "detects three anagrams" [
+        result: anagrams "allergy" ["gallery", "ballerina", "regally", "clergy", "largely", "leading"]
+        assert -> ["gallery", "regally", "largely"] = result
+    ]?
 
-"detects multiple anagrams with different case"
-    ( "nose" ["Eons", "ONES"] anagrams )
-    ["Eons", "ONES"]
-    equal?
+    test "detects multiple anagrams with different case" [
+        result: anagrams "nose" ["Eons", "ONES"]
+        assert -> ["Eons", "ONES"] = result
+    ]?
 
-"does not detect non-anagrams with identical checksum"
-    ( "mass" ["last"] anagrams )
-    []
-    equal?
+    test "does not detect non-anagrams with identical checksum" [
+        result: anagrams "mass" ["last"]
+        assert -> [] = result
+    ]?
 
-"detects anagrams case-insensitively"
-    ( "Orchestra" ["cashregister", "Carthorse", "radishes"] anagrams )
-    ["Carthorse"]
-    equal?
+    test "detects anagrams case-insensitively" [
+        result: anagrams "Orchestra" ["cashregister", "Carthorse", "radishes"]
+        assert -> ["Carthorse"] = result
+    ]?
 
-"detects anagrams using case-insensitive subject"
-    ( "Orchestra" ["cashregister", "carthorse", "radishes"] anagrams )
-    ["carthorse"]
-    equal?
+    test "detects anagrams using case-insensitive subject" [
+        result: anagrams "Orchestra" ["cashregister", "carthorse", "radishes"]
+        assert -> ["carthorse"] = result
+    ]?
 
-"detects anagrams using case-insensitive possible matches"
-    ( "orchestra" ["cashregister", "Carthorse", "radishes"] anagrams )
-    ["Carthorse"]
-    equal?
+    test "detects anagrams using case-insensitive possible matches" [
+        result: anagrams "orchestra" ["cashregister", "Carthorse", "radishes"]
+        assert -> ["Carthorse"] = result
+    ]?
 
-"does not detect an anagram if the original word is repeated"
-    ( "go" ["goGoGO"] anagrams )
-    []
-    equal?
+    test "does not detect an anagram if the original word is repeated" [
+        result: anagrams "go" ["goGoGO"]
+        assert -> [] = result
+    ]?
 
-"anagrams must use all letters exactly once"
-    ( "tapper" ["patter"] anagrams )
-    []
-    equal?
+    test "anagrams must use all letters exactly once" [
+        result: anagrams "tapper" ["patter"]
+        assert -> [] = result
+    ]?
 
-"words are not anagrams of themselves"
-    ( "BANANA" ["BANANA"] anagrams )
-    []
-    equal?
+    test "words are not anagrams of themselves" [
+        result: anagrams "BANANA" ["BANANA"]
+        assert -> [] = result
+    ]?
 
-"words are not anagrams of themselves even if letter case is partially different"
-    ( "BANANA" ["Banana"] anagrams )
-    []
-    equal?
+    test "words are not anagrams of themselves even if letter case is partially different" [
+        result: anagrams "BANANA" ["Banana"]
+        assert -> [] = result
+    ]?
 
-"words are not anagrams of themselves even if letter case is completely different"
-    ( "BANANA" ["banana"] anagrams )
-    []
-    equal?
+    test "words are not anagrams of themselves even if letter case is completely different" [
+        result: anagrams "BANANA" ["banana"]
+        assert -> [] = result
+    ]?
 
-"words other than themselves can be anagrams"
-    ( "LISTEN" ["LISTEN", "Silent"] anagrams )
-    ["Silent"]
-    equal?
+    test "words other than themselves can be anagrams" [
+        result: anagrams "LISTEN" ["LISTEN", "Silent"]
+        assert -> ["Silent"] = result
+    ]?
 
 

@@ -1,58 +1,58 @@
 
-"empty"
-    ( [] flatten )
-    []
-    equal?
+    test "empty" [
+        result: flatten []
+        assert -> [] = result
+    ]?
 
 
-"no nesting"
-    ( [0, 1, 2] flatten )
-    [0, 1, 2]
-    equal?
+    test "no nesting" [
+        result: flatten [0, 1, 2]
+        assert -> [0, 1, 2] = result
+    ]?
 
-"flattens a nested array"
-    ( [[[]]] flatten )
-    []
-    equal?
+    test "flattens a nested array" [
+        result: flatten [[[]]]
+        assert -> [] = result
+    ]?
 
-"flattens array with just integers present"
-    ( [1, [2, 3, 4, 5, 6, 7], 8] flatten )
-    [1, 2, 3, 4, 5, 6, 7, 8]
-    equal?
+    test "flattens array with just integers present" [
+        result: flatten [1, [2, 3, 4, 5, 6, 7], 8]
+        assert -> [1, 2, 3, 4, 5, 6, 7, 8] = result
+    ]?
 
-"5 level nesting"
-    ( [0, 2, [[2, 3], 8, 100, 4, [[[50]]]], neg 2] flatten )
-    [0, 2, 2, 3, 8, 100, 4, 50, neg 2]
-    equal?
+    test "5 level nesting" [
+        result: flatten [0, 2, [[2, 3], 8, 100, 4, [[[50]]]], neg 2]
+        assert -> [0, 2, 2, 3, 8, 100, 4, 50, neg 2] = result
+    ]?
 
-"6 level nesting"
-    ( [1, [2, [[3]], [4, [[5]]], 6, 7], 8] flatten )
-    [1, 2, 3, 4, 5, 6, 7, 8]
-    equal?
+    test "6 level nesting" [
+        result: flatten [1, [2, [[3]], [4, [[5]]], 6, 7], 8]
+        assert -> [1, 2, 3, 4, 5, 6, 7, 8] = result
+    ]?
 
-"null values are omitted from the final result"
-    ( [1, 2, null] flatten )
-    [1, 2]
-    equal?
+    test "null values are omitted from the final result" [
+        result: flatten [1, 2, null]
+        assert -> [1, 2] = result
+    ]?
 
-"consecutive null values at the front of the list are omitted from the final result"
-    ( [null, null, 3] flatten )
-    [3]
-    equal?
+    test "consecutive null values at the front of the list are omitted from the final result" [
+        result: flatten [null, null, 3]
+        assert -> [3] = result
+    ]?
 
-"consecutive null values in the middle of the list are omitted from the final result"
-    ( [1, null, null, 4] flatten )
-    [1, 4]
-    equal?
+    test "consecutive null values in the middle of the list are omitted from the final result" [
+        result: flatten [1, null, null, 4]
+        assert -> [1, 4] = result
+    ]?
 
-"6 level nest list with null values"
-    ( [0, 2, [[2, 3], 8, [[100]], null, [[null]]], neg 2] flatten )
-    [0, 2, 2, 3, 8, 100, neg 2]
-    equal?
+    test "6 level nest list with null values" [
+        result: flatten [0, 2, [[2, 3], 8, [[100]], null, [[null]]], neg 2]
+        assert -> [0, 2, 2, 3, 8, 100, neg 2] = result
+    ]?
 
-"all values in nested list are null"
-    ( [null, [[[null]]], null, null, [[null, null], null], null] flatten )
-    []
-    equal?
+    test "all values in nested list are null" [
+        result: flatten [null, [[[null]]], null, null, [[null, null], null], null]
+        assert -> [] = result
+    ]?
 
 

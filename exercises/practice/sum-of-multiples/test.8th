@@ -1,83 +1,83 @@
 
-"no multiples within limit"
-    ( [3,5] 1 sum )
-    0
-    equal?
+    test "no multiples within limit" [
+        result: sum [3,5] 1
+        assert -> 0 = result
+    ]?
 
 
-"one factor has multiples within limit"
-    ( [3,5] 4 sum )
-    3
-    equal?
+    test "one factor has multiples within limit" [
+        result: sum [3,5] 4
+        assert -> 3 = result
+    ]?
 
-"more than one multiple within limit"
-    ( [3] 7 sum )
-    9
-    equal?
+    test "more than one multiple within limit" [
+        result: sum [3] 7
+        assert -> 9 = result
+    ]?
 
-"more than one factor with multiples within limit"
-    ( [3,5] 10 sum )
-    23
-    equal?
+    test "more than one factor with multiples within limit" [
+        result: sum [3,5] 10
+        assert -> 23 = result
+    ]?
 
-"each multiple is only counted once"
-    ( [3,5] 100 sum )
-    2318
-    equal?
+    test "each multiple is only counted once" [
+        result: sum [3,5] 100
+        assert -> 2318 = result
+    ]?
 
-"a much larger limit"
-    ( [3,5] 1000 sum )
-    233168
-    equal?
+    test "a much larger limit" [
+        result: sum [3,5] 1000
+        assert -> 233168 = result
+    ]?
 
-"three factors"
-    ( [7,13,17] 20 sum )
-    51
-    equal?
+    test "three factors" [
+        result: sum [7,13,17] 20
+        assert -> 51 = result
+    ]?
 
-"factors not relatively prime"
-    ( [4,6] 15 sum )
-    30
-    equal?
+    test "factors not relatively prime" [
+        result: sum [4,6] 15
+        assert -> 30 = result
+    ]?
 
-"some pairs of factors relatively prime and some not"
-    ( [5,6,8] 150 sum )
-    4419
-    equal?
+    test "some pairs of factors relatively prime and some not" [
+        result: sum [5,6,8] 150
+        assert -> 4419 = result
+    ]?
 
-"one factor is a multiple of another"
-    ( [5,25] 51 sum )
-    275
-    equal?
+    test "one factor is a multiple of another" [
+        result: sum [5,25] 51
+        assert -> 275 = result
+    ]?
 
-"much larger factors"
-    ( [43,47] 10000 sum )
-    2203160
-    equal?
+    test "much larger factors" [
+        result: sum [43,47] 10000
+        assert -> 2203160 = result
+    ]?
 
-"all numbers are multiples of 1"
-    ( [1] 100 sum )
-    4950
-    equal?
+    test "all numbers are multiples of 1" [
+        result: sum [1] 100
+        assert -> 4950 = result
+    ]?
 
-"no factors means an empty sum"
-    ( [] 10000 sum )
-    0
-    equal?
+    test "no factors means an empty sum" [
+        result: sum [] 10000
+        assert -> 0 = result
+    ]?
 
-"the only multiple of 0 is 0"
-    ( [0] 1 sum )
-    0
-    equal?
+    test "the only multiple of 0 is 0" [
+        result: sum [0] 1
+        assert -> 0 = result
+    ]?
 
-"the factor 0 does not affect the sum of multiples of other factors"
-    ( [3,0] 4 sum )
-    3
-    equal?
+    test "the factor 0 does not affect the sum of multiples of other factors" [
+        result: sum [3,0] 4
+        assert -> 3 = result
+    ]?
 
-"solutions using include-exclude must extend to cardinality greater than 3"
-    ( [2,3,5,7,11] 10000 sum )
-    39614537
-    equal?
+    test "solutions using include-exclude must extend to cardinality greater than 3" [
+        result: sum [2,3,5,7,11] 10000
+        assert -> 39614537 = result
+    ]?
 
 

@@ -1,64 +1,64 @@
 
-"single bit one to decimal"
-    ( 2 [1] 10 rebase )
-    [1]
-    equal?
+    test "single bit one to decimal" [
+        result: rebase 2 [1] 10
+        assert -> [1] = result
+    ]?
 
 
-"binary to single decimal"
-    ( 2 [1, 0, 1] 10 rebase )
-    [5]
-    equal?
+    test "binary to single decimal" [
+        result: rebase 2 [1, 0, 1] 10
+        assert -> [5] = result
+    ]?
 
-"single decimal to binary"
-    ( 10 [5] 2 rebase )
-    [1, 0, 1]
-    equal?
+    test "single decimal to binary" [
+        result: rebase 10 [5] 2
+        assert -> [1, 0, 1] = result
+    ]?
 
-"binary to multiple decimal"
-    ( 2 [1, 0, 1, 0, 1, 0] 10 rebase )
-    [4, 2]
-    equal?
+    test "binary to multiple decimal" [
+        result: rebase 2 [1, 0, 1, 0, 1, 0] 10
+        assert -> [4, 2] = result
+    ]?
 
-"decimal to binary"
-    ( 10 [4, 2] 2 rebase )
-    [1, 0, 1, 0, 1, 0]
-    equal?
+    test "decimal to binary" [
+        result: rebase 10 [4, 2] 2
+        assert -> [1, 0, 1, 0, 1, 0] = result
+    ]?
 
-"trinary to hexadecimal"
-    ( 3 [1, 1, 2, 0] 16 rebase )
-    [2, 10]
-    equal?
+    test "trinary to hexadecimal" [
+        result: rebase 3 [1, 1, 2, 0] 16
+        assert -> [2, 10] = result
+    ]?
 
-"hexadecimal to trinary"
-    ( 16 [2, 10] 3 rebase )
-    [1, 1, 2, 0]
-    equal?
+    test "hexadecimal to trinary" [
+        result: rebase 16 [2, 10] 3
+        assert -> [1, 1, 2, 0] = result
+    ]?
 
-"15-bit integer"
-    ( 97 [3, 46, 60] 73 rebase )
-    [6, 10, 45]
-    equal?
+    test "15-bit integer" [
+        result: rebase 97 [3, 46, 60] 73
+        assert -> [6, 10, 45] = result
+    ]?
 
-"empty list"
-    ( 2 [] 10 rebase )
-    [0]
-    equal?
+    test "empty list" [
+        result: rebase 2 [] 10
+        assert -> [0] = result
+    ]?
 
-"single zero"
-    ( 10 [0] 2 rebase )
-    [0]
-    equal?
+    test "single zero" [
+        result: rebase 10 [0] 2
+        assert -> [0] = result
+    ]?
 
-"multiple zeros"
-    ( 10 [0, 0, 0] 2 rebase )
-    [0]
-    equal?
+    test "multiple zeros" [
+        result: rebase 10 [0, 0, 0] 2
+        assert -> [0] = result
+    ]?
 
-"leading zeros"
-    ( 7 [0, 6, 0] 10 rebase )
-    [4, 2]
-    equal?
+    test "leading zeros" [
+        result: rebase 7 [0, 6, 0] 10
+        assert -> [4, 2] = result
+    ]?
 
 "input base is one"
     ( 1 [0] 10 rebase )

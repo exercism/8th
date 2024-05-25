@@ -1,29 +1,29 @@
 
-"empty strands"
-    ( "" "" distance )
-    0
-    equal?
+    test "empty strands" [
+        result: distance "" ""
+        assert -> 0 = result
+    ]?
 
 
-"single letter identical strands"
-    ( "A" "A" distance )
-    0
-    equal?
+    test "single letter identical strands" [
+        result: distance "A" "A"
+        assert -> 0 = result
+    ]?
 
-"long indentical strands"
-    ( "GGACTGAAATCTG" "GGACTGAAATCTG" distance )
-    0
-    equal?
+    test "long indentical strands" [
+        result: distance "GGACTGAAATCTG" "GGACTGAAATCTG"
+        assert -> 0 = result
+    ]?
 
-"single letter different strands"
-    ( "G" "T" distance )
-    1
-    equal?
+    test "single letter different strands" [
+        result: distance "G" "T"
+        assert -> 1 = result
+    ]?
 
-"long different strands"
-    ( "GGACGGATTCTG" "AGGACGGATTCT" distance )
-    9
-    equal?
+    test "long different strands" [
+        result: distance "GGACGGATTCTG" "AGGACGGATTCT"
+        assert -> 9 = result
+    ]?
 
 "disallow empty first strand" 
     ( "" "G" distance )

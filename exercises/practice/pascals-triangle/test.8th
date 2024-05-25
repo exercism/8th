@@ -1,43 +1,43 @@
 
-"zero rows"
-    ( 0 rows )
-    []
-    equal?
+    test "zero rows" [
+        result: rows 0
+        assert -> [] = result
+    ]?
 
 
-"single row"
-    ( 1 rows )
-    [[1]]
-    equal?
+    test "single row" [
+        result: rows 1
+        assert -> [[1]] = result
+    ]?
 
-"two rows"
-    ( 2 rows )
-    [[1], [1, 1]]
-    equal?
+    test "two rows" [
+        result: rows 2
+        assert -> [[1], [1, 1]] = result
+    ]?
 
-"three rows"
-    ( 3 rows )
-    [[1], [1, 1], [1, 2, 1]]
-    equal?
+    test "three rows" [
+        result: rows 3
+        assert -> [[1], [1, 1], [1, 2, 1]] = result
+    ]?
 
-"four rows"
-    ( 4 rows )
-    [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]]
-    equal?
+    test "four rows" [
+        result: rows 4
+        assert -> [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1]] = result
+    ]?
 
-"five rows"
-    ( 5 rows )
-    [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
-    equal?
+    test "five rows" [
+        result: rows 5
+        assert -> [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]] = result
+    ]?
 
-"six rows"
-    ( 6 rows )
-    [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]]
-    equal?
+    test "six rows" [
+        result: rows 6
+        assert -> [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]] = result
+    ]?
 
-"ten rows"
-    ( 10 rows )
-    [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1], [1, 6, 15, 20, 15, 6, 1], [1, 7, 21, 35, 35, 21, 7, 1], [1, 8, 28, 56, 70, 56, 28, 8, 1], [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]]
-    equal?
+    test "ten rows" [
+        result: rows 10
+        assert -> [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1], [1, 6, 15, 20, 15, 6, 1], [1, 7, 21, 35, 35, 21, 7, 1], [1, 8, 28, 56, 70, 56, 28, 8, 1], [1, 9, 36, 84, 126, 126, 84, 36, 9, 1]] = result
+    ]?
 
 

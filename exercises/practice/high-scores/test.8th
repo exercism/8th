@@ -1,14 +1,14 @@
 
-"List of scores"
-    ( [30, 50, 20, 70] scores )
-    [30, 50, 20, 70]
-    equal?
+    test "List of scores" [
+        result: scores [30, 50, 20, 70]
+        assert -> [30, 50, 20, 70] = result
+    ]?
 
 
-"Latest score"
-    ( [100, 0, 90, 30] latest )
-    30
-    equal?
+    test "Latest score" [
+        result: latest [100, 0, 90, 30]
+        assert -> 30 = result
+    ]?
 
 "Personal best"
     ( [40, 100, 70] personal-best )

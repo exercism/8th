@@ -5,10 +5,10 @@
         result: throws? 1 cb:new ' cb:read
         assert -> true = result
     ]
-"can read an item just written"
-    ( 1 cb:new 1 cb:write cb:read nip )
-    1
-    equal?    test "each item may only be read once" [
+    test "can read an item just written" [
+        result: nip 1 cb:new 1 cb:write cb:read
+        assert -> 1 = result
+    ]?    test "each item may only be read once" [
         result: throws? 1 cb:new 1 cb:write cb:read drop ' cb:read
         assert -> true = result
     ]
@@ -34,15 +34,15 @@
         assert -> true = result
     ]
 
-"clear frees up capacity for another write"
-    ( 1 cb:new 1 cb:write cb:clear 2 cb:write cb:read nip )
-    2
-    equal?
+    test "clear frees up capacity for another write" [
+        result: nip 1 cb:new 1 cb:write cb:clear 2 cb:write cb:read
+        assert -> 2 = result
+    ]?
 
-"clear does nothing on empty buffer"
-    ( 1 cb:new cb:clear 1 cb:write cb:read nip )
-    1
-    equal?
+    test "clear does nothing on empty buffer" [
+        result: nip 1 cb:new cb:clear 1 cb:write cb:read
+        assert -> 1 = result
+    ]?
 
 "overwrite acts like write on non-full buffer"
     ( 2 cb:new 1 cb:write 2 cb:overwrite cb:read swap cb:read nip 2 a:close )

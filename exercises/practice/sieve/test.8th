@@ -1,24 +1,24 @@
 
-"no primes under two"
-    ( 1 primes )
-    []
-    equal?
+    test "no primes under two" [
+        result: primes 1
+        assert -> [] = result
+    ]?
 
 
-"find first prime"
-    ( 2 primes )
-    [2]
-    equal?
+    test "find first prime" [
+        result: primes 2
+        assert -> [2] = result
+    ]?
 
-"find primes up to 10"
-    ( 10 primes )
-    [2, 3, 5, 7]
-    equal?
+    test "find primes up to 10" [
+        result: primes 10
+        assert -> [2, 3, 5, 7] = result
+    ]?
 
-"limit is prime"
-    ( 13 primes )
-    [2, 3, 5, 7, 11, 13]
-    equal?
+    test "limit is prime" [
+        result: primes 13
+        assert -> [2, 3, 5, 7, 11, 13] = result
+    ]?
 
 "find primes up to 1000"
     [  2,   3,   5,   7,  11,  13,  17,  19,  23,  29,  31,  37,  41,  43,  47,  53,

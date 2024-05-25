@@ -1,58 +1,58 @@
 
-"wink for 1"
-    ( 1 commands )
-    ["wink"]
-    equal?
+    test "wink for 1" [
+        result: commands 1
+        assert -> ["wink"] = result
+    ]?
 
 
-"double blink for 10"
-    ( 2 commands )
-    ["double blink"]
-    equal?
+    test "double blink for 10" [
+        result: commands 2
+        assert -> ["double blink"] = result
+    ]?
 
-"close your eyes for 100"
-    ( 4 commands )
-    ["close your eyes"]
-    equal?
+    test "close your eyes for 100" [
+        result: commands 4
+        assert -> ["close your eyes"] = result
+    ]?
 
-"jump for 1000"
-    ( 8 commands )
-    ["jump"]
-    equal?
+    test "jump for 1000" [
+        result: commands 8
+        assert -> ["jump"] = result
+    ]?
 
-"combine two actions"
-    ( 3 commands )
-    ["wink", "double blink"]
-    equal?
+    test "combine two actions" [
+        result: commands 3
+        assert -> ["wink", "double blink"] = result
+    ]?
 
-"reverse two actions"
-    ( 19 commands )
-    ["double blink", "wink"]
-    equal?
+    test "reverse two actions" [
+        result: commands 19
+        assert -> ["double blink", "wink"] = result
+    ]?
 
-"reversing one action gives the same action"
-    ( 24 commands )
-    ["jump"]
-    equal?
+    test "reversing one action gives the same action" [
+        result: commands 24
+        assert -> ["jump"] = result
+    ]?
 
-"reversing no actions still gives no actions"
-    ( 16 commands )
-    []
-    equal?
+    test "reversing no actions still gives no actions" [
+        result: commands 16
+        assert -> [] = result
+    ]?
 
-"all possible actions"
-    ( 15 commands )
-    ["wink", "double blink", "close your eyes", "jump"]
-    equal?
+    test "all possible actions" [
+        result: commands 15
+        assert -> ["wink", "double blink", "close your eyes", "jump"] = result
+    ]?
 
-"reverse all possible actions"
-    ( 31 commands )
-    ["jump", "close your eyes", "double blink", "wink"]
-    equal?
+    test "reverse all possible actions" [
+        result: commands 31
+        assert -> ["jump", "close your eyes", "double blink", "wink"] = result
+    ]?
 
-"do nothing for zero"
-    ( 0 commands )
-    []
-    equal?
+    test "do nothing for zero" [
+        result: commands 0
+        assert -> [] = result
+    ]?
 
 

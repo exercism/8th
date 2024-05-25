@@ -15,10 +15,10 @@
         assert -> "nemaR" = result
     ]
 
-"a sentence with punctuation"
-    ( "I'm hungry!" reverse )
-    "!yrgnuh m'I"
-    equal?
+    test "a sentence with punctuation" [
+        result: reverse "I'm hungry!"
+        assert -> "!yrgnuh m'I" = result
+    ]?
 
     test "a palindrome" [
         result: reverse "racecar"

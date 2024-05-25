@@ -1,73 +1,73 @@
 
-"keep on empty list returns empty list"
-    ( [] ( drop true ) keep )
-    []
-    equal?
+    test "keep on empty list returns empty list" [
+        result: keep [] ( drop true )
+        assert -> [] = result
+    ]?
 
 
-"keeps everything"
-    ( [1, 3, 5] ( drop true ) keep )
-    [1, 3, 5]
-    equal?
+    test "keeps everything" [
+        result: keep [1, 3, 5] ( drop true )
+        assert -> [1, 3, 5] = result
+    ]?
 
-"keeps nothing"
-    ( [1, 3, 5] ( drop false ) keep )
-    []
-    equal?
+    test "keeps nothing" [
+        result: keep [1, 3, 5] ( drop false )
+        assert -> [] = result
+    ]?
 
-"keeps first and last"
-    ( [1, 2, 3] ( 2 n:mod 1 n:= ) keep )
-    [1, 3]
-    equal?
+    test "keeps first and last" [
+        result: keep [1, 2, 3] ( 2 n:mod 1 n:= )
+        assert -> [1, 3] = result
+    ]?
 
-"keeps neither first nor last"
-    ( [1, 2, 3] ( 2 n:mod 0 n:= ) keep )
-    [2]
-    equal?
+    test "keeps neither first nor last" [
+        result: keep [1, 2, 3] ( 2 n:mod 0 n:= )
+        assert -> [2] = result
+    ]?
 
-"keeps strings"
-    ( ["apple", "zebra", "banana", "zombies", "cherimoya", "zealot"] ( 0 s:@ nip 'z n:= ) keep )
-    ["zebra", "zombies", "zealot"]
-    equal?
+    test "keeps strings" [
+        result: keep ["apple", "zebra", "banana", "zombies", "cherimoya", "zealot"] ( 0 s:@ nip 'z n:= )
+        assert -> ["zebra", "zombies", "zealot"] = result
+    ]?
 
-"keeps lists"
-    ( [[1, 2, 3], [5, 5, 5], [5, 1, 2], [2, 1, 2], [1, 5, 2], [2, 2, 1], [1, 2, 5]] ( 5 ' n:= a:indexof nip number? nip ) keep )
-    [[5, 5, 5], [5, 1, 2], [1, 5, 2], [1, 2, 5]]
-    equal?
+    test "keeps lists" [
+        result: keep [[1, 2, 3], [5, 5, 5], [5, 1, 2], [2, 1, 2], [1, 5, 2], [2, 2, 1], [1, 2, 5]] ( 5 ' n:= a:indexof nip number? nip )
+        assert -> [[5, 5, 5], [5, 1, 2], [1, 5, 2], [1, 2, 5]] = result
+    ]?
 
-"discard on empty list returns empty list"
-    ( [] ( drop true ) discard )
-    []
-    equal?
+    test "discard on empty list returns empty list" [
+        result: discard [] ( drop true )
+        assert -> [] = result
+    ]?
 
-"discards everything"
-    ( [1, 3, 5] ( drop true ) discard )
-    []
-    equal?
+    test "discards everything" [
+        result: discard [1, 3, 5] ( drop true )
+        assert -> [] = result
+    ]?
 
-"discards nothing"
-    ( [1, 3, 5] ( drop false ) discard )
-    [1, 3, 5]
-    equal?
+    test "discards nothing" [
+        result: discard [1, 3, 5] ( drop false )
+        assert -> [1, 3, 5] = result
+    ]?
 
-"discards first and last"
-    ( [1, 2, 3] ( 2 n:mod 1 n:= ) discard )
-    [2]
-    equal?
+    test "discards first and last" [
+        result: discard [1, 2, 3] ( 2 n:mod 1 n:= )
+        assert -> [2] = result
+    ]?
 
-"discards neither first nor last"
-    ( [1, 2, 3] ( 2 n:mod 0 n:= ) discard )
-    [1, 3]
-    equal?
+    test "discards neither first nor last" [
+        result: discard [1, 2, 3] ( 2 n:mod 0 n:= )
+        assert -> [1, 3] = result
+    ]?
 
-"discards strings"
-    ( ["apple", "zebra", "banana", "zombies", "cherimoya", "zealot"] ( 0 s:@ nip 'z n:= ) discard )
-    ["apple", "banana", "cherimoya"]
-    equal?
+    test "discards strings" [
+        result: discard ["apple", "zebra", "banana", "zombies", "cherimoya", "zealot"] ( 0 s:@ nip 'z n:= )
+        assert -> ["apple", "banana", "cherimoya"] = result
+    ]?
 
-"discards lists"
-    ( [[1, 2, 3], [5, 5, 5], [5, 1, 2], [2, 1, 2], [1, 5, 2], [2, 2, 1], [1, 2, 5]] ( 5 ' n:= a:indexof nip number? nip ) discard )
-    [[1, 2, 3], [2, 1, 2], [2, 2, 1]]
-    equal?
+    test "discards lists" [
+        result: discard [[1, 2, 3], [5, 5, 5], [5, 1, 2], [2, 1, 2], [1, 5, 2], [2, 2, 1], [1, 2, 5]] ( 5 ' n:= a:indexof nip number? nip )
+        assert -> [[1, 2, 3], [2, 1, 2], [2, 2, 1]] = result
+    ]?
 
 
