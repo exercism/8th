@@ -20,8 +20,9 @@
     {"A": 20, "C": 12, "G": 17, "T": 21}
     equal?
 
-"strand with invalid nucleotides"
-    ( "AGXXACT" nucleotide-counts )
-    null?
+    test "strand with invalid nucleotides" [
+        result: nucleotide-counts "AGXXACT"
+        assert -> null = result
+    ]
 
 

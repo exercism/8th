@@ -1,23 +1,23 @@
 
 "no primes under two"
-    []
     ( 1 primes )
+    []
     equal?
 
 
 "find first prime"
-    [2]
     ( 2 primes )
+    [2]
     equal?
 
 "find primes up to 10"
-    [2, 3, 5, 7]
     ( 10 primes )
+    [2, 3, 5, 7]
     equal?
 
 "limit is prime"
-    [2, 3, 5, 7, 11, 13]
     ( 13 primes )
+    [2, 3, 5, 7, 11, 13]
     equal?
 
 "find primes up to 1000"

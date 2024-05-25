@@ -16,23 +16,23 @@
     equal?
 
 "On the inner circle"
-    10
     ( 0 neg 1 darts-score )
+    10
     equal?
 
 "Exactly on center"
-    10
     ( 0 0 darts-score )
+    10
     equal?
 
 "Near the center"
-    10
     ( neg 0.1 neg 0.1 darts-score )
+    10
     equal?
 
 "Just within the inner circle"
-    10
     ( 0.7 0.7 darts-score )
+    10
     equal?
 
 "Just outside the inner circle"

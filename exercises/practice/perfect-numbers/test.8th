@@ -1,63 +1,64 @@
 
-"Smallest perfect number is classified correctly"
-    ( 6 classify )
-    "perfect"
-    equal?
+    test "Smallest perfect number is classified correctly" [
+        result: classify 6
+        assert -> "perfect" = result
+    ]
 
 
-"Medium perfect number is classified correctly"
-    ( 28 classify )
-    "perfect"
-    equal?
+    test "Medium perfect number is classified correctly" [
+        result: classify 28
+        assert -> "perfect" = result
+    ]
 
-"Large perfect number is classified correctly"
-    ( 33550336 classify )
-    "perfect"
-    equal?
+    test "Large perfect number is classified correctly" [
+        result: classify 33550336
+        assert -> "perfect" = result
+    ]
 
-"Smallest abundant number is classified correctly"
-    ( 12 classify )
-    "abundant"
-    equal?
+    test "Smallest abundant number is classified correctly" [
+        result: classify 12
+        assert -> "abundant" = result
+    ]
 
-"Medium abundant number is classified correctly"
-    ( 30 classify )
-    "abundant"
-    equal?
+    test "Medium abundant number is classified correctly" [
+        result: classify 30
+        assert -> "abundant" = result
+    ]
 
-"Large abundant number is classified correctly"
-    ( 33550335 classify )
-    "abundant"
-    equal?
+    test "Large abundant number is classified correctly" [
+        result: classify 33550335
+        assert -> "abundant" = result
+    ]
 
-"Smallest prime deficient number is classified correctly"
-    ( 2 classify )
-    "deficient"
-    equal?
+    test "Smallest prime deficient number is classified correctly" [
+        result: classify 2
+        assert -> "deficient" = result
+    ]
 
-"Smallest non-prime deficient number is classified correctly"
-    ( 4 classify )
-    "deficient"
-    equal?
+    test "Smallest non-prime deficient number is classified correctly" [
+        result: classify 4
+        assert -> "deficient" = result
+    ]
 
-"Medium deficient number is classified correctly"
-    ( 32 classify )
-    "deficient"
-    equal?
+    test "Medium deficient number is classified correctly" [
+        result: classify 32
+        assert -> "deficient" = result
+    ]
 
-"Large deficient number is classified correctly"
-    ( 33550337 classify )
-    "deficient"
-    equal?
+    test "Large deficient number is classified correctly" [
+        result: classify 33550337
+        assert -> "deficient" = result
+    ]
 
-"Edge case (no factors other than itself) is classified correctly"
-    ( 1 classify )
-    "deficient"
-    equal?
+    test "Edge case (no factors other than itself) is classified correctly" [
+        result: classify 1
+        assert -> "deficient" = result
+    ]
 
-"Zero is rejected (as it is not a positive integer)"
-    ( 0 classify )
-    null?
+    test "Zero is rejected (as it is not a positive integer)" [
+        result: classify 0
+        assert -> null = result
+    ]
 
 "Negative integer is rejected (as it is not a positive integer)"
     ( neg 1 classify )

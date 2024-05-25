@@ -33,17 +33,19 @@
         assert -> 9223372036854775808 = result
     ]
 
-"square 0 is invalid"
-    ( 0 square )
-    null?
+    test "square 0 is invalid" [
+        result: square 0
+        assert -> null = result
+    ]
 
 "negative square is invalid"
     ( neg 1 square )
     null?
 
-"square greater than 64 is invalid"
-    ( 65 square )
-    null?
+    test "square greater than 64 is invalid" [
+        result: square 65
+        assert -> null = result
+    ]
 
 "returns the total number of grains on the board"
     ( total )

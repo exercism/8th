@@ -17,9 +17,10 @@
         assert -> 4 = result
     ]
 
-"zero is an error"
-    ( 0 collatz )
-    null?
+    test "zero is an error" [
+        result: collatz 0
+        assert -> null = result
+    ]
 
 "negative value is an error"
     ( neg 15 collatz )

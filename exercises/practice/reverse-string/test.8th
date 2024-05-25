@@ -1,32 +1,32 @@
 
-"an empty string"
-    ( "" reverse )
-    ""
-    equal?
+    test "an empty string" [
+        result: reverse ""
+        assert -> "" = result
+    ]
 
 
-"a word"
-    ( "robot" reverse )
-    "tobor"
-    equal?
+    test "a word" [
+        result: reverse "robot"
+        assert -> "tobor" = result
+    ]
 
-"a capitalized word"
-    ( "Ramen" reverse )
-    "nemaR"
-    equal?
+    test "a capitalized word" [
+        result: reverse "Ramen"
+        assert -> "nemaR" = result
+    ]
 
 "a sentence with punctuation"
     ( "I'm hungry!" reverse )
     "!yrgnuh m'I"
     equal?
 
-"a palindrome"
-    ( "racecar" reverse )
-    "racecar"
-    equal?
+    test "a palindrome" [
+        result: reverse "racecar"
+        assert -> "racecar" = result
+    ]
 
-"an even-sized word"
-    ( "drawer" reverse )
-    "reward"
-    equal?
+    test "an even-sized word" [
+        result: reverse "drawer"
+        assert -> "reward" = result
+    ]
 

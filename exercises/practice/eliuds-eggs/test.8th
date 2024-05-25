@@ -1,22 +1,22 @@
 
-"0 eggs"
-    0
-    ( 0 eggCount )
-    equal?
+    test "0 eggs" [
+        result: eggCount 0
+        assert -> 0 = result
+    ]
 
 
-"1 egg"
-    1
-    ( 16 eggCount )
-    equal?
+    test "1 egg" [
+        result: eggCount 16
+        assert -> 1 = result
+    ]
 
-"4 eggs"
-    4
-    ( 89 eggCount )
-    equal?
+    test "4 eggs" [
+        result: eggCount 89
+        assert -> 4 = result
+    ]
 
-"13 eggs"
-    13
-    ( 2000000000 eggCount )
-    equal?
+    test "13 eggs" [
+        result: eggCount 2000000000
+        assert -> 13 = result
+    ]
 

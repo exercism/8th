@@ -1,58 +1,58 @@
 
-"lowercase letter"
-    ( "a" score )
-    1
-    equal?
+    test "lowercase letter" [
+        result: score "a"
+        assert -> 1 = result
+    ]
 
 
-"uppercase letter"
-    ( "A" score )
-    1
-    equal?
+    test "uppercase letter" [
+        result: score "A"
+        assert -> 1 = result
+    ]
 
-"valuable letter"
-    ( "f" score )
-    4
-    equal?
+    test "valuable letter" [
+        result: score "f"
+        assert -> 4 = result
+    ]
 
-"short word"
-    ( "at" score )
-    2
-    equal?
+    test "short word" [
+        result: score "at"
+        assert -> 2 = result
+    ]
 
-"short, valuable word"
-    ( "zoo" score )
-    12
-    equal?
+    test "short, valuable word" [
+        result: score "zoo"
+        assert -> 12 = result
+    ]
 
-"medium word"
-    ( "street" score )
-    6
-    equal?
+    test "medium word" [
+        result: score "street"
+        assert -> 6 = result
+    ]
 
-"medium, valuable word"
-    ( "quirky" score )
-    22
-    equal?
+    test "medium, valuable word" [
+        result: score "quirky"
+        assert -> 22 = result
+    ]
 
-"long, mixed-case word"
-    ( "OxyphenButazone" score )
-    41
-    equal?
+    test "long, mixed-case word" [
+        result: score "OxyphenButazone"
+        assert -> 41 = result
+    ]
 
-"english-like word"
-    ( "pinata" score )
-    8
-    equal?
+    test "english-like word" [
+        result: score "pinata"
+        assert -> 8 = result
+    ]
 
-"empty input"
-    ( "" score )
-    0
-    equal?
+    test "empty input" [
+        result: score ""
+        assert -> 0 = result
+    ]
 
-"entire alphabet available"
-    ( "abcdefghijklmnopqrstuvwxyz" score )
-    87
-    equal?
+    test "entire alphabet available" [
+        result: score "abcdefghijklmnopqrstuvwxyz"
+        assert -> 87 = result
+    ]
 
 
