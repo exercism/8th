@@ -3,9 +3,10 @@
     catch dup if nip then nip
 ;
 
-"reading empty buffer should fail"
-    ( 1 cb:new ' cb:read throws? )
-    true?
+    test "reading empty buffer should fail" [
+        result: throws? 1 cb:new ' cb:read
+        assert -> true = result
+    ]
 
 
 "can read an item just written"
@@ -13,18 +14,20 @@
     1
     equal?
 
-"each item may only be read once"
-    ( 1 cb:new 1 cb:write cb:read drop ' cb:read throws? )
-    true?
+    test "each item may only be read once" [
+        result: throws? 1 cb:new 1 cb:write cb:read drop ' cb:read
+        assert -> true = result
+    ]
 
 "items are read in the order they are written"
     ( 2 cb:new 1 cb:write 2 cb:write cb:read swap cb:read nip 2 a:close )
     [1, 2]
     equal?
 
-"full buffer can't be written to"
-    ( 1 cb:new 1 cb:write 2 ' cb:write throws? )
-    true?
+    test "full buffer can't be written to" [
+        result: throws? 1 cb:new 1 cb:write 2 ' cb:write
+        assert -> true = result
+    ]
 
 "a read frees up capacity for another write"
     ( 1 cb:new 1 cb:write cb:read swap 2 cb:write cb:read nip 2 a:close )
@@ -36,9 +39,10 @@
     [1, 2, 3]
     equal?
 
-"items cleared out of buffer can't be read"
-    ( 1 cb:new 1 cb:write cb:clear ' cb:read throws? )
-    true?
+    test "items cleared out of buffer can't be read" [
+        result: throws? 1 cb:new 1 cb:write cb:clear ' cb:read
+        assert -> true = result
+    ]
 
 "clear frees up capacity for another write"
     ( 1 cb:new 1 cb:write cb:clear 2 cb:write cb:read nip )
@@ -65,8 +69,9 @@
     [1, 3, 4, 5]
     equal?
 
-"initial clear does not affect wrapping around"
-    ( 2 cb:new cb:clear 1 cb:write 2 cb:write 3 cb:overwrite 4 cb:overwrite cb:read drop cb:read drop ' cb:read throws? )
-    true?
+    test "initial clear does not affect wrapping around" [
+        result: throws? 2 cb:new cb:clear 1 cb:write 2 cb:write 3 cb:overwrite 4 cb:overwrite cb:read drop cb:read drop ' cb:read
+        assert -> true = result
+    ]
 
 

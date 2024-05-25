@@ -1,20 +1,23 @@
 
-"empty sentence"
-    ( "" pangram? )
-    false?
+    test "empty sentence" [
+        result: pangram? ""
+        assert -> false = result
+    ]
 
 
 "missing letters replaced by numbers"
     ( "7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog" pangram?  )
     false?
 
-"mixed case and punctuation"
-    ( "\"Five quacking Zephyrs jolt my wax bed.\"" pangram? )
-    true?
+    test "mixed case and punctuation" [
+        result: pangram? "\"Five quacking Zephyrs jolt my wax bed.\""
+        assert -> true = result
+    ]
 
-"missing letter x"
-    ( "a quick movement of the enemy will jeopardize five gunboats" pangram? )
-    false?
+    test "missing letter x" [
+        result: pangram? "a quick movement of the enemy will jeopardize five gunboats"
+        assert -> false = result
+    ]
 
 "perfect lower case"
     ( "abcdefghijklmnopqrstuvwxyz" pangram?  )

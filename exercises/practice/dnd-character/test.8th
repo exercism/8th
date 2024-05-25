@@ -84,9 +84,10 @@
     3 18 n:between
 ;
 
-"random ability is within range"
-    ( ability ability-valid? )
-    true?
+    test "random ability is within range" [
+        result: ability-valid? ability
+        assert -> true = result
+    ]
 
 "random character is valid"
     ( character >r

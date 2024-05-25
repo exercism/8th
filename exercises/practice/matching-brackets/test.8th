@@ -1,83 +1,103 @@
 
-"paired square brackets"
-    ( "[]" paired? )
-    true?
+    test "paired square brackets" [
+        result: paired? "[]"
+        assert -> true = result
+    ]
 
 
-"empty string"
-    ( "" paired? )
-    true?
+    test "empty string" [
+        result: paired? ""
+        assert -> true = result
+    ]
 
-"unpaired brackets"
-    ( "[[" paired? )
-    false?
+    test "unpaired brackets" [
+        result: paired? "[["
+        assert -> false = result
+    ]
 
-"wrong ordered brackets"
-    ( "}{" paired? )
-    false?
+    test "wrong ordered brackets" [
+        result: paired? "}{"
+        assert -> false = result
+    ]
 
-"wrong closing bracket"
-    ( "{]" paired? )
-    false?
+    test "wrong closing bracket" [
+        result: paired? "{]"
+        assert -> false = result
+    ]
 
-"paired with whitespace"
-    ( "{ }" paired? )
-    true?
+    test "paired with whitespace" [
+        result: paired? "{ }"
+        assert -> true = result
+    ]
 
-"partially paired brackets"
-    ( "{[])" paired? )
-    false?
+    test "partially paired brackets" [
+        result: paired? "{[])"
+        assert -> false = result
+    ]
 
-"simple nested brackets"
-    ( "{[]}" paired? )
-    true?
+    test "simple nested brackets" [
+        result: paired? "{[]}"
+        assert -> true = result
+    ]
 
-"several paired brackets"
-    ( "{}[]" paired? )
-    true?
+    test "several paired brackets" [
+        result: paired? "{}[]"
+        assert -> true = result
+    ]
 
-"paired and nested brackets"
-    ( "([{}({}[])])" paired? )
-    true?
+    test "paired and nested brackets" [
+        result: paired? "([{}({}[])])"
+        assert -> true = result
+    ]
 
-"unopened closing brackets"
-    ( "{[)][]}" paired? )
-    false?
+    test "unopened closing brackets" [
+        result: paired? "{[)][]}"
+        assert -> false = result
+    ]
 
-"unpaired and nested brackets"
-    ( "([{])" paired? )
-    false?
+    test "unpaired and nested brackets" [
+        result: paired? "([{])"
+        assert -> false = result
+    ]
 
-"paired and wrong nested brackets"
-    ( "[({]})" paired? )
-    false?
+    test "paired and wrong nested brackets" [
+        result: paired? "[({]})"
+        assert -> false = result
+    ]
 
-"paired and wrong nested brackets but innermost are correct"
-    ( "[({}])" paired? )
-    false?
+    test "paired and wrong nested brackets but innermost are correct" [
+        result: paired? "[({}])"
+        assert -> false = result
+    ]
 
-"paired and incomplete brackets"
-    ( "{}[" paired? )
-    false?
+    test "paired and incomplete brackets" [
+        result: paired? "{}["
+        assert -> false = result
+    ]
 
-"too many closing brackets"
-    ( "[]]" paired? )
-    false?
+    test "too many closing brackets" [
+        result: paired? "[]]"
+        assert -> false = result
+    ]
 
-"early unexpected brackets"
-    ( ")()" paired? )
-    false?
+    test "early unexpected brackets" [
+        result: paired? ")()"
+        assert -> false = result
+    ]
 
-"early mismatched brackets"
-    ( "{)()" paired? )
-    false?
+    test "early mismatched brackets" [
+        result: paired? "{)()"
+        assert -> false = result
+    ]
 
-"math expression"
-    ( "(((185 + 223.85) * 15) - 543)/2" paired? )
-    true?
+    test "math expression" [
+        result: paired? "(((185 + 223.85) * 15) - 543)/2"
+        assert -> true = result
+    ]
 
-"complex latex expression"
-    ( "\left(\begin{array}{cc} \frac{1}{3} & x\\ \mathrm{e}^{x} &... x^2 \end{array}\right)" paired? )
-    true?
+    test "complex latex expression" [
+        result: paired? "\left(\begin{array}{cc} \frac{1}{3} & x\\ \mathrm{e}^{x} &... x^2 \end{array}\right)"
+        assert -> true = result
+    ]
 
 

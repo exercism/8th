@@ -1,164 +1,204 @@
 
-"not allergic to anything, including eggs"
-    ( 0 "eggs" allergic-to? )
-    false?
+    test "not allergic to anything, including eggs" [
+        result: allergic-to? 0 "eggs"
+        assert -> false = result
+    ]
 
 
-"allergic only to eggs"
-    ( 1 "eggs" allergic-to? )
-    true?
+    test "allergic only to eggs" [
+        result: allergic-to? 1 "eggs"
+        assert -> true = result
+    ]
 
-"allergic to eggs and something else"
-    ( 3 "eggs" allergic-to? )
-    true?
+    test "allergic to eggs and something else" [
+        result: allergic-to? 3 "eggs"
+        assert -> true = result
+    ]
 
-"allergic to something, but not eggs"
-    ( 2 "eggs" allergic-to? )
-    false?
+    test "allergic to something, but not eggs" [
+        result: allergic-to? 2 "eggs"
+        assert -> false = result
+    ]
 
-"allergic to everything, including eggs"
-    ( 255 "eggs" allergic-to? )
-    true?
+    test "allergic to everything, including eggs" [
+        result: allergic-to? 255 "eggs"
+        assert -> true = result
+    ]
 
-"not allergic to anything, including peanuts"
-    ( 0 "peanuts" allergic-to? )
-    false?
+    test "not allergic to anything, including peanuts" [
+        result: allergic-to? 0 "peanuts"
+        assert -> false = result
+    ]
 
-"allergic only to peanuts"
-    ( 2 "peanuts" allergic-to? )
-    true?
+    test "allergic only to peanuts" [
+        result: allergic-to? 2 "peanuts"
+        assert -> true = result
+    ]
 
-"allergic to peanuts and something else"
-    ( 7 "peanuts" allergic-to? )
-    true?
+    test "allergic to peanuts and something else" [
+        result: allergic-to? 7 "peanuts"
+        assert -> true = result
+    ]
 
-"allergic to something, but not peanuts"
-    ( 5 "peanuts" allergic-to? )
-    false?
+    test "allergic to something, but not peanuts" [
+        result: allergic-to? 5 "peanuts"
+        assert -> false = result
+    ]
 
-"allergic to everything, including peanuts"
-    ( 255 "peanuts" allergic-to? )
-    true?
+    test "allergic to everything, including peanuts" [
+        result: allergic-to? 255 "peanuts"
+        assert -> true = result
+    ]
 
-"not allergic to anything, including shellfish"
-    ( 0 "shellfish" allergic-to? )
-    false?
+    test "not allergic to anything, including shellfish" [
+        result: allergic-to? 0 "shellfish"
+        assert -> false = result
+    ]
 
-"allergic only to shellfish"
-    ( 4 "shellfish" allergic-to? )
-    true?
+    test "allergic only to shellfish" [
+        result: allergic-to? 4 "shellfish"
+        assert -> true = result
+    ]
 
-"allergic to shellfish and something else"
-    ( 14 "shellfish" allergic-to? )
-    true?
+    test "allergic to shellfish and something else" [
+        result: allergic-to? 14 "shellfish"
+        assert -> true = result
+    ]
 
-"allergic to something, but not shellfish"
-    ( 10 "shellfish" allergic-to? )
-    false?
+    test "allergic to something, but not shellfish" [
+        result: allergic-to? 10 "shellfish"
+        assert -> false = result
+    ]
 
-"allergic to everything, including shellfish"
-    ( 255 "shellfish" allergic-to? )
-    true?
+    test "allergic to everything, including shellfish" [
+        result: allergic-to? 255 "shellfish"
+        assert -> true = result
+    ]
 
-"not allergic to anything, including strawberries"
-    ( 0 "strawberries" allergic-to? )
-    false?
+    test "not allergic to anything, including strawberries" [
+        result: allergic-to? 0 "strawberries"
+        assert -> false = result
+    ]
 
-"allergic only to strawberries"
-    ( 8 "strawberries" allergic-to? )
-    true?
+    test "allergic only to strawberries" [
+        result: allergic-to? 8 "strawberries"
+        assert -> true = result
+    ]
 
-"allergic to strawberries and something else"
-    ( 28 "strawberries" allergic-to? )
-    true?
+    test "allergic to strawberries and something else" [
+        result: allergic-to? 28 "strawberries"
+        assert -> true = result
+    ]
 
-"allergic to something, but not strawberries"
-    ( 20 "strawberries" allergic-to? )
-    false?
+    test "allergic to something, but not strawberries" [
+        result: allergic-to? 20 "strawberries"
+        assert -> false = result
+    ]
 
-"allergic to everything, including strawberries"
-    ( 255 "strawberries" allergic-to? )
-    true?
+    test "allergic to everything, including strawberries" [
+        result: allergic-to? 255 "strawberries"
+        assert -> true = result
+    ]
 
-"not allergic to anything, including tomatoes"
-    ( 0 "tomatoes" allergic-to? )
-    false?
+    test "not allergic to anything, including tomatoes" [
+        result: allergic-to? 0 "tomatoes"
+        assert -> false = result
+    ]
 
-"allergic only to tomatoes"
-    ( 16 "tomatoes" allergic-to? )
-    true?
+    test "allergic only to tomatoes" [
+        result: allergic-to? 16 "tomatoes"
+        assert -> true = result
+    ]
 
-"allergic to tomatoes and something else"
-    ( 56 "tomatoes" allergic-to? )
-    true?
+    test "allergic to tomatoes and something else" [
+        result: allergic-to? 56 "tomatoes"
+        assert -> true = result
+    ]
 
-"allergic to something, but not tomatoes"
-    ( 40 "tomatoes" allergic-to? )
-    false?
+    test "allergic to something, but not tomatoes" [
+        result: allergic-to? 40 "tomatoes"
+        assert -> false = result
+    ]
 
-"allergic to everything, including tomatoes"
-    ( 255 "tomatoes" allergic-to? )
-    true?
+    test "allergic to everything, including tomatoes" [
+        result: allergic-to? 255 "tomatoes"
+        assert -> true = result
+    ]
 
-"not allergic to anything, including chocolate"
-    ( 0 "chocolate" allergic-to? )
-    false?
+    test "not allergic to anything, including chocolate" [
+        result: allergic-to? 0 "chocolate"
+        assert -> false = result
+    ]
 
-"allergic only to chocolate"
-    ( 32 "chocolate" allergic-to? )
-    true?
+    test "allergic only to chocolate" [
+        result: allergic-to? 32 "chocolate"
+        assert -> true = result
+    ]
 
-"allergic to chocolate and something else"
-    ( 112 "chocolate" allergic-to? )
-    true?
+    test "allergic to chocolate and something else" [
+        result: allergic-to? 112 "chocolate"
+        assert -> true = result
+    ]
 
-"allergic to something, but not chocolate"
-    ( 80 "chocolate" allergic-to? )
-    false?
+    test "allergic to something, but not chocolate" [
+        result: allergic-to? 80 "chocolate"
+        assert -> false = result
+    ]
 
-"allergic to everything, including chocolate"
-    ( 255 "chocolate" allergic-to? )
-    true?
+    test "allergic to everything, including chocolate" [
+        result: allergic-to? 255 "chocolate"
+        assert -> true = result
+    ]
 
-"not allergic to anything, including pollen"
-    ( 0 "pollen" allergic-to? )
-    false?
+    test "not allergic to anything, including pollen" [
+        result: allergic-to? 0 "pollen"
+        assert -> false = result
+    ]
 
-"allergic only to pollen"
-    ( 64 "pollen" allergic-to? )
-    true?
+    test "allergic only to pollen" [
+        result: allergic-to? 64 "pollen"
+        assert -> true = result
+    ]
 
-"allergic to pollen and something else"
-    ( 224 "pollen" allergic-to? )
-    true?
+    test "allergic to pollen and something else" [
+        result: allergic-to? 224 "pollen"
+        assert -> true = result
+    ]
 
-"allergic to something, but not pollen"
-    ( 160 "pollen" allergic-to? )
-    false?
+    test "allergic to something, but not pollen" [
+        result: allergic-to? 160 "pollen"
+        assert -> false = result
+    ]
 
-"allergic to everything, including pollen"
-    ( 255 "pollen" allergic-to? )
-    true?
+    test "allergic to everything, including pollen" [
+        result: allergic-to? 255 "pollen"
+        assert -> true = result
+    ]
 
-"not allergic to anything, including cats"
-    ( 0 "cats" allergic-to? )
-    false?
+    test "not allergic to anything, including cats" [
+        result: allergic-to? 0 "cats"
+        assert -> false = result
+    ]
 
-"allergic only to cats"
-    ( 128 "cats" allergic-to? )
-    true?
+    test "allergic only to cats" [
+        result: allergic-to? 128 "cats"
+        assert -> true = result
+    ]
 
-"allergic to cats and something else"
-    ( 192 "cats" allergic-to? )
-    true?
+    test "allergic to cats and something else" [
+        result: allergic-to? 192 "cats"
+        assert -> true = result
+    ]
 
-"allergic to something, but not cats"
-    ( 64 "cats" allergic-to? )
-    false?
+    test "allergic to something, but not cats" [
+        result: allergic-to? 64 "cats"
+        assert -> false = result
+    ]
 
-"allergic to everything, including cats"
-    ( 255 "cats" allergic-to? )
-    true?
+    test "allergic to everything, including cats" [
+        result: allergic-to? 255 "cats"
+        assert -> true = result
+    ]
 
 "no allergies"
     ( 0 list )
