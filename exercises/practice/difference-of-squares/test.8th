@@ -4,7 +4,6 @@
         assert -> 1 = result
     ]
 
-
     test.skip "square of sum 5" [
         result: square-of-sum 5
         assert -> 225 = result

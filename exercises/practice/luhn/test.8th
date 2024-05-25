@@ -4,7 +4,6 @@
         assert -> false = result
     ]
 
-
     test.skip "a single zero is invalid" [
         result: luhn "0"
         assert -> false = result

@@ -4,7 +4,6 @@
         assert -> true = result
     ]
 
-
     test.skip "empty string" [
         result: paired? ""
         assert -> true = result

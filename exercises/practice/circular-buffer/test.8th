@@ -2,7 +2,6 @@
 : throws? \ w -- T
     catch dup if nip then nip
 ;
-
     test.skip "reading empty buffer should fail" [
         result: throws? 1 cb:new ' cb:read
         assert -> true = result
@@ -13,7 +12,6 @@
     ( 1 cb:new 1 cb:write cb:read nip )
     1
     equal?
-
     test.skip "each item may only be read once" [
         result: throws? 1 cb:new 1 cb:write cb:read drop ' cb:read
         assert -> true = result
@@ -23,7 +21,6 @@
     ( 2 cb:new 1 cb:write 2 cb:write cb:read swap cb:read nip 2 a:close )
     [1, 2]
     equal?
-
     test.skip "full buffer can't be written to" [
         result: throws? 1 cb:new 1 cb:write 2 ' cb:write
         assert -> true = result
@@ -38,7 +35,6 @@
     ( 3 cb:new 1 cb:write 2 cb:write cb:read swap 3 cb:write cb:read swap cb:read nip 3 a:close )
     [1, 2, 3]
     equal?
-
     test.skip "items cleared out of buffer can't be read" [
         result: throws? 1 cb:new 1 cb:write cb:clear ' cb:read
         assert -> true = result
@@ -68,7 +64,6 @@
     ( 3 cb:new 1 cb:write 2 cb:write 3 cb:write cb:read swap 4 cb:write 5 cb:overwrite cb:read swap cb:read swap cb:read nip 4 a:close )
     [1, 3, 4, 5]
     equal?
-
     test.skip "initial clear does not affect wrapping around" [
         result: throws? 2 cb:new cb:clear 1 cb:write 2 cb:write 3 cb:overwrite 4 cb:overwrite cb:read drop cb:read drop ' cb:read
         assert -> true = result

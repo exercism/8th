@@ -4,7 +4,6 @@
         assert -> false = result
     ]
 
-
     test.skip "allergic only to eggs" [
         result: allergic-to? 1 "eggs"
         assert -> true = result
