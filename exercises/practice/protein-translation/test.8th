@@ -3,146 +3,146 @@ import {src/protein-translation}!
 
 suite "Protein Translation" [
     test "Empty RNA sequence results in no proteins" [
-        result: >proteins ""
+        result: proteins ""
         assert -> [] = result
     ]
 
     test.skip "Methionine RNA sequence" [
-        result: >proteins "AUG"
+        result: proteins "AUG"
         assert -> ["Methionine"] = result
     ]
 
     test.skip "Phenylalanine RNA sequence 1" [
-        result: >proteins "UUU"
+        result: proteins "UUU"
         assert -> ["Phenylalanine"] = result
     ]
 
     test.skip "Phenylalanine RNA sequence 2" [
-        result: >proteins "UUC"
+        result: proteins "UUC"
         assert -> ["Phenylalanine"] = result
     ]
 
     test.skip "Leucine RNA sequence 1" [
-        result: >proteins "UUA"
+        result: proteins "UUA"
         assert -> ["Leucine"] = result
     ]
 
     test.skip "Leucine RNA sequence 2" [
-        result: >proteins "UUG"
+        result: proteins "UUG"
         assert -> ["Leucine"] = result
     ]
 
     test.skip "Serine RNA sequence 1" [
-        result: >proteins "UCU"
+        result: proteins "UCU"
         assert -> ["Serine"] = result
     ]
 
     test.skip "Serine RNA sequence 2" [
-        result: >proteins "UCC"
+        result: proteins "UCC"
         assert -> ["Serine"] = result
     ]
 
     test.skip "Serine RNA sequence 3" [
-        result: >proteins "UCA"
+        result: proteins "UCA"
         assert -> ["Serine"] = result
     ]
 
     test.skip "Serine RNA sequence 4" [
-        result: >proteins "UCG"
+        result: proteins "UCG"
         assert -> ["Serine"] = result
     ]
 
     test.skip "Tyrosine RNA sequence 1" [
-        result: >proteins "UAU"
+        result: proteins "UAU"
         assert -> ["Tyrosine"] = result
     ]
 
     test.skip "Tyrosine RNA sequence 2" [
-        result: >proteins "UAC"
+        result: proteins "UAC"
         assert -> ["Tyrosine"] = result
     ]
 
     test.skip "Cysteine RNA sequence 1" [
-        result: >proteins "UGU"
+        result: proteins "UGU"
         assert -> ["Cysteine"] = result
     ]
 
     test.skip "Cysteine RNA sequence 2" [
-        result: >proteins "UGC"
+        result: proteins "UGC"
         assert -> ["Cysteine"] = result
     ]
 
     test.skip "Tryptophan RNA sequence" [
-        result: >proteins "UGG"
+        result: proteins "UGG"
         assert -> ["Tryptophan"] = result
     ]
 
     test.skip "STOP codon RNA sequence 1" [
-        result: >proteins "UAA"
+        result: proteins "UAA"
         assert -> [] = result
     ]
 
     test.skip "STOP codon RNA sequence 2" [
-        result: >proteins "UAG"
+        result: proteins "UAG"
         assert -> [] = result
     ]
 
     test.skip "STOP codon RNA sequence 3" [
-        result: >proteins "UGA"
+        result: proteins "UGA"
         assert -> [] = result
     ]
 
     test.skip "Sequence of two protein codons translates into proteins" [
-        result: >proteins "UUUUUU"
+        result: proteins "UUUUUU"
         assert -> ["Phenylalanine", "Phenylalanine"] = result
     ]
 
     test.skip "Sequence of two different protein codons translates into proteins" [
-        result: >proteins "UUAUUG"
+        result: proteins "UUAUUG"
         assert -> ["Leucine", "Leucine"] = result
     ]
 
     test.skip "Translate RNA strand into correct protein list" [
-        result: >proteins "AUGUUUUGG"
+        result: proteins "AUGUUUUGG"
         assert -> ["Methionine", "Phenylalanine", "Tryptophan"] = result
     ]
 
     test.skip "Translation stops if STOP codon at beginning of sequence" [
-        result: >proteins "UAGUGG"
+        result: proteins "UAGUGG"
         assert -> [] = result
     ]
 
     test.skip "Translation stops if STOP codon at end of two-codon sequence" [
-        result: >proteins "UGGUAG"
+        result: proteins "UGGUAG"
         assert -> ["Tryptophan"] = result
     ]
 
     test.skip "Translation stops if STOP codon at end of three-codon sequence" [
-        result: >proteins "AUGUUUUAA"
+        result: proteins "AUGUUUUAA"
         assert -> ["Methionine", "Phenylalanine"] = result
     ]
 
     test.skip "Translation stops if STOP codon in middle of three-codon sequence" [
-        result: >proteins "UGGUAGUGG"
+        result: proteins "UGGUAGUGG"
         assert -> ["Tryptophan"] = result
     ]
 
     test.skip "Translation stops if STOP codon in middle of six-codon sequence" [
-        result: >proteins "UGGUGUUAUUAAUGGUUU"
+        result: proteins "UGGUGUUAUUAAUGGUUU"
         assert -> ["Tryptophan", "Cysteine", "Tyrosine"] = result
     ]
 
     test.skip "Unknown amino acids, not part of a codon, can't translate" [
-        result: >proteins "XYZ"
+        result: proteins "XYZ"
         assert -> null = result
     ]
 
     test.skip "Incomplete RNA sequence can't translate" [
-        result: >proteins "AUGU"
+        result: proteins "AUGU"
         assert -> null = result
     ]    
     test.skip "Incomplete RNA sequence can translate if valid until a STOP codon" [
-        result: >proteins "UUCUUCUAAUGGU"
+        result: proteins "UUCUUCUAAUGGU"
         assert -> ["Phenylalanine", "Phenylalanine"] = result
     ]
 ]

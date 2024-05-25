@@ -52,7 +52,7 @@ suite "Space Age" [
     approx_equal?
 
     test.skip "invalid planet causes error" [
-        result: >age 680804807 "Sun"
+        result: age 680804807 "Sun"
         assert -> null = result
     ]
 ]

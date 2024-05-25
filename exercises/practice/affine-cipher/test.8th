@@ -7,76 +7,76 @@ with: test
 
 16 tests    
     test.skip "encode yes" [
-        result: >code "yes" 5 7
+        result: code "yes" 5 7
         assert -> "xbt" = result
     ]
 
     test.skip "encode no" [
-        result: >code "no" 15 18
+        result: code "no" 15 18
         assert -> "fu" = result
     ]
 
     test.skip "encode OMG" [
-        result: >code "OMG" 21 3
+        result: code "OMG" 21 3
         assert -> "lvz" = result
     ]
 
     test.skip "encode O M G" [
-        result: >code "O M G" 25 47
+        result: code "O M G" 25 47
         assert -> "hjp" = result
     ]
 
     test.skip "encode mindblowingly" [
-        result: >code "mindblowingly" 11 15
+        result: code "mindblowingly" 11 15
         assert -> "rzcwa gnxzc dgt" = result
     ]
 
     test.skip "encode numbers" [
-        result: >code "Testing,1 2 3, testing." 3 4
+        result: code "Testing,1 2 3, testing." 3 4
         assert -> "jqgjc rw123 jqgjc rw" = result
     ]
 
     test.skip "encode deep thought" [
-        result: >code "Truth is fiction." 5 17
+        result: code "Truth is fiction." 5 17
         assert -> "iynia fdqfb ifje" = result
     ]
 
     test.skip "encode all the letters" [
-        result: >code "The quick brown fox jumps over the lazy dog." 17 33
+        result: code "The quick brown fox jumps over the lazy dog." 17 33
         assert -> "swxtj npvyk lruol iejdc blaxk swxmh qzglf" = result
     ]
 
     test.skip "encode with a not coprime to m" [
-        result: >code "This is a test." 6 17
+        result: code "This is a test." 6 17
         assert -> null = result
     ]    
     test.skip "decode exercism" [
-        result: code> "tytgn fjr" 3 7
+        result: code "tytgn fjr" 3 7
         assert -> "exercism" = result
     ]
 
     test.skip "decode a sentence" [
-        result: code> "qdwju nqcro muwhn odqun oppmd aunwd o" 19 16
+        result: code "qdwju nqcro muwhn odqun oppmd aunwd o" 19 16
         assert -> "anobstacleisoftenasteppingstone" = result
     ]
 
     test.skip "decode numbers" [
-        result: code> "odpoz ub123 odpoz ub" 25 7
+        result: code "odpoz ub123 odpoz ub" 25 7
         assert -> "testing123testing" = result
     ]
 
     test.skip "decode all the letters" [
-        result: code> "swxtj npvyk lruol iejdc blaxk swxmh qzglf" 17 33
+        result: code "swxtj npvyk lruol iejdc blaxk swxmh qzglf" 17 33
         assert -> "thequickbrownfoxjumpsoverthelazydog" = result
     ]
 
     test.skip "decode with no spaces in input" [
-        result: code> "swxtjnpvyklruoliejdcblaxkswxmhqzglf" 17 33
+        result: code "swxtjnpvyklruoliejdcblaxkswxmhqzglf" 17 33
         assert -> "thequickbrownfoxjumpsoverthelazydog" = result
     ]
 
     test.skip "decode with too many spaces" [
-        result: code> "vszzm    cly   yd cg    qdp" 15 16
+        result: code "vszzm    cly   yd cg    qdp" 15 16
         assert -> "jollygreengiant" = result
     ]
 

@@ -3,52 +3,52 @@ import {src/trinary}!
 
 suite "Trinary (Base-3) Numbers" [
     test "1 is decimal 1" [
-        result: trinary> "1"
+        result: trinary "1"
         assert -> 1 = result
     ]
 
     test.skip "2 is decimal 2" [
-        result: trinary> "2"
+        result: trinary "2"
         assert -> 2 = result
     ]
 
     test.skip "10 is decimal 3" [
-        result: trinary> "10"
+        result: trinary "10"
         assert -> 3 = result
     ]
 
     test.skip "11 is decimal 4" [
-        result: trinary> "11"
+        result: trinary "11"
         assert -> 4 = result
     ]
 
     test.skip "100 is decimal 9" [
-        result: trinary> "100"
+        result: trinary "100"
         assert -> 9 = result
     ]
 
     test.skip "112 is decimal 14" [
-        result: trinary> "112"
+        result: trinary "112"
         assert -> 14 = result
     ]
 
     test.skip "222 is decimal 26" [
-        result: trinary> "222"
+        result: trinary "222"
         assert -> 26 = result
     ]
 
     test.skip "1122000120 is decimal 32091" [
-        result: trinary> "1122000120"
+        result: trinary "1122000120"
         assert -> 32091 = result
     ]
 
     test.skip "invalid trinary is decimal 0" [
-        result: trinary> "carrot"
+        result: trinary "carrot"
         assert -> 0 = result
     ]
 
     test.skip "digits from 3 to 9 are invalid" [
-        result: trinary> "123"
+        result: trinary "123"
         assert -> 0 = result
     ]
 
