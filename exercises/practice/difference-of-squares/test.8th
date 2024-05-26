@@ -1,7 +1,8 @@
 import {unitt}!
 import {src/difference-of-squares}!
 
-suite "Difference of Squares" [    test.skip "square of sum 1" [
+suite "Difference of Squares"[
+    test "square of sum 1" [
         result: squareOfSum 1
         assert -> 1 = result
     ]

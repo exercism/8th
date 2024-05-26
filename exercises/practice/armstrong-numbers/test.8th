@@ -56,6 +56,4 @@ suite "Armstrong Numbers" [
         result: armstrong? 115132219018763992565095597973971522401
         assert -> true = result
     ]
-
-
 ]

@@ -1,7 +1,8 @@
 import {unitt}!
 import {src/square-root}!
 
-suite "Square Root" [    test.skip "root of 1" [
+suite "Square Root"[
+    test "root of 1" [
         result: squareRoot 1
         assert -> 1 = result
     ]

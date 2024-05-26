@@ -21,6 +21,4 @@ suite "Eliud's Eggs" [
         result: eggCount 2000000000
         assert -> 13 = result
     ]
-
-
 ]

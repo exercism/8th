@@ -31,6 +31,4 @@ suite "Reverse string" [
         result: reverse "drawer"
         assert -> "reward" = result
     ]
-
-
 ]

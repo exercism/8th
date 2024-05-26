@@ -71,6 +71,4 @@ suite "Isogram" [
         result: isogram? "up-to-date"
         assert -> false = result
     ]
-
-
 ]

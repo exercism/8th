@@ -106,6 +106,4 @@ suite "Triangle" [
         result: scalene? 0 3 0
         assert -> false = result
     ]
-
-
 ]

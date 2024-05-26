@@ -71,6 +71,4 @@ suite "Word Count" [
         result: wordCount "can, can't, 'can't'"
         assert -> { "can":1,"can't":2 } = result
     ]
-
-
 ]

@@ -46,6 +46,4 @@ suite "Hamming" [
         result: distance "G" ""
         assert -> null = result
     ]
-
-
 ]

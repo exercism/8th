@@ -1,7 +1,8 @@
 import {unitt}!
 import {src/dnd-character}!
 
-suite "D&D Character" [    test.skip "ability modifier for score 3 is neg 4" [
+suite "D&D Character"[
+    test "ability modifier for score 3 is neg 4" [
         result: modifier 3
         assert -> neg 4 = result
     ]

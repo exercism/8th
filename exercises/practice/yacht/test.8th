@@ -149,6 +149,4 @@ with: test
         result: play_yacht [2, 2, 2, 2, 2] "choice" 
         assert -> 10 = result
     ]
-
-
 ]

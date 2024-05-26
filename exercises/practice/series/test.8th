@@ -56,6 +56,4 @@ suite "Series" [
         result: slices "" 1
         assert -> []  = result
     ]
-
-
 ]

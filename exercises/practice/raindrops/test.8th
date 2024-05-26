@@ -91,6 +91,4 @@ suite "Raindrops" [
         result: raindrops 9
         assert -> "Pling" = result
     ]
-
-
 ]

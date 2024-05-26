@@ -1,7 +1,8 @@
 import {unitt}!
 import {src/luhn}!
 
-suite "Luhn Credit Card Number Checker" [    test.skip "single digit strings can not be valid" [
+suite "Luhn Credit Card Number Checker"[
+    test "single digit strings can not be valid" [
         result: luhn "1"
         assert -> false = result
     ]
@@ -110,6 +111,4 @@ suite "Luhn Credit Card Number Checker" [    test.skip "single digit strings can
         result: luhn "59%59"
         assert -> false = result
     ]
-
-
 ]

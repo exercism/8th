@@ -1,7 +1,8 @@
 import {unitt}!
 import {src/grains}!
 
-suite "Grains" [    test.skip "grains on square 1" [
+suite "Grains"[
+    test "grains on square 1" [
         result: square 1
         assert -> 1 = result
     ]

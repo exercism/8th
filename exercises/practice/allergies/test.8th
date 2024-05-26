@@ -1,7 +1,8 @@
 import {unitt}!
 import {src/allergies}!
 
-suite "Allergies" [    test.skip "not allergic to anything, including eggs" [
+suite "Allergies"[
+    test "not allergic to anything, including eggs" [
         result: allergicTo? 0 "eggs"
         assert -> false = result
     ]

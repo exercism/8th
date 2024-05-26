@@ -71,6 +71,4 @@ suite "Atbash Cipher" [
         result: atbash "zmlyhgzxovrhlugvmzhgvkkrmthglmv"
         assert -> "anobstacleisoftenasteppingstone" = result
     ]
-
-
 ]

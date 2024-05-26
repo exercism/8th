@@ -1,7 +1,8 @@
 import {unitt}!
 import {src/matching-brackets}!
 
-suite "Matching Brackets" [    test.skip "paired square brackets" [
+suite "Matching Brackets"[
+    test "paired square brackets" [
         result: paired? "[]"
         assert -> true = result
     ]

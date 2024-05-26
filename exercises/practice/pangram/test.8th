@@ -1,7 +1,8 @@
 import {unitt}!
 import {src/pangram}!
 
-suite "Pangram" [    test.skip "empty sentence" [
+suite "Pangram"[
+    test "empty sentence" [
         result: pangram? ""
         assert -> false = result
     ]
@@ -50,6 +51,4 @@ suite "Pangram" [    test.skip "empty sentence" [
         result: pangram? "the_quick_brown_fox_jumps_over_the_lazy_dog"
         assert -> true = result
     ]
-
-
 ]

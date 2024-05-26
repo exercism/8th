@@ -51,6 +51,4 @@ suite "Trinary (Base-3) Numbers" [
         result: trinary "123"
         assert -> 0 = result
     ]
-
-
 ]

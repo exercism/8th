@@ -24,6 +24,4 @@ with: test
         result: twoFer "הַצְּלֶלְפּוֹנִי"
         assert -> "One for הַצְּלֶלְפּוֹנִי, one for me." = result
     ]
-
-
 ]
