@@ -140,7 +140,8 @@ suite "Protein Translation" [
     test.skip "Incomplete RNA sequence can't translate" [
         result: proteins "AUGU"
         assert -> null = result
-    ]    
+    ]
+
     test.skip "Incomplete RNA sequence can translate if valid until a STOP codon" [
         result: proteins "UUCUUCUAAUGGU"
         assert -> ["Phenylalanine", "Phenylalanine"] = result

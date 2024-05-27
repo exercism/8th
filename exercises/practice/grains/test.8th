@@ -45,7 +45,8 @@ suite "Grains"[
     test.skip "negative square is invalid" [
         result: square neg 1
         assert -> null = result
-    ]    
+    ]
+
     test.skip "square greater than 64 is invalid" [
         result: square 65
         assert -> null = result

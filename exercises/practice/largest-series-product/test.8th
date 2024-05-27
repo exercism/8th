@@ -50,7 +50,8 @@ suite "Largest Series Product" [
     test.skip "rejects span longer than string length" [
         result: largestProduct "123" 4
         assert -> null = result
-    ]    
+    ]
+
     test.skip "reports 1 for empty string and empty product (0 span)" [
         result: largestProduct "" 0
         assert -> 1 = result
