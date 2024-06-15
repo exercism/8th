@@ -66,7 +66,7 @@ true var, run-test
    date?   if d:= ;then
 
    \ otherwise fall back to 'lazy evaluation'
-   l: =
+   G:l: =
 ;
 
 : eps_eq? \ n x x -- T
