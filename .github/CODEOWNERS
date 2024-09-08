@@ -1,6 +1,6 @@
 # Code owners
-.github/CODEOWNERS          @exercism/maintainers-admin
+.github/CODEOWNERS          @exercism/guardians
 
 # Changes to `fetch-configlet` should be made in the `exercism/configlet` repo
-bin/fetch-configlet         @exercism/maintainers-admin
-bin/fetch-configlet.ps1     @exercism/maintainers-admin
+bin/fetch-configlet         @exercism/guardians
+bin/fetch-configlet.ps1     @exercism/guardians
