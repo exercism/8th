@@ -159,53 +159,13 @@ false?
 "allergic to everything, including cats"
 (255 "cats" allergic-to?)
 true?
-
-"no allergies"
-(0 list)
-[]
-=?
-
-"just eggs"
-(1 list)
-["eggs"]
-=?
-
-"just peanuts"
-(2 list)
-["peanuts"]
-=?
-
-"just strawberries"
-(8 list)
-["strawberries"]
-=?
-
-"eggs and peanuts"
-(3 list)
-["eggs", "peanuts"]
-=?
-
-"more than eggs but not peanuts"
-(5 list)
-["eggs", "shellfish"]
-=?
-
-"lots of stuff"
-(248 list)
-["strawberries", "tomatoes", "chocolate", "pollen", "cats"]
-=?
-
-"everything"
-(255 list)
-["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
-=?
-
-"no allergen score parts"
-(509 list)
-["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
-=?
-
-"no allergen score parts without highest valid score"
-(257 list)
-["eggs"]
-=?
+⍤⤙≍ [] list 0                                                                                            # no allergies?
+⍤⤙≍ ["eggs"] list 1                                                                                      # just eggs?
+⍤⤙≍ ["peanuts"] list 2                                                                                   # just peanuts?
+⍤⤙≍ ["strawberries"] list 8                                                                              # just strawberries?
+⍤⤙≍ ["eggs", "peanuts"] list 3                                                                           # eggs and peanuts?
+⍤⤙≍ ["eggs", "shellfish"] list 5                                                                         # more than eggs but not peanuts?
+⍤⤙≍ ["strawberries", "tomatoes", "chocolate", "pollen", "cats"] list 248                                 # lots of stuff?
+⍤⤙≍ ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] list 255 # everything?
+⍤⤙≍ ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] list 509            # no allergen score parts?
+⍤⤙≍ ["eggs"] list 257                                                                                    # no allergen score parts without highest valid score?

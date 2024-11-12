@@ -1,8 +1,5 @@
 ~ "gigasecond.ua" ~ Hello
 
-\Workaround ⊃https://8th-dev.ℂ/bin/bugs/tktview/624833cc8d
-0 d:updatetz
-
 "date only specification of time"
 ([2011, 4, 25, 0, 0, 0, 0, 0, 0, 0] d:⊂ +gigasecond)
 [2043, 1, 1, 1, 46, 40, 0, 0, 0, 0] d:⊂

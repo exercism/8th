@@ -1,71 +1,16 @@
 ~ "word-count.ua" ~ Hello
 
-"count one word"
-("word" word-count)
-{"word":1}
-=?
-
-"count one of each word"
-("one of each" word-count)
-{"one":1,"of":1,"each":1}
-=?
-
-"multiple occurrences of a word"
-("one fish two fish red fish blue fish" word-count)
-{"one":1,"fish":4,"two":1,"red":1,"blue":1}
-=?
-
-"handles cramped lists"
-("one,two,three" word-count)
-{"one":1,"two":1,"three":1}
-=?
-
-"handles expanded lists"
-("one,\ntwo,\nthree" word-count)
-{"one":1,"two":1,"three":1}
-=?
-
-"ignore punctuation"
-("car: carpet as java: javascript!!&@$%^&" word-count)
-{"car":1,"carpet":1,"as":1,"java":1,"javascript":1}
-=?
-
-"include numbers"
-("testing, 1, 2 testing" word-count)
-{"testing":2,"1":1,"2":1}
-=?
-
-"normalize case"
-("go Go GO Stop stop" word-count)
-{"go":3,"stop":2}
-=?
-
-"with apostrophes"
-("First: don't laugh. Then: don't cry. You're getting it." word-count)
-{"first":1,"don't":2,"laugh":1,"then":1,"cry":1,"you're":1,"getting":1,"it":1}
-=?
-
-"with quotations"
-("Joe can't tell between 'large' and large." word-count)
-{"joe":1,"can't":1,"tell":1,"between":1,"large":2,"and":1}
-=?
-
-"substrings from the beginning"
-("Joe can't tell between app, apple and a." word-count)
-{"joe":1,"can't":1,"tell":1,"between":1,"app":1,"apple":1,"and":1,"a":1}
-=?
-
-"multiple spaces not detected as a word"
-(" multiple whitespaces" word-count)
-{"multiple":1,"whitespaces":1}
-=?
-
-"alternating word separators not detected as a word"
-(",\n,one,\n ,two \n 'three'" word-count)
-{"one":1,"two":1,"three":1}
-=?
-
-"quotation for word with apostrophe"
-("can, can't, 'can't'" word-count)
-{"can":1,"can't":2}
-=?
+⍤⤙≍ {"word":1} word-count "word"                                                                                                                        # count one word?
+⍤⤙≍ {"one":1,"of":1,"each":1} word-count "one of each"                                                                                                  # count one of each word?
+⍤⤙≍ {"one":1,"fish":4,"two":1,"red":1,"blue":1} word-count "one fish two fish red fish blue fish"                                                       # multiple occurrences of a word?
+⍤⤙≍ {"one":1,"two":1,"three":1} word-count "one,two,three"                                                                                              # handles cramped lists?
+⍤⤙≍ {"one":1,"two":1,"three":1} word-count "one,\ntwo,\nthree"                                                                                          # handles expanded lists?
+⍤⤙≍ {"car":1,"carpet":1,"as":1,"java":1,"javascript":1} word-count "car: carpet as java: javascript!!&@$%^&"                                            # ignore punctuation?
+⍤⤙≍ {"testing":2,"1":1,"2":1} word-count "testing, 1, 2 testing"                                                                                        # include numbers?
+⍤⤙≍ {"go":3,"stop":2} word-count "go Go GO Stop stop"                                                                                                   # normalize case?
+⍤⤙≍ {"first":1,"don't":2,"laugh":1,"then":1,"cry":1,"you're":1,"getting":1,"it":1} word-count "First: don't laugh. Then: don't cry. You're getting it." # with apostrophes?
+⍤⤙≍ {"joe":1,"can't":1,"tell":1,"between":1,"large":2,"and":1} word-count "Joe can't tell between 'large' and large."                                   # with quotations?
+⍤⤙≍ {"joe":1,"can't":1,"tell":1,"between":1,"app":1,"apple":1,"and":1,"a":1} word-count "Joe can't tell between app, apple and a."                      # substrings from the beginning?
+⍤⤙≍ {"multiple":1,"whitespaces":1} word-count " multiple whitespaces"                                                                                   # multiple spaces not detected as a word?
+⍤⤙≍ {"one":1,"two":1,"three":1} word-count ",\n,one,\n ,two \n 'three'"                                                                                 # alternating word separators not detected as a word?
+⍤⤙≍ {"can":1,"can't":2} word-count "can, can't, 'can't'"                                                                                                # quotation for word with apostrophe?

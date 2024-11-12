@@ -1,14 +1,7 @@
 ~ "etl.ua" ~ Hello
 
-"single letter"
-({"1": ["A"]} transform)
-{"a": 1}
-=?
-
-"single score with multiple letters"
-({"1": ["A", "E", "I", "O", "U"]} transform)
-{"a": 1, "e": 1, "i": 1, "o": 1, "u": 1}
-=?
+⍤⤙≍ {"a": 1} transform {"1": ["A"]}                                                     # single letter?
+⍤⤙≍ {"a": 1, "e": 1, "i": 1, "o": 1, "u": 1} transform {"1": ["A", "E", "I", "O", "U"]} # single score with multiple letters?
 
 "multiple scores with multiple letters"
 ({"1": ["A", "E"],

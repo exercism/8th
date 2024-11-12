@@ -1,42 +1,8 @@
 ~ "hamming.ua" ~ Hello
 
-"empty strands"
-("" "" distance)
-0
-=?
-
-"single letter identical strands"
-("A" "A" distance)
-0
-=?
-
-"long indentical strands"
-("GGACTGAAATCTG" "GGACTGAAATCTG" distance)
-0
-=?
-
-"single letter different strands"
-("G" "T" distance)
-1
-=?
-
-"long different strands"
-("GGACGGATTCTG" "AGGACGGATTCT" distance)
-9
-=?
-
-"disallow empty first strand"
-("" "G" distance)
-null?
-
-"disallow first strand longer"
-("AATG" "AAA" distance)
-null?
-
-"disallow second strand longer"
-("ATA" "AGTG" distance)
-null?
-
-"disallow empty second strand"
-("G" "" distance)
-null?
+⍤⤙≍ 0 distance "" ""                           # empty strands?
+⍤⤙≍ 0 distance "A" "A"                         # single letter identical strands?
+⍤⤙≍ 0 distance "GGACTGAAATCTG" "GGACTGAAATCTG" # long indentical strands?
+⍤⤙≍ 1 distance "G" "T"                         # single letter different strands?
+⍤⤙≍ 9 distance "GGACGGATTCTG" "AGGACGGATTCT"   # long different strands?
+⍤⤙≍ null? distance "" "G"                      # disallow empty first strand⍤⤙≍ null? distance "AATG" "AAA" # disallow first strand longer⍤⤙≍ null? distance "ATA" "AGTG" # disallow second strand longer⍤⤙≍ null? distance "G" ""       # disallow empty second strand

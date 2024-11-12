@@ -1,29 +1,7 @@
 ~ "collatz-conjecture.ua" ~ Hello
 
-"zero steps for one"
-(1 collatz)
-0
-=?
-
-"large number of even and odd steps"
-(1000000 collatz)
-152
-=?
-
-"even and odd steps"
-(12 collatz)
-9
-=?
-
-"divide if even"
-(16 collatz)
-4
-=?
-
-"zero is an error"
-(0 collatz)
-null?
-
-"negative value is an error"
-(-15 collatz)
-null?
+⍤⤙≍ 0 collatz 1         # zero steps for one?
+⍤⤙≍ 152 collatz 1000000 # large number of even and odd steps?
+⍤⤙≍ 9 collatz 12        # even and odd steps?
+⍤⤙≍ 4 collatz 16        # divide if even?
+⍤⤙≍ null? collatz 0     # zero is an error⍤⤙≍ null? collatz -15 # negative value is an error

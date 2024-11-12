@@ -1,46 +1,11 @@
 ~ "acronym.ua" ~ Hello
 
-"ignoring punctuation and casing"
-("Complementary metal-oxide semiconductor" acronym)
-"CMOS"
-=?
-
-"ignores punctuation"
-("First In, First Out" acronym)
-"FIFO"
-=?
-
-"from phrases with acronyms"
-("GNU Image Manipulation Program" acronym)
-"GIMP"
-=?
-
-"from phrases with apostrophes"
-("Halley's Comet" acronym)
-"HC"
-=?
-
-"from title case"
-("Portable Network Graphics" acronym)
-"PNG"
-=?
-
-"from lower case"
-("Ruby on Rails" acronym)
-"ROR"
-=?
-
-"from a very long abbreviation"
-("Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me" acronym)
-"ROTFLSHTMDCOALM"
-=?
-
-"from phrases with consecutive delimiters"
-("Something - I made up from thin air" acronym)
-"SIMUFTA"
-=?
-
-"from phrases with underscore emphasis"
-("The Road _Not_ Taken" acronym)
-"TRNT"
-=?
+⍤⤙≍ "CMOS" acronym "Complementary metal-oxide semiconductor"                                               # ignoring punctuation and casing?
+⍤⤙≍ "FIFO" acronym "First In, First Out"                                                                   # ignores punctuation?
+⍤⤙≍ "GIMP" acronym "GNU Image Manipulation Program"                                                        # from phrases with acronyms?
+⍤⤙≍ "HC" acronym "Halley's Comet"                                                                          # from phrases with apostrophes?
+⍤⤙≍ "PNG" acronym "Portable Network Graphics"                                                              # from title case?
+⍤⤙≍ "ROR" acronym "Ruby on Rails"                                                                          # from lower case?
+⍤⤙≍ "ROTFLSHTMDCOALM" acronym "Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me" # from a very long abbreviation?
+⍤⤙≍ "SIMUFTA" acronym "Something - I made up from thin air"                                                # from phrases with consecutive delimiters?
+⍤⤙≍ "TRNT" acronym "The Road _Not_ Taken"                                                                  # from phrases with underscore emphasis?
