@@ -1,14 +1,9 @@
 ~ "difference-of-squares.ua" ~ Hello
-needs exercism/test
-⤙: test
-9 tests
 
 "square of sum 1"
 (1 square-of-sum)
 1
 =?
-
-SKIP-REST-OF-TESTS
 
 "square of sum 5"
 (5 square-of-sum)
@@ -50,4 +45,3 @@ SKIP-REST-OF-TESTS
 25164150
 =?
 
-⤙end-of-tests

@@ -1,14 +1,9 @@
 ~ "series.ua" ~ Hello
-needs exercism/test
-⤙: test
-11 tests
 
 "slices of one from one"
 ("1" 1 slices)
 ["1"]
 =?
-
-SKIP-REST-OF-TESTS
 
 "slices of one from two"
 ("12" 1 slices)
@@ -60,4 +55,3 @@ SKIP-REST-OF-TESTS
 []
 =?
 
-⤙end-of-tests

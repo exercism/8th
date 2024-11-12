@@ -8,8 +8,6 @@ with: test
     0
     equal?
 
-SKIP-REST-OF-TESTS
-
 "one item, too heavy"
     ( 10 [{"weight": 100, "value": 1}] maximum-value )
     0
@@ -40,5 +38,4 @@ SKIP-REST-OF-TESTS
     1458
     equal?
 
-end-of-tests
-;with
+

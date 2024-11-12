@@ -66,5 +66,4 @@ SKIP-REST-OF-TESTS
     {"a": 50, "b": 100, "c": 150}
     equal?
 
-end-of-tests
-;with
+

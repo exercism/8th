@@ -1,14 +1,9 @@
 ~ "matrix.ua" ~ Hello
-needs exercism/test
-⤙: test
-8 tests
 
 "extract row from one number matrix"
 ("1" 1 ≡)
 [1]
 =?
-
-SKIP-REST-OF-TESTS
 
 "can extract row"
 ("1 2\n3 4" 2 ≡)
@@ -45,4 +40,3 @@ SKIP-REST-OF-TESTS
 [1903, 3, 4]
 =?
 
-⤙end-of-tests

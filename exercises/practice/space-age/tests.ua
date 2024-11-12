@@ -1,15 +1,10 @@
 ~ "space-age.ua" ~ Hello
-needs exercism/test
-⤙: test
-9 tests
 
 "age on Earth"
 (1000000000 "Earth" >age)
 31.69
 0.01
 approx_=?
-
-SKIP-REST-OF-TESTS
 
 "age on Mercury"
 (2134835688 "Mercury" >age)
@@ -57,4 +52,3 @@ approx_=?
 (680804807 "Sun" >age)
 null?
 
-⤙end-of-tests

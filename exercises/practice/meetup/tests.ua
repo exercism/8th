@@ -1,7 +1,4 @@
 ~ "meetup.ua" ~ Hello
-needs exercism/test
-⤙: test
-95 tests
 
 : >date-only \d -- d
 d:/0 3 a:slice [0, 0, 0, 0, 0, 0, 0] a:+ d:⊂
@@ -10,8 +7,6 @@ d:/0 3 a:slice [0, 0, 0, 0, 0, 0, 0] a:+ d:⊂
 (2013 5 "Monday" "teenth" meetup >date-only)
 [2013, 5, 13, 0, 0, 0, 0, 0, 0, 0] d:⊂
 =?
-
-SKIP-REST-OF-TESTS
 
 "when teenth Monday is the 19th, the last day of the teenth week"
 (2013 8 "Monday" "teenth" meetup >date-only)
@@ -483,4 +478,3 @@ SKIP-REST-OF-TESTS
 [2012, 12, 7, 0, 0, 0, 0, 0, 0, 0] d:⊂
 =?
 
-⤙end-of-tests

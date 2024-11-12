@@ -1,14 +1,10 @@
 ~ "reverse-string.ua" ~ Hello
-needs exercism/test
-⤙: test
-6 tests
+
 
 "an empty string"
 ("" ⇌)
 ""
 =?
-
-SKIP-REST-OF-TESTS
 
 "a word"
 ("robot" ⇌)
@@ -35,4 +31,3 @@ SKIP-REST-OF-TESTS
 "reward"
 =?
 
-⤙end-of-tests

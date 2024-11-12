@@ -1,8 +1,5 @@
 ~ "acronym.ua" ~ Hello
-needs exercism/test
-⤙: test
 
-9 tests
 
 "ignoring punctuation and casing"
 ("Complementary metal-oxide semiconductor" acronym)

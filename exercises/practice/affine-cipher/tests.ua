@@ -1,8 +1,5 @@
 ~ "affine-cipher.ua" ~ Hello
-needs exercism/test
-⤙: test
 
-16 tests
 
 "encode yes"
 ("yes" 5 7 >code)

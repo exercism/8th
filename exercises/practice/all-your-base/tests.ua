@@ -1,14 +1,10 @@
 ~ "all-your-base.ua" ~ Hello
-needs exercism/test
-⤙: test
-21 tests
+
 
 "single bit one to decimal"
 (2 [1] 10 rebase)
 [1]
 =?
-
-SKIP-REST-OF-TESTS
 
 "binary to single decimal"
 (2 [1, 0, 1] 10 rebase)
@@ -101,4 +97,3 @@ null?
 (-2 [1] -7 rebase)
 null?
 
-⤙end-of-tests
