@@ -1,14 +1,9 @@
 ~ "largest-series-product.ua" ~ Hello
-needs exercism/test
-⤙: test
-15 tests
 
 "finds the largest product if span equals length"
 ("29" 2 largest-product)
 18
 =?
-
-SKIP-REST-OF-TESTS
 
 "can find the largest product of 2 with numbers in order"
 ("0123456789" 2 largest-product)
@@ -75,5 +70,3 @@ null?
 "rejects negative span"
 ("12345" -1 largest-product)
 null?
-
-⤙end-of-tests

@@ -1,7 +1,4 @@
 ~ "food-chain.ua" ~ Hello
-needs exercism/test
-⤙: test
-10 tests
 
 "fly"
 (1 1 recite)
@@ -9,8 +6,6 @@ needs exercism/test
  "I don't know why she swallowed the fly. Perhaps she'll die."
 ]
 =?
-
-SKIP-REST-OF-TESTS
 
 "spider"
 (2 2 recite)
@@ -160,5 +155,3 @@ SKIP-REST-OF-TESTS
  "She's dead, of course!"
 ]
 =?
-
-⤙end-of-tests

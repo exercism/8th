@@ -1,10 +1,6 @@
 ~ "isogram.ua" ~ Hello
-needs exercism/test
-⤙: test
-14 tests
 
 "empty string" ("" isogram?) true?
-SKIP-REST-OF-TESTS
 "isogram with only lower case characters" ("isogram" isogram?) true?
 "word with one duplicated character" ("eleven" isogram?) false?
 "word with one duplicated character from the end of the alphabet" ("zzyzx" isogram?) false?
@@ -18,5 +14,3 @@ SKIP-REST-OF-TESTS
 "duplicated character in the middle" ("accentor" isogram?) false?
 "same first and last characters" ("angola" isogram?) false?
 "word with duplicated character and with two hyphens" ("up-to-date" isogram?) false?
-
-⤙end-of-tests

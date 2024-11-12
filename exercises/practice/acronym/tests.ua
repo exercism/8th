@@ -1,12 +1,9 @@
 ~ "acronym.ua" ~ Hello
 
-
 "ignoring punctuation and casing"
 ("Complementary metal-oxide semiconductor" acronym)
 "CMOS"
 =?
-
-SKIP-REST-OF-TESTS
 
 "ignores punctuation"
 ("First In, First Out" acronym)
@@ -47,5 +44,3 @@ SKIP-REST-OF-TESTS
 ("The Road _Not_ Taken" acronym)
 "TRNT"
 =?
-
-⤙end-of-tests

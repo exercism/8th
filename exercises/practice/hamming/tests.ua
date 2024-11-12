@@ -1,14 +1,9 @@
 ~ "hamming.ua" ~ Hello
-needs exercism/test
-⤙: test
-9 tests
 
 "empty strands"
 ("" "" distance)
 0
 =?
-
-SKIP-REST-OF-TESTS
 
 "single letter identical strands"
 ("A" "A" distance)
@@ -45,5 +40,3 @@ null?
 "disallow empty second strand"
 ("G" "" distance)
 null?
-
-⤙end-of-tests

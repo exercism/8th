@@ -1,14 +1,9 @@
 ~ "strain.ua" ~ Hello
-needs exercism/test
-⤙: test
-14 tests
 
 "keep on empty list returns empty list"
 ([] (↘ true) ▽)
 []
 =?
-
-SKIP-REST-OF-TESTS
 
 "keeps everything"
 ([1, 3, 5] (↘ true) ▽)
@@ -74,5 +69,3 @@ SKIP-REST-OF-TESTS
 ([[1, 2, 3], [5, 5, 5], [5, 1, 2], [2, 1, 2], [1, 5, 2], [2, 2, 1], [1, 2, 5]] (5 ’ n:= a:⊗ nip number? nip) discard)
 [[1, 2, 3], [2, 1, 2], [2, 2, 1]]
 =?
-
-⤙end-of-tests

@@ -1,14 +1,9 @@
 ~ "sum-of-multiples.ua" ~ Hello
-needs exercism/test
-⤙: test
-16 tests
 
 "no multiples within limit"
 ([3,5] 1 sum)
 0
 =?
-
-SKIP-REST-OF-TESTS
 
 "one factor has multiples within limit"
 ([3,5] 4 sum)
@@ -84,5 +79,3 @@ SKIP-REST-OF-TESTS
 ([2,3,5,7,11] 10000 sum)
 39614537
 =?
-
-⤙end-of-tests

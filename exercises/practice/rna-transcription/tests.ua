@@ -1,14 +1,9 @@
 ~ "rna-transcription.ua" ~ Hello
-needs exercism/test
-⤙: test
-6 tests
 
 "Empty RNA sequence"
 ("" >rna)
 ""
 =?
-
-SKIP-REST-OF-TESTS
 
 "RNA complement of cytosine is guanine"
 ("C" >rna)
@@ -34,5 +29,3 @@ SKIP-REST-OF-TESTS
 ("ACGTGGTCTTAA" >rna)
 "UGCACCAGAAUU"
 =?
-
-⤙end-of-tests

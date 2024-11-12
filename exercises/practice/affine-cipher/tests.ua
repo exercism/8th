@@ -1,12 +1,9 @@
 ~ "affine-cipher.ua" ~ Hello
 
-
 "encode yes"
 ("yes" 5 7 >code)
 "xbt"
 =?
-
-SKIP-REST-OF-TESTS
 
 "encode no"
 ("no" 15 18 >code)
@@ -80,5 +77,3 @@ null?
 "decode with a not coprime to m"
 ("Test" 13 5 code>)
 null?
-
-⤙end-of-tests

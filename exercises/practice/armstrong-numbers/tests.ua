@@ -1,10 +1,6 @@
 ~ "armstrong-numbers.ua" ~ Hello
-needs exercism/test
-⤙: test
-11 tests
 
 "Zero is an Armstrong number" (0 armstrong?) true?
-SKIP-REST-OF-TESTS
 "Single digit numbers are Armstrong numbers" (5 armstrong?) true?
 "There are no 2 digit Armstrong Numbers" (10 armstrong?) false?
 "Three digit number that is not an Armstrong number" (100 armstrong?) false?
@@ -15,5 +11,3 @@ SKIP-REST-OF-TESTS
 "Seven digit number that is an Armstrong number" (9926315 armstrong?) true?
 "Armstrong number containing seven zeroes" (186709961001538790100634132976990 armstrong?) true?
 "The largest and last Armstrong number" (115132219018763992565095597973971522401 armstrong?) true?
-
-⤙end-of-tests

@@ -1,5 +1,4 @@
 ~ "meetup.ua" ~ Hello
-
 : >date-only \d -- d
 d:/0 3 a:slice [0, 0, 0, 0, 0, 0, 0] a:+ d:⊂
 
@@ -477,4 +476,3 @@ d:/0 3 a:slice [0, 0, 0, 0, 0, 0, 0] a:+ d:⊂
 (2012 12 "Friday" "first" meetup >date-only)
 [2012, 12, 7, 0, 0, 0, 0, 0, 0, 0] d:⊂
 =?
-

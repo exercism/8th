@@ -1,14 +1,9 @@
 ~ "perfect-numbers.ua" ~ Hello
-needs exercism/test
-⤙: test
-13 tests
 
 "Smallest perfect number is classified correctly"
 (6 ⊛)
 "perfect"
 =?
-
-SKIP-REST-OF-TESTS
 
 "Medium perfect number is classified correctly"
 (28 ⊛)
@@ -67,5 +62,3 @@ null?
 "Negative integer is rejected (as it is not a positive integer)"
 (-1 ⊛)
 null?
-
-⤙end-of-tests

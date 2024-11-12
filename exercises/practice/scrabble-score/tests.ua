@@ -1,14 +1,9 @@
 ~ "scrabble-score.ua" ~ Hello
-needs exercism/test
-⤙: test
-11 tests
 
 "lowercase letter"
 ("a" score)
 1
 =?
-
-SKIP-REST-OF-TESTS
 
 "uppercase letter"
 ("A" score)
@@ -59,5 +54,3 @@ SKIP-REST-OF-TESTS
 ("abcdefghijklmnopqrstuvwxyz" score)
 87
 =?
-
-⤙end-of-tests

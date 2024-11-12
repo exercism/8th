@@ -1,14 +1,10 @@
 ~ "parallel-letter-frequency.ua" ~ Hello
-needs exercism/test
-with: test
-12 tests
 
 "no texts"
     ( [] >frequencies )
     {}
     equal?
 
-SKIP-REST-OF-TESTS
 
 "one text with one letter"
     ( ["a"] >frequencies )

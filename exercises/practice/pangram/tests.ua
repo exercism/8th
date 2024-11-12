@@ -1,13 +1,8 @@
 ~ "pangram.ua" ~ Hello
-needs exercism/test
-⤙: test
-10 tests
 
 "empty sentence"
 ("" pangram?)
 false?
-
-SKIP-REST-OF-TESTS
 
 "missing letters replaced by numbers"
 ("7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog" pangram?)
@@ -44,5 +39,3 @@ false?
 "with underscores"
 ("the_quick_brown_fox_jumps_over_the_lazy_dog" pangram?)
 true?
-
-⤙end-of-tests

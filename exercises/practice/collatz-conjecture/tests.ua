@@ -1,14 +1,9 @@
 ~ "collatz-conjecture.ua" ~ Hello
-needs exercism/test
-⤙: test
-6 tests
 
 "zero steps for one"
 (1 collatz)
 0
 =?
-
-SKIP-REST-OF-TESTS
 
 "large number of even and odd steps"
 (1000000 collatz)
@@ -32,5 +27,3 @@ null?
 "negative value is an error"
 (-15 collatz)
 null?
-
-⤙end-of-tests

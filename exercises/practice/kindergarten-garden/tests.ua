@@ -1,14 +1,9 @@
 ~ "kindergarten-garden.ua" ~ Hello
-needs exercism/test
-⤙: test
-17 tests
 
 "garden with single student"
 ("RC\nGG" "Alice" plants)
 ["radishes", "clover", "grass", "grass"]
 =?
-
-SKIP-REST-OF-TESTS
 
 "different garden with single student"
 ("VC\nRC" "Alice" plants)
@@ -89,5 +84,3 @@ SKIP-REST-OF-TESTS
 ("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Larry" plants)
 ["grass", "violets", "clover", "violets"]
 =?
-
-⤙end-of-tests

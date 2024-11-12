@@ -1,13 +1,8 @@
 ~ "allergies.ua" ~ Hello
-needs exercism/test
-⤙: test
-50 tests
 
 "not allergic to anything, including eggs"
 (0 "eggs" allergic-to?)
 false?
-
-SKIP-REST-OF-TESTS
 
 "allergic only to eggs"
 (1 "eggs" allergic-to?)
@@ -214,5 +209,3 @@ true?
 (257 list)
 ["eggs"]
 =?
-
-⤙end-of-tests

@@ -1,14 +1,9 @@
 ~ "word-count.ua" ~ Hello
-needs exercism/test
-⤙: test
-14 tests
 
 "count one word"
 ("word" word-count)
 {"word":1}
 =?
-
-SKIP-REST-OF-TESTS
 
 "count one of each word"
 ("one of each" word-count)
@@ -74,5 +69,3 @@ SKIP-REST-OF-TESTS
 ("can, can't, 'can't'" word-count)
 {"can":1,"can't":2}
 =?
-
-⤙end-of-tests

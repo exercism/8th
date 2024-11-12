@@ -1,14 +1,9 @@
 ~ "nucleotide-count.ua" ~ Hello
-needs exercism/test
-⤙: test
-5 tests
 
 "empty strand"
 ("" nucleotide-counts)
 {"A": 0, "C": 0, "G": 0, "T": 0}
 =?
-
-SKIP-REST-OF-TESTS
 
 "can count one nucleotide in single-character input"
 ("G" nucleotide-counts)
@@ -28,5 +23,3 @@ SKIP-REST-OF-TESTS
 "strand with invalid nucleotides"
 ("AGXXACT" nucleotide-counts)
 null?
-
-⤙end-of-tests

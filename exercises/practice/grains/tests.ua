@@ -1,14 +1,9 @@
 ~ "grains.ua" ~ Hello
-needs exercism/test
-⤙: test
-11 tests
 
 "grains on square 1"
 (1 square)
 1
 =?
-
-SKIP-REST-OF-TESTS
 
 "grains on square 2"
 (2 square)
@@ -56,5 +51,3 @@ null?
 (total)
 18446744073709551615
 =?
-
-⤙end-of-tests

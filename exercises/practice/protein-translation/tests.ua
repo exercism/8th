@@ -1,14 +1,9 @@
 ~ "protein-translation.ua" ~ Hello
-needs exercism/test
-⤙: test
-29 tests
 
 "Empty RNA sequence results in no proteins"
 ("" >proteins)
 []
 =?
-
-SKIP-REST-OF-TESTS
 
 "Methionine RNA sequence"
 ("AUG" >proteins)
@@ -147,5 +142,3 @@ null?
 ("UUCUUCUAAUGGU" >proteins)
 ["Phenylalanine", "Phenylalanine"]
 =?
-
-⤙end-of-tests

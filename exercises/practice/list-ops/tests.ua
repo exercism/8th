@@ -1,14 +1,9 @@
 ~ "list-ops.ua" ~ Hello
-needs exercism/test
-⤙: test
-22 tests
 
 "empty lists"
 ([] [] append)
 []
 =?
-
-SKIP-REST-OF-TESTS
 
 "list to empty list"
 ([] [1, 2, 3, 4] append)
@@ -117,5 +112,3 @@ SKIP-REST-OF-TESTS
 ([[1, 2], [3], [], [4, 5, 6]] ⇌)
 [[4, 5, 6], [], [3], [1, 2]]
 =?
-
-⤙end-of-tests

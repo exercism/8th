@@ -1,13 +1,9 @@
 ~ "matching-brackets.ua" ~ Hello
-needs exercism/test
-with: test
-20 tests
 
 "paired square brackets"
     ( "[]" paired? )
     true?
 
-SKIP-REST-OF-TESTS
 
 "empty string"
     ( "" paired? )

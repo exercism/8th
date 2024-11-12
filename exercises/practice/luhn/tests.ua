@@ -1,13 +1,8 @@
 ~ "luhn.ua" ~ Hello
-needs exercism/test
-⤙: test
-22 tests
 
 "single digit strings can not be valid"
 ("1" luhn)
 false?
-
-SKIP-REST-OF-TESTS
 
 "a single zero is invalid"
 ("0" luhn)
@@ -92,5 +87,3 @@ false?
 "non-numeric, non-space char in the middle with a sum that's divisible by 10 isn't allowed"
 ("59%59" luhn)
 false?
-
-⤙end-of-tests

@@ -1,14 +1,9 @@
 ~ "phone-number.ua" ~ Hello
-needs exercism/test
-⤙: test
-18 tests
 
 "cleans the number"
 ("(223) 456-7890" clean)
 "2234567890"
 =?
-
-SKIP-REST-OF-TESTS
 
 "cleans numbers with dots"
 ("223.456.7890" clean)
@@ -81,5 +76,3 @@ null?
 "invalid if exchange code starts with 1 on valid 11-digit number"
 ("1 (223) 156-7890" clean)
 null?
-
-⤙end-of-tests

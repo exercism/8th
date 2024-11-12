@@ -1,15 +1,10 @@
 ~ "diamond.ua" ~ Hello
-needs exercism/test
-⤙: test
-5 tests
 
 "Degenerate case with a single 'A' row"
 ("A" ≡)
 ["A"
 ]
 =?
-
-SKIP-REST-OF-TESTS
 
 "Degenerate case with no row containing 3 distinct groups of spaces"
 ("B" ≡)
@@ -96,5 +91,3 @@ SKIP-REST-OF-TESTS
  "                         A                         "
 ]
 =?
-
-⤙end-of-tests

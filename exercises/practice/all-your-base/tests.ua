@@ -1,6 +1,5 @@
 ~ "all-your-base.ua" ~ Hello
 
-
 "single bit one to decimal"
 (2 [1] 10 rebase)
 [1]
@@ -96,4 +95,3 @@ null?
 "both bases are negative"
 (-2 [1] -7 rebase)
 null?
-

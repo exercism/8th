@@ -1,7 +1,4 @@
 ~ "gigasecond.ua" ~ Hello
-needs exercism/test
-⤙: test
-5 tests
 
 \Workaround ⊃https://8th-dev.ℂ/bin/bugs/tktview/624833cc8d
 0 d:updatetz
@@ -10,8 +7,6 @@ needs exercism/test
 ([2011, 4, 25, 0, 0, 0, 0, 0, 0, 0] d:⊂ +gigasecond)
 [2043, 1, 1, 1, 46, 40, 0, 0, 0, 0] d:⊂
 =?
-
-SKIP-REST-OF-TESTS
 
 "second test for date only specification of time"
 ([1977, 6, 13, 0, 0, 0, 0, 0, 0, 0] d:⊂ +gigasecond)
@@ -32,5 +27,3 @@ SKIP-REST-OF-TESTS
 ([2015, 1, 24, 23, 59, 59, 0, 0, 0, 0] d:⊂ +gigasecond)
 [2046, 10, 3, 1, 46, 39, 0, 0, 0, 0] d:⊂
 =?
-
-⤙end-of-tests

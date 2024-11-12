@@ -1,14 +1,9 @@
 ~ "two-fer.ua" ~ Hello
-needs exercism/test
-⤙: test
-4 tests
 
 "Unnamed person test with empty string"
 ("" two-fer)
 "One for you, one for me."
 =?
-
-SKIP-REST-OF-TESTS
 
 "Unnamed person test with null"
 (null two-fer)
@@ -24,5 +19,3 @@ SKIP-REST-OF-TESTS
 ("הַצְּלֶלְפּוֹנִי" two-fer)
 "One for הַצְּלֶלְפּוֹנִי, one for me."
 =?
-
-⤙end-of-tests

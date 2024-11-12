@@ -1,14 +1,9 @@
 ~ "binary-search.ua" ~ Hello
-needs exercism/test
-⤙: test
-11 tests
 
 "finds a value in an array with one element"
 ([6] 6 ⌕)
 0
 =?
-
-SKIP-REST-OF-TESTS
 
 "finds a value in the middle of an array"
 ([1, 3, 4, 6, 8, 9, 11] 6 ⌕)
@@ -54,5 +49,3 @@ null?
 "nothing is found when the left and right bounds cross"
 ([1, 2] 0 ⌕)
 null?
-
-⤙end-of-tests

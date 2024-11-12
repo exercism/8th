@@ -1,14 +1,9 @@
 ~ "roman-numerals.ua" ~ Hello
-needs exercism/test
-⤙: test
-27 tests
 
 "1 is I"
 (1 n:>roman)
 "I"
 =?
-
-SKIP-REST-OF-TESTS
 
 "2 is II"
 (2 n:>roman)
@@ -139,5 +134,3 @@ SKIP-REST-OF-TESTS
 (3999 n:>roman)
 "MMMCMXCIX"
 =?
-
-⤙end-of-tests

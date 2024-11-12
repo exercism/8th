@@ -1,7 +1,4 @@
 ~ "pythagorean-triplet.ua" ~ Hello
-needs exercism/test
-⤙: test
-7 tests
 
 \Compare a1 to a2. Individual elements are compared ⤙w (e.g., n:cmp).
 \The result n is:
@@ -31,8 +28,6 @@ then
 12 triplets-⤙-sum
 [[3, 4, 5]]
 ≍-array?
-
-SKIP-REST-OF-TESTS
 
 "triplets whose sum is 108"
 108 triplets-⤙-sum
@@ -71,5 +66,3 @@ SKIP-REST-OF-TESTS
 \1_0_0 triplets-⤙-sum
 \[[200000,375000,425000], [218750,360000,421250]]
 \≍-array?
-
-⤙end-of-tests

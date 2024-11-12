@@ -1,14 +1,9 @@
 ~ "spiral-matrix.ua" ~ Hello
-needs exercism/test
-⤙: test
-6 tests
 
 "empty spiral"
 (0 spiral-matrix)
 []
 =?
-
-SKIP-REST-OF-TESTS
 
 "trivial spiral"
 (1 spiral-matrix)
@@ -48,5 +43,3 @@ SKIP-REST-OF-TESTS
  [13, 12, 11, 10, 9]
 ]
 =?
-
-⤙end-of-tests

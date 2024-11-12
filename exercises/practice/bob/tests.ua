@@ -1,14 +1,9 @@
 ~ "bob.ua" ~ Hello
-needs exercism/test
-⤙: test
-17 tests
 
 "prolonged silence"
 ("    " bob)
 "Fine. Be that way!"
 =?
-
-SKIP-REST-OF-TESTS
 
 "silence"
 ("" bob)
@@ -89,5 +84,3 @@ SKIP-REST-OF-TESTS
 ("ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!" bob)
 "Whoa, chill out!"
 =?
-
-⤙end-of-tests

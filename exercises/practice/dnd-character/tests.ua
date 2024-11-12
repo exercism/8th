@@ -1,14 +1,9 @@
 ~ "dnd-character.ua" ~ Hello
-needs exercism/test
-⤙: test
-18 tests
 
 "ability modifier for score 3 is -4"
 (3 modifier)
 -4
 =?
-
-SKIP-REST-OF-TESTS
 
 "ability modifier for score 4 is -3"
 (4 modifier)
@@ -103,5 +98,3 @@ true?
  r@ "constitution" m:@ nip modifier 10 n:+ r> "hitpoints" m:@ nip n:= and
 )
 true?
-
-⤙end-of-tests

@@ -1,7 +1,4 @@
 ~ "knapsack.ua" ~ Hello
-needs exercism/test
-with: test
-7 tests
 
 "no items"
     ( 100 [] maximum-value )

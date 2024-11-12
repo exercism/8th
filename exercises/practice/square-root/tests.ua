@@ -1,14 +1,9 @@
 ~ "square-root.ua" ~ Hello
-needs exercism/test
-⤙: test
-6 tests
 
 "root of 1"
 (1 square-root)
 1
 =?
-
-SKIP-REST-OF-TESTS
 
 "root of 4"
 (4 square-root)
@@ -34,5 +29,3 @@ SKIP-REST-OF-TESTS
 (65025 square-root)
 255
 =?
-
-⤙end-of-tests

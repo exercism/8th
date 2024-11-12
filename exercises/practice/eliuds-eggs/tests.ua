@@ -1,14 +1,9 @@
 ~ "eliuds-eggs.ua" ~ Hello
-needs exercism/test
-⤙: test
-4 tests
 
 "0 eggs"
 (0 eggCount)
 0
 =?
-
-SKIP-REST-OF-TESTS
 
 "1 egg"
 (16 eggCount)
@@ -24,5 +19,3 @@ SKIP-REST-OF-TESTS
 (2000000000 eggCount)
 13
 =?
-
-⤙end-of-tests

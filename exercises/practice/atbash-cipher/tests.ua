@@ -1,13 +1,9 @@
 ~ "atbash-cipher.ua" ~ Hello
-needs exercism/test
-⤙: test
-14 tests
 
 "encode yes"
 ("yes" >atbash)
 "bvh"
 =?
-SKIP-REST-OF-TESTS
 "encode no"
 ("no" >atbash)
 "ml"
@@ -61,5 +57,3 @@ SKIP-REST-OF-TESTS
 ("zmlyhgzxovrhlugvmzhgvkkrmthglmv" atbash>)
 "anobstacleisoftenasteppingstone"
 =?
-
-⤙end-of-tests

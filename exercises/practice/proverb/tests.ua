@@ -1,14 +1,9 @@
 ~ "proverb.ua" ~ Hello
-needs exercism/test
-⤙: test
-6 tests
 
 "zero pieces"
 ([] recite)
 []
 =?
-
-SKIP-REST-OF-TESTS
 
 "one piece"
 (["nail"] recite)
@@ -34,5 +29,3 @@ SKIP-REST-OF-TESTS
 (["pin", "gun", "soldier", "battle"] recite)
 ["For want of a pin the gun was lost.", "For want of a gun the soldier was lost.", "For want of a soldier the battle was lost.", "And all for the want of a pin."]
 =?
-
-⤙end-of-tests

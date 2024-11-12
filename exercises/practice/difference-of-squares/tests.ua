@@ -1,5 +1,4 @@
 ~ "difference-of-squares.ua" ~ Hello
-
 "square of sum 1"
 (1 square-of-sum)
 1
@@ -44,4 +43,3 @@
 (100 difference-of-squares)
 25164150
 =?
-

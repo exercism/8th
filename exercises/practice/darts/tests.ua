@@ -1,14 +1,9 @@
 ~ "darts.ua" ~ Hello
-needs exercism/test
-⤙: test
-13 tests
 
 "Missed target"
 (-9 9 darts-score)
 0
 =?
-
-SKIP-REST-OF-TESTS
 
 "On the outer circle"
 (0 10 darts-score)
@@ -69,5 +64,3 @@ SKIP-REST-OF-TESTS
 (0.5 -4 darts-score)
 5
 =?
-
-⤙end-of-tests

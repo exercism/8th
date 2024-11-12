@@ -1,6 +1,5 @@
 ~ "reverse-string.ua" ~ Hello
 
-
 "an empty string"
 ("" ⇌)
 ""
@@ -30,4 +29,3 @@
 ("drawer" ⇌)
 "reward"
 =?
-

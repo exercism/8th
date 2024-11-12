@@ -1,10 +1,6 @@
 ~ "leap.ua" ~ Hello
-needs exercism/test
-⤙: test
-9 tests
 
 "year not divisible by 4 in common year" (2015 leap-year?) false?
-SKIP-REST-OF-TESTS
 "year divisible by 100 but not by 3 is still not a leap year" (1900 leap-year?) false?
 "year divisible by 2, not divisible by 4 in common year" (1970 leap-year?) false?
 "year divisible by 200, not divisible by 400 in common year" (1800 leap-year?) false?
@@ -13,5 +9,3 @@ SKIP-REST-OF-TESTS
 "year divisible by 4, not divisible by 100 in leap year" (1996 leap-year?) true?
 "year divisible by 400 is leap year" (2000 leap-year?) true?
 "year divisible by 400 but not by 125 is still a leap year" (2400 leap-year?) true?
-
-⤙end-of-tests

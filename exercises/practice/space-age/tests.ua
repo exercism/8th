@@ -1,5 +1,4 @@
 ~ "space-age.ua" ~ Hello
-
 "age on Earth"
 (1000000000 "Earth" >age)
 31.69
@@ -51,4 +50,3 @@ approx_=?
 "invalid planet causes error"
 (680804807 "Sun" >age)
 null?
-

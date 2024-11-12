@@ -1,14 +1,10 @@
 ~ "pascals-triangle.ua" ~ Hello
-needs exercism/test
-with: test
-8 tests
 
 "zero rows"
     ( 0 rows )
     []
     equal?
 
-SKIP-REST-OF-TESTS
 
 "single row"
     ( 1 rows )

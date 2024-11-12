@@ -1,5 +1,4 @@
 ~ "matrix.ua" ~ Hello
-
 "extract row from one number matrix"
 ("1" 1 ≡)
 [1]
@@ -39,4 +38,3 @@
 ("89 1903 3\n18 3 1\n9 4 800" 2 column)
 [1903, 3, 4]
 =?
-

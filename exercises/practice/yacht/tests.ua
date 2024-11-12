@@ -1,14 +1,9 @@
 ~ "yacht.ua" ~ Hello
-needs exercism/test
-⤙: test
-29 tests
 
 "Yacht"
 ([5, 5, 5, 5, 5] "yacht" play_yacht)
 50
 =?
-
-SKIP-REST-OF-TESTS
 
 "Not Yacht"
 ([1, 3, 3, 2, 5] "yacht" play_yacht)
@@ -149,5 +144,3 @@ SKIP-REST-OF-TESTS
 ([2, 2, 2, 2, 2] "choice" play_yacht)
 10
 =?
-
-⤙end-of-tests

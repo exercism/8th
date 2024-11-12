@@ -1,14 +1,9 @@
 ~ "anagram.ua" ~ Hello
-needs exercism/test
-⤙: test
-16 tests
 
 "no matches"
 ("diaper" ["hello", "world", "zombies", "pants"] anagrams)
 []
 =?
-
-SKIP-REST-OF-TESTS
 
 "detects two anagrams"
 ("solemn" ["lemons", "cherry", "melons"] anagrams)
@@ -84,5 +79,3 @@ SKIP-REST-OF-TESTS
 ("LISTEN" ["LISTEN", "Silent"] anagrams)
 ["Silent"]
 =?
-
-⤙end-of-tests

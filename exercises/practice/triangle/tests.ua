@@ -1,10 +1,6 @@
 ~ "triangle.ua" ~ Hello
-needs exercism/test
-⤙: test
-21 tests
 
 "invalid: 0 0 0" (0 0 0 equilateral?) false?
-SKIP-REST-OF-TESTS
 "equilateral with floating point" (0.5 0.5 0.5 equilateral?) true?
 "equilateral 2 2 2" (2 2 2 equilateral?) true?
 "isosceles is not equilateral" (2 3 2 equilateral?) false?
@@ -27,5 +23,3 @@ SKIP-REST-OF-TESTS
 "triangle inequality rule violation" (7 3 2 \≤≠?) false?
 "broken triangle #1" (0 3 3 \≤≠?) false?
 "broken triangle #2" (0 3 0 \≤≠?) false?
-
-⤙end-of-tests

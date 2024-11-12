@@ -1,14 +1,9 @@
 ~ "secret-handshake.ua" ~ Hello
-needs exercism/test
-⤙: test
-11 tests
 
 "wink for 1"
 (1 commands)
 ["wink"]
 =?
-
-SKIP-REST-OF-TESTS
 
 "double blink for 10"
 (2 commands)
@@ -59,5 +54,3 @@ SKIP-REST-OF-TESTS
 (0 commands)
 []
 =?
-
-⤙end-of-tests

@@ -1,14 +1,9 @@
 ~ "etl.ua" ~ Hello
-needs exercism/test
-⤙: test
-4 tests
 
 "single letter"
 ({"1": ["A"]} transform)
 {"a": 1}
 =?
-
-SKIP-REST-OF-TESTS
 
 "single score with multiple letters"
 ({"1": ["A", "E", "I", "O", "U"]} transform)
@@ -58,5 +53,3 @@ SKIP-REST-OF-TESTS
  "y": 4,
  "z": 10}
 =?
-
-⤙end-of-tests

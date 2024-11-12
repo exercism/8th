@@ -1,14 +1,9 @@
 ~ "sieve.ua" ~ Hello
-needs exercism/test
-⤙: test
-5 tests
 
 "no primes under two"
 (1 primes)
 []
 =?
-
-SKIP-REST-OF-TESTS
 
 "find first prime"
 (2 primes)
@@ -39,5 +34,3 @@ SKIP-REST-OF-TESTS
  829, 839, 853, 857, 859, 863, 877, 881, 883, 887, 907, 911, 919, 929, 937, 941,
  947, 953, 967, 971, 977, 983, 991, 997]
 =?
-
-⤙end-of-tests

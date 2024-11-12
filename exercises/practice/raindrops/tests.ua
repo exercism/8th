@@ -1,14 +1,9 @@
 ~ "raindrops.ua" ~ Hello
-needs exercism/test
-⤙: test
-18 tests
 
 "the sound of 1 is 1"
 (1 raindrops)
 "1"
 =?
-
-SKIP-REST-OF-TESTS
 
 "the sound for 10 is Plang as it has a factor 5"
 (10 raindrops)
@@ -94,5 +89,3 @@ SKIP-REST-OF-TESTS
 (9 raindrops)
 "Pling"
 =?
-
-⤙end-of-tests

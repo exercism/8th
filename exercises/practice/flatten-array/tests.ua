@@ -1,14 +1,9 @@
 ~ "flatten-array.ua" ~ Hello
-needs exercism/test
-⤙: test
-11 tests
 
 "empty"
 ([] flatten)
 []
 =?
-
-SKIP-REST-OF-TESTS
 
 "no nesting"
 ([0, 1, 2] flatten)
@@ -59,5 +54,3 @@ SKIP-REST-OF-TESTS
 ([null, [[[null]]], null, null, [[null, null], null], null] flatten)
 []
 =?
-
-⤙end-of-tests

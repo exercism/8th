@@ -1,14 +1,9 @@
 ~ "trinary.ua" ~ Hello
-needs exercism/test
-⤙: test
-10 tests
 
 "1 is decimal 1"
 ("1" trinary>)
 1
 =?
-
-SKIP-REST-OF-TESTS
 
 "2 is decimal 2"
 ("2" trinary>)
@@ -54,5 +49,3 @@ SKIP-REST-OF-TESTS
 ("123" trinary>)
 0
 =?
-
-⤙end-of-tests

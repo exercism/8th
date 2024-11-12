@@ -1,14 +1,9 @@
 ~ "rotational-cipher.ua" ~ Hello
-needs exercism/test
-⤙: test
-10 tests
 
 "rotate a by 0, same output as input"
 ("a" 0 ↻)
 "a"
 =?
-
-SKIP-REST-OF-TESTS
 
 "rotate a by 1"
 ("a" 1 ↻)
@@ -54,5 +49,3 @@ SKIP-REST-OF-TESTS
 ("The quick brown fox jumps over the lazy dog." 13 ↻)
 "Gur dhvpx oebja sbk whzcf bire gur ynml qbt."
 =?
-
-⤙end-of-tests

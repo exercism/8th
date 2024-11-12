@@ -1,7 +1,4 @@
 ~ "circular-buffer.ua" ~ Hello
-needs exercism/test
-⤙: test
-14 tests
 
 : throws? \w -- T
 catch . if nip then nip
@@ -9,8 +6,6 @@ catch . if nip then nip
 "reading empty buffer should fail"
 (1 cb:new ’ cb:read throws?)
 true?
-
-SKIP-REST-OF-TESTS
 
 "can read an item just written"
 (1 cb:new 1 cb:write cb:read nip)
@@ -72,5 +67,3 @@ true?
 "initial clear does not affect wrapping around"
 (2 cb:new cb:clear 1 cb:write 2 cb:write 3 cb:overwrite 4 cb:overwrite cb:read ↘ cb:read ↘ ’ cb:read throws?)
 true?
-
-⤙end-of-tests

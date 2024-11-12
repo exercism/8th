@@ -1,14 +1,9 @@
 ~ "high-scores.ua" ~ Hello
-needs exercism/test
-⤙: test
-8 tests
 
 "List of scores"
 ([30, 50, 20, 70] scores)
 [30, 50, 20, 70]
 =?
-
-SKIP-REST-OF-TESTS
 
 "Latest score"
 ([100, 0, 90, 30] latest)
@@ -44,5 +39,3 @@ SKIP-REST-OF-TESTS
 ([40] personal-top-three)
 [40]
 =?
-
-⤙end-of-tests
