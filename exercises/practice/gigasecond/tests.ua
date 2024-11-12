@@ -1,37 +1,36 @@
-"gigasecond.8th" f:include
+~ "gigasecond.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 5 tests
 
-\ Workaround for https://8th-dev.com/bin/bugs/tktview/624833cc8d
+\Workaround ⊃https://8th-dev.ℂ/bin/bugs/tktview/624833cc8d
 0 d:updatetz
 
 "date only specification of time"
-    ( [2011, 4, 25, 0, 0, 0, 0, 0, 0, 0] d:join +gigasecond )
-    [2043, 1, 1, 1, 46, 40, 0, 0, 0, 0] d:join 
-    equal?
+([2011, 4, 25, 0, 0, 0, 0, 0, 0, 0] d:⊂ +gigasecond)
+[2043, 1, 1, 1, 46, 40, 0, 0, 0, 0] d:⊂
+=?
 
 SKIP-REST-OF-TESTS
 
 "second test for date only specification of time"
-    ( [1977, 6, 13, 0, 0, 0, 0, 0, 0, 0] d:join +gigasecond )
-    [2009, 2, 19, 1, 46, 40, 0, 0, 0, 0] d:join
-    equal?
+([1977, 6, 13, 0, 0, 0, 0, 0, 0, 0] d:⊂ +gigasecond)
+[2009, 2, 19, 1, 46, 40, 0, 0, 0, 0] d:⊂
+=?
 
 "third test for date only specification of time"
-    ( [1959, 7, 19, 0, 0, 0, 0, 0, 0, 0] d:join +gigasecond )
-    [1991, 3, 27, 1, 46, 40, 0, 0, 0, 0] d:join
-    equal?
+([1959, 7, 19, 0, 0, 0, 0, 0, 0, 0] d:⊂ +gigasecond)
+[1991, 3, 27, 1, 46, 40, 0, 0, 0, 0] d:⊂
+=?
 
 "full time specified"
-    ( [2015, 1, 24, 22, 0, 0, 0, 0, 0, 0] d:join +gigasecond )
-    [2046, 10, 2, 23, 46, 40, 0, 0, 0, 0] d:join
-    equal?
+([2015, 1, 24, 22, 0, 0, 0, 0, 0, 0] d:⊂ +gigasecond)
+[2046, 10, 2, 23, 46, 40, 0, 0, 0, 0] d:⊂
+=?
 
 "full time with day roll-over"
-    ( [2015, 1, 24, 23, 59, 59, 0, 0, 0, 0] d:join +gigasecond )
-    [2046, 10, 3, 1, 46, 39, 0, 0, 0, 0] d:join
-    equal?
+([2015, 1, 24, 23, 59, 59, 0, 0, 0, 0] d:⊂ +gigasecond)
+[2046, 10, 3, 1, 46, 39, 0, 0, 0, 0] d:⊂
+=?
 
-end-of-tests
-;with
+⤙end-of-tests

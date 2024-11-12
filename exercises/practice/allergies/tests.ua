@@ -1,219 +1,218 @@
-"allergies.8th" f:include
+~ "allergies.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 50 tests
 
 "not allergic to anything, including eggs"
-    ( 0 "eggs" allergic-to? )
-    false?
+(0 "eggs" allergic-to?)
+false?
 
 SKIP-REST-OF-TESTS
 
 "allergic only to eggs"
-    ( 1 "eggs" allergic-to? )
-    true?
+(1 "eggs" allergic-to?)
+true?
 
 "allergic to eggs and something else"
-    ( 3 "eggs" allergic-to? )
-    true?
+(3 "eggs" allergic-to?)
+true?
 
 "allergic to something, but not eggs"
-    ( 2 "eggs" allergic-to? )
-    false?
+(2 "eggs" allergic-to?)
+false?
 
 "allergic to everything, including eggs"
-    ( 255 "eggs" allergic-to? )
-    true?
+(255 "eggs" allergic-to?)
+true?
 
 "not allergic to anything, including peanuts"
-    ( 0 "peanuts" allergic-to? )
-    false?
+(0 "peanuts" allergic-to?)
+false?
 
 "allergic only to peanuts"
-    ( 2 "peanuts" allergic-to? )
-    true?
+(2 "peanuts" allergic-to?)
+true?
 
 "allergic to peanuts and something else"
-    ( 7 "peanuts" allergic-to? )
-    true?
+(7 "peanuts" allergic-to?)
+true?
 
 "allergic to something, but not peanuts"
-    ( 5 "peanuts" allergic-to? )
-    false?
+(5 "peanuts" allergic-to?)
+false?
 
 "allergic to everything, including peanuts"
-    ( 255 "peanuts" allergic-to? )
-    true?
+(255 "peanuts" allergic-to?)
+true?
 
 "not allergic to anything, including shellfish"
-    ( 0 "shellfish" allergic-to? )
-    false?
+(0 "shellfish" allergic-to?)
+false?
 
 "allergic only to shellfish"
-    ( 4 "shellfish" allergic-to? )
-    true?
+(4 "shellfish" allergic-to?)
+true?
 
 "allergic to shellfish and something else"
-    ( 14 "shellfish" allergic-to? )
-    true?
+(14 "shellfish" allergic-to?)
+true?
 
 "allergic to something, but not shellfish"
-    ( 10 "shellfish" allergic-to? )
-    false?
+(10 "shellfish" allergic-to?)
+false?
 
 "allergic to everything, including shellfish"
-    ( 255 "shellfish" allergic-to? )
-    true?
+(255 "shellfish" allergic-to?)
+true?
 
 "not allergic to anything, including strawberries"
-    ( 0 "strawberries" allergic-to? )
-    false?
+(0 "strawberries" allergic-to?)
+false?
 
 "allergic only to strawberries"
-    ( 8 "strawberries" allergic-to? )
-    true?
+(8 "strawberries" allergic-to?)
+true?
 
 "allergic to strawberries and something else"
-    ( 28 "strawberries" allergic-to? )
-    true?
+(28 "strawberries" allergic-to?)
+true?
 
 "allergic to something, but not strawberries"
-    ( 20 "strawberries" allergic-to? )
-    false?
+(20 "strawberries" allergic-to?)
+false?
 
 "allergic to everything, including strawberries"
-    ( 255 "strawberries" allergic-to? )
-    true?
+(255 "strawberries" allergic-to?)
+true?
 
 "not allergic to anything, including tomatoes"
-    ( 0 "tomatoes" allergic-to? )
-    false?
+(0 "tomatoes" allergic-to?)
+false?
 
 "allergic only to tomatoes"
-    ( 16 "tomatoes" allergic-to? )
-    true?
+(16 "tomatoes" allergic-to?)
+true?
 
 "allergic to tomatoes and something else"
-    ( 56 "tomatoes" allergic-to? )
-    true?
+(56 "tomatoes" allergic-to?)
+true?
 
 "allergic to something, but not tomatoes"
-    ( 40 "tomatoes" allergic-to? )
-    false?
+(40 "tomatoes" allergic-to?)
+false?
 
 "allergic to everything, including tomatoes"
-    ( 255 "tomatoes" allergic-to? )
-    true?
+(255 "tomatoes" allergic-to?)
+true?
 
 "not allergic to anything, including chocolate"
-    ( 0 "chocolate" allergic-to? )
-    false?
+(0 "chocolate" allergic-to?)
+false?
 
 "allergic only to chocolate"
-    ( 32 "chocolate" allergic-to? )
-    true?
+(32 "chocolate" allergic-to?)
+true?
 
 "allergic to chocolate and something else"
-    ( 112 "chocolate" allergic-to? )
-    true?
+(112 "chocolate" allergic-to?)
+true?
 
 "allergic to something, but not chocolate"
-    ( 80 "chocolate" allergic-to? )
-    false?
+(80 "chocolate" allergic-to?)
+false?
 
 "allergic to everything, including chocolate"
-    ( 255 "chocolate" allergic-to? )
-    true?
+(255 "chocolate" allergic-to?)
+true?
 
 "not allergic to anything, including pollen"
-    ( 0 "pollen" allergic-to? )
-    false?
+(0 "pollen" allergic-to?)
+false?
 
 "allergic only to pollen"
-    ( 64 "pollen" allergic-to? )
-    true?
+(64 "pollen" allergic-to?)
+true?
 
 "allergic to pollen and something else"
-    ( 224 "pollen" allergic-to? )
-    true?
+(224 "pollen" allergic-to?)
+true?
 
 "allergic to something, but not pollen"
-    ( 160 "pollen" allergic-to? )
-    false?
+(160 "pollen" allergic-to?)
+false?
 
 "allergic to everything, including pollen"
-    ( 255 "pollen" allergic-to? )
-    true?
+(255 "pollen" allergic-to?)
+true?
 
 "not allergic to anything, including cats"
-    ( 0 "cats" allergic-to? )
-    false?
+(0 "cats" allergic-to?)
+false?
 
 "allergic only to cats"
-    ( 128 "cats" allergic-to? )
-    true?
+(128 "cats" allergic-to?)
+true?
 
 "allergic to cats and something else"
-    ( 192 "cats" allergic-to? )
-    true?
+(192 "cats" allergic-to?)
+true?
 
 "allergic to something, but not cats"
-    ( 64 "cats" allergic-to? )
-    false?
+(64 "cats" allergic-to?)
+false?
 
 "allergic to everything, including cats"
-    ( 255 "cats" allergic-to? )
-    true?
+(255 "cats" allergic-to?)
+true?
 
 "no allergies"
-    ( 0 list )
-    []
-    equal?
+(0 list)
+[]
+=?
 
 "just eggs"
-    ( 1 list )
-    ["eggs"]
-    equal?
+(1 list)
+["eggs"]
+=?
 
 "just peanuts"
-    ( 2 list )
-    ["peanuts"]
-    equal?
+(2 list)
+["peanuts"]
+=?
 
 "just strawberries"
-    ( 8 list )
-    ["strawberries"]
-    equal?
+(8 list)
+["strawberries"]
+=?
 
 "eggs and peanuts"
-    ( 3 list )
-    ["eggs", "peanuts"]
-    equal?
+(3 list)
+["eggs", "peanuts"]
+=?
 
 "more than eggs but not peanuts"
-    ( 5 list )
-    ["eggs", "shellfish"]
-    equal?
+(5 list)
+["eggs", "shellfish"]
+=?
 
 "lots of stuff"
-    ( 248 list )
-    ["strawberries", "tomatoes", "chocolate", "pollen", "cats"]
-    equal?
+(248 list)
+["strawberries", "tomatoes", "chocolate", "pollen", "cats"]
+=?
 
 "everything"
-    ( 255 list )
-    ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
-    equal?
+(255 list)
+["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
+=?
 
 "no allergen score parts"
-    ( 509 list )
-    ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
-    equal?
+(509 list)
+["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"]
+=?
 
 "no allergen score parts without highest valid score"
-    ( 257 list )
-    ["eggs"]
-    equal?
+(257 list)
+["eggs"]
+=?
 
-end-of-tests
-;with
+⤙end-of-tests

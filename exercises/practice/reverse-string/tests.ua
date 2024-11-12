@@ -1,39 +1,38 @@
-"reverse-string.8th" f:include
+~ "reverse-string.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 6 tests
 
 "an empty string"
-    ( "" reverse )
-    ""
-    equal?
+("" ⇌)
+""
+=?
 
 SKIP-REST-OF-TESTS
 
 "a word"
-    ( "robot" reverse )
-    "tobor"
-    equal?
+("robot" ⇌)
+"tobor"
+=?
 
 "a capitalized word"
-    ( "Ramen" reverse )
-    "nemaR"
-    equal?
+("Ramen" ⇌)
+"nemaR"
+=?
 
 "a sentence with punctuation"
-    ( "I'm hungry!" reverse )
-    "!yrgnuh m'I"
-    equal?
+("I'm hungry!" ⇌)
+"!yrgnuh m'I"
+=?
 
 "a palindrome"
-    ( "racecar" reverse )
-    "racecar"
-    equal?
+("racecar" ⇌)
+"racecar"
+=?
 
 "an even-sized word"
-    ( "drawer" reverse )
-    "reward"
-    equal?
+("drawer" ⇌)
+"reward"
+=?
 
-end-of-tests
-;with
+⤙end-of-tests

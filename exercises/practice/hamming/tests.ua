@@ -1,50 +1,49 @@
-"hamming.8th" f:include
+~ "hamming.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 9 tests
 
 "empty strands"
-    ( "" "" distance )
-    0
-    equal?
+("" "" distance)
+0
+=?
 
 SKIP-REST-OF-TESTS
 
 "single letter identical strands"
-    ( "A" "A" distance )
-    0
-    equal?
+("A" "A" distance)
+0
+=?
 
 "long indentical strands"
-    ( "GGACTGAAATCTG" "GGACTGAAATCTG" distance )
-    0
-    equal?
+("GGACTGAAATCTG" "GGACTGAAATCTG" distance)
+0
+=?
 
 "single letter different strands"
-    ( "G" "T" distance )
-    1
-    equal?
+("G" "T" distance)
+1
+=?
 
 "long different strands"
-    ( "GGACGGATTCTG" "AGGACGGATTCT" distance )
-    9
-    equal?
+("GGACGGATTCTG" "AGGACGGATTCT" distance)
+9
+=?
 
-"disallow empty first strand" 
-    ( "" "G" distance )
-    null?
+"disallow empty first strand"
+("" "G" distance)
+null?
 
-"disallow first strand longer" 
-    ( "AATG" "AAA" distance )
-    null?
+"disallow first strand longer"
+("AATG" "AAA" distance)
+null?
 
-"disallow second strand longer" 
-    ( "ATA" "AGTG" distance )
-    null?
+"disallow second strand longer"
+("ATA" "AGTG" distance)
+null?
 
-"disallow empty second strand" 
-    ( "G" "" distance )
-    null?
+"disallow empty second strand"
+("G" "" distance)
+null?
 
-end-of-tests
-;with
+⤙end-of-tests

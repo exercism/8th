@@ -1,9 +1,8 @@
-"hello-world.8th" f:include
+~ "hello-world.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 1 tests
 
-"hello world test" ( hello-world ) "Hello, World!" equal?
+"hello world test" (hello-world) "Hello, World!" =?
 
-end-of-tests
-;with
+⤙end-of-tests

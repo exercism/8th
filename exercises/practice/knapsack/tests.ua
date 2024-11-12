@@ -1,4 +1,4 @@
-"knapsack.8th" f:include
+~ "knapsack.ua" ~ Hello
 needs exercism/test
 with: test
 7 tests

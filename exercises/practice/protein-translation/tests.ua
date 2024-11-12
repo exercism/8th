@@ -1,152 +1,151 @@
-"protein-translation.8th" f:include
+~ "protein-translation.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 29 tests
 
 "Empty RNA sequence results in no proteins"
-    ( "" >proteins )
-    []
-    equal?
+("" >proteins)
+[]
+=?
 
 SKIP-REST-OF-TESTS
 
 "Methionine RNA sequence"
-    ( "AUG" >proteins )
-    ["Methionine"]
-    equal?
+("AUG" >proteins)
+["Methionine"]
+=?
 
 "Phenylalanine RNA sequence 1"
-    ( "UUU" >proteins )
-    ["Phenylalanine"]
-    equal?
+("UUU" >proteins)
+["Phenylalanine"]
+=?
 
 "Phenylalanine RNA sequence 2"
-    ( "UUC" >proteins )
-    ["Phenylalanine"]
-    equal?
+("UUC" >proteins)
+["Phenylalanine"]
+=?
 
 "Leucine RNA sequence 1"
-    ( "UUA" >proteins )
-    ["Leucine"]
-    equal?
+("UUA" >proteins)
+["Leucine"]
+=?
 
 "Leucine RNA sequence 2"
-    ( "UUG" >proteins )
-    ["Leucine"]
-    equal?
+("UUG" >proteins)
+["Leucine"]
+=?
 
 "Serine RNA sequence 1"
-    ( "UCU" >proteins )
-    ["Serine"]
-    equal?
+("UCU" >proteins)
+["Serine"]
+=?
 
 "Serine RNA sequence 2"
-    ( "UCC" >proteins )
-    ["Serine"]
-    equal?
+("UCC" >proteins)
+["Serine"]
+=?
 
 "Serine RNA sequence 3"
-    ( "UCA" >proteins )
-    ["Serine"]
-    equal?
+("UCA" >proteins)
+["Serine"]
+=?
 
 "Serine RNA sequence 4"
-    ( "UCG" >proteins )
-    ["Serine"]
-    equal?
+("UCG" >proteins)
+["Serine"]
+=?
 
 "Tyrosine RNA sequence 1"
-    ( "UAU" >proteins )
-    ["Tyrosine"]
-    equal?
+("UAU" >proteins)
+["Tyrosine"]
+=?
 
 "Tyrosine RNA sequence 2"
-    ( "UAC" >proteins )
-    ["Tyrosine"]
-    equal?
+("UAC" >proteins)
+["Tyrosine"]
+=?
 
 "Cysteine RNA sequence 1"
-    ( "UGU" >proteins )
-    ["Cysteine"]
-    equal?
+("UGU" >proteins)
+["Cysteine"]
+=?
 
 "Cysteine RNA sequence 2"
-    ( "UGC" >proteins )
-    ["Cysteine"]
-    equal?
+("UGC" >proteins)
+["Cysteine"]
+=?
 
 "Tryptophan RNA sequence"
-    ( "UGG" >proteins )
-    ["Tryptophan"]
-    equal?
+("UGG" >proteins)
+["Tryptophan"]
+=?
 
 "STOP codon RNA sequence 1"
-    ( "UAA" >proteins )
-    []
-    equal?
+("UAA" >proteins)
+[]
+=?
 
 "STOP codon RNA sequence 2"
-    ( "UAG" >proteins )
-    []
-    equal?
+("UAG" >proteins)
+[]
+=?
 
 "STOP codon RNA sequence 3"
-    ( "UGA" >proteins )
-    []
-    equal?
+("UGA" >proteins)
+[]
+=?
 
 "Sequence of two protein codons translates into proteins"
-    ( "UUUUUU" >proteins )
-    ["Phenylalanine", "Phenylalanine"]
-    equal?
+("UUUUUU" >proteins)
+["Phenylalanine", "Phenylalanine"]
+=?
 
 "Sequence of two different protein codons translates into proteins"
-    ( "UUAUUG" >proteins )
-    ["Leucine", "Leucine"]
-    equal?
+("UUAUUG" >proteins)
+["Leucine", "Leucine"]
+=?
 
 "Translate RNA strand into correct protein list"
-    ( "AUGUUUUGG" >proteins )
-    ["Methionine", "Phenylalanine", "Tryptophan"]
-    equal?
+("AUGUUUUGG" >proteins)
+["Methionine", "Phenylalanine", "Tryptophan"]
+=?
 
 "Translation stops if STOP codon at beginning of sequence"
-    ( "UAGUGG" >proteins )
-    []
-    equal?
+("UAGUGG" >proteins)
+[]
+=?
 
 "Translation stops if STOP codon at end of two-codon sequence"
-    ( "UGGUAG" >proteins )
-    ["Tryptophan"]
-    equal?
+("UGGUAG" >proteins)
+["Tryptophan"]
+=?
 
 "Translation stops if STOP codon at end of three-codon sequence"
-    ( "AUGUUUUAA" >proteins )
-    ["Methionine", "Phenylalanine"]
-    equal?
+("AUGUUUUAA" >proteins)
+["Methionine", "Phenylalanine"]
+=?
 
 "Translation stops if STOP codon in middle of three-codon sequence"
-    ( "UGGUAGUGG" >proteins )
-    ["Tryptophan"]
-    equal?
+("UGGUAGUGG" >proteins)
+["Tryptophan"]
+=?
 
 "Translation stops if STOP codon in middle of six-codon sequence"
-    ( "UGGUGUUAUUAAUGGUUU" >proteins )
-    ["Tryptophan", "Cysteine", "Tyrosine"]
-    equal?
+("UGGUGUUAUUAAUGGUUU" >proteins)
+["Tryptophan", "Cysteine", "Tyrosine"]
+=?
 
 "Unknown amino acids, not part of a codon, can't translate"
-    ( "XYZ" >proteins )
-    null?
+("XYZ" >proteins)
+null?
 
 "Incomplete RNA sequence can't translate"
-    ( "AUGU" >proteins )
-    null?
+("AUGU" >proteins)
+null?
 
 "Incomplete RNA sequence can translate if valid until a STOP codon"
-    ( "UUCUUCUAAUGGU" >proteins )
-    ["Phenylalanine", "Phenylalanine"]
-    equal?
+("UUCUUCUAAUGGU" >proteins)
+["Phenylalanine", "Phenylalanine"]
+=?
 
-end-of-tests
-;with
+⤙end-of-tests

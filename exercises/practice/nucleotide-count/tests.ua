@@ -1,33 +1,32 @@
-"nucleotide-count.8th" f:include
+~ "nucleotide-count.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 5 tests
 
 "empty strand"
-    ( "" nucleotide-counts )
-    {"A": 0, "C": 0, "G": 0, "T": 0}
-    equal?
+("" nucleotide-counts)
+{"A": 0, "C": 0, "G": 0, "T": 0}
+=?
 
 SKIP-REST-OF-TESTS
 
 "can count one nucleotide in single-character input"
-    ( "G" nucleotide-counts )
-    {"A": 0, "C": 0, "G": 1, "T": 0}
-    equal?
+("G" nucleotide-counts)
+{"A": 0, "C": 0, "G": 1, "T": 0}
+=?
 
 "strand with repeated nucleotide"
-    ( "GGGGGGG" nucleotide-counts )
-    {"A": 0, "C": 0, "G": 7, "T": 0}
-    equal?
+("GGGGGGG" nucleotide-counts)
+{"A": 0, "C": 0, "G": 7, "T": 0}
+=?
 
 "strand with multiple nucleotides"
-    ( "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC" nucleotide-counts )
-    {"A": 20, "C": 12, "G": 17, "T": 21}
-    equal?
+("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC" nucleotide-counts)
+{"A": 20, "C": 12, "G": 17, "T": 21}
+=?
 
 "strand with invalid nucleotides"
-    ( "AGXXACT" nucleotide-counts )
-    null?
+("AGXXACT" nucleotide-counts)
+null?
 
-end-of-tests
-;with
+⤙end-of-tests

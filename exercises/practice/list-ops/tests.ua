@@ -1,123 +1,121 @@
-"list-ops.8th" f:include
+~ "list-ops.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 22 tests
 
 "empty lists"
-    ( [] [] append )
-    []
-    equal?
+([] [] append)
+[]
+=?
 
 SKIP-REST-OF-TESTS
 
 "list to empty list"
-    ( [] [1, 2, 3, 4] append )
-    [1, 2, 3, 4]
-    equal?
+([] [1, 2, 3, 4] append)
+[1, 2, 3, 4]
+=?
 
 "empty list to list"
-    ( [1, 2, 3, 4] [] append )
-    [1, 2, 3, 4]
-    equal?
+([1, 2, 3, 4] [] append)
+[1, 2, 3, 4]
+=?
 
 "non-empty lists"
-    ( [1, 2] [2, 3, 4, 5] append )
-    [1, 2, 2, 3, 4, 5]
-    equal?
+([1, 2] [2, 3, 4, 5] append)
+[1, 2, 2, 3, 4, 5]
+=?
 
 "empty list"
-    ( [] concat )
-    []
-    equal?
+([] concat)
+[]
+=?
 
 "list of lists"
-    ( [[1, 2], [3], [], [4, 5, 6]] concat )
-    [1, 2, 3, 4, 5, 6]
-    equal?
+([[1, 2], [3], [], [4, 5, 6]] concat)
+[1, 2, 3, 4, 5, 6]
+=?
 
 "list of nested lists"
-    ( [[[1], [2]], [[3]], [[]], [[4, 5, 6]]] concat )
-    [[1], [2], [3], [], [4, 5, 6]]
-    equal?
+([[[1], [2]], [[3]], [[]], [[4, 5, 6]]] concat)
+[[1], [2], [3], [], [4, 5, 6]]
+=?
 
-: odd? \ n -- T
-    2 n:/mod drop 1 n:=
-;
+: odd? \n -- T
+2 n:/◿ ↘ 1 n:=
 
 "empty list"
-    ( [] ' odd? filter )
-    []
-    equal?
+([] ’ odd? filter)
+[]
+=?
 
 "non-empty list"
-    ( [1, 2, 3, 5] ' odd? filter )
-    [1, 3, 5]
-    equal?
+([1, 2, 3, 5] ’ odd? filter)
+[1, 3, 5]
+=?
 
 "empty list"
-    ( [] length )
-    0
-    equal?
+([] ⧻)
+0
+=?
 
 "non-empty list"
-    ( [1, 2, 3, 4] length )
-    4
-    equal?
+([1, 2, 3, 4] ⧻)
+4
+=?
 
 "empty list"
-    ( [] ' n:1+ map )
-    []
-    equal?
+([] ’ n:1+ map)
+[]
+=?
 
 "non-empty list"
-    ( [1, 3, 5, 7] ' n:1+ map )
-    [2, 4, 6, 8]
-    equal?
+([1, 3, 5, 7] ’ n:1+ map)
+[2, 4, 6, 8]
+=?
 
 "empty list"
-    ( [] 2 ' n:* foldl )
-    2
-    equal?
+([] 2 ’ n:× foldl)
+2
+=?
 
 "direction independent function applied to non-empty list"
-    ( [1, 2, 3, 4] 5 ' n:+ foldl )
-    15
-    equal?
+([1, 2, 3, 4] 5 ’ n:+ foldl)
+15
+=?
 
 "direction dependent function applied to non-empty list"
-    ( [1, 2, 3, 4] 24 ( swap n:/ ) foldl )
-    64
-    equal?
+([1, 2, 3, 4] 24 (swap n:/) foldl)
+64
+=?
 
 "empty list"
-    ( [] 2 ' n:* foldr )
-    2
-    equal?
+([] 2 ’ n:× foldr)
+2
+=?
 
 "direction independent function applied to non-empty list"
-    ( [1, 2, 3, 4] 5 ' n:+ foldr )
-    15
-    equal?
+([1, 2, 3, 4] 5 ’ n:+ foldr)
+15
+=?
 
 "direction dependent function applied to non-empty list"
-    ( [1, 2, 3, 4] 24 ( swap n:/ ) foldr )
-    9
-    equal?
+([1, 2, 3, 4] 24 (swap n:/) foldr)
+9
+=?
 
 "empty list"
-    ( [] reverse )
-    []
-    equal?
+([] ⇌)
+[]
+=?
 
 "non-empty list"
-    ( [1, 3, 5, 7] reverse )
-    [7, 5, 3, 1]
-    equal?
+([1, 3, 5, 7] ⇌)
+[7, 5, 3, 1]
+=?
 
 "list of lists is not flattened"
-    ( [[1, 2], [3], [], [4, 5, 6]] reverse )
-    [[4, 5, 6], [], [3], [1, 2]]
-    equal?
+([[1, 2], [3], [], [4, 5, 6]] ⇌)
+[[4, 5, 6], [], [3], [1, 2]]
+=?
 
-end-of-tests
-;with
+⤙end-of-tests

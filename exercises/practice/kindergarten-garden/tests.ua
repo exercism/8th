@@ -1,94 +1,93 @@
-"kindergarten-garden.8th" f:include
+~ "kindergarten-garden.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 17 tests
 
 "garden with single student"
-    ( "RC\nGG" "Alice" plants )
-    ["radishes", "clover", "grass", "grass"]
-    equal?
+("RC\nGG" "Alice" plants)
+["radishes", "clover", "grass", "grass"]
+=?
 
 SKIP-REST-OF-TESTS
 
 "different garden with single student"
-    ( "VC\nRC" "Alice" plants )
-    ["violets", "clover", "radishes", "clover"]
-    equal?
+("VC\nRC" "Alice" plants)
+["violets", "clover", "radishes", "clover"]
+=?
 
 "garden with two students"
-    ( "VVCG\nVVRC" "Bob" plants )
-    ["clover", "grass", "radishes", "clover"]
-    equal?
+("VVCG\nVVRC" "Bob" plants)
+["clover", "grass", "radishes", "clover"]
+=?
 
 "second student's garden"
-    ( "VVCCGG\nVVCCGG" "Bob" plants )
-    ["clover", "clover", "clover", "clover"]
-    equal?
+("VVCCGG\nVVCCGG" "Bob" plants)
+["clover", "clover", "clover", "clover"]
+=?
 
 "third student's garden"
-    ( "VVCCGG\nVVCCGG" "Charlie" plants )
-    ["grass", "grass", "grass", "grass"]
-    equal?
+("VVCCGG\nVVCCGG" "Charlie" plants)
+["grass", "grass", "grass", "grass"]
+=?
 
 "for Alice, first student's garden"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Alice" plants )
-    ["violets", "radishes", "violets", "radishes"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Alice" plants)
+["violets", "radishes", "violets", "radishes"]
+=?
 
 "for Bob, second student's garden"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Bob" plants )
-    ["clover", "grass", "clover", "clover"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Bob" plants)
+["clover", "grass", "clover", "clover"]
+=?
 
 "for Charlie"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Charlie" plants )
-    ["violets", "violets", "clover", "grass"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Charlie" plants)
+["violets", "violets", "clover", "grass"]
+=?
 
 "for David"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "David" plants )
-    ["radishes", "violets", "clover", "radishes"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "David" plants)
+["radishes", "violets", "clover", "radishes"]
+=?
 
 "for Eve"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Eve" plants )
-    ["clover", "grass", "radishes", "grass"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Eve" plants)
+["clover", "grass", "radishes", "grass"]
+=?
 
 "for Fred"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Fred" plants )
-    ["grass", "clover", "violets", "clover"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Fred" plants)
+["grass", "clover", "violets", "clover"]
+=?
 
 "for Ginny"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Ginny" plants )
-    ["clover", "grass", "grass", "clover"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Ginny" plants)
+["clover", "grass", "grass", "clover"]
+=?
 
 "for Harriet"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Harriet" plants )
-    ["violets", "radishes", "radishes", "violets"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Harriet" plants)
+["violets", "radishes", "radishes", "violets"]
+=?
 
 "for Ileana"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Ileana" plants )
-    ["grass", "clover", "violets", "clover"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Ileana" plants)
+["grass", "clover", "violets", "clover"]
+=?
 
 "for Joseph"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Joseph" plants )
-    ["violets", "clover", "violets", "grass"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Joseph" plants)
+["violets", "clover", "violets", "grass"]
+=?
 
 "for Kincaid, second to last student's garden"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Kincaid" plants )
-    ["grass", "clover", "clover", "grass"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Kincaid" plants)
+["grass", "clover", "clover", "grass"]
+=?
 
 "for Larry, last student's garden"
-    ( "VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Larry" plants )
-    ["grass", "violets", "clover", "violets"]
-    equal?
+("VRCGVVRVCGGCCGVRGCVCGCGV\nVRCCCGCRRGVCGCRVVCVGCGCV" "Larry" plants)
+["grass", "violets", "clover", "violets"]
+=?
 
-end-of-tests
-;with
+⤙end-of-tests

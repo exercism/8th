@@ -1,39 +1,38 @@
-"rna-transcription.8th" f:include
+~ "rna-transcription.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 6 tests
 
 "Empty RNA sequence"
-    ( "" >rna )
-    ""
-    equal?
+("" >rna)
+""
+=?
 
 SKIP-REST-OF-TESTS
 
 "RNA complement of cytosine is guanine"
-    ( "C" >rna )
-    "G"
-    equal?
+("C" >rna)
+"G"
+=?
 
 "RNA complement of guanine is cytosine"
-    ( "G" >rna )
-    "C"
-    equal?
+("G" >rna)
+"C"
+=?
 
 "RNA complement of thymine is adenine"
-    ( "T" >rna )
-    "A"
-    equal?
+("T" >rna)
+"A"
+=?
 
 "RNA complement of adenine is uracil"
-    ( "A" >rna )
-    "U"
-    equal?
+("A" >rna)
+"U"
+=?
 
 "RNA complement"
-    ( "ACGTGGTCTTAA" >rna )
-    "UGCACCAGAAUU"
-    equal?
+("ACGTGGTCTTAA" >rna)
+"UGCACCAGAAUU"
+=?
 
-end-of-tests
-;with
+⤙end-of-tests

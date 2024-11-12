@@ -1,4 +1,4 @@
-"parallel-letter-frequency.8th" f:include
+~ "parallel-letter-frequency.ua" ~ Hello
 needs exercism/test
 with: test
 12 tests

@@ -1,55 +1,54 @@
-"acronym.8th" f:include
+~ "acronym.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 
 9 tests
 
 "ignoring punctuation and casing"
-    ( "Complementary metal-oxide semiconductor" acronym )
-    "CMOS"
-    equal?
+("Complementary metal-oxide semiconductor" acronym)
+"CMOS"
+=?
 
 SKIP-REST-OF-TESTS
 
 "ignores punctuation"
-    ( "First In, First Out" acronym )
-    "FIFO"
-    equal?
+("First In, First Out" acronym)
+"FIFO"
+=?
 
 "from phrases with acronyms"
-    ( "GNU Image Manipulation Program" acronym )
-    "GIMP"
-    equal?
+("GNU Image Manipulation Program" acronym)
+"GIMP"
+=?
 
 "from phrases with apostrophes"
-    ( "Halley's Comet" acronym )
-    "HC"
-    equal?
+("Halley's Comet" acronym)
+"HC"
+=?
 
 "from title case"
-    ( "Portable Network Graphics" acronym )
-    "PNG"
-    equal?
+("Portable Network Graphics" acronym)
+"PNG"
+=?
 
 "from lower case"
-    ( "Ruby on Rails" acronym )
-    "ROR"
-    equal?
+("Ruby on Rails" acronym)
+"ROR"
+=?
 
 "from a very long abbreviation"
-    ( "Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me" acronym )
-    "ROTFLSHTMDCOALM"
-    equal?
+("Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me" acronym)
+"ROTFLSHTMDCOALM"
+=?
 
 "from phrases with consecutive delimiters"
-    ( "Something - I made up from thin air" acronym )
-    "SIMUFTA"
-    equal?
+("Something - I made up from thin air" acronym)
+"SIMUFTA"
+=?
 
 "from phrases with underscore emphasis"
-    ( "The Road _Not_ Taken" acronym )
-    "TRNT"
-    equal?
+("The Road _Not_ Taken" acronym)
+"TRNT"
+=?
 
-end-of-tests
-;with
+⤙end-of-tests

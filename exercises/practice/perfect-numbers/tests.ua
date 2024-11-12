@@ -1,72 +1,71 @@
-"perfect-numbers.8th" f:include
+~ "perfect-numbers.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 13 tests
 
 "Smallest perfect number is classified correctly"
-    ( 6 classify )
-    "perfect"
-    equal?
+(6 ⊛)
+"perfect"
+=?
 
 SKIP-REST-OF-TESTS
 
 "Medium perfect number is classified correctly"
-    ( 28 classify )
-    "perfect"
-    equal?
+(28 ⊛)
+"perfect"
+=?
 
 "Large perfect number is classified correctly"
-    ( 33550336 classify )
-    "perfect"
-    equal?
+(33550336 ⊛)
+"perfect"
+=?
 
 "Smallest abundant number is classified correctly"
-    ( 12 classify )
-    "abundant"
-    equal?
+(12 ⊛)
+"abundant"
+=?
 
 "Medium abundant number is classified correctly"
-    ( 30 classify )
-    "abundant"
-    equal?
+(30 ⊛)
+"abundant"
+=?
 
 "Large abundant number is classified correctly"
-    ( 33550335 classify )
-    "abundant"
-    equal?
+(33550335 ⊛)
+"abundant"
+=?
 
 "Smallest prime deficient number is classified correctly"
-    ( 2 classify )
-    "deficient"
-    equal?
+(2 ⊛)
+"deficient"
+=?
 
 "Smallest non-prime deficient number is classified correctly"
-    ( 4 classify )
-    "deficient"
-    equal?
+(4 ⊛)
+"deficient"
+=?
 
 "Medium deficient number is classified correctly"
-    ( 32 classify )
-    "deficient"
-    equal?
+(32 ⊛)
+"deficient"
+=?
 
 "Large deficient number is classified correctly"
-    ( 33550337 classify )
-    "deficient"
-    equal?
+(33550337 ⊛)
+"deficient"
+=?
 
 "Edge case (no factors other than itself) is classified correctly"
-    ( 1 classify )
-    "deficient"
-    equal?
+(1 ⊛)
+"deficient"
+=?
 
 "Zero is rejected (as it is not a positive integer)"
-    ( 0 classify )
-    null?
+(0 ⊛)
+null?
 
 "Negative integer is rejected (as it is not a positive integer)"
-    ( -1 classify )
-    null?
+(-1 ⊛)
+null?
 
-end-of-tests
-;with
+⤙end-of-tests

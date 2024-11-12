@@ -1,64 +1,63 @@
-"scrabble-score.8th" f:include
+~ "scrabble-score.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 11 tests
 
 "lowercase letter"
-    ( "a" score )
-    1
-    equal?
+("a" score)
+1
+=?
 
 SKIP-REST-OF-TESTS
 
 "uppercase letter"
-    ( "A" score )
-    1
-    equal?
+("A" score)
+1
+=?
 
 "valuable letter"
-    ( "f" score )
-    4
-    equal?
+("f" score)
+4
+=?
 
 "short word"
-    ( "at" score )
-    2
-    equal?
+("at" score)
+2
+=?
 
 "short, valuable word"
-    ( "zoo" score )
-    12
-    equal?
+("zoo" score)
+12
+=?
 
 "medium word"
-    ( "street" score )
-    6
-    equal?
+("street" score)
+6
+=?
 
 "medium, valuable word"
-    ( "quirky" score )
-    22
-    equal?
+("quirky" score)
+22
+=?
 
 "long, mixed-case word"
-    ( "OxyphenButazone" score )
-    41
-    equal?
+("OxyphenButazone" score)
+41
+=?
 
 "english-like word"
-    ( "pinata" score )
-    8
-    equal?
+("pinata" score)
+8
+=?
 
 "empty input"
-    ( "" score )
-    0
-    equal?
+("" score)
+0
+=?
 
 "entire alphabet available"
-    ( "abcdefghijklmnopqrstuvwxyz" score )
-    87
-    equal?
+("abcdefghijklmnopqrstuvwxyz" score)
+87
+=?
 
-end-of-tests
-;with
+⤙end-of-tests

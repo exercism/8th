@@ -1,4 +1,4 @@
-"pascals-triangle.8th" f:include
+~ "pascals-triangle.ua" ~ Hello
 needs exercism/test
 with: test
 8 tests

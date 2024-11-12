@@ -1,37 +1,36 @@
-"collatz-conjecture.8th" f:include
+~ "collatz-conjecture.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 6 tests
 
 "zero steps for one"
-    ( 1 collatz )
-    0
-    equal?
+(1 collatz)
+0
+=?
 
 SKIP-REST-OF-TESTS
 
 "large number of even and odd steps"
-    ( 1000000 collatz )
-    152
-    equal?
- 
+(1000000 collatz)
+152
+=?
+
 "even and odd steps"
-    ( 12 collatz )
-    9
-    equal?
+(12 collatz)
+9
+=?
 
 "divide if even"
-    ( 16 collatz )
-    4
-    equal?
+(16 collatz)
+4
+=?
 
 "zero is an error"
-    ( 0 collatz )
-    null?
+(0 collatz)
+null?
 
 "negative value is an error"
-    ( -15 collatz )
-    null?
+(-15 collatz)
+null?
 
-end-of-tests
-;with
+⤙end-of-tests

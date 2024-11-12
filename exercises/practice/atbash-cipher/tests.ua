@@ -1,66 +1,65 @@
-"atbash-cipher.8th" f:include
+~ "atbash-cipher.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 14 tests
 
 "encode yes"
-  ( "yes" >atbash )
-  "bvh"
-  equal?
+("yes" >atbash)
+"bvh"
+=?
 SKIP-REST-OF-TESTS
 "encode no"
-  ( "no" >atbash )
-  "ml"
-  equal?
+("no" >atbash)
+"ml"
+=?
 "encode OMG"
-  ( "OMG" >atbash )
-  "lnt"
-  equal?
+("OMG" >atbash)
+"lnt"
+=?
 "encode spaces"
-  ( "O M G" >atbash )
-  "lnt"
-  equal?
+("O M G" >atbash)
+"lnt"
+=?
 "encode mindblowingly"
-  ( "mindblowingly" >atbash )
-  "nrmwy oldrm tob"
-  equal?
+("mindblowingly" >atbash)
+"nrmwy oldrm tob"
+=?
 "encode numbers"
-  ( "Testing,1 2 3, testing." >atbash )
-  "gvhgr mt123 gvhgr mt"
-  equal?
+("Testing,1 2 3, testing." >atbash)
+"gvhgr mt123 gvhgr mt"
+=?
 "encode deep thought"
-  ( "Truth is fiction." >atbash )
-  "gifgs rhurx grlm"
-  equal?
+("Truth is fiction." >atbash)
+"gifgs rhurx grlm"
+=?
 "encode all the letters"
-  ( "The quick brown fox jumps over the lazy dog." >atbash )
-  "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
-  equal?
+("The quick brown fox jumps over the lazy dog." >atbash)
+"gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt"
+=?
 
 "decode exercism"
-  ( "vcvix rhn" atbash> )
-  "exercism"
-  equal?
+("vcvix rhn" atbash>)
+"exercism"
+=?
 "decode a sentence"
-  ( "zmlyh gzxov rhlug vmzhg vkkrm thglm v" atbash> )
-  "anobstacleisoftenasteppingstone"
-  equal?
+("zmlyh gzxov rhlug vmzhg vkkrm thglm v" atbash>)
+"anobstacleisoftenasteppingstone"
+=?
 "decode numbers"
-  ( "gvhgr mt123 gvhgr mt" atbash> )
-  "testing123testing"
-  equal?
+("gvhgr mt123 gvhgr mt" atbash>)
+"testing123testing"
+=?
 "decode all the letters"
-  ( "gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt" atbash> )
-  "thequickbrownfoxjumpsoverthelazydog"
-  equal?
+("gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt" atbash>)
+"thequickbrownfoxjumpsoverthelazydog"
+=?
 "decode with too many spaces"
-  ( "vc vix    r hn" atbash> )
-  "exercism"
-  equal?
+("vc vix    r hn" atbash>)
+"exercism"
+=?
 "decode with no spaces"
-  ( "zmlyhgzxovrhlugvmzhgvkkrmthglmv" atbash> )
-  "anobstacleisoftenasteppingstone"
-  equal?
+("zmlyhgzxovrhlugvmzhgvkkrmthglmv" atbash>)
+"anobstacleisoftenasteppingstone"
+=?
 
-end-of-tests
-;with
+⤙end-of-tests

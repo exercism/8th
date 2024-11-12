@@ -1,49 +1,48 @@
-"pangram.8th" f:include
+~ "pangram.ua" ~ Hello
 needs exercism/test
-with: test
+⤙: test
 10 tests
 
 "empty sentence"
-    ( "" pangram? )
-    false?
+("" pangram?)
+false?
 
 SKIP-REST-OF-TESTS
 
 "missing letters replaced by numbers"
-    ( "7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog" pangram?  )
-    false?
+("7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog" pangram?)
+false?
 
 "mixed case and punctuation"
-    ( "\"Five quacking Zephyrs jolt my wax bed.\"" pangram? )
-    true?
+("\"Five quacking Zephyrs jolt my wax bed.\"" pangram?)
+true?
 
 "missing letter x"
-    ( "a quick movement of the enemy will jeopardize five gunboats" pangram? )
-    false?
+("a quick movement of the enemy will jeopardize five gunboats" pangram?)
+false?
 
 "perfect lower case"
-    ( "abcdefghijklmnopqrstuvwxyz" pangram?  )
-    true?
+("abcdefghijklmnopqrstuvwxyz" pangram?)
+true?
 
 "missing letter h"
-    ( "five boxing wizards jump quickly at it" pangram?  )
-    false?
+("five boxing wizards jump quickly at it" pangram?)
+false?
 
 "with numbers"
-    ( "the 1 quick brown fox jumps over the 2 lazy dogs" pangram?  )
-    true?
+("the 1 quick brown fox jumps over the 2 lazy dogs" pangram?)
+true?
 
 "only lower case"
-    ( "the quick brown fox jumps over the lazy dog" pangram?  )
-    true?
+("the quick brown fox jumps over the lazy dog" pangram?)
+true?
 
 "missing d and g"
-    ( "the quick brown fox jumps over with lazy FX" pangram?  )
-    false?
+("the quick brown fox jumps over with lazy FX" pangram?)
+false?
 
 "with underscores"
-    ( "the_quick_brown_fox_jumps_over_the_lazy_dog" pangram?  )
-    true?
+("the_quick_brown_fox_jumps_over_the_lazy_dog" pangram?)
+true?
 
-end-of-tests
-;with
+⤙end-of-tests
