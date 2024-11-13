@@ -2,7 +2,7 @@
 
 ⍤⤙≍ "1" raindrops 1                 # the sound of 1 is 1?
 ⍤⤙≍ "Plang" raindrops 10            # the sound for 10 is Plang as it has a factor 5?
-⍤⤙≍ "PlingPlangPlong" raindrops 105 # the sound for 105 is PlingPlangPlong as it has factors 3, 5 and 7?
+⍤⤙≍ "PlingPlangPlong" raindrops 105 # the sound for 105 is PlingPlangPlong as it has factors 3 5 and 7?
 ⍤⤙≍ "Plong" raindrops 14            # the sound for 14 is Plong as it has a factor of 7?
 ⍤⤙≍ "PlingPlang" raindrops 15       # the sound for 15 is PlingPlang as it has factors 3 and 5?
 ⍤⤙≍ "PlingPlong" raindrops 21       # the sound for 21 is PlingPlong as it has factors 3 and 7?

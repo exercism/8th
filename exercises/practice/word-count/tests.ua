@@ -6,7 +6,7 @@
 ⍤⤙≍ {"one":1,"two":1,"three":1} word-count "one,two,three"                                                                                              # handles cramped lists?
 ⍤⤙≍ {"one":1,"two":1,"three":1} word-count "one,\ntwo,\nthree"                                                                                          # handles expanded lists?
 ⍤⤙≍ {"car":1,"carpet":1,"as":1,"java":1,"javascript":1} word-count "car: carpet as java: javascript!!&@$%^&"                                            # ignore punctuation?
-⍤⤙≍ {"testing":2,"1":1,"2":1} word-count "testing, 1, 2 testing"                                                                                        # include numbers?
+⍤⤙≍ {"testing":2,"1":1,"2":1} word-count "testing, 1 2 testing"                                                                                         # include numbers?
 ⍤⤙≍ {"go":3,"stop":2} word-count "go Go GO Stop stop"                                                                                                   # normalize case?
 ⍤⤙≍ {"first":1,"don't":2,"laugh":1,"then":1,"cry":1,"you're":1,"getting":1,"it":1} word-count "First: don't laugh. Then: don't cry. You're getting it." # with apostrophes?
 ⍤⤙≍ {"joe":1,"can't":1,"tell":1,"between":1,"large":2,"and":1} word-count "Joe can't tell between 'large' and large."                                   # with quotations?
