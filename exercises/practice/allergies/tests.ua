@@ -159,13 +159,13 @@ false?
 "allergic to everything, including cats"
 (255 "cats" allergic-to?)
 true?
-⍤⤙≍ [] list 0                                                                                            # no allergies?
-⍤⤙≍ ["eggs"] list 1                                                                                      # just eggs?
-⍤⤙≍ ["peanuts"] list 2                                                                                   # just peanuts?
-⍤⤙≍ ["strawberries"] list 8                                                                              # just strawberries?
-⍤⤙≍ ["eggs", "peanuts"] list 3                                                                           # eggs and peanuts?
-⍤⤙≍ ["eggs", "shellfish"] list 5                                                                         # more than eggs but not peanuts?
-⍤⤙≍ ["strawberries", "tomatoes", "chocolate", "pollen", "cats"] list 248                                 # lots of stuff?
-⍤⤙≍ ["eggs", "peanuts", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] list 255 # everything?
-⍤⤙≍ ["eggs", "shellfish", "strawberries", "tomatoes", "chocolate", "pollen", "cats"] list 509            # no allergen score parts?
-⍤⤙≍ ["eggs"] list 257                                                                                    # no allergen score parts without highest valid score?
+⍤⤙≍ [] list 0                                                                                     # no allergies?
+⍤⤙≍ ["eggs"] list 1                                                                               # just eggs?
+⍤⤙≍ ["peanuts"] list 2                                                                            # just peanuts?
+⍤⤙≍ ["strawberries"] list 8                                                                       # just strawberries?
+⍤⤙≍ ["eggs" "peanuts"] list 3                                                                     # eggs and peanuts?
+⍤⤙≍ ["eggs" "shellfish"] list 5                                                                   # more than eggs but not peanuts?
+⍤⤙≍ ["strawberries" "tomatoes" "chocolate" "pollen" "cats"] list 248                              # lots of stuff?
+⍤⤙≍ ["eggs" "peanuts" "shellfish" "strawberries" "tomatoes" "chocolate" "pollen" "cats"] list 255 # everything?
+⍤⤙≍ ["eggs" "shellfish" "strawberries" "tomatoes" "chocolate" "pollen" "cats"] list 509           # no allergen score parts?
+⍤⤙≍ ["eggs"] list 257                                                                             # no allergen score parts without highest valid score?

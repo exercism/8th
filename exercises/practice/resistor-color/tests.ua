@@ -4,4 +4,4 @@
 "White" ("white" color-code) 9 =?
 "Orange" ("orange" color-code) 3 =?
 
-"Colors" (colors) ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white"] =?
+"Colors" (colors) ["black" "brown" "red" "orange" "yellow" "green" "blue" "violet" "grey" "white"] =?

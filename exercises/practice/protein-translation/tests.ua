@@ -92,17 +92,17 @@
 
 "Sequence of two protein codons translates into proteins"
 ("UUUUUU" >proteins)
-["Phenylalanine", "Phenylalanine"]
+["Phenylalanine" "Phenylalanine"]
 =?
 
 "Sequence of two different protein codons translates into proteins"
 ("UUAUUG" >proteins)
-["Leucine", "Leucine"]
+["Leucine" "Leucine"]
 =?
 
 "Translate RNA strand into correct protein list"
 ("AUGUUUUGG" >proteins)
-["Methionine", "Phenylalanine", "Tryptophan"]
+["Methionine" "Phenylalanine" "Tryptophan"]
 =?
 
 "Translation stops if STOP codon at beginning of sequence"
@@ -117,7 +117,7 @@
 
 "Translation stops if STOP codon at end of three-codon sequence"
 ("AUGUUUUAA" >proteins)
-["Methionine", "Phenylalanine"]
+["Methionine" "Phenylalanine"]
 =?
 
 "Translation stops if STOP codon in middle of three-codon sequence"
@@ -127,7 +127,7 @@
 
 "Translation stops if STOP codon in middle of six-codon sequence"
 ("UGGUGUUAUUAAUGGUUU" >proteins)
-["Tryptophan", "Cysteine", "Tyrosine"]
+["Tryptophan" "Cysteine" "Tyrosine"]
 =?
 
 "Unknown amino acids, not part of a codon, can't translate"
@@ -140,5 +140,5 @@ null?
 
 "Incomplete RNA sequence can translate if valid until a STOP codon"
 ("UUCUUCUAAUGGU" >proteins)
-["Phenylalanine", "Phenylalanine"]
+["Phenylalanine" "Phenylalanine"]
 =?

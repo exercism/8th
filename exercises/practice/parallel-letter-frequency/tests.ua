@@ -17,38 +17,38 @@
     equal?
 
 "two texts with one letter"
-    ( ["e", "f"] >frequencies )
+    ( ["e" "f"] >frequencies )
     {"e": 1, "f": 1}
     equal?
 
 "two texts with multiple letters"
-    ( ["ggh", "hhi"] >frequencies )
+    ( ["ggh" "hhi"] >frequencies )
     {"g": 2, "h": 3, "i": 1}
     equal?
 
 "ignore letter casing"
-    ( ["m", "M"] >frequencies )
+    ( ["m" "M"] >frequencies )
     {"m": 2}
     equal?
 
 "ignore whitespace"
-    ( ["   ", "	", "
+    ( ["   " "	" "
 "] >frequencies )
     {}
     equal?
 
 "ignore punctuation"
-    ( ["!", "?", ";", ",", "."] >frequencies )
+    ( ["!" "?" ";" "," "."] >frequencies )
     {}
     equal?
 
 "ignore numbers"
-    ( ["1", "2", "3", "4", "5", "6", "7", "8", "9"] >frequencies )
+    ( ["1" "2" "3" "4" "5" "6" "7" "8" "9"] >frequencies )
     {}
     equal?
 
 "Unicode letters"
-    ( ["本", "φ", "ほ", "ø"] >frequencies )
+    ( ["本" "φ" "ほ" "ø"] >frequencies )
     {"本": 1, "φ": 1, "ほ": 1, "ø": 1}
     equal?
 
@@ -58,7 +58,7 @@
     equal?
 
 "many small texts"
-    ( ["abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc", "abbccc"] >frequencies )
+    ( ["abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc" "abbccc"] >frequencies )
     {"a": 50, "b": 100, "c": 150}
     equal?
 

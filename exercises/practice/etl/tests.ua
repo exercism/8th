@@ -1,23 +1,23 @@
 ~ "etl.ua" ~ Hello
 
-⍤⤙≍ {"a": 1} transform {"1": ["A"]}                                                     # single letter?
-⍤⤙≍ {"a": 1, "e": 1, "i": 1, "o": 1, "u": 1} transform {"1": ["A", "E", "I", "O", "U"]} # single score with multiple letters?
+⍤⤙≍ {"a": 1} transform {"1": ["A"]}                                                 # single letter?
+⍤⤙≍ {"a": 1, "e": 1, "i": 1, "o": 1, "u": 1} transform {"1": ["A" "E" "I" "O" "U"]} # single score with multiple letters?
 
 "multiple scores with multiple letters"
-({"1": ["A", "E"],
-  "2": ["D", "G"]}
+({"1": ["A" "E"],
+  "2": ["D" "G"]}
  transform)
 {"a": 1, "d": 2, "e": 1, "g": 2}
 =?
 
 "multiple scores with differing numbers of letters"
-({"1": ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
-  "2": ["D", "G"],
-  "3": ["B", "C", "M", "P"],
-  "4": ["F", "H", "V", "W", "Y"],
+({"1": ["A" "E" "I" "O" "U" "L" "N" "R" "S" "T"],
+  "2": ["D" "G"],
+  "3": ["B" "C" "M" "P"],
+  "4": ["F" "H" "V" "W" "Y"],
   "5": ["K"],
-  "8": ["J", "X"],
-  "10": ["Q", "Z"]}
+  "8": ["J" "X"],
+  "10": ["Q" "Z"]}
  transform)
 {"a": 1,
  "b": 3,
