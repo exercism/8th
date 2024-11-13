@@ -2,8 +2,8 @@
 
 ⍤⤙≍ "Fine. Be that way!" bob "    "                                            # prolonged silence?
 ⍤⤙≍ "Fine. Be that way!" bob ""                                                # silence?
-⍤⤙≍ "Whoa, chill out!" bob "1 2, 3 GO!"                                        # shouting numbers?
-⍤⤙≍ "Whatever." bob "1 2, 3"                                                   # no letters?
+⍤⤙≍ "Whoa, chill out!" bob "1 2 3 GO!"                                         # shouting numbers?
+⍤⤙≍ "Whatever." bob "1 2 3"                                                    # no letters?
 ⍤⤙≍ "Sure." bob "4?"                                                           # question with no letters?
 ⍤⤙≍ "Whatever." bob "Does this cryogenic chamber make me look fat?\nno"        # multiple line question?
 ⍤⤙≍ "Sure." bob "Does this cryogenic chamber make me look fat?"                # asking a question?

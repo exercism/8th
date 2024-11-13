@@ -1,26 +1,26 @@
 ~ "gigasecond.ua" ~ Hello
 
 "date only specification of time"
-([2011 4, 25 0, 0 0, 0 0, 0 0] d:⊂ +gigasecond)
-[2043 1, 1 1, 46 40, 0 0, 0 0] d:⊂
+([2011 4 25 0 0 0 0 0 0 0] d:⊂ +gigasecond)
+[2043 1 1 1 46 40 0 0 0 0] d:⊂
 =?
 
 "second test for date only specification of time"
-([1977 6, 13 0, 0 0, 0 0, 0 0] d:⊂ +gigasecond)
-[2009 2, 19 1, 46 40, 0 0, 0 0] d:⊂
+([1977 6 13 0 0 0 0 0 0 0] d:⊂ +gigasecond)
+[2009 2 19 1 46 40 0 0 0 0] d:⊂
 =?
 
 "third test for date only specification of time"
-([1959 7, 19 0, 0 0, 0 0, 0 0] d:⊂ +gigasecond)
-[1991 3, 27 1, 46 40, 0 0, 0 0] d:⊂
+([1959 7 19 0 0 0 0 0 0 0] d:⊂ +gigasecond)
+[1991 3 27 1 46 40 0 0 0 0] d:⊂
 =?
 
 "full time specified"
-([2015 1, 24 22, 0 0, 0 0, 0 0] d:⊂ +gigasecond)
-[2046 10, 2 23, 46 40, 0 0, 0 0] d:⊂
+([2015 1 24 22 0 0 0 0 0 0] d:⊂ +gigasecond)
+[2046 10 2 23 46 40 0 0 0 0] d:⊂
 =?
 
 "full time with day roll-over"
-([2015 1, 24 23, 59 59, 0 0, 0 0] d:⊂ +gigasecond)
-[2046 10, 3 1, 46 39, 0 0, 0 0] d:⊂
+([2015 1 24 23 59 59 0 0 0 0] d:⊂ +gigasecond)
+[2046 10 3 1 46 39 0 0 0 0] d:⊂
 =?
