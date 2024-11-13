@@ -3,24 +3,21 @@
 : throws? \w -- T
 catch . if nip then nip
 
-"reading empty buffer should fail"
-(1 cb:new ’ cb:read throws?)
-true?
+$ reading empty buffer should fail
+⍤⤙≍ 1 throws? 1 cb:new ’ cb:read
 # can read an item just written?
 ⍤⤙≍ 1 nip 1 cb:new 1 cb:write cb:read
 
-"each item may only be read once"
-(1 cb:new 1 cb:write cb:read ↘ ’ cb:read throws?)
-true?
+$ each item may only be read once
+⍤⤙≍ 1 throws? 1 cb:new 1 cb:write cb:read ↘ ’ cb:read
 
 "items are read in the order they are written"
 (2 cb:new 1 cb:write 2 cb:write cb:read swap cb:read nip 2 a:close)
 [1 2]
 =?
 
-"full buffer can't be written to"
-(1 cb:new 1 cb:write 2 ’ cb:write throws?)
-true?
+$ full buffer can't be written to
+⍤⤙≍ 1 throws? 1 cb:new 1 cb:write 2 ’ cb:write
 
 "a read frees up capacity for another write"
 (1 cb:new 1 cb:write cb:read swap 2 cb:write cb:read nip 2 a:close)
@@ -32,9 +29,8 @@ true?
 [1 2 3]
 =?
 
-"items cleared out of buffer can't be read"
-(1 cb:new 1 cb:write cb:clear ’ cb:read throws?)
-true?
+$ items cleared out of buffer can't be read
+⍤⤙≍ 1 throws? 1 cb:new 1 cb:write cb:clear ’ cb:read
 # clear frees up capacity for another write?
 ⍤⤙≍ 2 nip 1 cb:new 1 cb:write cb:clear 2 cb:write cb:read
 
@@ -56,6 +52,5 @@ true?
 [1 3 4 5]
 =?
 
-"initial clear does not affect wrapping around"
-(2 cb:new cb:clear 1 cb:write 2 cb:write 3 cb:overwrite 4 cb:overwrite cb:read ↘ cb:read ↘ ’ cb:read throws?)
-true?
+$ initial clear does not affect wrapping around
+⍤⤙≍ 1 throws? 2 cb:new cb:clear 1 cb:write 2 cb:write 3 cb:overwrite 4 cb:overwrite cb:read ↘ cb:read ↘ ’ cb:read

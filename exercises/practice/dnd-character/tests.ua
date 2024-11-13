@@ -51,9 +51,8 @@
 : ability-valid? \n -- t
 3 18 n:between
 
-"random ability is within range"
-(ability ability-valid?)
-true?
+$ random ability is within range
+⍤⤙≍ 1 ability-valid? ability
 
 "random character is valid"
 (character >r
