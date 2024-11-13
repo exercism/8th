@@ -1,13 +1,34 @@
 ~ "scrabble-score.ua" ~ Hello
 
-⍤⤙≍ 1 score "a"                           # lowercase letter?
-⍤⤙≍ 1 score "A"                           # uppercase letter?
-⍤⤙≍ 4 score "f"                           # valuable letter?
-⍤⤙≍ 2 score "at"                          # short word?
-⍤⤙≍ 12 score "zoo"                        # short, valuable word?
-⍤⤙≍ 6 score "street"                      # medium word?
-⍤⤙≍ 22 score "quirky"                     # medium, valuable word?
-⍤⤙≍ 41 score "OxyphenButazone"            # long, mixed-case word?
-⍤⤙≍ 8 score "pinata"                      # english-like word?
-⍤⤙≍ 0 score ""                            # empty input?
-⍤⤙≍ 87 score "abcdefghijklmnopqrstuvwxyz" # entire alphabet available?
+# lowercase letter?
+⍤⤙≍ 1 score "a"
+
+# uppercase letter?
+⍤⤙≍ 1 score "A"
+
+# valuable letter?
+⍤⤙≍ 4 score "f"
+
+# short word?
+⍤⤙≍ 2 score "at"
+
+# short, valuable word?
+⍤⤙≍ 12 score "zoo"
+
+# medium word?
+⍤⤙≍ 6 score "street"
+
+# medium, valuable word?
+⍤⤙≍ 22 score "quirky"
+
+# long, mixed-case word?
+⍤⤙≍ 41 score "OxyphenButazone"
+
+# english-like word?
+⍤⤙≍ 8 score "pinata"
+
+# empty input?
+⍤⤙≍ 0 score ""
+
+# entire alphabet available?
+⍤⤙≍ 87 score "abcdefghijklmnopqrstuvwxyz"

@@ -34,10 +34,23 @@
 ([[1 2 3], [5 5 5], [5 1 2], [2 1 2], [1 5 2], [2 2 1], [1 2 5]] (5 ’ n:= a:⊗ nip number? nip) ▽)
 [[5 5 5], [5 1 2], [1 5 2], [1 2 5]]
 =?
-⍤⤙≍ [] discard [] (↘ true)                                                                                                            # discard on empty list returns empty list?
-⍤⤙≍ [] discard [1 3 5] (↘ true)                                                                                                       # discards everything?
-⍤⤙≍ [1 3 5] discard [1 3 5] (↘ false)                                                                                                 # discards nothing?
-⍤⤙≍ [2] discard [1 2 3] (2 n:◿ 1 n:=)                                                                                                 # discards first and last?
-⍤⤙≍ [1 3] discard [1 2 3] (2 n:◿ 0 n:=)                                                                                               # discards neither first nor last?
-⍤⤙≍ ["apple" "banana" "cherimoya"] discard ["apple" "zebra" "banana" "zombies" "cherimoya" "zealot"] (0 s:@ nip ’z n:=)               # discards strings?
-⍤⤙≍ [[1 2 3], [2 1 2], [2 2 1]] discard [[1 2 3], [5 5 5], [5 1 2], [2 1 2], [1 5 2], [2 2 1], [1 2 5]] (5 ’ n:= a:⊗ nip number? nip) # discards lists?
+# discard on empty list returns empty list?
+⍤⤙≍ [] discard [] (↘ true)
+
+# discards everything?
+⍤⤙≍ [] discard [1 3 5] (↘ true)
+
+# discards nothing?
+⍤⤙≍ [1 3 5] discard [1 3 5] (↘ false)
+
+# discards first and last?
+⍤⤙≍ [2] discard [1 2 3] (2 n:◿ 1 n:=)
+
+# discards neither first nor last?
+⍤⤙≍ [1 3] discard [1 2 3] (2 n:◿ 0 n:=)
+
+# discards strings?
+⍤⤙≍ ["apple" "banana" "cherimoya"] discard ["apple" "zebra" "banana" "zombies" "cherimoya" "zealot"] (0 s:@ nip ’z n:=)
+
+# discards lists?
+⍤⤙≍ [[1 2 3], [2 1 2], [2 2 1]] discard [[1 2 3], [5 5 5], [5 1 2], [2 1 2], [1 5 2], [2 2 1], [1 2 5]] (5 ’ n:= a:⊗ nip number? nip)

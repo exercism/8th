@@ -1,11 +1,21 @@
 ~ "sieve.ua" ~ Hello
 
-⍤⤙≍ [] primes 1               # no primes under two?
-⍤⤙≍ [2] primes 2              # find first prime?
-⍤⤙≍ [2 3 5 7] primes 10       # find primes up to 10?
-⍤⤙≍ [2 3 5 7 11 13] primes 13 # limit is prime?
+# no primes under two?
+⍤⤙≍ [] primes 1
+
+# find first prime?
+⍤⤙≍ [2] primes 2
+
+# find primes up to 10?
+⍤⤙≍ [2 3 5 7] primes 10
+
+# limit is prime?
+⍤⤙≍ [2 3 5 7 11 13] primes 13
+
 ⍤⤙≍ [
-  2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53, primes 1000 # find primes up to 1000 59 61 67 71 73 79 83 89 97 101 103 107 109 113 127 131,
+  # find primes up to 1000 59 61 67 71 73 79 83 89 97 101 103 107 109 113 127 131,
+  2 3 5 7 11 13 17 19 23 29 31 37 41 43 47 53, primes 1000
+
   137 139 149 151 157 163 167 173 179 181 191 193 197 199 211 223,
   227 229 233 239 241 251 257 263 269 271 277 281 283 293 307 311,
   313 317 331 337 347 349 353 359 367 373 379 383 389 397 401 409,

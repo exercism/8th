@@ -18,7 +18,14 @@
 ("1 2 3\n4 5 6\n7 8 9\n8 7 6" 4 ≡)
 [8 7 6]
 =?
-⍤⤙≍ [1] column "1" 1                                 # extract column from one number matrix?
-⍤⤙≍ [3 6 9] column "1 2 3\n4 5 6\n7 8 9" 3           # can extract column?
-⍤⤙≍ [4 8 6] column "1 2 3 4\n5 6 7 8\n9 8 7 6" 4     # can extract column from non-square matrix with no corresponding row?
-⍤⤙≍ [1903 3 4] column "89 1903 3\n18 3 1\n9 4 800" 2 # extract column where numbers have different widths?
+# extract column from one number matrix?
+⍤⤙≍ [1] column "1" 1
+
+# can extract column?
+⍤⤙≍ [3 6 9] column "1 2 3\n4 5 6\n7 8 9" 3
+
+# can extract column from non-square matrix with no corresponding row?
+⍤⤙≍ [4 8 6] column "1 2 3 4\n5 6 7 8\n9 8 7 6" 4
+
+# extract column where numbers have different widths?
+⍤⤙≍ [1903 3 4] column "89 1903 3\n18 3 1\n9 4 800" 2
