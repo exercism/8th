@@ -51,7 +51,7 @@
 : ability-valid? \n -- t
 3 18 n:between
 
-$ random ability is within range
+# random ability is within range
 ⍤⤙≍ 1 ability-valid? ability
 
 "random character is valid"
