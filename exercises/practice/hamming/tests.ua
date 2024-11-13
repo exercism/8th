@@ -16,4 +16,13 @@
 ⍤⤙≍ 9 distance "GGACGGATTCTG" "AGGACGGATTCT"
 
 # disallow empty second strand
-⍤⤙≍ null? distance "" "G" # disallow empty first strand⍤⤙≍ null? distance "AATG" "AAA" # disallow first strand longer⍤⤙≍ null? distance "ATA" "AGTG" # disallow second strand longer⍤⤙≍ null? distance "G" ""      
+⍤⤙≍ null? distance "" "G"
+
+# disallow empty first stran
+⍤⤙≍ null? distance "AATG" "AAA"
+
+# disallow first strand longe
+⍤⤙≍ null? distance "ATA" "AGTG"
+
+# disallow second strand longe
+⍤⤙≍ null? distance "G" ""

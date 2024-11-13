@@ -28,10 +28,19 @@
 ⍤⤙≍ 0 largest-product "99099" 3
 
 # reports 1 for empty string and empty product (0 span)?
-⍤⤙≍ null? largest-product "123" 4 # rejects span longer than string length⍤⤙≍ 1 largest-product "" 0       
+⍤⤙≍ null? largest-product "123" 4
+
+# rejects span longer than string lengt
+⍤⤙≍ 1 largest-product "" 0
 
 # reports 1 for nonempty string and empty product (0 span)?
 ⍤⤙≍ 1 largest-product "123" 0
 
 # rejects negative span
-⍤⤙≍ null? largest-product "" 1 # rejects empty string and nonzero span⍤⤙≍ null? largest-product "1234a5" 2 # rejects invalid character in digits⍤⤙≍ null? largest-product "12345" -1
+⍤⤙≍ null? largest-product "" 1
+
+# rejects empty string and nonzero spa
+⍤⤙≍ null? largest-product "1234a5" 2
+
+# rejects invalid character in digit
+⍤⤙≍ null? largest-product "12345" -1

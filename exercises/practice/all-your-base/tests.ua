@@ -37,4 +37,28 @@
 ⍤⤙≍ [4 2] rebase 7 [0 6 0] 10
 
 # both bases are negative
-⍤⤙≍ null? rebase 1 [0] 10 # input base is one⍤⤙≍ null? rebase 0 [] 10                  # input base is zero⍤⤙≍ null? rebase -2 [1] 10                # input base is negative⍤⤙≍ null? rebase 2 [1, -1 1 0 1 0] 10 # negative digit⍤⤙≍ null? rebase 2 [1 2 1 0 1 0] 10  # invalid positive digit⍤⤙≍ null? rebase 2 [1 0 1 0 1 0] 1   # output base is one⍤⤙≍ null? rebase 10 [7] 0                 # output base is zero⍤⤙≍ null? rebase 2 [1] -7                 # output base is negative⍤⤙≍ null? rebase -2 [1] -7               
+⍤⤙≍ null? rebase 1 [0] 10
+
+# input base is on
+⍤⤙≍ null? rebase 0 [] 10
+
+# input base is zer
+⍤⤙≍ null? rebase -2 [1] 10
+
+# input base is negativ
+⍤⤙≍ null? rebase 2 [1, -1 1 0 1 0] 10
+
+# negative digi
+⍤⤙≍ null? rebase 2 [1 2 1 0 1 0] 10
+
+# invalid positive digi
+⍤⤙≍ null? rebase 2 [1 0 1 0 1 0] 1
+
+# output base is on
+⍤⤙≍ null? rebase 10 [7] 0
+
+# output base is zer
+⍤⤙≍ null? rebase 2 [1] -7
+
+# output base is negativ
+⍤⤙≍ null? rebase -2 [1] -7

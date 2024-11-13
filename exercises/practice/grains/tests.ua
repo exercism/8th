@@ -22,7 +22,13 @@
 ⍤⤙≍ 9223372036854775808 square 64
 
 # square greater than 64 is invalid
-⍤⤙≍ null? square 0 # square 0 is invalid⍤⤙≍ null? square -1 # negative square is invalid⍤⤙≍ null? square 65
+⍤⤙≍ null? square 0
+
+# square 0 is invali
+⍤⤙≍ null? square -1
+
+# negative square is invali
+⍤⤙≍ null? square 65
 
 "returns the total number of grains on the board"
 (total)

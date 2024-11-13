@@ -13,4 +13,7 @@
 ⍤⤙≍ 4 collatz 16
 
 # negative value is an error
-⍤⤙≍ null? collatz 0 # zero is an error⍤⤙≍ null? collatz -15
+⍤⤙≍ null? collatz 0
+
+# zero is an erro
+⍤⤙≍ null? collatz -15

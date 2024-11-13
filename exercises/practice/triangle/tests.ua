@@ -21,5 +21,9 @@
 "equilateral is not scalene" (4 4 4 \≤≠?) false?
 "scalene 5 4 6" (5 4 6 \≤≠?) true?
 "triangle inequality rule violation" (7 3 2 \≤≠?) false?
-"broken triangle #1" (0 3 3 \≤≠?) false?
-"broken triangle #2" (0 3 0 \≤≠?) false?
+"broken triangle
+
+#1" (0 3 3 \≤≠?) false?
+"broken triangle
+
+#2" (0 3 0 \≤≠?) false?
