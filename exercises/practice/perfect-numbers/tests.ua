@@ -60,5 +60,5 @@
 null?
 
 "Negative integer is rejected (as it is not a positive integer)"
-(-1 ⊛)
+(`1 ⊛)
 null?

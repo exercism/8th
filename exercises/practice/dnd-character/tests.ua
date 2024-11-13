@@ -1,25 +1,25 @@
 ~ "dnd-character.ua" ~ Hello
 
-# ability modifier for score 3 is -4?
-⍤⤙≍ -4 modifier 3
+# ability modifier for score 3 is `4?
+⍤⤙≍ `4 modifier 3
 
-# ability modifier for score 4 is -3?
-⍤⤙≍ -3 modifier 4
+# ability modifier for score 4 is `3?
+⍤⤙≍ `3 modifier 4
 
-# ability modifier for score 5 is -3?
-⍤⤙≍ -3 modifier 5
+# ability modifier for score 5 is `3?
+⍤⤙≍ `3 modifier 5
 
-# ability modifier for score 6 is -2?
-⍤⤙≍ -2 modifier 6
+# ability modifier for score 6 is `2?
+⍤⤙≍ `2 modifier 6
 
-# ability modifier for score 7 is -2?
-⍤⤙≍ -2 modifier 7
+# ability modifier for score 7 is `2?
+⍤⤙≍ `2 modifier 7
 
-# ability modifier for score 8 is -1?
-⍤⤙≍ -1 modifier 8
+# ability modifier for score 8 is `1?
+⍤⤙≍ `1 modifier 8
 
-# ability modifier for score 9 is -1?
-⍤⤙≍ -1 modifier 9
+# ability modifier for score 9 is `1?
+⍤⤙≍ `1 modifier 9
 
 # ability modifier for score 10 is 0?
 ⍤⤙≍ 0 modifier 10

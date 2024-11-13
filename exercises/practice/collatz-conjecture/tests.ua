@@ -16,4 +16,4 @@
 ⍤⤙≍ null? collatz 0
 
 # zero is an erro
-⍤⤙≍ null? collatz -15
+⍤⤙≍ null? collatz `15

@@ -43,10 +43,10 @@
 ⍤⤙≍ null? rebase 0 [] 10
 
 # input base is zer
-⍤⤙≍ null? rebase -2 [1] 10
+⍤⤙≍ null? rebase `2 [1] 10
 
 # input base is negativ
-⍤⤙≍ null? rebase 2 [1, -1 1 0 1 0] 10
+⍤⤙≍ null? rebase 2 [1, `1 1 0 1 0] 10
 
 # negative digi
 ⍤⤙≍ null? rebase 2 [1 2 1 0 1 0] 10
@@ -58,7 +58,7 @@
 ⍤⤙≍ null? rebase 10 [7] 0
 
 # output base is zer
-⍤⤙≍ null? rebase 2 [1] -7
+⍤⤙≍ null? rebase 2 [1] `7
 
 # output base is negativ
-⍤⤙≍ null? rebase -2 [1] -7
+⍤⤙≍ null? rebase `2 [1] `7

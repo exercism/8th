@@ -43,4 +43,4 @@
 ⍤⤙≍ null? largest-product "1234a5" 2
 
 # rejects invalid character in digit
-⍤⤙≍ null? largest-product "12345" -1
+⍤⤙≍ null? largest-product "12345" `1

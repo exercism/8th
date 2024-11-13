@@ -28,7 +28,7 @@
 ⍤⤙≍ [] slices "12345" 0
 
 # slice length cannot be negative?
-⍤⤙≍ [] slices "123" -1
+⍤⤙≍ [] slices "123" `1
 
 # empty series is invalid?
 ⍤⤙≍ [] slices "" 1

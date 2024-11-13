@@ -25,7 +25,7 @@
 ⍤⤙≍ null? square 0
 
 # square 0 is invali
-⍤⤙≍ null? square -1
+⍤⤙≍ null? square `1
 
 # negative square is invali
 ⍤⤙≍ null? square 65

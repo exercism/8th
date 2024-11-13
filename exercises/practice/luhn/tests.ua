@@ -37,7 +37,7 @@
 ⍤⤙≍ false? luhn "059a"
 
 # valid strings with a non-digit added at the end become invali
-⍤⤙≍ false? luhn "055-444-285"
+⍤⤙≍ false? luhn "055`444`285"
 
 # valid strings with punctuation included become invali
 ⍤⤙≍ false? luhn "055# 444$ 285"
