@@ -1,31 +1,19 @@
 ~ "reverse-string.ua" ~ Hello
 
-"an empty string"
-("" ⇌)
-""
-=?
+# an empty string
+⍤⤙≍ "" ReverseString ""
 
-"a word"
-("robot" ⇌)
-"tobor"
-=?
+# a word
+⍤⤙≍ "tobor" ReverseString "robot"
 
-"a capitalized word"
-("Ramen" ⇌)
-"nemaR"
-=?
+# a capitalized word
+⍤⤙≍ "nemaR" ReverseString "Ramen"
 
-"a sentence with punctuation"
-("I'm hungry!" ⇌)
-"!yrgnuh m'I"
-=?
+# a sentence with punctuation
+⍤⤙≍ "!yrgnuh m'I" ReverseString "I'm hungry!"
 
-"a palindrome"
-("racecar" ⇌)
-"racecar"
-=?
+# a palindrome
+⍤⤙≍ "racecar" ReverseString "racecar"
 
-"an even-sized word"
-("drawer" ⇌)
-"reward"
-=?
+# an even-sized word
+⍤⤙≍ "reward" ReverseString "drawer"
