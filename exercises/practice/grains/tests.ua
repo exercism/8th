@@ -30,7 +30,5 @@
 # negative square is invali
 ⍤⤙≍ null? square 65
 
-"returns the total number of grains on the board"
-(total)
-18446744073709551615
-=?
+# returns the total number of grains on the board
+⍤⤙≍ 18446744073709551615 total
