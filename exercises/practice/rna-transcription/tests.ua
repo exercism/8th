@@ -1,31 +1,19 @@
 ~ "rna-transcription.ua" ~ Hello
 
-"Empty RNA sequence"
-("" >rna)
-""
-=?
+# Empty RNA sequence
+⍤⤙≍ "" >rna ""
 
-"RNA complement of cytosine is guanine"
-("C" >rna)
-"G"
-=?
+# RNA complement of cytosine is guanine
+⍤⤙≍ "G" >rna "C"
 
-"RNA complement of guanine is cytosine"
-("G" >rna)
-"C"
-=?
+# RNA complement of guanine is cytosine
+⍤⤙≍ "C" >rna "G"
 
-"RNA complement of thymine is adenine"
-("T" >rna)
-"A"
-=?
+# RNA complement of thymine is adenine
+⍤⤙≍ "A" >rna "T"
 
-"RNA complement of adenine is uracil"
-("A" >rna)
-"U"
-=?
+# RNA complement of adenine is uracil
+⍤⤙≍ "U" >rna "A"
 
-"RNA complement"
-("ACGTGGTCTTAA" >rna)
-"UGCACCAGAAUU"
-=?
+# RNA complement
+⍤⤙≍ "UGCACCAGAAUU" >rna "ACGTGGTCTTAA"

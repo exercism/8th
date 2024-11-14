@@ -1,134 +1,82 @@
 ~ "protein-translation.ua" ~ Hello
 
-"Empty RNA sequence results in no proteins"
-("" >proteins)
-[]
-=?
+# Empty RNA sequence results in no proteins
+⍤⤙≍ [] >proteins ""
 
-"Methionine RNA sequence"
-("AUG" >proteins)
-["Methionine"]
-=?
+# Methionine RNA sequence
+⍤⤙≍ ["Methionine"] >proteins "AUG"
 
-"Phenylalanine RNA sequence 1"
-("UUU" >proteins)
-["Phenylalanine"]
-=?
+# Phenylalanine RNA sequence 1
+⍤⤙≍ ["Phenylalanine"] >proteins "UUU"
 
-"Phenylalanine RNA sequence 2"
-("UUC" >proteins)
-["Phenylalanine"]
-=?
+# Phenylalanine RNA sequence 2
+⍤⤙≍ ["Phenylalanine"] >proteins "UUC"
 
-"Leucine RNA sequence 1"
-("UUA" >proteins)
-["Leucine"]
-=?
+# Leucine RNA sequence 1
+⍤⤙≍ ["Leucine"] >proteins "UUA"
 
-"Leucine RNA sequence 2"
-("UUG" >proteins)
-["Leucine"]
-=?
+# Leucine RNA sequence 2
+⍤⤙≍ ["Leucine"] >proteins "UUG"
 
-"Serine RNA sequence 1"
-("UCU" >proteins)
-["Serine"]
-=?
+# Serine RNA sequence 1
+⍤⤙≍ ["Serine"] >proteins "UCU"
 
-"Serine RNA sequence 2"
-("UCC" >proteins)
-["Serine"]
-=?
+# Serine RNA sequence 2
+⍤⤙≍ ["Serine"] >proteins "UCC"
 
-"Serine RNA sequence 3"
-("UCA" >proteins)
-["Serine"]
-=?
+# Serine RNA sequence 3
+⍤⤙≍ ["Serine"] >proteins "UCA"
 
-"Serine RNA sequence 4"
-("UCG" >proteins)
-["Serine"]
-=?
+# Serine RNA sequence 4
+⍤⤙≍ ["Serine"] >proteins "UCG"
 
-"Tyrosine RNA sequence 1"
-("UAU" >proteins)
-["Tyrosine"]
-=?
+# Tyrosine RNA sequence 1
+⍤⤙≍ ["Tyrosine"] >proteins "UAU"
 
-"Tyrosine RNA sequence 2"
-("UAC" >proteins)
-["Tyrosine"]
-=?
+# Tyrosine RNA sequence 2
+⍤⤙≍ ["Tyrosine"] >proteins "UAC"
 
-"Cysteine RNA sequence 1"
-("UGU" >proteins)
-["Cysteine"]
-=?
+# Cysteine RNA sequence 1
+⍤⤙≍ ["Cysteine"] >proteins "UGU"
 
-"Cysteine RNA sequence 2"
-("UGC" >proteins)
-["Cysteine"]
-=?
+# Cysteine RNA sequence 2
+⍤⤙≍ ["Cysteine"] >proteins "UGC"
 
-"Tryptophan RNA sequence"
-("UGG" >proteins)
-["Tryptophan"]
-=?
+# Tryptophan RNA sequence
+⍤⤙≍ ["Tryptophan"] >proteins "UGG"
 
-"STOP codon RNA sequence 1"
-("UAA" >proteins)
-[]
-=?
+# STOP codon RNA sequence 1
+⍤⤙≍ [] >proteins "UAA"
 
-"STOP codon RNA sequence 2"
-("UAG" >proteins)
-[]
-=?
+# STOP codon RNA sequence 2
+⍤⤙≍ [] >proteins "UAG"
 
-"STOP codon RNA sequence 3"
-("UGA" >proteins)
-[]
-=?
+# STOP codon RNA sequence 3
+⍤⤙≍ [] >proteins "UGA"
 
-"Sequence of two protein codons translates into proteins"
-("UUUUUU" >proteins)
-["Phenylalanine" "Phenylalanine"]
-=?
+# Sequence of two protein codons translates into proteins
+⍤⤙≍ ["Phenylalanine" "Phenylalanine"] >proteins "UUUUUU"
 
-"Sequence of two different protein codons translates into proteins"
-("UUAUUG" >proteins)
-["Leucine" "Leucine"]
-=?
+# Sequence of two different protein codons translates into proteins
+⍤⤙≍ ["Leucine" "Leucine"] >proteins "UUAUUG"
 
-"Translate RNA strand into correct protein list"
-("AUGUUUUGG" >proteins)
-["Methionine" "Phenylalanine" "Tryptophan"]
-=?
+# Translate RNA strand into correct protein list
+⍤⤙≍ ["Methionine" "Phenylalanine" "Tryptophan"] >proteins "AUGUUUUGG"
 
-"Translation stops if STOP codon at beginning of sequence"
-("UAGUGG" >proteins)
-[]
-=?
+# Translation stops if STOP codon at beginning of sequence
+⍤⤙≍ [] >proteins "UAGUGG"
 
-"Translation stops if STOP codon at end of two-codon sequence"
-("UGGUAG" >proteins)
-["Tryptophan"]
-=?
+# Translation stops if STOP codon at end of two-codon sequence
+⍤⤙≍ ["Tryptophan"] >proteins "UGGUAG"
 
-"Translation stops if STOP codon at end of three-codon sequence"
-("AUGUUUUAA" >proteins)
-["Methionine" "Phenylalanine"]
-=?
+# Translation stops if STOP codon at end of three-codon sequence
+⍤⤙≍ ["Methionine" "Phenylalanine"] >proteins "AUGUUUUAA"
 
-"Translation stops if STOP codon in middle of three-codon sequence"
-("UGGUAGUGG" >proteins)
-["Tryptophan"]
-=?
+# Translation stops if STOP codon in middle of three-codon sequence
+⍤⤙≍ ["Tryptophan"] >proteins "UGGUAGUGG"
 
-"Translation stops if STOP codon in middle of six-codon sequence"
-("UGGUGUUAUUAAUGGUUU" >proteins)
-["Tryptophan" "Cysteine" "Tyrosine"]
-=?
+# Translation stops if STOP codon in middle of six-codon sequence
+⍤⤙≍ ["Tryptophan" "Cysteine" "Tyrosine"] >proteins "UGGUGUUAUUAAUGGUUU"
 
 "Unknown amino acids, not part of a codon, can't translate"
 ("XYZ" >proteins)
@@ -138,7 +86,5 @@ null?
 ("AUGU" >proteins)
 null?
 
-"Incomplete RNA sequence can translate if valid until a STOP codon"
-("UUCUUCUAAUGGU" >proteins)
-["Phenylalanine" "Phenylalanine"]
-=?
+# Incomplete RNA sequence can translate if valid until a STOP codon
+⍤⤙≍ ["Phenylalanine" "Phenylalanine"] >proteins "UUCUUCUAAUGGU"
