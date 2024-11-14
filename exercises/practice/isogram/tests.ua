@@ -1,16 +1,44 @@
 ~ "isogram.ua" ~ Hello
 
-"empty string" ("" isogram?) true?
-"isogram with only lower case characters" ("isogram" isogram?) true?
-"word with one duplicated character" ("eleven" isogram?) false?
-"word with one duplicated character from the end of the alphabet" ("zzyzx" isogram?) false?
-"longest reported english isogram" ("subdermatoglyphic" isogram?) true?
-"word with duplicated character in mixed case" ("Alphabet" isogram?) false?
-"word with duplicated character in mixed case, lowercase first" ("alphAbet" isogram?) false?
-"hypothetical isogrammic word with hyphen" ("thumbscrew-japingly" isogram?) true?
-"hypothetical word with duplicated character following hyphen" ("thumbscrew-jappingly" isogram?) false?
-"isogram with duplicated hyphen" ("six-year-old" isogram?) true?
-"made-up name that is an isogram" ("Emily Jung Schwartzkopf" isogram?) true?
-"duplicated character in the middle" ("accentor" isogram?) false?
-"same first and last characters" ("angola" isogram?) false?
-"word with duplicated character and with two hyphens" ("up-to-date" isogram?) false?
+# empty string
+⍤⤙≍ 1 isogram? ""
+
+# isogram with only lower case characters
+⍤⤙≍ 1 isogram? "isogram"
+
+# word with one duplicated character
+⍤⤙≍ 0 isogram? "eleven"
+
+# word with one duplicated character from the end of the alphabet
+⍤⤙≍ 0 isogram? "zzyzx"
+
+# longest reported english isogram
+⍤⤙≍ 1 isogram? "subdermatoglyphic"
+
+# word with duplicated character in mixed case
+⍤⤙≍ 0 isogram? "Alphabet"
+
+# word with duplicated character in mixed case, lowercase first
+⍤⤙≍ 0 isogram? "alphAbet"
+
+# hypothetical isogrammic word with hyphen
+⍤⤙≍ 1 isogram? "thumbscrew-japingly"
+
+# hypothetical word with duplicated character following hyphen
+⍤⤙≍ 0 isogram? "thumbscrew-jappingly"
+
+# isogram with duplicated hyphen
+⍤⤙≍ 1 isogram? "six-year-old"
+
+# made-up name that is an isogram
+⍤⤙≍ 1 isogram? "Emily Jung Schwartzkopf"
+
+# duplicated character in the middle
+⍤⤙≍ 0 isogram? "accentor"
+
+# same first and last characters
+⍤⤙≍ 0 isogram? "angola"
+
+# word with duplicated character and with two hyphens
+⍤⤙≍ 0 isogram? "up-to-date"
+

@@ -1,11 +1,29 @@
 ~ "leap.ua" ~ Hello
 
-"year not divisible by 4 in common year" (2015 leap-year?) false?
-"year divisible by 100 but not by 3 is still not a leap year" (1900 leap-year?) false?
-"year divisible by 2, not divisible by 4 in common year" (1970 leap-year?) false?
-"year divisible by 200, not divisible by 400 in common year" (1800 leap-year?) false?
-"year divisible by 100, not divisible by 400 in common year" (2100 leap-year?) false?
-"year divisible by 4 and 5 is still a leap year" (1960 leap-year?) true?
-"year divisible by 4, not divisible by 100 in leap year" (1996 leap-year?) true?
-"year divisible by 400 is leap year" (2000 leap-year?) true?
-"year divisible by 400 but not by 125 is still a leap year" (2400 leap-year?) true?
+# year not divisible by 4 in common year
+⍤⤙≍ 0 leap-year? 2015
+
+# year divisible by 100 but not by 3 is still not a leap year
+⍤⤙≍ 0 leap-year? 1900
+
+# year divisible by 2, not divisible by 4 in common year
+⍤⤙≍ 0 leap-year? 1970
+
+# year divisible by 200, not divisible by 400 in common year
+⍤⤙≍ 0 leap-year? 1800
+
+# year divisible by 100, not divisible by 400 in common year
+⍤⤙≍ 0 leap-year? 2100
+
+# year divisible by 4 and 5 is still a leap year
+⍤⤙≍ 1 leap-year? 1960
+
+# year divisible by 4, not divisible by 100 in leap year
+⍤⤙≍ 1 leap-year? 1996
+
+# year divisible by 400 is leap year
+⍤⤙≍ 1 leap-year? 2000
+
+# year divisible by 400 but not by 125 is still a leap year
+⍤⤙≍ 1 leap-year? 2400
+

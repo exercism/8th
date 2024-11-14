@@ -1,13 +1,35 @@
 ~ "armstrong-numbers.ua" ~ Hello
 
-"Zero is an Armstrong number" (0 armstrong?) true?
-"Single digit numbers are Armstrong numbers" (5 armstrong?) true?
-"There are no 2 digit Armstrong Numbers" (10 armstrong?) false?
-"Three digit number that is not an Armstrong number" (100 armstrong?) false?
-"Three digit number that is an Armstrong number" (153 armstrong?) true?
-"Four digit number that is an Armstrong number" (9474 armstrong?) true?
-"Four digit number that is not an Armstrong number" (9475 armstrong?) false?
-"Seven digit number that is not an Armstrong number" (9926314 armstrong?) false?
-"Seven digit number that is an Armstrong number" (9926315 armstrong?) true?
-"Armstrong number containing seven zeroes" (186709961001538790100634132976990 armstrong?) true?
-"The largest and last Armstrong number" (115132219018763992565095597973971522401 armstrong?) true?
+# Zero is an Armstrong number
+⍤⤙≍ 1 armstrong? 0
+
+# Single digit numbers are Armstrong numbers
+⍤⤙≍ 1 armstrong? 5
+
+# There are no 2 digit Armstrong Numbers
+⍤⤙≍ 0 armstrong? 10
+
+# Three digit number that is not an Armstrong number
+⍤⤙≍ 0 armstrong? 100
+
+# Three digit number that is an Armstrong number
+⍤⤙≍ 1 armstrong? 153
+
+# Four digit number that is an Armstrong number
+⍤⤙≍ 1 armstrong? 9474
+
+# Four digit number that is not an Armstrong number
+⍤⤙≍ 0 armstrong? 9475
+
+# Seven digit number that is not an Armstrong number
+⍤⤙≍ 0 armstrong? 9926314
+
+# Seven digit number that is an Armstrong number
+⍤⤙≍ 1 armstrong? 9926315
+
+# Armstrong number containing seven zeroes
+⍤⤙≍ 1 armstrong? 186709961001538790100634132976990
+
+# The largest and last Armstrong number
+⍤⤙≍ 1 armstrong? 115132219018763992565095597973971522401
+
