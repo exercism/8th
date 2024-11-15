@@ -1,4 +1,0 @@
-: slices \ s n --
-  dup 0 n:> !if 2drop [] ;; then
-  >r "" s:/
-  ( "" a:join ) r> 1 a:map+ ;

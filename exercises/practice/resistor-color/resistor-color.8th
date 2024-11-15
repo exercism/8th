@@ -1,5 +1,0 @@
-: colors \ -- a
-;
-
-: color-code \ s -- n
-;

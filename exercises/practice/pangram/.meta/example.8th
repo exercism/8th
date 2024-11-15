@@ -1,6 +1,0 @@
-: pangram? \ s -- b
-   s:uc /[A-Z]/ r:/ \ s -- a # convert to uppercase and extract only A-Z
-   ' s:cmp a:sort \ a -- a # sort letters
-   ' s:= a:uniq \ a -- a # remove duplicates
-   a:len nip 26 n:= \ a -- b # is length of array == 26 (length of English alphabet)
-;
