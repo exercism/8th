@@ -11,23 +11,17 @@ catch . if nip then nip
 # each item may only be read once
 ⍤⤙≍ 1 throws? 1 cb:new 1 cb:write cb:read ↘ ’ cb:read
 
-"items are read in the order they are written"
-(2 cb:new 1 cb:write 2 cb:write cb:read swap cb:read nip 2 a:close)
-[1 2]
-=?
+# items are read in the order they are written
+⍤⤙≍ [1 2] a:close 2 cb:new 1 cb:write 2 cb:write cb:read swap cb:read nip 2
 
 # full buffer can't be written to
 ⍤⤙≍ 1 throws? 1 cb:new 1 cb:write 2 ’ cb:write
 
-"a read frees up capacity for another write"
-(1 cb:new 1 cb:write cb:read swap 2 cb:write cb:read nip 2 a:close)
-[1 2]
-=?
+# a read frees up capacity for another write
+⍤⤙≍ [1 2] a:close 1 cb:new 1 cb:write cb:read swap 2 cb:write cb:read nip 2
 
-"read position is maintained even across multiple writes"
-(3 cb:new 1 cb:write 2 cb:write cb:read swap 3 cb:write cb:read swap cb:read nip 3 a:close)
-[1 2 3]
-=?
+# read position is maintained even across multiple writes
+⍤⤙≍ [1 2 3] a:close 3 cb:new 1 cb:write 2 cb:write cb:read swap 3 cb:write cb:read swap cb:read nip 3
 
 # items cleared out of buffer can't be read
 ⍤⤙≍ 1 throws? 1 cb:new 1 cb:write cb:clear ’ cb:read
@@ -37,20 +31,14 @@ catch . if nip then nip
 # clear does nothing on empty buffer?
 ⍤⤙≍ 1 nip 1 cb:new cb:clear 1 cb:write cb:read
 
-"overwrite acts like write on non-full buffer"
-(2 cb:new 1 cb:write 2 cb:overwrite cb:read swap cb:read nip 2 a:close)
-[1 2]
-=?
+# overwrite acts like write on non-full buffer
+⍤⤙≍ [1 2] a:close 2 cb:new 1 cb:write 2 cb:overwrite cb:read swap cb:read nip 2
 
-"overwrite replaces the oldest item on full buffer"
-(2 cb:new 1 cb:write 2 cb:write 3 cb:overwrite cb:read swap cb:read nip 2 a:close)
-[2 3]
-=?
+# overwrite replaces the oldest item on full buffer
+⍤⤙≍ [2 3] a:close 2 cb:new 1 cb:write 2 cb:write 3 cb:overwrite cb:read swap cb:read nip 2
 
-"overwrite replaces the oldest item remaining in buffer following a read"
-(3 cb:new 1 cb:write 2 cb:write 3 cb:write cb:read swap 4 cb:write 5 cb:overwrite cb:read swap cb:read swap cb:read nip 4 a:close)
-[1 3 4 5]
-=?
+# overwrite replaces the oldest item remaining in buffer following a read
+⍤⤙≍ [1 3 4 5] a:close 3 cb:new 1 cb:write 2 cb:write 3 cb:write cb:read swap 4 cb:write 5 cb:overwrite cb:read swap cb:read swap cb:read nip 4
 
 # initial clear does not affect wrapping around
 ⍤⤙≍ 1 throws? 2 cb:new cb:clear 1 cb:write 2 cb:write 3 cb:overwrite 4 cb:overwrite cb:read ↘ cb:read ↘ ’ cb:read
