@@ -1,64 +1,42 @@
 ~ "perfect-numbers.ua" ~ Hello
 
-"Smallest perfect number is classified correctly"
-(6 ⊛)
-"perfect"
-=?
+# Smallest perfect number is classified correctly
+⍤⤙≍ "perfect" ClassifyNumber 6
 
-"Medium perfect number is classified correctly"
-(28 ⊛)
-"perfect"
-=?
+# Medium perfect number is classified correctly
+⍤⤙≍ "perfect" ClassifyNumber 28
 
-"Large perfect number is classified correctly"
-(33550336 ⊛)
-"perfect"
-=?
+# Large perfect number is classified correctly
+⍤⤙≍ "perfect" ClassifyNumber 33550336
 
-"Smallest abundant number is classified correctly"
-(12 ⊛)
-"abundant"
-=?
+# Smallest abundant number is classified correctly
+⍤⤙≍ "abundant" ClassifyNumber 12
 
-"Medium abundant number is classified correctly"
-(30 ⊛)
-"abundant"
-=?
+# Medium abundant number is classified correctly
+⍤⤙≍ "abundant" ClassifyNumber 30
 
-"Large abundant number is classified correctly"
-(33550335 ⊛)
-"abundant"
-=?
+# Large abundant number is classified correctly
+⍤⤙≍ "abundant" ClassifyNumber 33550335
 
-"Smallest prime deficient number is classified correctly"
-(2 ⊛)
-"deficient"
-=?
+# Smallest prime deficient number is classified correctly
+⍤⤙≍ "deficient" ClassifyNumber 2
 
-"Smallest non-prime deficient number is classified correctly"
-(4 ⊛)
-"deficient"
-=?
+# Smallest non-prime deficient number is classified correctly
+⍤⤙≍ "deficient" ClassifyNumber 4
 
-"Medium deficient number is classified correctly"
-(32 ⊛)
-"deficient"
-=?
+# Medium deficient number is classified correctly
+⍤⤙≍ "deficient" ClassifyNumber 32
 
-"Large deficient number is classified correctly"
-(33550337 ⊛)
-"deficient"
-=?
+# Large deficient number is classified correctly
+⍤⤙≍ "deficient" ClassifyNumber 33550337
 
-"Edge case (no factors other than itself) is classified correctly"
-(1 ⊛)
-"deficient"
-=?
+# Edge case (no factors other than itself) is classified correctly
+⍤⤙≍ "deficient" ClassifyNumber 1
 
 "Zero is rejected (as it is not a positive integer)"
-(0 ⊛)
+(0 ClassifyNumber)
 null?
 
 "Negative integer is rejected (as it is not a positive integer)"
-(`1 ⊛)
+(`1 ClassifyNumber)
 null?
