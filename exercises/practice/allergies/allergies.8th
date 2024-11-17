@@ -1,7 +1,0 @@
-: allergic-to? \ n s -- T
-
-;
-
-: list \ n -- a 
-
-;
