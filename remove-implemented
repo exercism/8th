@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+jq -r '.exercises.practice[].slug' ~/exercism/tracks/uiua/config.json | sort | xargs -I
+{} rm -rf exercises/practice/{} 
