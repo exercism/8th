@@ -1,84 +1,63 @@
 ~ "matching-brackets.ua" ~ Hello
 
-"paired square brackets"
-    ( "[]" paired? )
-    true?
+# paired square brackets
+⍤⤙≍ 1 IsPaired "[]"
 
+# empty string
+⍤⤙≍ 1 IsPaired ""
 
-"empty string"
-    ( "" paired? )
-    true?
+# unpaired brackets
+⍤⤙≍ 0 IsPaired "[["
 
-"unpaired brackets"
-    ( "[[" paired? )
-    false?
+# wrong ordered brackets
+⍤⤙≍ 0 IsPaired "}{"
 
-"wrong ordered brackets"
-    ( "}{" paired? )
-    false?
+# wrong closing bracket
+⍤⤙≍ 0 IsPaired "{]"
 
-"wrong closing bracket"
-    ( "{]" paired? )
-    false?
+# paired with whitespace
+⍤⤙≍ 1 IsPaired "{ }"
 
-"paired with whitespace"
-    ( "{ }" paired? )
-    true?
+# partially paired brackets
+⍤⤙≍ 0 IsPaired "{[])"
 
-"partially paired brackets"
-    ( "{[])" paired? )
-    false?
+# simple nested brackets
+⍤⤙≍ 1 IsPaired "{[]}"
 
-"simple nested brackets"
-    ( "{[]}" paired? )
-    true?
+# several paired brackets
+⍤⤙≍ 1 IsPaired "{}[]"
 
-"several paired brackets"
-    ( "{}[]" paired? )
-    true?
+# paired and nested brackets
+⍤⤙≍ 1 IsPaired "([{}({}[])])"
 
-"paired and nested brackets"
-    ( "([{}({}[])])" paired? )
-    true?
+# unopened closing brackets
+⍤⤙≍ 0 IsPaired "{[)][]}"
 
-"unopened closing brackets"
-    ( "{[)][]}" paired? )
-    false?
+# unpaired and nested brackets
+⍤⤙≍ 0 IsPaired "([{])"
 
-"unpaired and nested brackets"
-    ( "([{])" paired? )
-    false?
+# paired and wrong nested brackets
+⍤⤙≍ 0 IsPaired "[({]})"
 
-"paired and wrong nested brackets"
-    ( "[({]})" paired? )
-    false?
+# paired and wrong nested brackets but innermost are correct
+⍤⤙≍ 0 IsPaired "[({}])"
 
-"paired and wrong nested brackets but innermost are correct"
-    ( "[({}])" paired? )
-    false?
+# paired and incomplete brackets
+⍤⤙≍ 0 IsPaired "{}["
 
-"paired and incomplete brackets"
-    ( "{}[" paired? )
-    false?
+# too many closing brackets
+⍤⤙≍ 0 IsPaired "[]]"
 
-"too many closing brackets"
-    ( "[]]" paired? )
-    false?
+# early unexpected brackets
+⍤⤙≍ 0 IsPaired ")()"
 
-"early unexpected brackets"
-    ( ")()" paired? )
-    false?
+# early mismatched brackets
+⍤⤙≍ 0 IsPaired "{)()"
 
-"early mismatched brackets"
-    ( "{)()" paired? )
-    false?
+# math expression
+⍤⤙≍ 1 IsPaired "(((185 + 223.85) * 15) - 543)/2"
 
-"math expression"
-    ( "(((185 + 223.85) * 15) - 543)/2" paired? )
-    true?
-
-"complex latex expression"
-    ( "\left(\begin{array}{cc} \frac{1}{3} & x\\ \mathrm{e}^{x} &... x^2 \end{array}\right)" paired? )
-    true?
+# complex latex expression
+⍤⤙≍ 1 IsPaired "\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)"
 
 
