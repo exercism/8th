@@ -5,45 +5,45 @@ with: test
 16 tests
 
 "encode yes"
-    ( "yes" 5 7 >code )
     "xbt"
+    ( "yes" 5 7 >code )
     equal?
 
 SKIP-REST-OF-TESTS
 
 "encode no"
-    ( "no" 15 18 >code )
     "fu"
+    ( "no" 15 18 >code )
     equal?
 
 "encode OMG"
-    ( "OMG" 21 3 >code )
     "lvz"
+    ( "OMG" 21 3 >code )
     equal?
 
 "encode O M G"
-    ( "O M G" 25 47 >code )
     "hjp"
+    ( "O M G" 25 47 >code )
     equal?
 
 "encode mindblowingly"
-    ( "mindblowingly" 11 15 >code )
     "rzcwa gnxzc dgt"
+    ( "mindblowingly" 11 15 >code )
     equal?
 
 "encode numbers"
-    ( "Testing,1 2 3, testing." 3 4 >code )
     "jqgjc rw123 jqgjc rw"
+    ( "Testing,1 2 3, testing." 3 4 >code )
     equal?
 
 "encode deep thought"
-    ( "Truth is fiction." 5 17 >code )
     "iynia fdqfb ifje"
+    ( "Truth is fiction." 5 17 >code )
     equal?
 
 "encode all the letters"
-    ( "The quick brown fox jumps over the lazy dog." 17 33 >code )
     "swxtj npvyk lruol iejdc blaxk swxmh qzglf"
+    ( "The quick brown fox jumps over the lazy dog." 17 33 >code )
     equal?
 
 "encode with a not coprime to m"
@@ -51,33 +51,33 @@ SKIP-REST-OF-TESTS
     null?
 
 "decode exercism"
-    ( "tytgn fjr" 3 7 code> )
     "exercism"
+    ( "tytgn fjr" 3 7 code> )
     equal?
 
 "decode a sentence"
-    ( "qdwju nqcro muwhn odqun oppmd aunwd o" 19 16 code> )
     "anobstacleisoftenasteppingstone"
+    ( "qdwju nqcro muwhn odqun oppmd aunwd o" 19 16 code> )
     equal?
 
 "decode numbers"
-    ( "odpoz ub123 odpoz ub" 25 7 code> )
     "testing123testing"
+    ( "odpoz ub123 odpoz ub" 25 7 code> )
     equal?
 
 "decode all the letters"
-    ( "swxtj npvyk lruol iejdc blaxk swxmh qzglf" 17 33 code> )
     "thequickbrownfoxjumpsoverthelazydog"
+    ( "swxtj npvyk lruol iejdc blaxk swxmh qzglf" 17 33 code> )
     equal?
 
 "decode with no spaces in input"
-    ( "swxtjnpvyklruoliejdcblaxkswxmhqzglf" 17 33 code> )
     "thequickbrownfoxjumpsoverthelazydog"
+    ( "swxtjnpvyklruoliejdcblaxkswxmhqzglf" 17 33 code> )
     equal?
 
 "decode with too many spaces"
-    ( "vszzm    cly   yd cg    qdp" 15 16 code> )
     "jollygreengiant"
+    ( "vszzm    cly   yd cg    qdp" 15 16 code> )
     equal?
 
 "decode with a not coprime to m"
