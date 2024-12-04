@@ -5,50 +5,50 @@ with: test
 9 tests
 
 "ignoring punctuation and casing"
-    ( "Complementary metal-oxide semiconductor" acronym )
     "CMOS"
+    ( "Complementary metal-oxide semiconductor" acronym )
     equal?
 
 SKIP-REST-OF-TESTS
 
 "ignores punctuation"
-    ( "First In, First Out" acronym )
     "FIFO"
+    ( "First In, First Out" acronym )
     equal?
 
 "from phrases with acronyms"
-    ( "GNU Image Manipulation Program" acronym )
     "GIMP"
+    ( "GNU Image Manipulation Program" acronym )
     equal?
 
 "from phrases with apostrophes"
-    ( "Halley's Comet" acronym )
     "HC"
+    ( "Halley's Comet" acronym )
     equal?
 
 "from title case"
-    ( "Portable Network Graphics" acronym )
     "PNG"
+    ( "Portable Network Graphics" acronym )
     equal?
 
 "from lower case"
-    ( "Ruby on Rails" acronym )
     "ROR"
+    ( "Ruby on Rails" acronym )
     equal?
 
 "from a very long abbreviation"
-    ( "Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me" acronym )
     "ROTFLSHTMDCOALM"
+    ( "Rolling On The Floor Laughing So Hard That My Dogs Came Over And Licked Me" acronym )
     equal?
 
 "from phrases with consecutive delimiters"
-    ( "Something - I made up from thin air" acronym )
     "SIMUFTA"
+    ( "Something - I made up from thin air" acronym )
     equal?
 
 "from phrases with underscore emphasis"
-    ( "The Road _Not_ Taken" acronym )
     "TRNT"
+    ( "The Road _Not_ Taken" acronym )
     equal?
 
 end-of-tests
