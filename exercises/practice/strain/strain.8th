@@ -1,7 +1,0 @@
-: keep \ a w -- a
-  
-;
-
-: discard \ a w -- a
-  
-;

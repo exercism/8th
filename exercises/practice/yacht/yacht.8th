@@ -1,5 +1,0 @@
-: play_yacht \ a s -- n
-             \ array-of-roll
-             \   scoring-method
-             \        score  
-;
