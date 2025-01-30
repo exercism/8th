@@ -102,7 +102,7 @@ SKIP-REST-OF-TESTS
       r@ "wisdom"       m:@ ability-valid? nip and
       r@ "charisma"     m:@ ability-valid? nip and       
       r@ "constitution" m:@ nip modifier 10 n:+ r> "hitpoints" m:@ nip n:= and
-    )    
+    )
     true?
 
 end-of-tests
