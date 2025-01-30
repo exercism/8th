@@ -158,6 +158,14 @@
         "difficulty": 3
       },
       {
+        "slug": "resistor-color-duo",
+        "name": "Resistor Color Duo",
+        "uuid": "5e8ed224-3711-4444-98e7-03880d95021a",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "luhn",
         "name": "Luhn Credit Card Number Checker",
         "uuid": "b36a18cc-4385-40ba-9113-af5bf2ea349e",
