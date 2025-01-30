@@ -1,0 +1,66 @@
+"change.8th" f:include
+needs exercism/test
+with: test
+12 tests
+
+"Change for 1 cent"
+    ( fewestcoins [1, 5, 10, 25] 1 )
+    [1]
+    equal?
+
+SKIP-REST-OF-TESTS
+
+"Single coin change"
+    ( fewestcoins [1, 5, 10, 25, 100] 25 )
+    [25]
+    equal?
+
+"Multiple coin change"
+    ( fewestcoins [1, 5, 10, 25, 100] 15 )
+    [5, 10]
+    equal?
+
+"Change with Lilliputian Coins"
+    ( fewestcoins [1, 4, 15, 20, 50] 23 )
+    [4, 4, 15]
+    equal?
+
+"Change with Lower Elbonia Coins"
+    ( fewestcoins [1, 5, 10, 21, 25] 63 )
+    [21, 21, 21]
+    equal?
+
+"Large target values"
+    ( fewestcoins [1, 2, 5, 10, 20, 50, 100] 999 )
+    [2, 2, 5, 20, 20, 50, 100, 100, 100, 100, 100, 100, 100, 100, 100]
+    equal?
+
+"Possible change without unit coins available"
+    ( fewestcoins [2, 5, 10, 20, 50] 21 )
+    [2, 2, 2, 5, 10]
+    equal?
+
+"Another possible change without unit coins available"
+    ( fewestcoins [4, 5] 27 )
+    [4, 4, 4, 5, 5, 5]
+    equal?
+
+"No coins make 0 change"
+    ( fewestcoins [1, 5, 10, 21, 25] 0 )
+    []
+    equal?
+
+"Error testing for change smaller than the smallest of coins"
+    ( fewestcoins [5, 10] 3 )
+    null?
+
+"Error if no combination can add up to target"
+    ( fewestcoins [5, 10] 94 )
+    null?
+
+"Cannot find negative change values"
+    ( fewestcoins [1, 2, 5] -5 )
+    null?
+
+end-of-tests
+;with

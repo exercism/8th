@@ -1,0 +1,25 @@
+: initial-coins \ n -- a
+  1 swap ( drop null ) -rot a:generate a:new a:slide
+;
+
+: valid-coins \ n a -- a
+  ( over n:> not ) a:filter nip
+;
+
+: current-coins \ n -- a
+  r@ swap a:@
+;
+
+: update-coins \ a n -- a
+  2dup swap valid-coins
+\  coins amount valid-coins
+"update-coins" log
+.s cr
+  ( over swap n:- current-coins rot a:push nip .s ) a:map
+;
+
+: fewestcoins \ a n -- a
+  over a:_len 0 n:= if 2drop [] ;then
+  dup 0 n:< if 2drop null ;then
+  dup initial-coins >r 1 swap ' noop -rot a:generate ' update-coins a:map 
+;

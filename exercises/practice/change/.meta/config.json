@@ -1,0 +1,19 @@
+{
+  "authors": [
+    "erikschierboom"
+  ],
+  "files": {
+    "solution": [
+      "change.8th"
+    ],
+    "test": [
+      "test.8th"
+    ],
+    "example": [
+      ".meta/example.8th"
+    ]
+  },
+  "blurb": "Correctly determine change to be given using the least number of coins.",
+  "source": "Software Craftsmanship - Coin Change Kata",
+  "source_url": "https://web.archive.org/web/20130115115225/http://craftsmanship.sv.cmu.edu:80/exercises/coin-change-kata"
+}
