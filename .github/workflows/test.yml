@@ -40,4 +40,4 @@ jobs:
           build-args: ZIP_PASSWORD=${{secrets.ZIP_PASSWORD}}
 
       - name: Run tests for all exercises
-        run: bin/test
+        run: bin/verify-exercises-in-docker
