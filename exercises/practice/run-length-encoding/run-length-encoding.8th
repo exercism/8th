@@ -1,0 +1,7 @@
+: encode \ s -- s
+
+;
+
+: decode \ s -- s
+
+;
