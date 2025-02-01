@@ -430,6 +430,14 @@
         "difficulty": 3
       },
       {
+        "slug": "house",
+        "name": "House",
+        "uuid": "1544058f-dd9a-4ec8-bcb6-e122d74249fc",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "parallel-letter-frequency",
         "name": "Parallel Letter Frequency",
         "uuid": "8f55c666-41f7-42df-abf2-7133af0cb36a",
