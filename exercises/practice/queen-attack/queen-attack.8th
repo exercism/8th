@@ -1,0 +1,6 @@
+: create \ n n -- x
+
+;
+
+: can-attack? \ x x -- T
+;

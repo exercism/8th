@@ -486,6 +486,14 @@
         "difficulty": 3
       },
       {
+        "slug": "queen-attack",
+        "name": "Queen Attack",
+        "uuid": "e001865b-134b-40fd-86b0-8d646eace2b5",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 3
+      },
+      {
         "slug": "list-ops",
         "name": "List Ops",
         "uuid": "3f882da7-7702-468a-aa43-010917e30a17",
