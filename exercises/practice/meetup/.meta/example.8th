@@ -1,5 +1,12 @@
 needs date/utils
 
+\ This is a workaround for https://8th-dev.com/bin/bugs/tktview/513e135cb489cb9a0479cfa61fcd6f24b21c1527
+: first-dow \ d dow -- d-dow
+  swap d:/ 2 1 a:! d:join 
+  -1 d:+
+  swap d:next-dow
+;
+
 : >dow \ s -- n
   { 
     "Monday":    ' d:Mon,
@@ -21,7 +28,7 @@ needs date/utils
 ;
 
 : first-of-month \ n n s -- n
-  -rot first-day-of-month swap >dow d:first-dow
+  -rot first-day-of-month swap >dow first-dow
 ;
 
 : second-of-month \ n n s -- n
