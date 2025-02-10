@@ -558,6 +558,14 @@
         "difficulty": 5
       },
       {
+        "slug": "prime-factors",
+        "name": "Prime Factors",
+        "uuid": "48187959-1ed3-4327-94e9-aac4013f223c",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "run-length-encoding",
         "name": "Run-Length Encoding",
         "uuid": "89a616a0-50df-49fd-8421-0e0e6bcb58cf",
