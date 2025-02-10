@@ -478,6 +478,14 @@
         "difficulty": 4
       },
       {
+        "slug": "bottle-song",
+        "name": "Bottle Song",
+        "uuid": "7bb10ccd-4ccd-4bb8-bf92-c4294623a173",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 4
+      },
+      {
         "slug": "binary-search",
         "name": "Binary Search",
         "uuid": "f171fdeb-ad29-4268-a3bf-0fd84380630b",
