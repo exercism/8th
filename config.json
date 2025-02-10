@@ -558,6 +558,14 @@
         "difficulty": 5
       },
       {
+        "slug": "run-length-encoding",
+        "name": "Run-Length Encoding",
+        "uuid": "89a616a0-50df-49fd-8421-0e0e6bcb58cf",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 7
+      },
+      {
         "slug": "circular-buffer",
         "name": "Circular Buffer",
         "uuid": "2442f2fe-3304-4d28-9539-b23a31e24c22",
