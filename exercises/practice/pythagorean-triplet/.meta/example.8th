@@ -27,7 +27,7 @@ needs stack/rstack \ for G:rpick
               0 G:rpick 3 G:rpick n:* \ c_ * k as c
               G:3dup n:+ n:+ 5 G:pick n:= G:if \ a + b + c = sum
                 3 a:close \ create array [a, b, c]
-                6 G:rpick G:swap a:push' \ push it to the results array
+                6 G:rpick G:swap a:_push \ push it to the results array
               G:else
                 G:3drop \ drop a, b, c otherwise
               G:then
