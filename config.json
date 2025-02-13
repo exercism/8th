@@ -582,6 +582,14 @@
         "difficulty": 5
       },
       {
+        "slug": "saddle-points",
+        "name": "Saddle Points",
+        "uuid": "ba2ee80c-1e42-4ef6-9b3d-9e84061d0e12",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5
+      },
+      {
         "slug": "run-length-encoding",
         "name": "Run-Length Encoding",
         "uuid": "89a616a0-50df-49fd-8421-0e0e6bcb58cf",

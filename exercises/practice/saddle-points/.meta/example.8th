@@ -1,0 +1,27 @@
+: transpose \ a -- a
+    0 a:@ a:_len n:1- ' noop 0 rot a:generate ( over ( over a:_@  ) a:map nip ) a:map nip
+;
+
+: maximum \ a -- n
+    ' n:max -Inf a:reduce
+;
+
+: minimum \ a -- n
+    ' n:min Inf a:reduce
+;
+
+: row-max \ a -- a
+    ' maximum a:map
+;
+
+: col-min \ a -- a
+    transpose ' minimum a:map
+;
+
+: saddle-points \ a -- a
+    a:len 0 = if ;then
+
+    >r r@ row-max r@ col-min 2 a:close
+    r> swap >r
+    ( ( r@ .s cr 3drop ) a:each 2drop ) a:each
+;
