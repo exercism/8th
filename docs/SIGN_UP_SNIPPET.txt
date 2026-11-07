@@ -1,0 +1,12 @@
+var best
+var best-count
+
+: count-word
+  2dup m:@ nip null? if drop 0 then n:1+
+  dup best-count @ n:> if 2dup best-count ! best ! then
+  m:! ;
+
+: most-common-word
+  "" best ! 0 best-count !
+  s:lc " " s:/ m:new swap ' count-word a:each! 2drop
+  "\"" best @ s:+ "\" appears " s:+ best-count @ >s s:+ " times" s:+ ;
